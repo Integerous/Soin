@@ -1,1 +1,42 @@
 @charset "UTF-8";
+
+/* 초기화 */
+body{
+	margin :0px;
+}
+
+header{
+	
+}
+
+nav{
+	
+}
+
+main{
+	
+	
+}
+
+footer{
+	
+}
+
+h1{
+	margin :0px;
+}
+
+li{
+	margin :0px;
+	display: block;
+}
+
+ul{
+	margin :0px;
+	padding: 0px;	
+}
+
+a{
+	text-decoration:none;
+	color: inherit; 
+}
