@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-/* 초기화 */
+/* ─────초기화───── */
 body{
 	margin :0px;
+	background-color: #ffffff;
 }
 
 header{
@@ -10,6 +11,10 @@ header{
 }
 
 nav{
+	margin-top: 20px;
+	padding : 10px;
+	border-top : 1px solid #B0C4DE;
+	border-bottom : 1px sloid #B0C4DE;
 	
 }
 
@@ -40,3 +45,58 @@ a{
 	text-decoration:none;
 	color: inherit; 
 }
+
+/* ─────방 만들기───── */
+
+
+/* ──────버튼────── */
+.btn-txt,
+.txt-button{
+	background: #759d2a;
+
+	min-width: 71px;
+	color: #87CEFA;
+	display: inline-block;
+	text-align:center;
+	padding : 3px 8px;
+	border-radius: 4px;
+	
+	/* input override */
+	border : 0px;
+}
+
+.btn-img,
+.img-button{
+	border-radius: 0px;
+	text-indent: -999px;
+	overflow: hidden;
+	
+	min-width: 71px;
+	color: #87CEFA;
+	display: inline-block;
+	text-align:center;
+	padding : 3px 8px;
+	border-radius: 4px;
+	
+	/* input override */
+	border : 0px;
+}
+
+.btn-cancel,
+.cancel-button{
+	background: #000000;
+}
+
+.btn-search,
+.search-button{
+	background: url("") no-repeat center;
+	min-width :31px;
+	height : 25px;
+}
+
+.btn-menu,
+.menu-button{
+	min-width: 100px;
+	background: #EEE8AA;
+}
+
