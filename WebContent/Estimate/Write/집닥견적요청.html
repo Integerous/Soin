@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<section class="start_section">
+
+		<div class="request_copy_container">
+			<h3 id="header_ment1">
+				오늘도 <b class="done_num countTo" data-speed="1000">114</b>명이 집닥을 통해<br>
+				무료 방문 견적을 신청했습니다
+			</h3>
+			<h3 id="header_ment2" style="display:none;">
+				집닥 전문가의 현장관리서비스 1회!<br>
+				<b>-</b><b class="done_num countTo" data-speed="1000">10</b><b>0,000</b>원 절약중 <small>(출장비 무료)</small>
+			</h3>
+			<h3 id="header_ment3" style="display:none;">
+				집닥 2~3년차 AS 하자보증!<br>
+				<b>-</b><b class="done_num countTo" data-speed="1000">1</b><b>,</b><b class="done_num countTo" data-speed="1000">50</b><b>0,000</b>원 절약중 <small>(공사비의 5%, 3천만원 기준)</small>
+			</h3>
+			<h3 id="header_ment4" style="display:none;">
+				12개월 무이자 할부!<br>
+				<b>-</b><b class="done_num countTo" data-speed="1000">1</b><b>,</b><b class="done_num countTo" data-speed="1000">20</b><b>0,000</b>원 절약중 <small>(이율 4%, 3천만원 기준)</small>
+			</h3>
+			<h3 id="header_ment5" style="display:none;">
+				집닥 중개 서비스를 이용해 현재<br>
+				총 <b>-</b><b class="done_num countTo" data-speed="1000">2</b><b>,</b><b class="done_num countTo" data-speed="1000">80</b><b>0,000</b>원 절약 중입니다.
+			</h3>
+
+		</div>
+
+		<div class="container border_lr request_detail_container">
+			<!-- 여기서 부터 스텝데이터 데려다 쓰시면 될 것 같습니다.  ----------------------------------------------------------->
+			<div class="tab-pane fade in active" id="estimate_consulting">
+				<!-- 진행 상태 바 Start  -->
+				<div class="row process-wizard process-wizard-primary margin-top-20">
+					<div id="step_progress1" class="col-xs-5th process-wizard-step active"><!-- complete -->
+						<div id="progress1" class="progress">
+							<div class="progress-bar"></div>
+						</div>
+						<a href="javascript:doPrevStep(1);" class="process-wizard-dot"></a>
+						<div class="process-wizard-info text-center">공간선택</div>
+					</div>
+					<div id="step_progress2" class="col-xs-5th process-wizard-step disabled"><!-- active -->
+						<div id="progress2" class="progress">
+							<div class="progress-bar"></div>
+						</div>
+						<a href="javascript:doPrevStep(2);" class="process-wizard-dot"></a>
+						<div class="process-wizard-info text-center">지역 선택</div>
+					</div>
+					<div id="step_progress3" class="col-xs-5th process-wizard-step disabled"><!-- disabled -->
+						<div id="progress3" class="progress">
+							<div class="progress-bar"></div>
+						</div>
+						<a href="javascript:doPrevStep(3);" class="process-wizard-dot"></a>
+						<div class="process-wizard-info text-center">예산 선택</div>
+					</div>
+					<div id="step_progress4" class="col-xs-5th process-wizard-step disabled"><!-- disabled -->
+						<div id="progress4" class="progress">
+							<div class="progress-bar"></div>
+						</div>
+						<a href="javascript:doPrevStep(4);" class="process-wizard-dot"></a>
+						<div class="process-wizard-info text-center">컨셉 선택</div>
+					</div>
+					<div id="step_progress5" class="col-xs-5th process-wizard-step disabled"><!-- disabled -->
+						<div id="progress5" class="progress">
+							<div class="progress-bar"></div>
+						</div>
+						<a href="javascript:doPrevStep(5);" class="process-wizard-dot"></a>
+						<div class="process-wizard-info text-center">정보입력</div>
+					</div>
+				</div>
+				<!-- /진행 상태 바  -->
+				<form id="estimateForm" name="estimateForm" action="/zws/estimate/create.do?pageTracking=event1" method="post">
+					<input id="cmd" name="cmd" type="hidden" value="create">
+					<input id="mode" name="mode" value="complex" type="hidden">
+					<input id="pageTracking" name="pageTracking" type="hidden" value="event1">
+					<input id="estimate_type" name="estimate_type" type="hidden" value="">
+					<input id="address" name="estimate.address" type="hidden" value="">
+					<input id="pid" name="estimate.pid" type="hidden" value="">
+					<input id="phone_no" name="estimate.phone_no" type="hidden" value="">
+				<!-- 스텝1-->
+				<div id="step1" class="request_detail margin-top-50 margin-bottom-30">
+					<div class="slector_box">
+						<div class="rd_ment">
+							<h2 class="question">어떤 공간을 원하시나요?</h2>
+						</div>
+						<!-- request detail form -->
+						<div class="rd_form">
+							<select id="category_code1" name="estimate.category_code1" class="form-control select rd-6"><option value="">--공간선택--</option><option value="10" category="주거공간">주거공간</option><option value="20" category="상업공간">상업공간</option><option value="30" category="부분시공">부분시공</option></select>
+							<select id="category_code2" name="estimate.category_code2" class="form-control select rd-6"><option value="">--유형선택--</option></select>
+							<input id="category_name2" name="estimate.category_name2" type="hidden" value="">
+						</div>
+						<!-- / request detail form -->
+					</div>
+					<!-- / 스텝1 선택지 -->
+
+					<div class="clearfix"></div>
+
+					<!-- nest prev btn box -->
+					<div class="next_step">
+						<a href="javascript:doNextStep(2);" class="btn btn-orange">
+							<span>다 음</span> <i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					<!-- / nest prev btn box -->
+				</div>
+				<!-- /스텝1-->
+
+				<!-- 스텝2  -->
+				<div id="step2" class="request_detail margin-top-50 margin-bottom-30" style="display:none;">
+					<div class="slector_box">
+						<div class="rd_ment">
+							<h2 class="question">어느 지역을 원하시나요?</h2>
+						</div>
+						<!-- request detail form -->
+						<div class="rd_form">
+							<select id="region1" name="region1" class="form-control select rd-4"><option value="전체">전체</option><option value="서울">서울</option><option value="경기">경기</option><option value="부산">부산</option><option value="대구">대구</option><option value="인천">인천</option><option value="광주">광주</option><option value="대전">대전</option><option value="울산">울산</option><option value="강원">강원</option><option value="경남">경남</option><option value="경북">경북</option><option value="전남">전남</option><option value="전북">전북</option><option value="제주">제주</option><option value="충남">충남</option><option value="충북">충북</option></select>
+							<select id="region2" name="region2" class="form-control select rd-4"></select>
+							<select id="region3" name="region3" class="form-control select rd-4"></select>
+						</div>
+						<div class="margin-top-10">
+							<br>
+							<input id="address_detail" name="address_detail" placeholder="상세주소를 입력해주세요 ex) 래미안 아파트" class="form-control small-h" type="text" value="" maxlength="200">
+							<label>* 상세주소 생략 가능</label>
+						</div>
+						<script type="text/javascript">
+						sojaeji('전체','','');
+						</script>
+						<!-- / request detail form -->
+					</div>
+					<!-- / 스텝1 선택지 -->
+
+					<div class="clearfix"></div>
+
+					<!-- nest prev btn box -->
+					<div class="next_step">
+						<a href="javascript:doPrevStep(1);" class="btn btn-default"><i class="fa fa-angle-left"></i><span>이 전</span></a>
+						<a href="javascript:doNextStep(3);" class="btn btn-orange"><span>다 음</span> <i class="fa fa-angle-right"></i></a>
+					</div>
+					<!-- / nest prev btn box -->
+				</div>
+				<!-- /스텝2-->
+
+				<!-- 스텝3 -->
+				<div id="step3" class="request_detail margin-top-50 margin-bottom-30" style="display:none;">
+					<div class="slector_box">
+						<div class="rd_ment">
+							<h2 class="question">예산을 어느 정도 생각하시나요?</h2>
+						</div>
+						<!-- request detail form -->
+						<div class="rd_form">
+							<select id="budget" name="estimate.budget" class="form-control select">
+								<option value="1000만원 이하">1000만원 이하</option>
+								<option value="1000~2000만원">1000~2000만원</option>
+								<option value="2000~3000만원">2000~3000만원</option>
+								<option value="3000~4000만원">3000~4000만원</option>
+								<option value="4000~5000만원">4000~5000만원</option>
+								<option value="5000~6000만원">5000~6000만원</option>
+								<option value="6000만원 초과">6000만원 초과</option>
+							</select>
+							<!-- <script>
+								$(document).ready(function(){
+									$( ".sliderRange" ).slider({
+										range: true,
+										min: 100,
+										max: 6000,
+										step: 100,
+										values: [ 2000, 4000 ],
+										slide: function( event, ui ) {
+											$("#budget").val(ui.values[ 0 ] + " " + ((ui.values[1]>5800)?" 만원 이상":" ~ " + ui.values[ 1 ] + "만원"));
+										}
+									});
+								});
+							</script>
+							<div class="slider sliderRange sliderOrange"></div> -->
+							
+						</div>
+						<!-- / request detail form -->
+					</div>
+					<div class="clearfix"></div>
+					<!-- nest prev btn box -->
+					<div class="next_step">
+						<a href="javascript:doPrevStep(2);" class="btn btn-default"><i class="fa fa-angle-left"></i><span>이 전</span></a>
+						<a href="javascript:doNextStep(4);" class="btn btn-orange"><span>다 음</span> <i class="fa fa-angle-right"></i></a>
+					</div>
+					<!-- / nest prev btn box -->
+				</div>
+				<!-- /스텝3-->
+
+				<!-- 스텝4 -->
+				<div id="step4" style="display:none;">
+					<div class="request_detail margin-top-50 margin-bottom-30">
+						<div class="slector_box">
+							<div class="rd_ment">
+								<h2 class="question">찜해 놓으신 인테리어가 있나요?</h2>
+								<p>
+									원하시는 인테리어 컨셉을 첨부해 주시면, 더욱 정확한 상담을 받으실 수 있습니다.
+								</p>
+							</div>
+						</div>
+						<!-- / 스텝1 선택지 -->
+					</div>
+					<div class="clearfix"></div>
+
+					<!-- nest prev btn box -->
+					<div class="next_step">
+						<a href="javascript:doPrevStep(3);" class="btn btn-default"><i class="fa fa-angle-left"></i><span>이 전</span></a>
+						<a href="javascript:doNextStep(5);" class="btn btn-orange"><span>이 단계 건너뛰기</span> <i class="fa fa-angle-right"></i></a>
+					</div>
+					<!-- / nest prev btn box -->
+
+					<!-- Slider -->
+					<section class="slider best">
+						<div class="container-fluid">
+							<header class="text-left margin-bottom-10">
+								<h4 class="weight-500 red">나의 찜 리스트</h4>
+							</header>
+
+							<div id="myZzimListDiv">
+								
+									<div class="login_fail">
+										<h4 class="ment">로그인 후 나의 찜 리스트에서 원하는 인테리어 컨셉을 선택해 보세요!</h4>
+										<a href="#" data-toggle="modal" data-target="#login_window" class="btn -3d btn-reveal btn-orange margin-top-30"> <i class="fa fa-unlock-alt"></i> <span>로그인</span> </a>
+									</div>
+								
+							</div>
+						</div>
+					</section>
+					<!-- /Slider -->
+					<!-- Slider -->
+					<section class="slider best">
+						<div class="container-fluid">
+							<header class="text-left margin-bottom-10">
+								<h4 class="weight-500 red">집닥 추천 인테리어</h4>
+							</header>
+							
+							<div class="bx-wrapper" style="max-width: 1030px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><div class="moveSlider" style="width: 1015%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/1063/360x240_20171128143003528_dNEA0k6NKs.jpg" alt="생존이 걸린 문제, 낡은 한옥 바꾸기 19평,내츄럴,화이트,주택,동대문구">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(1063, this);" value="1063">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>9</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=1063">생존이 걸린 문제, 낡은 한옥 바꾸기</a></li>
+										<li class="text-left"><span class="title">서울 동대문구 제기동</span></li>
+										<li class="tag"><span>19평</span><span>주택</span><span>4,500만원</span></li>
+									</ul>
+								</div>
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/1124/360x240_20180109133438320_v88IxHc4Fb.jpg" alt="럭셔리는 생각보다 가까이에 있다 41평,럭셔리,화이트,아파트,양천구">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(1124, this);" value="1124">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>8</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=1124">럭셔리는 생각보다 가까이에 있다</a></li>
+										<li class="text-left"><span class="title">서울 양천구 신정동 신정5차현대아파트</span></li>
+										<li class="tag"><span>41평</span><span>아파트</span><span>6,800만원</span></li>
+									</ul>
+								</div>
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/1123/360x240_20180108190207085_ikYKJkztxG.jpg" alt="당신이 사랑하는 유럽, 
+You Love. 32평,북유럽,아이보리,아파트,대방동">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(1123, this);" value="1123">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>2</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=1123">당신이 사랑하는 유럽, 
+You Love</a></li>
+										<li class="text-left"><span class="title">서울 동작구 대방동 대방1차e-편한세상</span></li>
+										<li class="tag"><span>32평</span><span>아파트</span><span>5,300만원</span></li>
+									</ul>
+								</div>
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/1122/360x240_20180108181007703_r2p8ZMiYHT.jpg" alt="직원을 위해 3억원 들인 금빛 사무실 278평,내츄럴,그레이,사무실,강남구">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(1122, this);" value="1122">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>1</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=1122">직원을 위해 3억원 들인 금빛 사무실</a></li>
+										<li class="text-left"><span class="title">서울 강남구 대치동 해암빌딩</span></li>
+										<li class="tag"><span>278평</span><span>사무실</span><span>33,000만원</span></li>
+									</ul>
+								</div>
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/1095/360x240_20171226151143764_ZJ5YYqWHVL.jpg" alt="새로운 개념의
+청소년성문화센터 170평,모던,브라운,문화센터,파주시">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(1095, this);" value="1095">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>0</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=1095">딱딱한 이미지를 벗고
+편안하게 다가가다</a></li>
+										<li class="text-left"><span class="title">경기 파주시 탄현면 얼음실로40</span></li>
+										<li class="tag"><span>170평</span><span>학원/교육</span><span>45,000만원</span></li>
+									</ul>
+								</div>
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/756/360x240_20170525160636173_yFdfdGVwBz.jpg" alt="식물 소품으로
+느껴지는 아늑한 공간, 54평 아파트 인테리어 54평,모던,화이트,아파트,남양주시">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(756, this);" value="756">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>61</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=756">식물 소품으로
+느껴지는 아늑한 공간, 54평 아파트 인테리어</a></li>
+										<li class="text-left"><span class="title">경기 남양주시 별내동 별내 신일유토빌</span></li>
+										<li class="tag"><span>54평</span><span>아파트</span><span>7,900만원</span></li>
+									</ul>
+								</div>
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/876/360x240_20170821120257504_FfKQS6Fd1U.jpg" alt="어머니라는 존재 53평,모던,화이트,아파트,용인시">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(876, this);" value="876">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>32</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=876">어머니라는 존재</a></li>
+										<li class="text-left"><span class="title">경기 용인시 기흥구 동백동 호수마을상록롯데캐슬</span></li>
+										<li class="tag"><span>53평</span><span>아파트</span><span>4,000만원</span></li>
+									</ul>
+								</div>
+							
+								
+								<div class="slide" style="float: left; list-style: none; position: relative; width: 45px; margin-right: 10px;">
+									
+									<img class="img-responsive" src="//cdn.zipdoc.co.kr/static/product/1104/360x240_20171229152839384_5WTyPrvMiZ.jpg" alt="흰 도화지에 그려진 자연 62평,모던,화이트,아파트,용인시">
+									<!-- </a> -->
+									<input class="list_select estimate_recommend_product" type="checkbox" name="checkbox-inline" onclick="doCheckedRecommendProduct(1104, this);" value="1104">
+									<ul>
+										<li class="text-left wish"><i class="fa fa-paperclip"></i>9</li>
+										<li class="text-left"><a href="/zws/product/detail.do?pid=1104">흰 도화지에 그려진 자연</a></li>
+										<li class="text-left"><span class="title">경기 용인시 수지구 상현동 만현마을8단지두산위브아파트</span></li>
+										<li class="tag"><span>62평</span><span>아파트</span><span>6,500만원</span></li>
+									</ul>
+								</div>
+							
+							</div></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+						</div>
+					</section>
+					<!-- /Slider -->
+
+				</div>
+				<!-- /스텝4 -->
+
+				
+				<!-- 스텝5  -->
+				<div id="step5" class="request_detail margin-top-50 margin-bottom-30" style="display:none;">
+					<div class="slector_box">
+						<div class="rd_ment">
+							<h2 class="question">자세한 내용을 입력해주세요.</h2>
+							<p>
+								견적 신청 후 집닥에서 안내 전화를 드립니다.
+							</p>
+						</div>
+						<div class="rd_notice">
+							<div class="rd_notice_cont">
+								<div class="text_poz">
+									<h2>전화상담시간</h2>
+									<ul>
+										<li>평일, 공휴일 : 10:00 ~ 18:00</li>
+										<li>금요일, 일요일 : 10:00 ~ 17:00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- request detail form -->
+						<div class="rd_form">
+							<input name="estimate.writer" id="writer" required="" type="text" value="" class="form-control small-h" placeholder="이름을 입력하세요." maxlength="30" style="ime-mode:active;">
+							<div class="phone margin-top-10">
+								<select name="tel1" id="tel1" class="form-control select small-h rd-3">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+								<span class="space">-</span>
+								<input type="tel" name="tel2" id="tel2" class="form-control small-h rd-3" maxlength="4" value="">
+								<span class="space">-</span>
+								<input type="tel" name="tel3" id="tel3" class="form-control small-h rd-3" maxlength="4" value="">
+							</div>
+							<select id="space_code" name="space_code" class="form-control select small-h margin-top-10">
+								<option value="-1">평수선택</option>
+								
+									<option value="1">10평 이하</option>
+								
+									<option value="2">10~20평</option>
+								
+									<option value="3">20~30평</option>
+								
+									<option value="4">30~40평</option>
+								
+									<option value="5">40~50평</option>
+								
+									<option value="6">50~60평</option>
+								
+									<option value="7">60평 초과</option>
+								
+							</select>
+							
+							<div class="margin-top-10">
+								<textarea id="comment" name="estimate.comment" maxlength="3000" style="ime-mode:active;" placeholder="요청사항 ::: ex) 32평 아파트 주방교체, 욕실, 장판, 샷시 교체하고 싶어요." class="form-control" required="true" rows="4"></textarea>
+								
+							</div>
+							<!-- 20171219 약관동의 부분 수정 -->
+							<div class="agree">
+								<div class="border-bottom-1 margin-bottom-10 padding-bottom-10">
+									<div class="checks round-type">
+										<input type="checkbox" name="chk" class="required small-h" title="약관 동의" id="agreement_all">
+										<label for="agreement_all">아래 약관에 모두 동의합니다.</label>
+									</div>
+								</div>
+								<div class="checks round-type margin-top-10">
+									<input type="checkbox" name="estimate.agreement_yn" class="required small-h" title="약관 동의" id="agreement_yn" value="1">
+									<label for="agreement_yn">(필수) 개인정보처리방침에 동의합니다.</label>
+									<a onclick="window.open('/zws/html/estimate_register_private_info.jsp','name', 'top=10,left=10,width=500,height=400,resizable=1,status=0,scrollbars=1,menubar=0').focus()" class="col_point">상세보기 &gt;</a>
+								</div>
+								<div class="checks round-type margin-top-10">
+									<input type="checkbox" name="estimate.agreement_third" class="required small-h" title="약관 동의" id="agreement_third" value="1">
+									<label for="agreement_third">(필수) 제 3자 제공에 동의합니다. </label>
+									<a onclick="window.open('/zws/partner/thirdParty.do','name', 'top=10,left=10,width=500,height=400,resizable=1,status=0,scrollbars=1,menubar=0').focus()" class="col_point">상세보기 &gt;</a>
+								</div>
+								<div class="checks round-type margin-top-10">
+									<input type="checkbox" name="estimate.agreement_marketing" class="required small-h" title="약관 동의" id="agreement_marketing" value="1">
+									<label for="agreement_marketing">(선택) 인테리어 정보 및 이벤트 알림 수신에 동의합니다.</label>
+									<a onclick="window.open('/zws/html/event_zipdoc.jsp','name', 'top=10,left=10,width=500,height=400,resizable=1,status=0,scrollbars=1,menubar=0').focus()" class="col_point">상세보기 &gt;</a>
+								</div>
+							</div>
+							<!-- /20171219 약관동의 부분 수정 -->
+							<div class="captcha margin-top-10">
+								<div id="grecaptcha2"></div>
+							</div>
+						</div>
+						<!-- / request detail form -->
+					</div>
+
+					<!-- / 스텝1 선택지 -->
+					<div class="behind_contract">
+						<picture>
+							<!--[if IE 9]><video style="display: none;"><![endif]-->
+							<source media="(min-width: 480px &amp; max-width: 768px)" srcset="//d5yrt3m079rz1.cloudfront.net/zws/assets/images/zipdoc/behind_contract_tab.png">
+							<source media="(max-width: 479px)" srcset="//d5yrt3m079rz1.cloudfront.net/zws/assets/images/zipdoc/behind_contract_mov.png">
+							<!--[if IE 9]></video><![endif]-->
+							<img src="//d5yrt3m079rz1.cloudfront.net/zws/assets/images/zipdoc/behind_contract_web.png" srcset="//d5yrt3m079rz1.cloudfront.net/zws/assets/images/zipdoc/behind_contract_web.png" alt="...">
+						</picture>
+					</div>
+
+
+
+
+					<div class="clearfix"></div>
+
+					<!-- nest prev btn box -->
+					<div class="next_step">
+						<button type="button" onclick="doPrevStep(4);" class="btn btn-default" style="width:40%;"><i class="fa fa-angle-left"></i><span>이 전</span></button>
+						<button type="button" onclick="doEstimateCreate();" id="btn_create_estimate" class="btn btn-orange" style="width:40%;"><span>견적 신청하기</span> <i class="fa fa-check"></i></button>
+						
+					</div>
+					<!-- / nest prev btn box -->
+				</div>
+				<!-- /스텝5-->
+				<!-- /스텝 완료-->
+				</form>
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+</body>
+</html>
