@@ -22,6 +22,9 @@ body{
 h1{
 	margin:0px;
 }
+h1>ul>li{
+	text-align: center;
+}
 ul{
 	padding: 0px;
 	margin:0px;
@@ -57,12 +60,12 @@ section{
   display: inline-block;
 	}
 	
-	.hor-menu > h1{
+.hor-menu > h1{
   display: none;
 	}
   
-	.hor-menu>ul {
-  overflow: auto;
+.hor-menu>ul {
+  overflow: auto; 
 	}
   .hor-menu>ul>li{
   float: left;
@@ -95,19 +98,18 @@ section{
 	display: center;
 }
 /*------main-menu style--*/
-	.main-menu{
+.main-menu{
   font-family :"맑은고딕", "고딕", "sans-serif";
   font-size: 15px;
   font-weight: bold;	
   color:#000000;
-	}
-	
-	.main-menu>ul>li{
-  padding-left: 24px;
+}
+.main-menu>ul>li{
+  text-align:center;
+  padding-left: 70px;
   background: no-repeat 13px center;
-  font-size: 24px;
+  font-size: 23px;
   }
-	
 /*----------------------------------------------------------------------------------*/
 
 
@@ -144,15 +146,12 @@ section{
 #aside{
 	min-height:inherit;
 	min-width:205px;
-	-- float:left; --
 	background: no-repeat left top;
 }
 
 #main{
 	min-height:inherit; /* --상위 엘리먼트의 속성값을 그대로 물려받아 적용-- */
 	min-width:755px;
-	/* -- float:left; --
-	-- padding-left:35px; -- */
 	padding:45px 0px 40px 35px; /* --padding을 주면 박스가 늘어남. 그래서 box-sizing: border-box; 사용-- */
 	box-sizing: border-box;
 }
@@ -162,6 +161,7 @@ section{
 	height:100px;
 	background: no-repeat left top;
 }
+
  
 .clear-fix::after{
 	content:"안뇽하세요?";
@@ -175,7 +175,10 @@ section{
 }
 .distance{
 	display: inline;
+	margin:10px;
+	border-bottom: 3px solid red;
 }
+
 .height{
 	height:25px;
 }
