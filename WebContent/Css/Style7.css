@@ -46,6 +46,15 @@ a{
 	color: inherit; 
 }
 
+table,th,td{
+	border:1px solid black;
+	border-collapse : collapse;
+}
+
+th,td{
+	padding:15px;
+}
+
 /* ─────방 만들기───── */
 
 
