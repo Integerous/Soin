@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+/* 첫 번째 방
+-height / min-height
+-reset : body(margin 을 리셋)
+두 번째 방
+-height / min-height : 100%, inherit
+-박스를 정렬 : width:고정 -> margin-left/right/center
+-margin / padding / border
+-DevTool(F12) 
+-세 번째 방
+-floating, clear-fix
+
+
+*/
+
+
+/*-- --------reset-------------------- --*/
+body{
+	margin:0px;
+}
+h1{
+	margin:0px;
+}
+h1>ul>li{
+	text-align: center;
+}
+ul{
+	padding: 0px;
+	margin:0px;
+}
+li{
+	display: block;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
+img{
+	height:80px;
+	width:50px;
+	background: no-repeat center;
+	display:inline-block;
+}
+input{
+	display: inline-block;
+}
+section{
+	display: inline-block;
+}
+
+/*------------------------------abstract--------------------*/
+
+
+/*-------------------component--------------------------------*/
+
+
+/*-------------------------------------------------*/
+.hor-menu{
+  display: inline-block;
+	}
+	
+.hor-menu > h1{
+  display: none;
+	}
+  
+.hor-menu>ul {
+  overflow: auto; 
+	}
+  .hor-menu>ul>li{
+  float: left;
+  }
+  .hor-menu.fitst-pad-none>ul>li:first-child { /* and */
+  padding-left: 0px;
+  background: none;
+  }
+  
+/*------------------------------*/
+	
+	.member-menu{
+  font-family :"맑은고딕", "고딕", "sans-serif";
+  font-size: 15px;
+  font-weight: bold;	
+	}
+  .member-menu>ul>li{
+  padding-left: 20px;
+  }
+
+
+/*----------------------------*/
+#header{
+	height : 100px;
+}
+#logo{
+	background: no-repeat 4px center;
+	width:30px;
+	height:30px;
+	display: center;
+}
+/*------main-menu style--*/
+.main-menu{
+  font-family :"맑은고딕", "고딕", "sans-serif";
+  font-size: 15px;
+  font-weight: bold;	
+  color:#000000;
+}
+.main-menu>ul>li{
+  text-align:center;
+  padding-left: 70px;
+  background: no-repeat 13px center;
+  font-size: 23px;
+  }
+/*----------------------------------------------------------------------------------*/
+
+
+/*-------------visual--------------------------------------*/
+#visual{
+	height : 170px;
+	border-top:3px solid #8CBA34; /* --뒤에있는 아이를 기준으로 줌--
+	-- background :#313131 no-repeat center;  -- */
+}
+/*----------------visual----------------------*/
+#body{
+	min-height : 300px;  /* --물려받은 높이 없음-- */
+	border-top:5px solid #8CBA34;
+	margin-top:1px;
+}
+#footer{
+	height : 100px;
+	background :#313131;
+}
+.root-container{
+	height:100%;
+	min-height:inherit;
+	width : 960px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#body> .root-container{
+	display:flex;
+	flex-direction: row;
+	background: repeat-y center;
+}
+	
+#aside{
+	min-height:inherit;
+	min-width:205px;
+	background: no-repeat left top;
+}
+
+#main{
+	min-height:inherit; /* --상위 엘리먼트의 속성값을 그대로 물려받아 적용-- */
+	min-width:755px;
+	padding:45px 0px 40px 35px; /* --padding을 주면 박스가 늘어남. 그래서 box-sizing: border-box; 사용-- */
+	box-sizing: border-box;
+}
+
+ #main > section > h1{
+	width:100px;
+	height:100px;
+	background: no-repeat left top;
+}
+
+ 
+.clear-fix::after{
+	content:"안뇽하세요?";
+	display:block;
+	clear:both;
+	height:0px;
+	overflow:hidden; /* --넘친것들 숨김-- */
+}
+.enterprise-list{
+	display: inline-block;
+}
+.distance{
+	display: inline;
+	margin:10px;
+	border-bottom: 3px solid red;
+}
+
+.height{
+	height:25px;
+}
+
+
+
+
+
+
+
