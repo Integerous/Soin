@@ -6,6 +6,7 @@ body{
 	padding: 0px;
 	font-family: "맑은 고딕", "고딕", sans-serif;
 	font-weight: bold;
+	font-size: 25px;
 }
 
 ul{
@@ -25,8 +26,11 @@ a{
 	text-decoration: inherit;
 	color: inherit;
 }
+
+
 /*--------------------------------Abstract------------------------------*/
 .root-container{
+	height: 100%;
 	min-height: inherit;
 	width : 960px;
 	margin-left: auto;
@@ -40,8 +44,10 @@ a{
 	background: #b0c4de;
 }
 
+
+/*--------------------------------member-menu------------------------------*/
 .member-menu{
-	border-bottom: 5px solid blue;
+	border-bottom: 5px solid #add8e6;
 	height: 55px;
 	overflow: auto;
 }
@@ -52,7 +58,8 @@ a{
 
 .member-menu-box{
 	float: right;
-	padding: 5px;
+	padding-top: 15px;
+	padding-right: 15px;
 }
 
 .member-menu-box > ul > li{
@@ -67,6 +74,73 @@ a{
 	background: none;
 }
 
+.member-menu-box > ul > li:hover{
+	color: blue;
+}
+
+
+/*--------------------------------logo------------------------------*/
+#logo{
+	float: left;
+	width: 90px;
+	height: 90px;
+}
+
+#logo > .images{
+	width: 90px;
+	height: 90px;
+}
+
+
+/*--------------------------------공백------------------------------*/
+.null{
+	width:5px;
+	height:90px;
+	float: left;
+	background: #ffcec8;
+}
+
+
+/*--------------------------------main-menu------------------------------*/
+.main-menu{
+	height: 90px;
+	padding-top: 25px;
+	overflow: auto;
+	font-size : 25px;
+	background: #ffcec8;
+}
+
+.main-menu > h1{
+	display: none;
+}
+
+.main-menu > ul{
+	text-align: center;	
+}
+
+.main-menu > ul > li{
+	float: left;
+	width : 19%;		/* width : 155px */
+	height: 35px;
+	display: inline-block;
+}
+
+.main-menu > ul > li:first-child{
+	padding-left: 15px;
+}
+
+.main-menu > ul > li:last-child{
+	padding-right: 20px;
+}
+
+.main-menu > ul > li:hover{
+	color: blue;
+	background: #add8e6;
+}
+/*--------------------------------header End------------------------------*/
+/*--------------------------------header End------------------------------*/
+
+
 /*--------------------------------main------------------------------*/
 
 #main{
@@ -79,5 +153,43 @@ a{
 #footer{
 	width: 100%;
 	height: 210px;
-	background: #add8e6;
+	background: #313131;
+	font-size: 15px;
+	padding-top: 45px;
+	color: #979797;
+}
+
+#footer > h1{
+	display: none;
+}
+
+.left-footer{
+	padding-left: 15px;
+	width: 43%;
+	height: inherit;
+	float: left;
+	overflow: auto;
+}
+
+.right-footer{
+	width: 43%;
+	height: inherit;
+	overflow: auto;
+	float: left;
+}
+
+#footer-logo{
+	width: 75px;
+	height: 75px;
+}
+
+.footer-images{
+	width:75px;
+	height: 75px;
+	float: left;
+}
+
+.copyright{
+	margin-top: 90px;
+
 }
