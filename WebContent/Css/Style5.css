@@ -76,6 +76,7 @@ a{
 
 .member-menu-box > ul > li:hover{
 	color: blue;
+	text-decoration: underline;
 }
 
 
@@ -86,11 +87,16 @@ a{
 	height: 90px;
 }
 
+.images {
+	
+	}
 #logo > .images{
 	width: 90px;
 	height: 90px;
 }
 
+/*--------------------------------logo End------------------------------*/
+/*--------------------------------logo End------------------------------*/
 
 /*--------------------------------공백------------------------------*/
 .null{
@@ -100,6 +106,8 @@ a{
 	background: #ffcec8;
 }
 
+/*--------------------------------공백 End------------------------------*/
+/*--------------------------------공백 End------------------------------*/
 
 /*--------------------------------main-menu------------------------------*/
 .main-menu{
@@ -136,6 +144,7 @@ a{
 .main-menu > ul > li:hover{
 	color: blue;
 	background: #add8e6;
+	text-decoration: underline;
 }
 /*--------------------------------header End------------------------------*/
 /*--------------------------------header End------------------------------*/
@@ -147,6 +156,38 @@ a{
 	width: 100%;
 	min-height: 850px;
 	background: #b0e0e6;
+}
+
+#main > .root-container > h1{
+	display: none;
+}
+
+.main-box{
+	height: 200px;
+}
+
+/* .rootcontainer > main-box:first-child{
+	padding-top: 100px;
+} */
+
+.img-box{
+	width: 35%;
+	height: 200px;
+	background: red;
+	float:left;
+	overflow: hidden;
+}
+
+.text-box{
+	width: 65%;
+	height: 200px;
+	background: blue;
+	overflow: hidden;
+}
+
+.img-box > .images{
+	width: 100%;
+	height: 200px;
 }
 /*--------------------------------main End------------------------------*/
 /*--------------------------------main End------------------------------*/
