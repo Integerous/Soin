@@ -1,44 +1,23 @@
-@charset "UTF-8";
+@charset "utf-8";
 
-/* ─────초기화───── */
+/* reset------------------------------------------------------ */
+
 body{
-	margin :0px;
-	background-color: #ffffff;
-}
-
-header{
-	
-}
-
-nav{
-	margin-top: 20px;
-	padding : 10px;
-	border-top : 1px solid #B0C4DE;
-	border-bottom : 1px sloid #B0C4DE;
-	
-}
-
-main{
-	
-	
-}
-
-footer{
-	
-}
-
-h1{
-	margin :0px;
+	margin :0px;	
 }
 
 li{
-	margin :0px;
+	margin :10px;
 	display: block;
 }
 
 ul{
 	margin :0px;
-	padding: 0px;	
+	padding: 0px;
+}
+
+h1{
+	margin :0px;
 }
 
 a{
@@ -46,25 +25,39 @@ a{
 	color: inherit; 
 }
 
-table,th,td{
-	border:1px solid black;
-	border-collapse : collapse;
+input{
+	
 }
 
-th,td{
-	padding:15px;
+/* base style----------------------------------------------------- */
+body{
+	color:#979797;
+	font-family:돋움,Arial,sans-serif;
+	font-size:11px;
 }
 
-/* ─────방 만들기───── */
+a:hover{
+	text-decoration:underline;
+}
 
+.hidden{
+	display:none;
+}
 
-/* ──────버튼────── */
-.btn-txt,
-.txt-button{
-	background: #759d2a;
+.color-warning,
+.color-notice{
+	color:#ff6a00;
+}
 
+.color-highlight{
+	color:#8cba34;
+}
+
+/* component(자주 사용하는 가구들)--------------------------------- */
+.btn,	
+.button{	
 	min-width: 71px;
-	color: #87CEFA;
+	color: #ffffff;
 	display: inline-block;
 	text-align:center;
 	padding : 3px 8px;
@@ -72,40 +65,181 @@ th,td{
 	
 	/* input override */
 	border : 0px;
+	cursor: pointer;
 }
 
-.btn-img,
-.img-button{
+/* 마우스 올라갔을때 변경 --------------------------------- */
+.btn-text:hover,
+.text-button:hover{
+	color:#0080c0;
+	background: #dedede;
+}
+
+
+.btn-default,
+.default-button{
+	background: #759d2a;
+}
+
+.btn-img{
 	border-radius: 0px;
 	text-indent: -999px;
 	overflow: hidden;
+	background:none;
 	
-	min-width: 71px;
-	color: #87CEFA;
-	display: inline-block;
-	text-align:center;
-	padding : 3px 8px;
-	border-radius: 4px;
+}
+
+.btn-search,
+.search-button{
+	background: url("../images/btn-zoom.png") no-repeat center;
+	min-width :31px;
+	height : 25px;	
+}
+
+.warning-button{
 	
-	/* input override */
-	border : 0px;
 }
 
 .btn-cancel,
 .cancel-button{
 	background: #000000;
 }
-
-.btn-search,
-.search-button{
-	background: url("") no-repeat center;
-	min-width :31px;
-	height : 25px;
+/* ----------------------------------------------------------------------- */
+.hor-menu{
+	display : inline-block;'
 }
 
-.btn-menu,
-.menu-button{
-	min-width: 100px;
-	background: #EEE8AA;
+	.hor-menu>h1{
+		display : none;
+		
+	}
+	
+	.hor-menu>ul{
+		overflow: auto;		
+	}
+	
+		.hor-menu>ul>li{
+			float:left; 
+		}
+	
+			.hor-menu.first-pad-none>ul>li:first-child{
+				padding-left : 0px ;
+				background : none ;
+			}
+
+/* ----------------------------------------------------------------------- */
+.title{
+	font-family:"맑은고딕","고딕",sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	color: #646464;
+	padding-left:25px;
+	background: url("../images/icon-main-title.png") no-repeat left center;
 }
+	#main>section>h1,
+	.main-title{
+		font-family:"맑은고딕","고딕",sans-serif;
+		font-size: 21px;
+		font-weight: bold;
+		color: #646464;
+		padding-left:25px;
+		background: url("../images/icon-main-title.png") no-repeat left center;
+	}
+
+.title{
+	
+}	
+
+
+/* body---------------------------------------------------------------- */
+
+#body{
+	min-height: 500px;
+	border-top :5px ;
+	margin-top: 1px;
+}
+
+#body>.root-container{
+	display: flex;
+	flex-direction: row;
+	background: url("../images/bg-body.png") repeat-y center;
+	background-attachment: local;
+}
+
+.root-container{
+	height: 100%;
+	min-height:inherit;
+	/* height: inherit; */
+	width:960px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* header--------------------------------------------------------------- */
+#header{
+	height: 70px;	
+}
+
+.member-menu{
+	font-family:"맑은고딕","고딕",sans-serif;
+	font-size:10px;
+	font-weight: 20px;
+}
+#logo{
+	width: 90px;
+	height: 90px;
+}
+
+#logo > .images{
+	width: 90px;
+	height: 90px;
+}
+
+	.member-menu>ul>li{
+		float:right;	
+	}
+	
+/* navigation---------------------------------------------------------- */	
+#nav{
+	height: 50px;
+	background:	#B0E0E6;	
+}
+
+.main-menu{
+	font-family:"맑은고딕","고딕",sans-serif;
+	font-size:15px;
+	font-weight:bold;
+}		
+
+	.main-menu>ul>li{
+		width: 150px;
+		text-align: center;	
+		float:left;
+	}
+
+
+/* main--------------------------------------------------------------- */
+
+#main{
+	min-height: inherit;
+	min-width:755px;
+	padding : 45px 45px 45px 35px;
+	box-sizing: border-box; 
+}
+
+/* foot--------------------------------------------------------------- */
+#footer{
+	height: 100px;
+	background: #313131;
+}
+
+.clear-fix::after{
+	content : "안녕";
+	display : block;
+	clear : both;
+	height : 0px;
+	overflow : hidden; 
+}
+
 
