@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상세 견적요청 - 소규모 인테리어 시공 중개 플랫폼 소인</title>
+<link href="../../Css/Style4.css" type="text/css" rel="stylesheet"/>
+
+</head>
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">소인소개</a></li>
+				<li><a href="#">소인소개</a></li>
+				<li><a href="#">소인소개</a></li>
+				<li><a href="#">소인소개</a></li>
+				<li><a href="#">소인소개</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section>
+		<article>
+		
+			<fieldset>
+				<legend>검색</legend>
+					<input type="search">
+					<input type="submit" value="검색">
+			</fieldset>
+	
+			<fieldset>
+				<legend>실측 사이즈</legend>
+					<b>창틀 가로길이 : </b><input type="number" min="1" max="5" value="">cm
+					<b>창틀 세로길이 : </b><input type="number" min="1" max="5" value="">cm
+			</fieldset>
+	
+	
+			<fieldset>
+				<legend>견적요청 카테고리</legend>
+					<p> 시공이 필요한 카테고리를 선택하세요(복수선택 가능) </p>
+						<label><input type="checkbox" name="category1" value="window">창문</label>
+						<label><input type="checkbox" name="category2" value="door">문</label>
+						<label><input type="checkbox" name="category3" value="bathroom">욕실</label>
+						<label><input type="checkbox" name="category4" value="wall">벽</label>		
+				</fieldset>
+	
+			<fieldset>
+				<legend>상세 카테고리 선택</legend>
+					<label class="reg" for="2category">상세 카테고리</label>
+						<select id="2category">
+							<option>하이 샷시</option>
+							<option>알루미늄 창</option>
+							<option>목재 창</option>
+							<option>기타</option>
+						</select>
+			</fieldset>	
+	
+			<fieldset>
+				<legend>색상 선택</legend>
+					<p> 원하시는 색상과 유사한 색상을 선택해주세요.</p>
+				<label>선호색상 <input type="color" value="#00ff00"></label>
+			</fieldset>
+	
+			<fieldset>
+				<legend>희망 시공일 선택</legend>
+					<label><input type="date" id="start"></label>
+					<label><input type="date" id="end"></label>
+			</fieldset>
+	
+			<fieldset>
+				<legend>상세 요청사항</legend>
+				<textarea name="request" cols="30" rows="5">
+				</textarea>
+				<button type="submit">보내기</button>
+			</fieldset>
+			
+
+			<fieldset>
+				<legend>사진 올리기</legend>
+				<ul>
+					<li>
+						<label for="photo"> 사진제목</label>
+						<input type="text" id="photo">
+					</li>
+					<li>
+						<label for="name"> 작성자 </label>
+						<input type="text" id="name">
+					</li>
+				</ul>
+			</fieldset>
+		
+		</article>
+	
+	</section>
+	
+	<footer>
+		<p> Copyright 2018 SoinProject</p>
+	</footer>
+	
+	
+	
+	<!------------------ 연습 ------------------->
+	
+	
+	
+	
+</body>
+</html>
