@@ -3,25 +3,52 @@
 
 /* ----------RESET----------- */
 
-/* * {
-	margin: 0;
-	padding: 0;
-} */
+a{
+	text-decoration: none;
+}
 
-body {
-	background: #fff;
-	margin: 0px;
-}
-li{
-	display: block;
-}
+
+
 
 /* ----------BASE STYLE----------- */
+#grid{
+	height: 100%;
+	display: grid;
+	
+	grid-gap: 3px;
+	grid-template-columns : repeat(12,1fr);
+	grid-template-rows : 30px 100px auto 100px;
+	grid-template-areas:
+	"b b b b b b b b b b b b"
+	". . l l n n n n n n n n"
+	"e e e e e e e e e e e e"
+	"f f f f f f f f f f f f"
+}
 
+#topbar{
+	/* grid-column: 1/-1; */
+	grid-area: b;
+}
 
+#toplogo{
+	/* grid-row: 1/2; */
+	grid-area: l;
+}
 
+#topnav{
+	/* grid-column: 2/-1; */
+	grid-area: n;
+}
 
+#est-request{
+	/* grid-column: 1/-1; */
+	grid-area: e;
+}
 
+footer{
+	/* grid-column: 1/-1; */
+	grid-area: f;
+}
 /* ----------COMPONENT----------- */
 
 
@@ -29,76 +56,91 @@ li{
 
 
 /* ----------HEADER----------- */
-
-.main-menu{
-	display: flex;
-	display: -webkit-flex;
-	-webkit-align-items: center;
-			align-items: center;
-	-webkit-justify-content: center;
-			justify-content: center;
-}
-
-.main-menu > ul {
-	overflow: auto;
-}
-
-.main-menu > ul > li {
-	float: left;
-	padding-left: 24px;
-}
-
 header{
 	/* position: fixed; */
+	
+}
+
+
+#topbar{
+	display: flex;
+			justify-content: center;
+			align-items: center;
+	background: #fff;
+	height: 30px;
+/* 	line-height: 1.2; */
+}
+
+
+.container{
+	display: flex;
+			justify-content: flex-end;
+			align-items: center;
+	height: 30px;
+	width: 60%;
+}
+
+.container > div > a {
+	font-size: 12px;
+	color:#1da1f2;
+	padding: 0px 10px;
+	font-weight: bold;
+}
+
+
+#topnav{
+	display: flex;
+/* 			align-items: baseline; */
+			justify-content: center;
 	width: 100%;
-	height: 120px;
-	display: inline-block;
+	height: 100px;
 	background: #1da1f2;
 }
 
 
-/* ----------CONTENT---------- */
-
-/* #container{
+.main-menu{
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;	
-} */
+			align-items: center ;
+			justify-content: center;
+}
+
+.main-menu > div {
+	padding: 20px;
+}
+
+
+
+/* ----------MAIN---------- */
+main{
+	display: flex;
+			justify-content: center;
+}
 
 #est-request{
+	display: center;
+			justify-content: center;
 	max-width: 700px;
-	margin: 0 auto;
+
 	padding: 20px;
 	border: solid blue 5px;
 	background: #b3b3b3;
 }
 
-
-
-
-
-
-/* .content{
-	float: center;
-	width: 62.5%;
-	height: 400px;
-	padding: 1.5625%;
-	background-color: #ffd800;
+.content{
+	
+/* 	display: grid;
+	grid-template-columns : repeat(3,1fr);
+	grid-template-rows : 130px auto 130px;
+	grid-gap: 3px;
+	grid-column-start: 1;
+	grid-column-end: 3;  */
 }
 
-.right-side{
-	float: right;
-	width: 31.25%;
-	height: 400px;
-	padding: 1.5625%;
-	background-color: #00ff90;
-} */
 
 /* ----------FOOTER----------- */
 
 footer{
-	position: fixed;
+	/* position: fixed; */
 	clear: both;
 	width: 100%;
 	height: 120px;
