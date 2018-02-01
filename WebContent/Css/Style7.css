@@ -1,44 +1,24 @@
-@charset "UTF-8";
+@charset "utf-8";
 
-/* ─────초기화───── */
+/* reset------------------------------------------------------ */
+
 body{
-	margin :0px;
-	background-color: #ffffff;
-}
-
-header{
-	
-}
-
-nav{
-	margin-top: 20px;
-	padding : 10px;
-	border-top : 1px solid #B0C4DE;
-	border-bottom : 1px sloid #B0C4DE;
-	
-}
-
-main{
-	
-	
-}
-
-footer{
-	
-}
-
-h1{
-	margin :0px;
+	margin :0px;	
 }
 
 li{
-	margin :0px;
+	margin :10px;
 	display: block;
 }
 
 ul{
 	margin :0px;
-	padding: 0px;	
+	padding: 0px;
+}
+
+h1{
+	margin :0px;
+	color: #B0C4DE;
 }
 
 a{
@@ -46,66 +26,160 @@ a{
 	color: inherit; 
 }
 
-table,th,td{
-	border:1px solid black;
-	border-collapse : collapse;
+input{
+	
 }
 
-th,td{
-	padding:15px;
+/* base style----------------------------------------------------- */
+body{
+	color:#979797;
+	font-family:나눔고딕,고딕,sans-serif;
+	font-size:11px;
 }
 
-/* ─────방 만들기───── */
+a:hover{
+	text-decoration:none;
+	color: #696969;
+}
+
+.hidden{
+	display:none;
+}
+
+.color-warning,
+.color-notice{
+	color:#ff6a00;
+}
+
+.color-highlight{
+	color:#8cba34;
+}
 
 
-/* ──────버튼────── */
-.btn-txt,
-.txt-button{
-	background: #759d2a;
+/* header--------------------------------------------------------------- */
 
-	min-width: 71px;
-	color: #87CEFA;
+#header{
+	height: 135px;
+}
+
+.member-menu{
+	font-family:"맑은고딕","고딕",sans-serif;
+	font-size:10px;
+	font-weight: 20px;
+}
+
+	.member-menu>ul>li{
+		float:right;	
+	}	
+	
+.logo{	
+	display:tabel;
+	margin-left: 45%;
+}
+	
+	.logo>img{
+		display: tabel-cell;
+		width:124px;
+		height:125px;
+		text-align: center;
+		vertical-align: middle;
+	}	
+	
+	
+/* navigation---------------------------------------------------------- */	
+#nav{
+	height: 40px;
+	background:	#ffffff;
+	border-top :3px solid #a1c4fd;
+	border-bottom :3px solid #c2e9fb;
+}
+
+.main-menu{
+	font-family:"나눔고딕","고딕",sans-serif;
+	font-size:13px ;
+	font-weight: bold;
+}	
+
+	.main-menu>ul>li{
+		width: 150px;
+		text-align: center;	
+		float:left;
+		color: #B0C4DE;
+	}
+	
+	.main-menu>ul>li>a:hover{
+		text-decoration:none;
+		color: #4682B4;
+	}
+
+
+/* main--------------------------------------------------------------- */
+
+#body{
+	min-height: 500px;
+}
+
+#main{
+	min-height: inherit;
+	min-width:300px;
+	 padding : 50px 50px;
+	box-sizing: border-box; 
+	
+}
+
+.root-container{
+	height: 100%;
+	min-height:inherit;
+	height: inherit;
+	width:860px;
+	margin-top:auto;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.box-menu{
+	
+}
+
+/* foot--------------------------------------------------------------- */
+#footer{
+	min-height: 100px;
+	background: #eef1f5;
+}
+
+
+/* 버튼--------------------------------------------------------------- */
+
+.button{	
+	min-width: 50px;
+	min-height:50px;
+	color: #000000;
 	display: inline-block;
 	text-align:center;
-	padding : 3px 8px;
-	border-radius: 4px;
-	
-	/* input override */
-	border : 0px;
+	padding : 8px 8px;
+	border-radius: 10px;
+	cursor: pointer;
+	background: #ffffff;
+	border :3px solid #a1c4fd;
 }
 
-.btn-img,
-.img-button{
-	border-radius: 0px;
-	text-indent: -999px;
-	overflow: hidden;
-	
-	min-width: 71px;
-	color: #87CEFA;
-	display: inline-block;
-	text-align:center;
-	padding : 3px 8px;
-	border-radius: 4px;
-	
-	/* input override */
-	border : 0px;
-}
-
-.btn-cancel,
-.cancel-button{
-	background: #000000;
-}
-
-.btn-search,
-.search-button{
-	background: url("") no-repeat center;
-	min-width :31px;
-	height : 25px;
-}
-
-.btn-menu,
 .menu-button{
+	margin-right: 50px;
 	min-width: 100px;
-	background: #EEE8AA;
+	min-height:50px;
+	line-height:80px;
+	color: #B0C4DE;
+	font-size: 18px;
+	font-family:"나눔고딕","고딕",sans-serif;
+	font-weight: bold;
+	
 }
 
+.text-button{
+	
+}
+
+.text-button:hover{
+	color:#0080c0;
+	background: #dedede;
+}
