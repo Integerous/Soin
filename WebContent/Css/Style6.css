@@ -144,6 +144,7 @@ section{
 	height : 130px;
 	background :#313131;
 	padding : 35px;
+	color:white;
 }
 .root-container{
 	height:100%;
@@ -196,10 +197,6 @@ section{
 
 .height{
 	height:25px;
-}
-
-.color-footer{
-	color:white;
 }
 
 .head-menu{
