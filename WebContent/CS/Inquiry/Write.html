@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 	<meta name = "author" content="Nhyeonyeong" >
-	<meta name = "description" content="고객센터_FAQ">
+	<meta name = "description" content="고객센터_1:1">
 	<meta name="keywords" content="인테리어,리모델링,집수리,셀프인테리어,소규모인테리어,인테리어중개,벽지,문,창문,욕조,소인,SOIN,soin">
 	<title>소인-소규모 인테리어 중개 플랫폼</title>
 	
@@ -11,11 +11,11 @@
 	<style type="text/css">		</style>
 </head>
 
-<body id="body">
+<body>
 	<!-- ------------------------HEADER------------------------ -->
-	<header id="header">
-		<div class="root-container">			
-			<div class="member-menu">
+	<header>
+		<div>			
+			<div id="member-menu">
 				<h1 class="hidden">회원메뉴</h1>
 				<ul>
 					<li><a href="">로그인</a></li>
@@ -31,11 +31,11 @@
 		</div>
 	</header>
 	<!-- ------------------------NAVIGATION-------------------- -->
-	<nav id="nav">
-		<div class="root-container">		
-			<div class="main-menu">
+	<nav>
+		<div>		
+			<div id="main-menu">
 				<h1 class="hidden">메인메뉴</h1>
-				<ul>
+				<ul class="flex">
 					<li><a href="">소인소개</a></li>
 					<li><a href="">업체소개</a></li>
 					<li><a href="">견적요청</a></li>
@@ -45,47 +45,48 @@
 			</div>
 		</div>
 	</nav>
-	<!-- -------------------------MAIN------------------------- -->	
-	<div id="body">
-		<div class="root-container">
-			<main id="main">
-				<div class="box-menu">
-					<a class="button menu-button text-button" href="" >자주하는질문</a>
-					<a class="button menu-button text-button" href="">1:1문의</a>
-					<a class="button menu-button text-button" href="">공지사항</a>				
+	<!-- -------------------------BODY------------------------- -->	
+	<div class="flex">
+		<div>
+			<main class = "main-box">
+				<div class="box-menu flex">
+					<a class="button menu-button" href="" >자주하는질문</a>
+					<a class="button menu-button" href="">1:1문의</a>
+					<a class="button menu-button" href="">공지사항</a>				
 				</div>			
 			
 				<div>
-					<h1 class="title"> 1:1 문의 </h1>
+					<h1 class="content-title">┃ 1:1 문의 </h1>
 				</div>
 				
-				<div>
+				<div class="flex">
 					<h3 class="hidden">1:1 문의 폼</h3>
 					
-					<fieldset>
+					<fieldset class="form">
 						<ul>
 							<li>
-								<label for="email">이메일</label>
+								<label class="label-title" for="email">이메일</label>
 								<input type="text" id="email">
 							</li>
 							<li>
-								<label for="problem">문제유형</label>
+								<label class="label-title" for="problem">문제유형</label>
 								<label><input type="radio" id="problem">소인 홈페이지</label>
 								<label><input type="radio" id="problem">견적 의뢰</label>
 							</li>
 							<li>
-								<label for="title">제목</label>
+								<label class="label-title" for="title">제목</label>
 								<input type="text" id="title">
 							</li>
 							<li>
-								<label for="cont">내용</label>
+								<label class="label-title" for="cont">내용</label>
 								<textarea name="cont" rows="5" cols="60"></textarea>
 							</li>
 							<li>
-								<label for="file">파일첨부</label>
+								<label class="label-title" for="file">파일첨부</label>
 								<input type="file" id="file">
 							</li>
 						</ul>
+						<a class="button text-button"href="">해결 요청하기</a>
 					</fieldset>
 				</div>
 			 </main>
@@ -93,8 +94,8 @@
 	 </div>
 	 
 	 <!-- -----------------------FOOTER----------------------- -->
-	 <footer id="footer">
-	 	<section class="root-container">
+	 <footer>
+	 	<section >
 	 		<br>
 			<p>소인_소규모 인테리어 중개 플랫폼<br>
 				사업자등록번호: 12122-1212-12 | 대표: 한정수 <br>
