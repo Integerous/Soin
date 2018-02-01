@@ -96,4 +96,6 @@
   
  .menu-main > ul > li{
 	padding: 4px 32px 4px 32px;
+ 	
+	background:url( "../../../Images/ic_accessibility_black_24dp_2x.png") no-repeat 4px center; ; 
  }
