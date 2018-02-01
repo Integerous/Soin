@@ -40,7 +40,9 @@ img{
 	width:100px;
 	background: no-repeat center;
 	display:inline-block;
+	
 }
+
 input{
 	display: inline-block;
 }
@@ -96,9 +98,10 @@ section{
 	
 	.member-menu{
   font-family :"맑은고딕", "고딕", "sans-serif";
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;	
 	}
+	
   .member-menu>ul>li{
   padding-left: 20px;
   }
@@ -106,13 +109,13 @@ section{
 
 /*----------------------------*/
 #header{
-	height : 100px;
+	height : 180px;
 	border-bottom:5px solid #83aafc;
 }
 #logo{
-	background: no-repeat 4px center;
-	width:30px;
-	height:30px;
+	background:no-repeat 4px center;
+	width:50px;
+	height:50px;
 	margin-left:45%;
 }
 /*------main-menu style--*/
@@ -177,21 +180,28 @@ section{
 	height:0px;
 	overflow:hidden; /* --넘친것들 숨김-- */
 }
+
 .form{
 	display:inline-block;
 }
+
 .distance{
 	display: inline-block;
 	padding:0px 50px;
 	margin-top:25px;
 }
+.distance-all-list{
+	padding:50px 50px; 
+}
 
 .height{
 	height:25px;
 }
+
 .color-footer{
 	color:white;
 }
 
-
-
+.head-menu{
+	float:right;
+}
