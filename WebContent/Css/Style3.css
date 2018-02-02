@@ -1,5 +1,7 @@
 @charset "UTF-8";
+/* ---------reset---------------------------- */
 
+	
  /* -------------------------------------------------- */
  #wrap{
   
@@ -10,18 +12,18 @@
  #header{
  
   height:180px;
-  background:red;
+  /* background:red; */
   
  }
- #body{
+ /* #body{
   min-height:1000px;
   background:#D4F4FA;
- }
- #footer{
+ } */
+ /* #footer{
   height:140px;
   background:#A3AFC9;
  }
- 
+  */
  body{
  	margin: 0px;
  }
@@ -44,7 +46,7 @@
  	
  	display:inline-block;
  	
- 	display: inline-block;
+ 	
  }
  
  
@@ -54,6 +56,10 @@
 	background:pink;
 	text-align:right;
 	margin:0;
+	font-family:"a옛날목욕탕L","고딕","sans-serif";
+	font-size:15px;
+	
+	
 	
  }
  
@@ -63,7 +69,8 @@
 	
  }
    .menu-member>ul > li{
-	padding: 0 8px;
+	padding-right: 16px;
+	margin-bottom: 6px;
  }
  
  .img-logo{
@@ -73,6 +80,10 @@
  }
  .img-logo > h1{
  	align-content: center;
+ }
+ 
+.menu-member .logo-member{
+ 	 height: 24px; 
  }
  
  /* ---그림로고 */
@@ -85,8 +96,13 @@
 /*  -----메인메뉴-- */
  .menu-main{
 	height : 20%;
-	background:blue;
+	/* background:blue; */
 	margin:0;
+	font-family:"a옛날목욕탕L","고딕","sans-serif";
+	font-size:26px;
+	font-weight:bold;
+	color: #686868;
+	
  }
  
  .menu-main > ul{
@@ -96,4 +112,29 @@
   
  .menu-main > ul > li{
 	padding: 4px 32px 4px 32px;
+	background:url("../Images/ic_accessibility_black_24dp_1x.png") no-repeat 10px center; 
  }
+ /* ----------바디--------------- */
+ #body{
+  min-height:1000px;
+  background:#D4F4FA;
+  height:auto;
+ }
+ 
+/*  ------------풋터------------- */
+
+#footer{
+  height:140px;
+  background:#A3AFC9;
+  
+  
+  
+ }
+ #ceo{
+ 	margin-left:50px;
+ 	margin-top:20px;
+ 	height:50px;
+ 	border:1px solid black;
+ 	border-radius: 10px;
+ }
+ 
