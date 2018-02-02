@@ -8,11 +8,11 @@
 </head>
 <body>
 	
-<div id="grid">	
+<!-- <div id="grid">	 -->
 <!-- ---------------------HEADER---------------------- -->
 	<header>
-			<div id="topbar">
-				<div class="container">
+			<div id="top-bar">
+				<div class="tb-container">
 						<div class="login-status" style="display:none;">
 							<a href="#">로그아웃</a></div>
 							
@@ -25,96 +25,107 @@
 						<div><a href="#">마이페이지</a></div>
 				</div>
 			</div>
-<!-- ---------------------LOGO---------------------- -->
-			<div id="toplogo">
-				<p>여기는 로고</p>
+
+<!-- ---------------------LOGO & NAVIGATION---------------------- -->
+			<div id="top-nav">
+				<div class="top-logo">
+					<img src="../../Images/logo_js.png" alt="Soin_Logo" />
+				</div>
 			
-			</div>
-
-
-<!-- ---------------------NAVIGATION---------------------- -->
-			<div id="topnav">
-				<nav class="main-menu">
-					<div><a href="#">소인소개</a></div>
-					<div><a href="#">업체소개</a></div>
-					<div><a href="#">견적요청</a></div>
-					<div><a href="#">인테리어 TIP</a></div>
-					<div><a href="#">시공후기</a></div>
+				<nav class="tn-container">
+					<div class="hello">
+						<a href="#">소인소개</a></div>
+					<div class="hello-contr">
+						<a href="#">업체소개</a></div>
+					<div class="est-request">
+						<a href="#">견적요청</a></div>
+					<div class="tip">
+						<a href="#">인테리어 TIP</a></div>
+					<div class="review">
+						<a href="#">시공후기</a></div>
 				</nav>
 			</div>
 	</header>
 		
-<!-- ---------------------MAIN---------------------- -->
+<!-- ---------------------MAIN---------------------- -->	
 	<main>
-		<section id="est-request">
-			<div class="main-title">
-				<h1>바로 견적요청
-			</div>
+		<div class="form-wrapper">
+			<section class="form-title">
+				<div class="ft-container">
+					바로 견적요청
+				</div>
+			</section>
 			
-			<div class="content">
-				
-				<div>
-					<fieldset>
-						<legend>검색</legend>
-							<input type="search">
-							<input type="submit" value="검색">
-					</fieldset>
+			<section class="request-form">
+				<div class="content">
+					<div>
+						<fieldset>
+							<legend>사진 올리기</legend>
+						<input type="file" class="photos">	
+						</fieldset>
+					</div>
+					<div>
+						<fieldset>
+							<legend>검색</legend>
+								<input type="search">
+								<input type="submit" value="검색">
+						</fieldset>
+					</div>
+					<div>
+						<fieldset>
+							<legend>실측 사이즈</legend>
+								<b>창틀 가로길이 : </b><input type="number" min="1" max="5" value="">cm
+								<b>창틀 세로길이 : </b><input type="number" min="1" max="5" value="">cm
+						</fieldset>
+					</div>
+					<div>
+						<fieldset>
+							<legend>견적요청 카테고리</legend>
+								<p> 시공이 필요한 카테고리를 선택하세요(복수선택 가능) </p>
+									<label><input type="checkbox" name="category1" value="window">창문</label>
+									<label><input type="checkbox" name="category2" value="door">문</label>
+									<label><input type="checkbox" name="category3" value="bathroom">욕실</label>
+									<label><input type="checkbox" name="category4" value="wall">벽</label>		
+						</fieldset>
+					</div>
+					<div>
+						<fieldset>
+							<legend>상세 카테고리 선택</legend>
+								<label class="reg" for="2category">상세 카테고리</label>
+									<select id="2category">
+										<option>하이 샷시</option>
+										<option>알루미늄 창</option>
+										<option>목재 창</option>
+										<option>기타</option>
+									</select>
+						</fieldset>	
+					</div>
+					<div>
+						<fieldset>
+							<legend>색상 선택</legend>
+								<p> 원하시는 색상과 유사한 색상을 선택해주세요.</p>
+							<label>선호색상 <input type="color" value="#00ff00"></label>
+						</fieldset>
+					</div>
+					<div>
+						<fieldset>
+							<legend>희망 시공일 선택</legend>
+								<label><input type="date" id="start"></label>
+								<label><input type="date" id="end"></label>
+						</fieldset>
+					</div>
+					<div>
+						<fieldset>
+							<legend>상세 요청사항</legend>
+							<textarea name="request" cols="30" rows="5">
+							</textarea>
+							<button type="submit">보내기</button>
+						</fieldset>
+					</div>
 				</div>
-				<div>
-					<fieldset>
-						<legend>실측 사이즈</legend>
-							<b>창틀 가로길이 : </b><input type="number" min="1" max="5" value="">cm
-							<b>창틀 세로길이 : </b><input type="number" min="1" max="5" value="">cm
-					</fieldset>
-				</div>
-				<div>
-					<fieldset>
-						<legend>견적요청 카테고리</legend>
-							<p> 시공이 필요한 카테고리를 선택하세요(복수선택 가능) </p>
-								<label><input type="checkbox" name="category1" value="window">창문</label>
-								<label><input type="checkbox" name="category2" value="door">문</label>
-								<label><input type="checkbox" name="category3" value="bathroom">욕실</label>
-								<label><input type="checkbox" name="category4" value="wall">벽</label>		
-					</fieldset>
-				</div>
-				<div>
-					<fieldset>
-						<legend>상세 카테고리 선택</legend>
-							<label class="reg" for="2category">상세 카테고리</label>
-								<select id="2category">
-									<option>하이 샷시</option>
-									<option>알루미늄 창</option>
-									<option>목재 창</option>
-									<option>기타</option>
-								</select>
-					</fieldset>	
-				</div>
-				<div>
-					<fieldset>
-						<legend>색상 선택</legend>
-							<p> 원하시는 색상과 유사한 색상을 선택해주세요.</p>
-						<label>선호색상 <input type="color" value="#00ff00"></label>
-					</fieldset>
-				</div>
-				<div>
-					<fieldset>
-						<legend>희망 시공일 선택</legend>
-							<label><input type="date" id="start"></label>
-							<label><input type="date" id="end"></label>
-					</fieldset>
-				</div>
-				<div>
-					<fieldset>
-						<legend>상세 요청사항</legend>
-						<textarea name="request" cols="30" rows="5">
-						</textarea>
-						<button type="submit">보내기</button>
-					</fieldset>
-				</div>
-			</div>
 		
-		</section>
-		
+			</section>
+		</div>
 	</main>
 
 <!-- ---------------------FOOTER---------------------- -->	
@@ -123,6 +134,6 @@
 		</footer>
 		
 		
-	</div>	
+<!-- 	</div> -->	
 </body>
 </html>
