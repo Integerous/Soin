@@ -1,19 +1,5 @@
 @charset "utf-8";
 
-/* 첫 번째 방
--height / min-height
--reset : body(margin 을 리셋)
-두 번째 방
--height / min-height : 100%, inherit
--박스를 정렬 : width:고정 -> margin-left/right/center
--margin / padding / border
--DevTool(F12) 
--세 번째 방
--floating, clear-fix
-<<<<<<< HEAD
-*/
-
-
 /*-- --------reset-------------------- --*/
 body{
 	margin:0px;
@@ -36,8 +22,8 @@ a{
 	color:inherit;
 }
 img{
-	height:100px;
-	width:100px;
+	height:130px;
+	width:130px;
 	background: no-repeat center;
 	display:inline-block;
 	
@@ -113,10 +99,10 @@ section{
 	border-bottom:5px solid #83aafc;
 }
 #logo{
-	background:no-repeat 4px center;
-	width:50px;
-	height:50px;
+	width:120px;
+	height:120px;
 	margin-left:45%;
+	margin-top:50px;
 }
 /*------main-menu style--*/
 .main-menu{
@@ -185,15 +171,13 @@ section{
 .form{
 	display:inline-block;
 	margin-left:200px;
+	width: fit-content;
 }
 
 .distance{
 	display: inline-block;
-	padding:0px 50px;
+	padding:30px 45px;
 	margin-top:25px;
-}
-.distance-all-list{
-	padding:50px 50px; 
 }
 
 .height{
@@ -202,4 +186,10 @@ section{
 
 .head-menu{
 	float:right;
+	margin-top:20px;
+}
+
+.my-page{
+	height:20px;
+	width:28px;
 }
