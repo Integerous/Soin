@@ -70,7 +70,7 @@ select{
 .member-menu-box > ul > li{
 	float: left;
 	padding-left: 10px;
-	background: url("../Images/bg-member-menu-sp.png") no-repeat 5px center;
+	background: url("../Images/jyh/bg-member-menu-sp.png") no-repeat 5px center;
 	font-size: 12px; 
 	color : #979797;
 }
@@ -350,14 +350,14 @@ select{
 	display: flex;
 }
 
-.top-box > h1{
-	display: none;
-}
-
+	.top-box > h1{
+		display: none;
+	}
+	
 .top-left-box{
-
 	background: #fff;
 }
+
 .cst-images{
 	width: 300px;
 	height: 300px;
@@ -387,8 +387,89 @@ select{
 
 .top-mid-box{
 	width: 330px;
-	background: #000;
+	background: #888;
+	font-size: 20px;
 }
+
+	.top-box textarea{
+		background: #888;
+		border : 3px solid #000;
+		width:310px;
+		height: 235px;
+		resize: none;
+	}
+	
+.table {
+		border:3px solid #333333;
+		font-size: 15px;
+		width: 320px;
+		height: 200px;
+		/* border-spacing: 0px; */
+}
+
+	.table th{
+		border: 1px solid #333333;
+	}
+	
+	.table td{
+		border: 1px solid #333333;
+		padding-left: 10px;
+	}
+	
+.top-right-box{
+	background: #333;
+	width: 330px;
+	margin-top : 25px;
+}
+
+.map-box{
+	width: 250px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 5px solid #999;
+}
+
+.map{
+	width:inherit;
+	height:250px;
+	background: url("../Images/jyh/mapExam.png") no-repeat center;
+}
+
+.distance {
+	border : 2px solid #000;
+	margin-top : 20px;
+	width: 250px;
+	font-size: 15px;
+}
+
+	.distance label{
+		height: 35px;
+		border-right : 2px solid #000;
+		font-size: 15px;
+	}
+	
+	.distance input{
+		margin:0px;
+		padding: 0px;
+		height: 15px;
+		width: 80px;
+	}
+	
+.btn-box{
+	height: 200px;
+	width: inherit;
+	margin-top:40px;
+	margin-left: 35px;
+}
+
+	.btn-box > input{
+		height: 50px;
+		width:80px;
+		font-size: 15px;
+		text-align:center;
+		padding: 0px; 
+	}
 /*--------------------------------Top-Box End--------------------------------*/
 /*--------------------------------Top-Box End--------------------------------*/
 .mid-box{
