@@ -1,7 +1,29 @@
 @charset "UTF-8";
 /* ---------reset---------------------------- */
 
-	
+/* --base style-------------------------------------- */
+.hidden{
+	display:none;
+}
+.box{
+	margin-top:30px;
+}	
+.btn{
+	min-width:65px;
+	padding: 3px 8px;
+	color:#ffffff;
+	display: inline-block;/* 이게있어야 컬러랑 너비설정됨 */
+	text-align: center;/* 박스안에 내용정렬 */
+	border-radius: 7px;
+	float:right;
+	border:0px;
+	cursor:pointer;
+	margin-left: 0px;
+}
+.btn:hover{
+	color:red;
+	background: yellow;
+}
  /* -------------------------------------------------- */
  #wrap{
   
@@ -12,18 +34,10 @@
  #header{
  
   height:180px;
-  /* background:red; */
+  background: #FFF2E6;
   
  }
- /* #body{
-  min-height:1000px;
-  background:#D4F4FA;
- } */
- /* #footer{
-  height:140px;
-  background:#A3AFC9;
- }
-  */
+
  body{
  	margin: 0px;
  }
@@ -53,11 +67,12 @@
  /* --------멤버메뉴 */
  .menu-member{
 	height : 15%;
-	background:pink;
+	background:#FFF2E6;
 	text-align:right;
 	margin:0;
 	font-family:"a옛날목욕탕L","고딕","sans-serif";
 	font-size:15px;
+	color: #807973;
 	
 	
 	
@@ -68,15 +83,19 @@
 	margin:inherit;
 	
  }
-   .menu-member>ul > li{
-	padding-right: 16px;
-	margin-bottom: 6px;
- }
- 
+	   .menu-member>ul > li{
+			padding-right: 16px;
+			margin-bottom: 6px;
+		 }
+	 		.logo-member{
+	 			
+	 			opacity: 0.5;
+	 		}
  .img-logo{
  	height:65%;
-	background:tomato;
+	background:white;
 	margin:0;
+	
  }
  .img-logo > h1{
  	align-content: center;
@@ -104,37 +123,129 @@
 	color: #686868;
 	
  }
- 
- .menu-main > ul{
-	margin:inherit;
-	text-align: center;
- }
+	 .menu-main > ul{
+		margin:inherit;
+		text-align: center;
+	 }
   
- .menu-main > ul > li{
-	padding: 4px 32px 4px 32px;
-	background:url("../Images/ic_accessibility_black_24dp_1x.png") no-repeat 10px center; 
- }
+		 .menu-main > ul > li{
+			padding: 4px 32px 4px 32px;
+			background:url("../Images/ic_accessibility_black_24dp_1x.png") no-repeat 10px center; 
+		 }
  /* ----------바디--------------- */
  #body{
-  min-height:1000px;
-  background:#D4F4FA;
-  height:auto;
+ 	 min-height:300px;
+ 	 background:#D4F4FA;
+  	 height:auto;
  }
  
+ .company-info{
+ 	height: 400px;
+    background-color: #CEFBC9;
+    margin-top: 20px;
+ 	
+ }
+ .constructor-img{
+ 	width:350px;
+ 	height:400px;
+ 	background-color: yellow;
+ 	float:left;
+ }
+ 	.constructor-info{
+ 		float:left;
+ 		width:650px;
+ 		height:400px;
+ 		background-color: tomato;
+ 		
+ 	}
+ 	
+ .company-sort{
+ 	height:100px;
+ 	background-color: #FAF4C0;
+ }
+ 	.company-array{
+ 		height:inherit;
+ 		width:220px;
+ 		background-color: aqua;
+ 		float:left;
+ 	}
+ 	.construction-sort{
+ 		height:inherit;
+ 		width:500px;
+ 		background-color: green;
+ 		float:left;
+ 	}
+ 	.search{
+ 		height:inherit;
+ 		width:280px;
+ 		background-color: grey;
+ 		float:left;
+ 	}
+ 
+ .company-port{
+ 	min-height:1000px;
+ 	height:auto;
+ 	background-color: #B2CCFF;
+ }
+ 
+	 .company-content{
+	 	height:300px;
+	 	background-color:#FFD8D8;
+	 	
+	 }
+	 	.company-content2{
+	 		background-color:red;
+	 		float:left;
+	 		width:333px;
+	 		height: inherit;
+	 		
+	 	}
+	 	
+	 	.company-content3{
+	 		background-color:blue;
+	 		float:left;
+	 		width:333px;
+	 		height: inherit;
+	 		
+	 	}
+	 /* 	.company-content2:last-child{
+	 		float:none;
+	 		
+	 	}
+  */
+.search > .box > input{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+
 /*  ------------풋터------------- */
 
 #footer{
-  height:140px;
-  background:#A3AFC9;
-  
-  
-  
+	 height:140px;
+ 	 background:#A3AFC9;
+ 	 font-size: 15px;
  }
  #ceo{
- 	margin-left:50px;
+ 	margin-left:150px;
  	margin-top:20px;
  	height:50px;
  	border:1px solid black;
  	border-radius: 10px;
+ 	float:left;
+ 	border-color:#8C8C8C;
+ }
+ #company-info{
+    margin-left: 200px;
+    padding-top: 16px;
+   
+ }
+ #customer-svc{
+ 	margin:auto;
+ 	padding-left:150px;
+ }
+ 
+ #copyright{
+ 	float: right;
  }
  
