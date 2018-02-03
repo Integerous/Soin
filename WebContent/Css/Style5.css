@@ -347,7 +347,44 @@ select{
 
 /*--------------------------------윤호 Detail Start--------------------------------*/
 
+#main > .root-container div{
+	margin: 0px auto;
+}
 
+.detail-title{
+	width: 80%;
+	height: 150px;
+	background: #333;
+}
+
+.detail-content{
+	width: 100%;
+	min-height: inherit;
+	background: #666;
+}
+	
+.detail-img{
+	width:80%;
+	height: 500px;
+	background: #999;
+}
+
+.detail-text{
+	width: 80%;
+	min-height: inherit;
+	background: #111;
+}
+
+.detail-btn{
+	width: 80%;
+	text-align: center;
+}
+
+	.detail-btn > .btn{
+		width: 80px;
+		height: 50px;
+		font-size: 25px;
+	}
 /*--------------------------------윤호 Detail End--------------------------------*/
 /*--------------------------------윤호 Detail End--------------------------------*/
 
