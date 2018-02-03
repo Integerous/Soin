@@ -62,28 +62,35 @@
 				<div>
 					<h3 class="hidden">1:1 문의 폼</h3>
 					
-					<fieldset class="form">
+					<fieldset class="form content-table">
 						<ul>
 							<li>
 								<label class="label-title" for="email">이메일</label>
-								<input type="text" id="email">
+								<input type="text" id="input-box">
+							</li>
+							<li>
+								<label class="label-title" for="id">아이디</label>
+								<input type="text" id="input-box">
+								<hr>
 							</li>
 							<li>
 								<label class="label-title" for="problem">문제유형</label>
-								<label><input type="radio" id="problem">소인 홈페이지</label>
-								<label><input type="radio" id="problem">견적 의뢰</label>
+								<label><input type="radio" id="input-box">소인 홈페이지</label>
+								<label><input type="radio" >견적 의뢰</label>
 							</li>
 							<li>
-								<label class="label-title" for="title">제목</label>
-								<input type="text" id="title">
-							</li>
+								<label class="label-title" for="title">문의제목</label>
+								<input type="text" id="input-box">
+								
+							</li>							
 							<li>
-								<label class="label-title" for="cont">내용</label>
-								<textarea name="cont" rows="5" cols="60"></textarea>
+								<label class="label-title" for="cont">문의내용</label>
+								<textarea name="cont" rows="10" cols="60" id="input-box"></textarea>
+								<hr>
 							</li>
 							<li>
 								<label class="label-title" for="file">파일첨부</label>
-								<input type="file" id="file">
+								<input type="file" id="input-box">
 							</li>
 						</ul>
 						<a class="button text-button"href="">해결 요청하기</a>

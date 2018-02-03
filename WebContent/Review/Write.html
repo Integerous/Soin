@@ -21,7 +21,7 @@
 					<li><a href="">로그인</a></li>
 					<li><a href="">회원가입</a></li>
 					<li><a href="">마이페이지</a></li>
-					<li><a href="">고객센터</a></li>
+					<li><a href="../CS/FAQ/MainList.html">고객센터</a></li>
 				</ul>
 			</div>	
 			
@@ -52,38 +52,64 @@
 				<h1 class="content-title">┃ 후기쓰기 </h1>
 			</div>
 			
-			<div class="form content-table">
+			<div class="form content-table" style="height: 570px">
 				<ul>
 					<li>
 						<label class="label-title" for="title">제목</label>
-						<input type="text" id="title">
+						<input type="text" id="input-box" >
 					</li>
 					<li>
 						<label class="label-title" for="star-button">평점</label>
+							<input type="image" src="../Images/star.png" class="star-button" id="input-box">
 							<input type="image" src="../Images/star.png" class="star-button">
 							<input type="image" src="../Images/star.png" class="star-button">
 							<input type="image" src="../Images/star.png" class="star-button">
 							<input type="image" src="../Images/star.png" class="star-button">
-							<input type="image" src="../Images/star.png" class="star-button">
+						<hr>
 					</li>
 					<li>
 						<label class="label-title" for="info">시공정보</label>
-						<select size="1">
+						<select size="1" id="input-box">
 							<option>벽지/창문 - 2018/01/12</option>
 						</select>
 					</li>
+				</ul>
 					<!-- 여기다가 디비에서 가져온 시공정보를 불러와야해.....	 -->
+					
+					<table id="data-table">
+						<tbody>
+							<tr>
+							<td>카테고리 : </td>
+							</tr>					
+							<tr>
+								<td>시공기간 : </td>
+							</tr>	
+							<tr>
+								<td>시공업체 : </td>
+							</tr>	
+							<tr>
+								<td>거주지역 : </td>
+							</tr>
+							<tr>
+								<td>예산 : </td>
+							</tr>	
+						</tbody>
+					</table>
+							
+				
+					<hr>
+				<ul>		
 					<li>
 						<label class="label-title" for="main-photo">메인사진</label>
-						<input type="file" id="main-photo">
+						<input type="file" id="input-box">
 					</li>
 					<li>
 						<label class="label-title" for="plus-photo">추가사진</label>
-						<input type="file" id="plus-photo">
+						<input type="file" id="input-box">
 					</li>
 					<li>
 						<label class="label-title" for="review">후기작성</label>
-						<textarea name="review" rows="10" cols="50" ></textarea>
+						<textarea name="review" rows="10" cols="50" id="input-box"></textarea>
 					</li>
 				</ul>
 				<div>
