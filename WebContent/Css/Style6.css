@@ -59,6 +59,10 @@ section{
 	margin-top:30px;
 	float:right;
 }
+.btn-page-num{
+	margin-left:45%;
+	margin-top:13%;
+}
 
 /*-------------------------------------------------*/
 .hor-menu{
@@ -122,7 +126,7 @@ section{
 
 /*--------------------------------------*/
 #body{
-	min-height : 300px;  /* --물려받은 높이 없음-- */
+	min-height :300px;
 	border-top:5px solid #83aafc;
 	margin-top:1px;
 }
@@ -148,9 +152,9 @@ section{
 	
 
 #main{
-	min-height:inherit; /* --상위 엘리먼트의 속성값을 그대로 물려받아 적용-- */
+	min-height:inherit; 
 	min-width:755px;
-	padding:45px 0px 40px 35px; /* --padding을 주면 박스가 늘어남. 그래서 box-sizing: border-box; 사용-- */
+	padding:45px 0px 40px 35px; 
 	box-sizing: border-box;
 }
 
@@ -165,12 +169,11 @@ section{
 	display:block;
 	clear:both;
 	height:0px;
-	overflow:hidden; /* --넘친것들 숨김-- */
+	overflow:hidden;
 }
 
 .form{
 	display:inline-block;
-	margin-left:200px;
 	width: fit-content;
 }
 
@@ -180,8 +183,11 @@ section{
 	margin-top:25px;
 }
 
-.height{
+.area-list{
 	height:25px;
+}
+.area-list-height{
+	margin-left: 230px;
 }
 
 .head-menu{
@@ -193,3 +199,20 @@ section{
 	height:20px;
 	width:28px;
 }
+.table {
+		border:3px solid #333333;
+		font-size: 15px;
+		width: 320px;
+		height: 200px;
+		/* border-spacing: 0px; */
+}
+
+	.table th{
+		border: 1px solid #333333;
+	}
+	
+	.table td{
+		border: 1px solid #333333;
+		padding-left: 10px;
+	}
+
