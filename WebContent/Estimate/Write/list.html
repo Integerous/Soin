@@ -10,8 +10,9 @@
 	
 <!-- <div id="grid">	 -->
 <!-- ---------------------HEADER---------------------- -->
+
+<!-- ------------top-bar------------ -->
 	<header>
-	
 		<div id="top-bar">
 			<div class="tb-container">
 				<div class="login-status" style="display:none;">
@@ -27,27 +28,28 @@
 				<div><a href="#">마이페이지</a></div>
 			</div>
 		</div>
-<!-- ---------------------LOGO---------------------- -->			
+	
+<!-- ------------logo & title------------ -->			
 		<div id="mid-bar">
 			<div class="mb-container">
-				
 				<div class="logo">
 					<a href="index.html">
-					<img src="../../Images/logo_js.png" alt="Soin_Logo" style="width:35px" /></a>
+					<img src="../../Images/logo_js.png" alt="Soin_Logo" /></a>
 				</div>
-	
+				
 					<a href="#">소인</a>
+					
 				<div class="p">
-					- 소규모 인테리어 중개 플랫폼
+					- 소규모 인테리어 시공 중개 플랫폼
 				</div>
 			</div>
 		</div>
 		
 		<div class="liner"></div>
-<!-- ---------------------NAVIGATION---------------------- -->
+		
+<!-- ------------navigation------------ -->
 		<div id="top-nav">
 			
-		
 			<nav class="tn-container">
 				<div class="hello">
 					<a href="#">소인소개</a></div>
@@ -65,19 +67,113 @@
 		<div class="liner"></div>
 		
 	</header>
-	
+
 <!-- ---------------------MAIN---------------------- -->	
 	<main>
+	
+<!-- ------------progress bar------------ -->		
+			<div class="pb-bar">
+				<section class="progress-bar">
+						<div class="step1">STEP 1</div>
+						<div class="step2">STEP 2</div>
+						<div class="step3">STEP 3</div>
+						<div class="step4">STEP 4</div>
+				</section>
+							
+				<div class="triangle">
+					 <div class="ta-1"></div>
+					 <div class="ta-2"></div>
+					 <div class="ta-3"></div>
+					 <div class="ta-4"></div>
+				</div>
+			</div>
+			
+<!-- ------------form wrapper------------ -->		
 		<div class="form-wrapper">
+
+<!-- ------------견적요청서 ------------ -->
 			<section class="form-title">
 				<div class="ft-container">
 					견적요청서 작성
 				</div>
 			</section>
-			
-			<section class="request-form">
-				<div class="content">
-					<div>
+
+<!-- ------------카테고리 1 선택------------ -->			
+		<section class="request-form">
+				<fieldset>
+					<legend>1. 어떤 시공이 필요하신가요?</legend>
+						<div class="category-1">
+							<div>
+								<input id="window" type="radio" name="category" value="#" checked>
+								<label for="window">창문</label>
+							</div>
+							<div>
+								<input id="door" type="radio" name="category" value="#">
+								<label for="door">문</label>
+							</div>
+							<div>
+								<input id="bathroom" type="radio" name="category" value="#">
+								<label for="bathroom">욕실</label>
+							</div>
+							<div>
+								<input id="wall" type="radio" name="category" value="#">
+								<label for="wall">벽</label>
+							</div>
+						</div>
+				</fieldset>
+	
+<!-- ------------카테고리 2 선택------------ -->		
+				<fieldset>
+					<legend>2. 상세 카테고리 선택</legend>
+						<div class="category-2">
+							<div>
+								<input id="high-ss" type="radio" name="category2" value="##" checked>
+								<label for="high-ss">하이샤시</label>
+							</div>
+							<div>
+								<input id="aluminum" type="radio" name="category2" value="##">
+								<label for="aluminum">알루미늄 창</label>
+							</div>
+							<div>
+								<input id="wood" type="radio" name="category2" value="##">
+								<label for="wood">목재 창</label>
+							</div>
+							<div>
+								<input id="etc" type="radio" name="category2" value="##">
+								<label for="etc">기타</label>
+							</div>
+						</div>
+				</fieldset>
+	
+<!-- ------------실측 사이즈------------ -->					
+				<fieldset>
+					<legend>3. 실측 사이즈</legend>
+					<div class="category-3">
+						<div class="category-3-a">
+							<div>창문 너비 : 
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+							<div>창문 높이 :
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+						</div>
+						<div class="category-3-b">
+							<div>창틀 너비 : 
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+							<div>창틀 높이 :
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				
+<!-- ------------next button------------ -->							
+			<div class="next-button">
+		      <button class="next-btn"><span>다음</span></button>
+		    </div>
+									
+					<!-- <div>
 						<fieldset>
 							<legend>사진 올리기</legend>
 						<input type="file" class="photos">	
@@ -90,35 +186,9 @@
 								<input type="submit" value="검색">
 						</fieldset>
 					</div>
-					<div>
-						<fieldset>
-							<legend>실측 사이즈</legend>
-								<b>창틀 가로길이 : </b><input type="number" min="1" max="5" value="">cm
-								<b>창틀 세로길이 : </b><input type="number" min="1" max="5" value="">cm
-						</fieldset>
-					</div>
-					<div>
-						<fieldset>
-							<legend>견적요청 카테고리</legend>
-								<p> 시공이 필요한 카테고리를 선택하세요(복수선택 가능) </p>
-									<label><input type="checkbox" name="category1" value="window">창문</label>
-									<label><input type="checkbox" name="category2" value="door">문</label>
-									<label><input type="checkbox" name="category3" value="bathroom">욕실</label>
-									<label><input type="checkbox" name="category4" value="wall">벽</label>		
-						</fieldset>
-					</div>
-					<div>
-						<fieldset>
-							<legend>상세 카테고리 선택</legend>
-								<label class="reg" for="2category">상세 카테고리</label>
-									<select id="2category">
-										<option>하이 샷시</option>
-										<option>알루미늄 창</option>
-										<option>목재 창</option>
-										<option>기타</option>
-									</select>
-						</fieldset>	
-					</div>
+					
+					
+					
 					<div>
 						<fieldset>
 							<legend>색상 선택</legend>
@@ -141,8 +211,23 @@
 							<button type="submit">보내기</button>
 						</fieldset>
 					</div>
-				</div>
-		
+					
+					<div>
+						<fieldset>
+							<legend>상세 카테고리 선택</legend>
+								<div class="category-2">
+								<label for="2nd-category"></label>
+									<select>
+										<option>하이 샷시</option>
+										<option>알루미늄 창</option>
+										<option>목재 창</option>
+										<option>기타</option>
+									</select>
+								</div>
+						</fieldset>	
+					</div>
+					 -->
+
 			</section>
 		</div>
 	</main>
@@ -152,7 +237,5 @@
 			<p> Copyright 2018 SoinProject</p>
 		</footer>
 		
-		
-<!-- 	</div> -->	
 </body>
 </html>
