@@ -248,6 +248,7 @@ footer{
 	
 .content-table{
 	min-height: 400px;
+	min-width: 532px;
 	padding : 30px 30px;
 }	
 
