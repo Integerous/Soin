@@ -1,1 +1,258 @@
 @charset "UTF-8";
+
+/* ---------------------------reset--------------------------- */
+
+body{
+   margin : 0px;
+}
+
+ul{
+   padding: 0px;
+   margin: 0px;
+}
+
+li{
+   display: block;
+}
+
+h1{
+   margin: 0px;
+}
+
+a{
+   text-decoration: none;
+   color: inherit;   
+   cursor: pointer;
+}
+
+/*----------------------------base  style----------------------------------*/
+.hidden {
+	display : none ;
+}
+
+/* ------------------logo--------------- */
+.logo-images{
+	width: 122px;
+	height: 122px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ------------------hor-menu--------------- */
+.hor-menu {
+	display: block;
+	overflow: auto;
+	padding-left: 0px;
+	background: none;
+}
+
+ 	.hor-menu > ul{
+      overflow: auto;
+   	}
+
+    	 .hor-menu > ul > li{
+      		float: left;
+   		 }	
+
+/*----------------------------header----------------------------------*/
+
+
+#header {
+	height : 180px ;
+	background: green ;
+}
+
+	.main-menu {
+		font-family : "맑은 고딕", "고딕", "sans-serif" ;
+		font-size : 20px ;
+		font-weight : bold ;
+		background: red ;
+		text-align: center;
+	}
+	
+	.main-menu > ul {
+		text-align : center ;
+		padding-top : 5px ;
+	}
+	
+	 .main-menu > ul > li {
+      padding-left: 24px; 
+      float : left ;
+      width : 17% ;
+   }
+/* ---------------------member-menu---------------------------- */   
+.member-menu{
+   font-family: "맑은 고딕", "고딕", "sans-serif";
+   font-size: 12px;
+   font-weight: bold;
+}
+ .member-menu > ul {
+ 	padding-top : 8px ;
+ 	padding-right :10px ;
+ }  
+  
+   .member-menu > ul > li{
+      padding-left: 9px;
+      float: right;
+   }
+/*----------------------------visual----------------------------------*/
+.root-container{
+   height : 100%;
+   /* height : inherit; */
+   /* min-height : 100%; */
+   min-height : inherit;
+   width: 960px;
+   /* background: pink; */
+   /* opacity : 0.5; */
+   margin-left: auto;
+   margin-right: auto;
+   background: orange;
+}
+
+#body > .root-container {
+	display : flex;
+}
+
+#aside {
+	background : yellow;
+	width: 205px;
+	height: 520px;
+	float: left;
+	border-right : 2px solid black ;
+	display:block;
+}
+.button{
+	margin-top : 40px ;
+	text-align:center;
+}
+
+.button > input {
+	font-weight : bold ;
+	min-width : 50px;
+	min-height : 30px ;
+	font-size : 17px;
+	border-radius: 10px ;
+}
+
+.btn{
+   display : inline-block;
+   width:108px;
+   color : black;
+   /* text-align: center; */
+   padding: 3px 8px 3px 8px;
+   border-radius: 4px;
+   cursor: pointer;
+   /* border: 0px; */
+   background : #56C840 ;
+}
+
+
+
+.button > input:hover {
+	cursor : pointer;
+}
+
+.ver-menu {
+	font-family : "맑은 고딕", "고딕", "sans-serif" ;
+	font-size : 16px ;
+}
+
+.ver-menu > ul  { 
+    padding-top: 80px;
+    padding-left: 75px;
+}
+
+.ver-menu > ul > li {
+	padding-top: 20px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#main {
+	width : 755px ;
+	height : 520px;
+	background : azure ; 
+	display: block;
+}
+
+#main > section > h1 {
+	text-align : center ;
+	padding-top : 70px ;
+}
+
+#main > .contents-box {
+	height : 500px ;
+	width : 600px ;
+	align : center ;
+	margin-left : auto;
+	margin-right : auto;
+}
+
+.notice-phrase {
+	font-size: 17px;
+	text-align : center ;
+}
+
+.main-table{
+	border : 5px solid #333;
+	height: 250px;
+	width: 80%;
+	margin: 0px auto;
+	border-radius: 10px;
+}
+
+.main-table th{
+	padding-top:10px;
+	padding-left: 30px;
+}
+.main-table td{
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+.main-table2{
+	border : 5px solid #333;
+	height: 150px;
+	width: 80%;
+	margin: 0px auto;
+	border-radius: 10px;
+	margin-top: 50px;   /* table2에만 */
+}
+
+.main-table2 th{
+	padding-top:10px;
+	padding-left: 30px;
+}
+.main-table2 td{
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+.contents-box > h1{
+	margin-bottom: 35px;
+}
+
+.contents-box > section > ul {
+	
+}
+
+.contents-box > section  > ul > li {
+	height: 50px;
+	margin: auto;
+}
+
+#footer{
+	height: 145px;
+	background: blue;	
+}
+
+.com-info {
+	padding-top : 1px ;
+	padding-left: 10px ;
+}	
+
+.copyright {
+	padding-top: 10px ;
+	padding-left : 10px ;
+}
