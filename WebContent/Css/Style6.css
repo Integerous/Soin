@@ -160,14 +160,6 @@ section{
 	padding:45px 0px 40px 35px; 
 	box-sizing: border-box;
 }
-
- #main > section > h1{
-	width:100px;
-	height:100px;
-	background: no-repeat left top;
-}
-
- 
 .clear-fix::after{
 	display:block;
 	clear:both;
@@ -226,8 +218,8 @@ section{
 	display: inline-block;
 	padding: 30px 15px;
 	margin-top: 25px;
+	margin-bottom: 30px;
 }
-
 .textarea-size{
     width: 315px;
     height: 68px;
@@ -240,8 +232,6 @@ section{
 	width: 200px;
     height: 185px;
 }
-
-
 
 
 
