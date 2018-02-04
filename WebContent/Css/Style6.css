@@ -63,6 +63,9 @@ section{
 	margin-left:45%;
 	margin-top:13%;
 }
+.btn-box{
+	hegiht:35px;
+}
 
 /*-------------------------------------------------*/
 .hor-menu{
@@ -176,6 +179,9 @@ section{
 	display:inline-block;
 	width: fit-content;
 }
+.distance-form {
+	margin-bottom: 20px;
+	margin-top: 25px;}
 
 .distance{
 	display: inline-block;
@@ -215,4 +221,29 @@ section{
 		border: 1px solid #333333;
 		padding-left: 10px;
 	}
+	
+.box{
+	display: inline-block;
+	padding: 30px 15px;
+	margin-top: 25px;
+}
 
+.textarea-size{
+    width: 315px;
+    height: 68px;
+}
+.area-distance-img{
+	height: 206px;
+    width: 200px;
+}
+.constructore-img{
+	width: 200px;
+    height: 185px;
+}
+
+
+
+
+
+
+.
