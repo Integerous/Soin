@@ -1,29 +1,64 @@
 @charset "UTF-8";
 /* ---------reset---------------------------- */
-
+a{
+	text-decoration: none;
+	color:inherit;
+	}
+	
 /* --base style-------------------------------------- */
+
 .hidden{
-	display:none;
+display:none;
+}
+ a:hover{
+text-decoration: underline;
+
+}
+.padding-l-10{
+padding-left:10px;
+float:left;
 }
 .box{
-	margin-top:30px;
-}	
+margin-top:30px;
+margin-left:28px;
+}
 .btn{
-	min-width:65px;
-	padding: 3px 8px;
-	color:#ffffff;
-	display: inline-block;/* 이게있어야 컬러랑 너비설정됨 */
-	text-align: center;/* 박스안에 내용정렬 */
-	border-radius: 7px;
-	float:right;
-	border:0px;
-	cursor:pointer;
-	margin-left: 0px;
+min-width:65px;
+padding: 3px 8px;
+color:#ffffff;
+display: inline-block;
+text-align: center;
+border-radius: 7px;
+float:right;
+border:0px;
+cursor:pointer;
+margin-left: 0px;
 }
 .btn:hover{
-	color:red;
-	background: yellow;
+color:navy;
+background: #FFF2E6;
 }
+.font-content{
+font-size: 20px;
+padding: 30px 10px 10px 20px;
+float:left;
+}
+select{
+	width: 100px;
+    height: 25px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 34px
+}
+.text-ellipsis{
+overflow: hidden;
+text-overflow: ellipsis;
+list-style:none;
+margin-top:5px;
+
+}
+
  /* -------------------------------------------------- */
  #wrap{
   
@@ -38,31 +73,24 @@
   
  }
 
- body{
- 	margin: 0px;
- }
+
  /* -----헤더.------------------------------------- */
 
 
 /* ----메뉴----- */
 .menu{
- 	
+ 
 
  }
  .hor-menu{
-		
+
 }
  .hor-menu>ul{
- 	
- 	overflow:auto;
+  overflow:auto;
  }
  .hor-menu>ul>li{
- 	
  	display:inline-block;
- 	
- 	
  }
- 
  
  /* --------멤버메뉴 */
  .menu-member{
@@ -73,42 +101,40 @@
 	font-family:"a옛날목욕탕L","고딕","sans-serif";
 	font-size:15px;
 	color: #807973;
-	
-	
-	
+
  }
  
   .menu-member>ul{
 	padding-right:30px;
 	margin:inherit;
-	
+
  }
-	   .menu-member>ul > li{
-			padding-right: 16px;
-			margin-bottom: 6px;
-		 }
-	 		.logo-member{
-	 			
-	 			opacity: 0.5;
-	 		}
+.menu-member>ul > li{
+	padding-right: 16px;
+	margin-bottom: 6px;
+}
+.logo-member{
+
+	opacity: 0.5;
+}
  .img-logo{
- 	height:65%;
+	 height:65%;
 	background:white;
 	margin:0;
-	
+
  }
  .img-logo > h1{
  	align-content: center;
  }
  
 .menu-member .logo-member{
- 	 height: 24px; 
+ 	height: 24px;
  }
  
  /* ---그림로고 */
  #logo{
- 	height : 100%;
- 	margin-left:44%;
+	 height : 100%;
+	 margin-left:44%;
 	display: inline-block;
  }
  
@@ -118,101 +144,143 @@
 	/* background:blue; */
 	margin:0;
 	font-family:"a옛날목욕탕L","고딕","sans-serif";
-	font-size:26px;
+	font-size:24px;
 	font-weight:bold;
 	color: #686868;
-	
+
  }
-	 .menu-main > ul{
-		margin:inherit;
-		text-align: center;
-	 }
+.menu-main > ul{
+	margin:inherit;
+	text-align: center;
+}
   
-		 .menu-main > ul > li{
-			padding: 4px 32px 4px 32px;
-			background:url("../Images/ic_accessibility_black_24dp_1x.png") no-repeat 10px center; 
-		 }
- /* ----------바디--------------- */
+.menu-main > ul > li{
+	padding: 4px 32px 4px 32px;
+	background:url("../Images/ic_accessibility_black_24dp_1x.png") no-repeat 10px center; 
+}
+ /* ----------바디-------------------- */
  #body{
- 	 min-height:300px;
- 	 background:#D4F4FA;
-  	 height:auto;
+	 margin-top:20px;
+	 min-height:500px;
+	 /* background:#D4F4FA; */
+	 height:auto;
  }
  
  .company-info{
- 	height: 400px;
-    background-color: #CEFBC9;
-    margin-top: 20px;
- 	
+	 height: 400px;
+     background-color: #FFD8D8/* #CEFBC9 */;
+     margin-top: 20px;
+ 
  }
  .constructor-img{
- 	width:350px;
- 	height:400px;
- 	background-color: yellow;
- 	float:left;
+	 width:350px;
+	 height:400px;
+	 
+	 float:left;
  }
- 	.constructor-info{
- 		float:left;
- 		width:650px;
- 		height:400px;
- 		background-color: tomato;
- 		
- 	}
- 	
+ .company-main-img{
+	 height: 300px;
+	 border: solid 1px gray;
+	 margin:30px 20px 2px;
+	 font-size: 22px;
+    
+ }
+ .company-name{
+	 font-size: 22px;
+	 padding-left: 40px;
+	 color:gray;
+ }
+ .star{
+	 height:20px;
+	 width:20px;
+	 float:left;
+ }
+ .constructor-info{
+	 float:left;
+	 width:650px;
+	 height:400px;
+ 
+ }
+ .company-major{
+ 
+ }
+ .major{
+	 height:50px;
+	 float:left;
+	 /* padding: 18px 10px; */
+	 margin:16px;
+ }
+ .major:last-child{
+ 	float:none;
+ }
+ .company-information{
+	 border: solid 1px gray;
+	 border-radius: 10px;
+	 font-size: 15px;
+     font-family: 돋움;
+ 
+ 
+ }
+ 
  .company-sort{
- 	height:100px;
- 	background-color: #FAF4C0;
+	 height:100px;
+	/*  background-color: #FAF4C0; */
+ 
+}
+.body-font{
+	padding-top:30px;
+	padding-left:20px;
+	font-size:20px;
+	float: left;
+}
+
+ .company-array{
+	 height:inherit;
+	 width:240px;
+	 
+	 float:left;
  }
- 	.company-array{
- 		height:inherit;
- 		width:220px;
- 		background-color: aqua;
- 		float:left;
- 	}
- 	.construction-sort{
- 		height:inherit;
- 		width:500px;
- 		background-color: green;
- 		float:left;
- 	}
- 	.search{
- 		height:inherit;
- 		width:280px;
- 		background-color: grey;
- 		float:left;
- 	}
+ .construction-sort{
+	 height:inherit;
+	 width:480px;
+	 
+	 float:left;
+ }
+ 
+ .search{
+	 height:inherit;
+	 width:280px;
+	 
+	 float:left;
+ }
  
  .company-port{
- 	min-height:1000px;
- 	height:auto;
- 	background-color: #B2CCFF;
+	 min-height:500px;
+	 height:auto;
+	 background-color: #B2CCFF;
  }
  
-	 .company-content{
-	 	height:300px;
-	 	background-color:#FFD8D8;
-	 	
-	 }
-	 	.company-content2{
-	 		background-color:red;
-	 		float:left;
-	 		width:333px;
-	 		height: inherit;
-	 		
-	 	}
-	 	
-	 	.company-content3{
-	 		background-color:blue;
-	 		float:left;
-	 		width:333px;
-	 		height: inherit;
-	 		
-	 	}
-	 /* 	.company-content2:last-child{
-	 		float:none;
-	 		
-	 	}
-  */
+.company-content{
+	height:300px;
+	background-color:#FFD8D8;
+	border-top: 1px solid gray;
+
+}
+.company-content2{
+	float:left;
+	width:333px;
+	height: inherit;
+}
+.img-interior{
+	height: 190px;
+    margin: 30px;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+.img-interior:hover{
+	opacity: 0.7;
+}
+
 .search > .box > input{
 	margin-right: 10px;
 	margin-left: 10px;
@@ -222,18 +290,18 @@
 /*  ------------풋터------------- */
 
 #footer{
-	 height:140px;
- 	 background:#A3AFC9;
- 	 font-size: 15px;
+	height:140px;
+	 background:#A3AFC9;
+	 font-size: 15px;
  }
  #ceo{
- 	margin-left:150px;
- 	margin-top:20px;
- 	height:50px;
- 	border:1px solid black;
- 	border-radius: 10px;
- 	float:left;
- 	border-color:#8C8C8C;
+	 margin-left:150px;
+	 margin-top:20px;
+	 height:50px;
+	 border:1px solid black;
+	 border-radius: 10px;
+	 float:left;
+	 border-color:#8C8C8C;
  }
  #company-info{
     margin-left: 200px;
@@ -241,11 +309,78 @@
    
  }
  #customer-svc{
- 	margin:auto;
- 	padding-left:150px;
+	 margin:auto;
+	 padding-left:150px;
  }
  
  #copyright{
  	float: right;
  }
  
+ /* ---상세페이지 body------ */	
+ #detail-title{
+ 	height:40px;
+ 	background-color: #FFD8D8;
+ 	margin-top:50px;
+ 	text-align: center;
+ 	padding-top: 10px;
+ 	font-size:20px;
+ 	overflow: hidden;
+	text-overflow: ellipsis;
+	border-bottom: 1px solid gray;
+	border-bottom-style: dotted;
+ }
+ .detail-info{
+ 	/* height:440px; */
+ 	margin:30px;
+ 	background-color: #ddffff;
+ }
+ 	.detail-img{
+ 		height:420px;
+ 		margin:auto;
+ 		float:left;
+ 		width:600px;
+ 	}
+ 	.detail-cate{
+ 		background-color:  #ddffff ;
+ 		overflow: hidden;
+ 		padding-top:50px;
+ 		height: 370px;
+   		 width: 310px;
+   		 padding-left: 30px;
+
+ 		
+ 	}
+ 	.construction-content{
+ 		float:left;	
+ 		
+ 		border-bottom:1.5px dotted gray;
+ 	}
+ 	.construction-content>ul >li{
+ 		list-style: circle;
+ 		padding-bottom:15px;
+ 	}
+ .detail-content{
+ 	padding: 30px;
+ 	background-color: white;
+ 	text-align: center;
+ 	border: 2px solid gray;
+ 	border-radius: 10px;
+ 	font-family: "굴림";
+ }
+ .btn-large{
+ 	width:100px;
+ 	height: 30px;
+ 	padding:3px 8px;
+ 	display:inline-block;
+ 	text-align: center;
+ 	border-radius: 9px;
+ 	border:0px;
+ 	cursor:pointer;
+ 	border: 1px solid gray;
+ 	background-color: #b3d9ff;
+ 	margin-left:40px;
+ }
+ 	.btn-large:hover{
+ 		background-color: #6d80e9;
+ 	}
