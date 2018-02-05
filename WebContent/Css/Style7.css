@@ -67,10 +67,17 @@ main{
 	.search-box{
 		display:inline-block;
 		float:none;
-		width: 600px;
-		height: 100px;
+		min-width: 600px;
+		min-height: 80px;
 		border: 3px solid #A9A9A9;
 		margin: 0px;
+		padding : 20px;
+		line-height: 80px;
+		text-align: center;
+	}
+	.icon-box{
+		width:256px;
+		margin:0px;
 	}
 
 footer{
