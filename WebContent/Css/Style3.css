@@ -5,43 +5,41 @@ a{
 	color:inherit;
 	}
 	
+	
+	
 /* --base style-------------------------------------- */
 
 .hidden{
 display:none;
 }
  a:hover{
-text-decoration: underline;
+	text-decoration: inherit;
 
 }
 .padding-l-10{
-padding-left:10px;
-float:left;
+	padding-left:10px;
+	float:left;
 }
 .box{
-margin-top:30px;
-margin-left:28px;
+	margin-top:30px;
+	
 }
+
 .btn{
-min-width:65px;
-padding: 3px 8px;
-color:#ffffff;
-display: inline-block;
-text-align: center;
-border-radius: 7px;
-float:right;
-border:0px;
-cursor:pointer;
-margin-left: 0px;
+	min-width:65px;
+	padding:3px 8px;
+	border-radius: 7px;
 }
 .btn:hover{
-color:navy;
-background: #FFF2E6;
+	background: #D9E5FF;
+	
+	
 }
+
 .font-content{
-font-size: 20px;
-padding: 30px 10px 10px 20px;
-float:left;
+	font-size: 20px;
+	padding: 30px 10px 10px 20px;
+	float:left;
 }
 select{
 	width: 100px;
@@ -49,13 +47,14 @@ select{
     font-size: 16px;
     border: 1px solid black;
     border-radius: 3px;
-    margin-top: 34px
+    margin-top: 28px;
+    margin-left:10px;
 }
 .text-ellipsis{
-overflow: hidden;
-text-overflow: ellipsis;
-list-style:none;
-margin-top:5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	list-style:none;
+	margin-top:5px;
 
 }
 
@@ -70,6 +69,7 @@ margin-top:5px;
  
   height:180px;
   background: #FFF2E6;
+  font-family:"a옛날목욕탕L","고딕","sans-serif";
   
  }
 
@@ -162,13 +162,14 @@ margin-top:5px;
  #body{
 	 margin-top:20px;
 	 min-height:500px;
-	 /* background:#D4F4FA; */
+	 background:#D4F4FA; 
 	 height:auto;
+	 font-family:"a옛날목욕탕L","고딕","sans-serif";
  }
  
  .company-info{
 	 height: 400px;
-     background-color: #FFD8D8/* #CEFBC9 */;
+     background-color: #EDFAFD/* #EBF7FF *//* #FFD8D8 *//* #CEFBC9 */;
      margin-top: 20px;
  
  }
@@ -202,7 +203,7 @@ margin-top:5px;
  
  }
  .company-major{
- 
+ 	float: left;
  }
  .major{
 	 height:50px;
@@ -218,8 +219,6 @@ margin-top:5px;
 	 border-radius: 10px;
 	 font-size: 15px;
      font-family: 돋움;
- 
- 
  }
  
  .company-sort{
@@ -252,6 +251,7 @@ margin-top:5px;
 	 width:280px;
 	 
 	 float:left;
+	 margin-top:28px;
  }
  
  .company-port{
@@ -287,11 +287,12 @@ margin-top:5px;
 }
 
 
+
 /*  ------------풋터------------- */
 
 #footer{
 	height:140px;
-	 background:#A3AFC9;
+	 background:#086A87/* #A3AFC9 */;
 	 font-size: 15px;
  }
  #ceo{
@@ -316,11 +317,142 @@ margin-top:5px;
  #copyright{
  	float: right;
  }
+ /* ----사이드바--------------------- */
+#side{
+	background-color: #A0D9E2/* #C4D4E0 */ /* #AED9DA */ ;
+	width:90px;
+	height:100px;
+	position: fixed;
+	right:280px;
+	top:150px;
+	text-align: center;
+	margin-top: 100px;
+	color: #37435D;
+	font-size: 20px;
+	
+	font-family:"a옛날목욕탕L","고딕","sans-serif";
+	padding:3px;
+	
+	display: flex;
+    
+    align-items: center;
+    
+	border-radius: 12px;
+}
+
+#side>a{
+	
+}
+#side:hover{	
+	text-decoration:none;
+	cursor: pointer;
+}
  
- /* ---상세페이지 body------ */	
- #detail-title{
+ /* -@@@@@@@@@@@@@@@@@@@@--상세페이지 body------ */	
+ 
+ .detail-title{
+ 	height:35px;
+ 	background:pink;
+ 	border-bottom: 1px solid gray;
+ 	border-bottom-style: dotted;
+ 	text-align: center;
+ 	font-size:23px;
+ 	padding-top:10px;
+ 	 }
+ .detail-info{
+ 	height: 450px;
+ 	background-color: tomato;
+ 	padding-top: 20px;
+ }
+ .detail-img{
+ 	float: left;
+ 	background-color: red;
+ 	height:430px;
+ 	width:600px;
+ 	margin-left: 20px;
+ 	border-radius: 10px;
+ }
+ 
+ .detail-cate{
+ 	height:430px;
+ 	float:left;
+ 	margin:0;
+ 	width:340px;
+ 	background-color: green;
+ 	margin-left: 20px;
+ }
+ 
+	.detail-table{
+		float:left;
+		text-align: center;
+		margin-left:60px;
+		font-size:18px;
+		background-color: #D8D8D8;
+		
+	}
+	.menu-total{
+		width:inherit;
+		height:150px;
+		background-color: blue;
+		border-top-style: dotted;
+		border-top: 2px solid gray;
+		
+		
+	}
+		/* .hits{
+			float: left;
+			margin-left:30px;
+			margin-top: 20px;
+			font-size: 20px; */
+		}
+		
+		/* .hits{
+			border-radius:5px;
+			width:150px;
+			height:10px;
+			padding:3px 8px;
+			display:inline-block;
+			float:left;
+			margin-top: 18px;
+			text-align: center;
+			margin-left: 20px;
+			font-size:30px;
+		} */
+		
+		.hits{
+			margin-left:50px;
+		}
+  .construction-content{
+ 	width:inherit;
+ 	height:280px;
+ 	background-color: white;
+ }
+ 
+	 .detail-content{
+	 	width:inherit;
+	 	min-height:20px;
+	 	background: aqua;
+	 	margin:30px;
+	 	border: 2px solid black;
+	 	text-align: center;
+	 }
+	 .btn-large{
+		 width:100px;
+	 	height: 30px;
+	 	padding:3px 8px;
+	 	display:inline-block;
+	 	text-align: center;
+	 	border-radius: 4px;
+	 	border:0px;
+	 	cursor:pointer;
+	 	border: 1px solid gray;
+	 	background-color: #b3d9ff;
+	 	margin-left:40px;
+	 }
+	
+ /* #detail-title{
  	height:40px;
- 	background-color: #FFD8D8;
+ 	background-color: #EDFAFD#FFD8D8;
  	margin-top:50px;
  	text-align: center;
  	padding-top: 10px;
@@ -329,11 +461,11 @@ margin-top:5px;
 	text-overflow: ellipsis;
 	border-bottom: 1px solid gray;
 	border-bottom-style: dotted;
- }
- .detail-info{
- 	/* height:440px; */
+ } */
+/*  .detail-info{
+ 	height:440px;
  	margin:30px;
- 	background-color: #ddffff;
+ 	background-color: #EDFAFD;
  }
  	.detail-img{
  		height:420px;
@@ -342,16 +474,15 @@ margin-top:5px;
  		width:600px;
  	}
  	.detail-cate{
- 		background-color:  #ddffff ;
+ 		background-color: #EDFAFD ;
  		overflow: hidden;
  		padding-top:50px;
  		height: 370px;
    		 width: 310px;
    		 padding-left: 30px;
-
  		
- 	}
- 	.construction-content{
+ 	} */
+ /*	.construction-content{
  		float:left;	
  		
  		border-bottom:1.5px dotted gray;
@@ -359,8 +490,8 @@ margin-top:5px;
  	.construction-content>ul >li{
  		list-style: circle;
  		padding-bottom:15px;
- 	}
- .detail-content{
+ 	} */
+/*  .detail-content{
  	padding: 30px;
  	background-color: white;
  	text-align: center;
@@ -374,13 +505,18 @@ margin-top:5px;
  	padding:3px 8px;
  	display:inline-block;
  	text-align: center;
- 	border-radius: 9px;
+ 	border-radius: 4px;
  	border:0px;
  	cursor:pointer;
  	border: 1px solid gray;
  	background-color: #b3d9ff;
  	margin-left:40px;
+ 	
  }
  	.btn-large:hover{
  		background-color: #6d80e9;
- 	}
+ 	} */
+ 	
+/*  --작성, 수정.---------------------- */	
+
+
