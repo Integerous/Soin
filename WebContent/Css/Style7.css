@@ -64,7 +64,7 @@ main{
 		margin: 50px 250px;
 	}
 
-	.search-box{
+	/* .search-box{
 		display:inline-block;
 		float:none;
 		min-width: 600px;
@@ -74,11 +74,42 @@ main{
 		padding : 20px;
 		line-height: 80px;
 		text-align: center;
-	}
+	} */
 	.icon-box{
 		width:256px;
 		margin:0px;
 	}
+	
+	.sort-box{
+		width : 600px;
+		padding: 20px;
+		
+		display:flex;
+		flex-flow : row norap;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+		
+		border:2px solid #A9A9A9;
+		border-style: dashed;
+	}
+	
+	.sort-box .box1{
+		align-items: center;
+		align-self:center;
+		border: 1px solid #F0F8FF;
+	}
+	
+		.sort-box .box1:hover{
+			border: 2px solid #6495ED;
+		}
+		
+	.content-box{
+		width: 600px;
+		min-height: 600px; 
+		margin-top:20px;
+	}	
+		
 
 footer{
 	height: 150px;
@@ -112,6 +143,7 @@ footer{
 	min-width:300px;
 }
 
+
 /* 로고 */
 
 .logo{
@@ -138,10 +170,17 @@ footer{
 	font-weight: bold;
 }
 
+.label{
+	font-size: 11px;
+	font-weight: bold;
+	color: #6495ED;
+}
+
 .label-title{
 	font-size: 13px;
 	font-weight: bold;
 }
+
 
 
 /* 버튼 */
@@ -188,10 +227,6 @@ footer{
 		color:#0080c0;
 		background: #dedede;
 	}
-
-.cancel-button{
-	
-}
 
 .list-button{
 	width : 100px;
@@ -290,6 +325,7 @@ footer{
 	border:1px solid #4169E1; 
 	min-width: 350px;	
 }
+
 
 /* 나도 가운데 정렬 한다 */
 
