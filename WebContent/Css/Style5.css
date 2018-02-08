@@ -43,119 +43,122 @@ select{
 	overflow: hidden;
 }
 
+.text-ellipsis{
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
 /*--------------------------------header------------------------------*/
-#header{
-	width:100%;
-	height: 150px;
-	background: #b0c4de;
+header{
+/* 	height: 130px;
+	position: fixed; */
+	width: 100%;
 }
 
+.top-box{
+	display:flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		align-items: center;
+	height: 115px;	
+}
 
 /*--------------------------------member-menu------------------------------*/
+.member-bar{
+	display: flex;
+	height: 30px;
+	width: 100%;
+	font-size: 12px;
+	padding-top: 5px;
+	justify-content: center;
+	background: #FAFAFA;
+}
+
 .member-menu{
-	border-bottom: 5px solid #add8e6;
-	height: 55px;
-	overflow: auto;
+	display: flex;
+		justify-content: flex-end ;
+		align-items: center;
+	width: 960px;
 }
 
-.member-menu > h1{
-	display: none;
+	.member-menu div{
+		padding-left : 10px;
+		background: url("../Images/jyh/bg-member-menu-sp.png") no-repeat 5px center;
+		color : #424242;
+	}
+
+	.member-menu div:first-child{
+		padding-left: 0px;
+		background: none;
+	}
+	
+	.member-menu div:hover{
+		color: #000000;
+		background: #b0c4de;
+	}
+	
+/*--------------------------------main-menu------------------------------*/
+.main-bar{
+	background: #b0c4de;
+	height: 60px;
+	width: 100%;
+	display:flex;
+		justify-content: center;
+	font-size: 20px;
 }
 
-.member-menu-box{
-	float: right;
-	padding-top: 15px;
-	padding-right: 15px;
+.main-container{
+	display: flex;
+		justify-content: center;
+	width: 960px;
 }
 
-.member-menu-box > ul > li{
-	float: left;
-	padding-left: 10px;
-	background: url("../Images/jyh/bg-member-menu-sp.png") no-repeat 5px center;
-	font-size: 12px; 
-	color : #979797;
-}
-
-.member-menu-box > ul > li:first-child{
-	padding-left: 0px;
-	background: none;
-}
-
-.member-menu-box > ul > li:hover{
-	color: blue;
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-
-/*--------------------------------logo------------------------------*/
-#logo{
-	float: left;
-	width: 90px;
-	height: 90px;
+.main-menu{
+	display: flex;
+		justify-content: space-between;
+		align-items: center;
+	width: 100%;
 }
 	
-#logo > .images{
-	width: 90px;
-	height: 90px;
-}
+	.main-menu div:hover{
+		background: #ffcec8;
+	}
+/*--------------------------------logo------------------------------*/
 
-.images {
+.logo-bar{
 	width: 100%;
-    height: 100%;
+	height: 40px;
+	display: flex;
+		justify-content: center;
+	padding-top : 5px;
+	padding-bottom: 5px;
 }
 
-/*--------------------------------logo End------------------------------*/
-/*--------------------------------logo End------------------------------*/
+#logo{
+	width: 40px;
+	height: 40px;
+	align-self: center;
+	padding-right: 10px;
+}
 
+.images{
+	width:100%;
+	height: 100%;
+}
+
+.name{
+	color: #0C89DD;
+	padding-right: 10px;
+}
+
+.full-name{
+	font-size: 12px;
+	color : #979797;
+	padding-top: 15px;
+}
 /*--------------------------------공백------------------------------*/
 .null{
-	width:5px;
-	height:90px;
-	float: left;
-	background: #ffcec8;
-}
-
-/*--------------------------------공백 End------------------------------*/
-/*--------------------------------공백 End------------------------------*/
-
-/*--------------------------------main-menu------------------------------*/
-.main-menu{
-	height: 90px;
-	padding-top: 25px;
-	overflow: auto;
-	font-size : 25px;
-	background: #ffcec8;
-}
-
-.main-menu > h1{
-	display: none;
-}
-
-.main-menu > ul{
-	text-align: center;	
-}
-
-.main-menu > ul > li{
-	float: left;
-	width : 19%;		/* width : 155px */
-	height: 35px;
-	display: inline-block;
-}
-
-.main-menu > ul > li:first-child{
-	padding-left: 15px;
-}
-
-.main-menu > ul > li:last-child{
-	padding-right: 20px;
-}
-
-.main-menu > ul > li:hover{
-	color: blue;
-	background: #add8e6;
-	text-decoration: underline;
-	cursor: pointer;
+	margin: 0px 10px;
 }
 /*--------------------------------header End------------------------------*/
 /*--------------------------------header End------------------------------*/
@@ -166,7 +169,9 @@ select{
 #main{
 	width: 100%;
 	min-height: 350px;
-	background: #b0e0e6;
+/* 	margin-top: 0px;
+	padding-top: 50px; */
+	background: #FAFAFA;
 }
 
 #main > .root-container > h1{
@@ -175,12 +180,14 @@ select{
 
 #main > .root-container{
 	padding-top: 70px;
-	padding-bottom: 100px;
+	padding-bottom: 70px;
 }
 
 .main-text-box{
 	text-align: center;
 	margin-bottom: 20px;
+	min-height: 50px;
+	width: 100%;
 }
 
 .search-box{
@@ -208,20 +215,15 @@ select{
 }
 
 .btn:hover{
-	background: #FFCEC8;
+	background: #b0c4de;
 	text-decoration: underline;
-	font-weight: bold;
+	color: #1C1C1C;
 }
 
 .main-box{
 	height: 200px;
 	padding-bottom: 20px;
 }
-
-
-/* .rootcontainer > main-box:first-child{
-	padding-top: 100px;
-} */
 
 .img-box{
 	width: 336px;
@@ -237,11 +239,8 @@ select{
 .text-box{
 	width: 624px;
 	height: 200px;
-	background: #757575;
+	background: #A4A4A4;
 	float: right;
-	white-space: nowrap;
-	overflow:hidden;
-	text-overflow: ellipsis;
 }
 
 .text-box a{
@@ -288,12 +287,11 @@ select{
 /*--------------------------------main End------------------------------*/
 /*--------------------------------main End------------------------------*/
 
-
 /*--------------------------------footer------------------------------*/
 
 #footer{
 	width: 100%;
-	height: 210px;
+	height: 190px;
 	background: #313131;
 	font-size: 15px;
 	padding-top: 45px;
@@ -307,39 +305,27 @@ select{
 
 .left-footer{
 	padding-left: 15px;
-	width: 43%;
+	width: 45%;
 	height: inherit;
 	float: left;
 	overflow: auto;
 }
 
 .right-footer{
-	width: 43%;
+	width: 45%;
 	height: inherit;
 	overflow: auto;
 	float: left;
 }
 
 #footer-logo{
-	width: 75px;
-	height: 75px;
-}
-
-.footer-images{
-	width:75px;
-	height: 75px;
+	width: 50px;
+	height: 50px;
 	float: left;
 }
 
 .copyright{
-	margin-top: 90px;
-}
-
-.clear-fix::after {
-	display: block;
-	clear:both;
-	height: 0px;
-	overflow: hidden;
+	margin-top: 60px;
 }
 
 /*--------------------------------윤호 Main01 End--------------------------------*/
@@ -357,6 +343,53 @@ select{
 	text-align: right;
 }
 
+.main03-content-box{
+	display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	
+	width: 100%;
+	min-height: 200px;
+}
+
+.main03-content{
+	width:30%;
+	height: 300px;
+	padding-bottom: 15px;
+}
+
+.main03-image{
+	width:90%;
+	height: 200px;
+}
+
+.main03-text{
+	width:100%;
+	height:100px;
+	font-size: 13px;
+	white-space: normal;
+	display: inline-block;
+	padding-top : 5px;
+}
+
+	.main03-text a{
+		width:100%;
+		height: 100%;
+		display: block;
+	}
+
+.text03-title{
+	text-decoration: underline;
+	font-size: 20px;
+	width:90%;
+	height: 30px
+}
+
+.text03-surmmary{
+	text-align:cetner;
+	width:90%;
+	height: 70px;
+}
 /*--------------------------------윤호 Main03 End--------------------------------*/
 /*--------------------------------윤호 Main03 End--------------------------------*/
 /*--------------------------------윤호 Detail01 Start--------------------------------*/
@@ -373,24 +406,24 @@ select{
 
 .detail-title{
 	float: left;
+	padding-top : 20px;
 }
 
 .detail-popularity{
 	font-size: 10px;	
 	text-align: right;
-	padding-top: 18px;
+	padding-top: 30px;
+	padding-left : 0px;
 }
 
 .detail-content{
 	width: 100%;
 	min-height: inherit;
-	background: #666;
 }
 	
 .detail-img{
 	width:80%;
 	min-height: 400px;
-	background: #999;
 	text-align: center;
 }
 
@@ -400,8 +433,7 @@ select{
 
 .detail-text{
 	width: 80%;
-	min-height: inherit;
-	background: #707070;
+	min-height: 200px;
 	text-align: center;
 	font-size: 20px;
 	padding-top: 25px;
@@ -427,7 +459,7 @@ select{
 /*--------------------------------윤호 Detail03 Start--------------------------------*/
 
 .detail-title03{
-	width : 95%;
+	width : 98%;
 	float: left;
 	border: 3px solid #979797;
 	border-radius: 10px;
@@ -444,162 +476,17 @@ select{
 
 .detail-text03{
 	width: 80%;
-	min-height: inherit;
-	background: #707070;
+	min-height: 200px;
 	text-align: center;
 	font-size: 15px;
 	padding-top: 25px;
 }
 
+.detail-popularity03{
+	font-size: 10px;	
+	text-align: right;
+	padding-top: 45px;
+	padding-left : 0px;
+}
 /*--------------------------------윤호 Detail03 End--------------------------------*/
 /*--------------------------------윤호 Detail03 End--------------------------------*/
-
-/*--------------------------------Detail Page Start--------------------------------*/
-/*--------------------------------Top-Box--------------------------------*/
-.top-box{
-	width:100%;
-	height: 500px;
-	background: red;
-	display: flex;
-}
-
-	.top-box > h1{
-		display: none;
-	}
-	
-.top-left-box{
-	background: #fff;
-}
-
-.cst-images{
-	width: 300px;
-	height: 300px;
-}
-
-.form-box{
-	border : 2px solid #000;
-	margin-top : 20px;
-	width: 300px;
-	font-size: 15px;
-}
-	.form-box > input{
-		margin:0px;
-		padding: 0px;
-		height: 15px;
-		width: 230px;
-	}
-	
-	.form-box > label{
-		height: 35px;
-		border-right : 2px solid #000;
-	}
-
-.rank-label{
-	padding-right: 15px;
-}
-
-.top-mid-box{
-	width: 330px;
-	background: #888;
-	font-size: 20px;
-}
-
-	.top-box textarea{
-		background: #888;
-		border : 3px solid #000;
-		width:310px;
-		height: 235px;
-		resize: none;
-	}
-	
-.table {
-		border:3px solid #333333;
-		font-size: 15px;
-		width: 320px;
-		height: 200px;
-		/* border-spacing: 0px; */
-}
-
-	.table th{
-		border: 1px solid #333333;
-	}
-	
-	.table td{
-		border: 1px solid #333333;
-		padding-left: 10px;
-	}
-	
-.top-right-box{
-	background: #333;
-	width: 330px;
-	margin-top : 25px;
-}
-
-.map-box{
-	width: 250px;
-	height: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	border: 5px solid #999;
-}
-
-.map{
-	width:inherit;
-	height:250px;
-	background: url("../Images/jyh/mapExam.png") no-repeat center;
-}
-
-.distance {
-	border : 2px solid #000;
-	margin-top : 20px;
-	width: 250px;
-	font-size: 15px;
-}
-
-	.distance label{
-		height: 35px;
-		border-right : 2px solid #000;
-		font-size: 15px;
-	}
-	
-	.distance input{
-		margin:0px;
-		padding: 0px;
-		height: 15px;
-		width: 80px;
-	}
-	
-.btn-box{
-	height: 200px;
-	width: inherit;
-	margin-top:40px;
-	margin-left: 35px;
-}
-
-	.btn-box > input{
-		height: 50px;
-		width:80px;
-		font-size: 15px;
-		text-align:center;
-		padding: 0px; 
-	}
-/*--------------------------------Top-Box End--------------------------------*/
-/*--------------------------------Top-Box End--------------------------------*/
-.mid-box{
-	width:100%;
-	height: 350px;
-	background: blue;
-}
-
-/*--------------------------------Mid-Box End--------------------------------*/
-/*--------------------------------Mid-Box End--------------------------------*/
-
-/*--------------------------------Bot--Box--------------------------------*/
-.bot-box{
-	width:100%;
-	height: 350px;
-	background: yellow;
-}
-
-/*--------------------------------Bot-Box End--------------------------------*/
-/*--------------------------------Bot-Box End--------------------------------*/
