@@ -146,11 +146,13 @@ hr {
 /* ----------MAIN---------- */
 main{
 	display: flex;
-		justify-content: center;
+/* 		justify-content: center; */
 		align-items: center;
 		flex-direction: column;
 	margin-top: 121px;
 	min-height: 708px;
+	
+	background: #0e5079;
 }
 
 /* -----progress bar----- */
@@ -167,7 +169,7 @@ main{
 	display: flex;
 		justify-content: space-around;
 		align-items: center;
-	width: 70%;
+	width: 60%;
 	padding-top: 5px;
 	font-size: 15px;
 	font-weight: bold;
@@ -186,7 +188,7 @@ main{
 .triangle{
 	display: flex;
 		justify-content:space-around;
-	width: 70%;
+	width: 60%;
 	hegiht:	10px;
 	background: #e9e9e9;
 /* 	opacity: 0.7; */
@@ -213,7 +215,7 @@ main{
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-	padding: 20px 40px 30px;
+	padding: 20px 20px 20px;
 	margin: 20px 0px;
 	background: gold;
 	border-radius: 20px;
@@ -245,7 +247,7 @@ section{
 /* 	border-radius: 20px; */
 }
 
-/* -----STEP 1---- */
+/* -----견적의뢰서 작성---- */
 .request-form{	
 	display: flex;
 		flex-direction: column;
@@ -284,11 +286,50 @@ legend{
 	padding: 0px 10px;
 }
 
+
+/* -----견적의뢰서 요약---- */
+.request-summary{
+	display: flex;
+		justify-content: space-around;
+}
+
+.request-options{
+	display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+}
+
+.request-options > div{
+	display: flex;
+		align-items: center;
+	padding: 5px;
+	font-size: 14px;	
+}
+
+.summary-content{
+	display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+}
+
+.summary-content > div{
+	display: flex;
+		align-items: center;
+	padding: 5px;
+	font-size: 14px;
+}
+
+
+
+
 /* -----button container----- */
 
 .btn-container{
 	display: flex;
-	justify-content: space-evenly;
+		justify-content: space-evenly;
+	padding: 0px 70px;
 }
 /* -----prev button----- */
 
@@ -301,7 +342,7 @@ legend{
 
 .prev-btn {
   border-radius: 10px;
-  background-color:#1da1f2;
+  background-color:#ff7f00;
   border: none;
   /* padding: 20px; */
   width: 100px;
@@ -320,21 +361,21 @@ legend{
 }
 
 .prev-btn span:after {
-  content: '»';
+  content: '<';
   position: absolute;
   opacity: 0;
-  top: 0;
-  right: -20px;
+  top: 2px;
+  left: -20px;
   transition: 0.5s;
 }
 
 .prev-btn:hover span {
-  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .prev-btn:hover span:after {
   opacity: 1;
-  right: 0;
+  left: 0;
 }
 
 
