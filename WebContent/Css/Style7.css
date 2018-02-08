@@ -16,6 +16,19 @@ h1{
 	color: #B0C4DE;
 }
 
+h3{
+	font-weight: bold;
+	margin: 0px;	
+}
+	
+	h3:hover{
+		text-decoration: underline;
+	}
+
+p{
+	margin: 5px 0px;
+}
+
 a{
 	margin:0px;
 	text-decoration:none;
@@ -82,7 +95,7 @@ main{
 	
 	.sort-box{
 		width : 600px;
-		padding: 20px;
+		padding: 20px 10px;
 		
 		display:flex;
 		flex-flow : row norap;
@@ -94,11 +107,12 @@ main{
 		border-style: dashed;
 	}
 	
-	.sort-box .box1{
-		align-items: center;
-		align-self:center;
-		border: 1px solid #F0F8FF;
-	}
+		.sort-box .box1{
+			align-items: center;
+			align-self:center;
+			border: 1px solid #F0F8FF;
+			height: 55px;
+		}
 	
 		.sort-box .box1:hover{
 			border: 2px solid #6495ED;
@@ -107,7 +121,24 @@ main{
 	.content-box{
 		width: 600px;
 		min-height: 600px; 
-		margin-top:20px;
+		margin-top:50px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:flex-end;
+	}
+	
+		.content-box .box{
+			display: flex;
+			flex-direction: column;
+			margin-right:25px;
+			width: 260px;
+			height: 350px;
+		}
+	
+	.page-box{
+		margin-top:70px;
+		display: flex;
+		justify-content: center;
 	}	
 		
 
@@ -181,6 +212,15 @@ footer{
 	font-weight: bold;
 }
 
+#page{
+	margin-right: 10px;
+	font-size: 12px;
+	
+}
+	
+	#page:hover{
+		border: 2px solid #0080c0;
+	}
 
 
 /* 버튼 */
@@ -239,6 +279,11 @@ footer{
 	float: right;
 }
 
+.write-button{
+	float: right;
+	margin-top: 10px;
+
+}
 
 /* 테이블 */
 
