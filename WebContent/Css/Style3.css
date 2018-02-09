@@ -418,6 +418,7 @@ select{
 		align-items:flex-end; */
 		flex-direction: row;
 		justify-content:space-around;
+		width: 400px;
 	}
 	
 		
@@ -439,7 +440,7 @@ select{
 	 .btn-large{
 		 width:100px;
 	 	height: 40px;
-	 	padding:3px 8px;
+	 	padding-top:10px;
 	 	display:inline-block;
 	 	text-align: center;
 	 	border-radius: 4px;
