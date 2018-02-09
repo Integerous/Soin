@@ -5,7 +5,7 @@ a{
 	color:inherit;
 	}
 	
-	
+
 	
 /* --base style-------------------------------------- */
 
@@ -66,7 +66,7 @@ select{
   margin-right: auto;
  }
  #header{
- 
+
   height:180px;
   background: #FFF2E6;
   font-family:"a옛날목욕탕L","고딕","sans-serif";
@@ -262,7 +262,7 @@ select{
  
 .company-content{
 	height:300px;
-	background-color:#FFD8D8;
+	background-color:#F2F2F2/* #FFD8D8 */;
 	border-top: 1px solid gray;
 
 }
@@ -291,9 +291,11 @@ select{
 /*  ------------풋터------------- */
 
 #footer{
-	height:140px;
-	 background:#086A87/* #A3AFC9 */;
+	height:154px;
+	 background:#444444/* #A3AFC9 */;
 	 font-size: 15px;
+	 color:#F2F2F2;
+	 font-weight: lighter;
  }
  #ceo{
 	 margin-left:150px;
@@ -315,15 +317,16 @@ select{
  }
  
  #copyright{
- 	float: right;
+ 	position: absolute;
+ 	right: 30px;
  }
  /* ----사이드바--------------------- */
 #side{
-	background-color: #A0D9E2/* #C4D4E0 */ /* #AED9DA */ ;
+	background-color: #75bbec/* #A0D9E2 *//* #C4D4E0 */ /* #AED9DA */ ;
 	width:90px;
 	height:100px;
 	position: fixed;
-	right:280px;
+	right:240px;
 	top:150px;
 	text-align: center;
 	margin-top: 100px;
@@ -399,29 +402,26 @@ select{
 		
 		
 	}
-		/* .hits{
-			float: left;
-			margin-left:30px;
-			margin-top: 20px;
-			font-size: 20px; */
-		}
+	.choice-container{
+		display:flex;
+		width:500px;
+		height:50px;
+		background:fuchsia;
+		margin-left: 230px;
+		justify-content:space-around;
+		align-items:flex-end;
+	}
+	.flex-choice{
+		display:flex;
+		justify-content:center;
+		/* justify-content:space-around;
+		align-items:flex-end; */
+		flex-direction: row;
+		justify-content:space-around;
+	}
+	
 		
-		/* .hits{
-			border-radius:5px;
-			width:150px;
-			height:10px;
-			padding:3px 8px;
-			display:inline-block;
-			float:left;
-			margin-top: 18px;
-			text-align: center;
-			margin-left: 20px;
-			font-size:30px;
-		} */
 		
-		.hits{
-			margin-left:50px;
-		}
   .construction-content{
  	width:inherit;
  	height:280px;
@@ -438,7 +438,7 @@ select{
 	 }
 	 .btn-large{
 		 width:100px;
-	 	height: 30px;
+	 	height: 40px;
 	 	padding:3px 8px;
 	 	display:inline-block;
 	 	text-align: center;
@@ -447,7 +447,7 @@ select{
 	 	cursor:pointer;
 	 	border: 1px solid gray;
 	 	background-color: #b3d9ff;
-	 	margin-left:40px;
+	 	/* margin-left:40px; */
 	 }
 	
  /* #detail-title{
@@ -519,4 +519,9 @@ select{
  	
 /*  --작성, 수정.---------------------- */	
 
-
+.root-container{
+	height: 100%;
+	min-height: inherit;
+	width:1000px;
+	margin:0 auto;
+}	
