@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상세 견적요청 - 소규모 인테리어 시공 중개 플랫폼 소인</title>
+<title>상세 견적의뢰 - 소규모 인테리어 시공 중개 플랫폼 소인</title>
 <link href="../../Css/Style4.css" type="text/css" rel="stylesheet"/>
 
 </head>
@@ -56,7 +56,7 @@
 				<div class="hello-contr">
 					<a href="#">업체소개</a></div>
 				<div class="est-request">
-					<a href="#" style="color:gold">견적요청</a></div>
+					<a href="#" style="color:gold">견적의뢰</a></div>
 				<div class="tip">
 					<a href="#">인테리어 TIP</a></div>
 				<div class="review">
@@ -91,10 +91,13 @@
 <!-- ------------form wrapper------------ -->		
 		<div class="form-wrapper">
 
-<!-- ------------견적요청서  타이틀------------ -->
+<!-- ------------견적의뢰서  타이틀------------ -->
 			<section class="form-title">
+				
+				<img src="../../Images/ic_check_box_black_24dp_2x.png" alt="check-box" /></a>
+				
 				<div class="ft-container">
-					견적요청서 작성
+					견적의뢰서 작성
 				</div>
 			</section>
 
@@ -103,7 +106,7 @@
 					<div>
 						<fieldset>
 							<legend>4. 원하는 스타일/제품이 담긴 URL 입력</legend>
-								<div class="category-4">
+								<div class="options">
 									<div>
 										<input type="search">
 										<input type="submit" value="URL 입력">
@@ -116,7 +119,7 @@
 					<div>
 						<fieldset>
 							<legend>5. 현재 상태 사진 올리기</legend>
-								<div class="category-5">
+								<div class="options">
 									<div>
 										<input type="file" class="photos">
 									</div>
@@ -128,7 +131,7 @@
 					<div>
 						<fieldset>
 							<legend>6. 희망 시공일 선택</legend>
-								<div class="category-6">
+								<div class="options">
 									<div>
 										<label><input type="date" id="start"></label>
 									</div>
@@ -144,17 +147,30 @@
 					<div>
 						<fieldset>
 							<legend>7. 상세 요청사항</legend>
-								<div class="category-7">
+								<div class="options">
 									<textarea name="request" cols="55" rows="5">
 									</textarea>
 								</div>
 						</fieldset>
 					</div>
+		
+
+<!-- ------------button container------------ -->
+		<div class="btn-container">
+		
+<!-- ------------previous button------------ -->	
+			<div class="previous-button">
+				<button class="prev-btn" onclick="location.href='est-request1.html'"><span>이전</span></button>
+			</div>		
 				 
 <!-- ------------next button------------ -->							
 			<div class="next-button">
-		      <button class="next-btn"><span>다음</span></button>
+		      <button class="next-btn" onclick="location.href='est-request3.html'"><span>다음</span></button>
 		    </div>
+
+
+		</div>
+
 
 
 			</section>

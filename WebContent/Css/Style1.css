@@ -53,6 +53,9 @@ select
 	width: 100px;
 	padding-left: 5px;
 	margin-left: 5px;
+	position: relative;
+	border-color: #7B7F80;
+	left: 3px;
 }
 /*------abstract--------------------------------------------------------------------*/
 body
@@ -77,6 +80,7 @@ body
 {
 	margin-top: 20px;
 }
+
 
 .mb20
 {
@@ -106,15 +110,22 @@ body
 	border: 1px solid #7B7F80;
 }
 
+
 .input-sh-short
 {
 	box-sizing: border-box;
 	height: 30px;
 	width: 95px;
 	padding-left: 10px;
-	margin-left: 15px;
+	margin-left: 17.5px;
 	border: 1px solid #7B7F80;
 }
+
+.marl5
+{
+	margin-left: 0px;
+}
+
 
 .btn-input
 {
@@ -165,10 +176,6 @@ body
 #direct-reserve
 {
 	position: relative;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 	width: 15%;
 	height: 50px;
 	background-color: #7B7F80;
@@ -178,6 +185,7 @@ body
 #dir-res > a
 {
 	height: inherit;
+	line-height: 50px;
 	width : 100%;
 	color: #fff;
 }
@@ -185,7 +193,7 @@ body
 #body
 {
 	width: 100%;
-	min-height: 800px;
+	min-height: 950px;
 	background: url("../Images/phz/main.jpg") no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -366,10 +374,20 @@ body
 	
 	.btn a
 	{	
-		display: inline-block;
+		display: flex;
+		flex-direction: row;
 		box-sizing: border-box;
 		height: inherit;
 		width : inherit;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.btn img
+	{	
+		display: block;
+		height: 80%;
+		width: 20%;
 	}
 	
 	
@@ -387,6 +405,7 @@ body
 		display: inline-block;
 		box-sizing: border-box;
 		height: inherit;
+		line-height: 70px;
 		width : 100%;
 		vertical-align: middle;
 	}
@@ -503,7 +522,7 @@ body
 	min-height: inherit;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 30px;
+	padding-top: 100px;
 	padding-bottom: 30px;
 }
 
@@ -545,6 +564,8 @@ body
 .register-step > ul> li > span
 {
 	display: inline-block;
+	line-height: 30px;
+	font-weight: bold;
 	height: 30px;
 	width: 250px;
 	border: 1px solid #DDDEDE;
@@ -683,6 +704,10 @@ body
 	font-weight: bold;
 }
 
+.btn-huge span
+{
+	line-height: 50px;
+}
 
 .text-emp
 {
@@ -720,3 +745,7 @@ body
 	cursor: pointer;
 }
 
+.category p
+{
+	line-height: 50px;
+}

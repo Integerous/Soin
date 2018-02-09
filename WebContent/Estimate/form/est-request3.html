@@ -74,16 +74,16 @@
 <!-- ------------progress bar------------ -->		
 			<div class="pb-bar">
 				<section class="progress-bar">
-						<div class="current-step">STEP 1</div>
+						<div class="step1">STEP 1</div>
 						<div class="step2">STEP 2</div>
-						<div class="step3">STEP 3</div>
+						<div class="current-step">STEP 3</div>
 						<div class="step4">STEP 4</div>
 				</section>
 							
 				<div class="triangle">
-					 <div class="current-ta"></div>
+					 <div class="ta-1"></div>
 					 <div class="ta-2"></div>
-					 <div class="ta-3"></div>
+					 <div class="current-ta"></div>
 					 <div class="ta-4"></div>
 				</div>
 			</div>
@@ -91,97 +91,80 @@
 <!-- ------------form wrapper------------ -->		
 		<div class="form-wrapper">
 
-<!-- ------------견적의뢰서 ------------ -->
+<!-- ------------견적의뢰서  타이틀------------ -->
 			<section class="form-title">
-				
-				<img src="../../Images/ic_check_box_black_24dp_2x.png" alt="check-box" /></a>
-				
-				<div class="ft-container">
-					견적의뢰서 작성
-				</div>
+				<img src="../../Images/ic_playlist_add_check_black_24dp_2x.png" alt="check-box2" />
+					<div class="ft-container">
+						견적의뢰서 요약
+					</div>
 			</section>
 
-<!-- ------------카테고리 1 선택------------ -->			
+<!-- ------------견적의뢰서 요약------------ -->			
 		<section class="request-form">
-				<fieldset>
-					<legend>1. 어디에 시공이 필요하신가요?</legend>
-						<div class="options">
-							<div>
-								<input id="window" type="radio" name="category" value="#" checked>
-								<label for="window">창문</label>
-							</div>
-							<div>
-								<input id="door" type="radio" name="category" value="#">
-								<label for="door">문</label>
-							</div>
-							<div>
-								<input id="bathroom" type="radio" name="category" value="#">
-								<label for="bathroom">욕실</label>
-							</div>
-							<div>
-								<input id="wall" type="radio" name="category" value="#">
-								<label for="wall">벽</label>
-							</div>
-						</div>
-				</fieldset>
-	
-<!-- ------------카테고리 2 선택------------ -->		
-				<fieldset>
-					<legend>2. 상세 카테고리 선택</legend>
-						<div class="options">
-							<div>
-								<input id="high-ss" type="radio" name="category2" value="##" checked>
-								<label for="high-ss">하이샤시</label>
-							</div>
-							<div>
-								<input id="aluminum" type="radio" name="category2" value="##">
-								<label for="aluminum">알루미늄 창</label>
-							</div>
-							<div>
-								<input id="wood" type="radio" name="category2" value="##">
-								<label for="wood">목재 창</label>
-							</div>
-							<div>
-								<input id="etc" type="radio" name="category2" value="##">
-								<label for="etc">기타</label>
-							</div>
-						</div>
-				</fieldset>
-	
-<!-- ------------실측 사이즈------------ -->					
-				<fieldset>
-					<legend>3. 실측 사이즈</legend>
-					<div class="options">
-						<div class="category-3-a">
-							<div>창문 너비 : 
-								<input type="number" min="1" max="500" value="">cm
-							</div>
-							<div>창문 높이 :
-								<input type="number" min="1" max="500" value="">cm
-							</div>
-						</div>
-						<div class="category-3-b">
-							<div>창틀 너비 : 
-								<input type="number" min="1" max="500" value="">cm
-							</div>
-							<div>창틀 높이 :
-								<input type="number" min="1" max="500" value="">cm
-							</div>
-						</div>
+					<div>
+						<fieldset>
+							<legend>요약</legend>
+								<div class="request-summary">
+									<div class="request-options">
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											시공 카테고리:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											상세 카테고리:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											실측 사이즈:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											희망 시공일:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											시공지 주소:
+										</div>
+									</div>
+									<div class="summary-content">
+										<div>
+											(여기에 해당하는 데이터 불러왕)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+									</div>
+								</div>
+						</fieldset>
 					</div>
-				</fieldset>
+					
 
 
 <!-- ------------button container------------ -->
 		<div class="btn-container">
-				
+		
+<!-- ------------previous button------------ -->	
+			<div class="previous-button">
+				<button class="prev-btn" onclick="location.href='est-request2.html'"><span>이전</span></button>
+			</div>
 <!-- ------------next button------------ -->							
 			<div class="next-button">
-		      <button class="next-btn" onclick="location.href='est-request2.html'"><span>다음</span></button>
+		      <button class="next-btn"><span>다음</span></button>
 		    </div>
+	    
+		</div>  
 		    
 		    
-		</div>
 		    
 		    
 		    

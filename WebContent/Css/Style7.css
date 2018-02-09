@@ -16,6 +16,19 @@ h1{
 	color: #B0C4DE;
 }
 
+h3{
+	font-weight: bold;
+	margin: 0px;	
+}
+	
+	h3:hover{
+		text-decoration: underline;
+	}
+
+p{
+	margin: 5px 0px;
+}
+
 a{
 	margin:0px;
 	text-decoration:none;
@@ -64,14 +77,70 @@ main{
 		margin: 50px 250px;
 	}
 
-	.search-box{
+	/* .search-box{
 		display:inline-block;
 		float:none;
-		width: 600px;
-		height: 100px;
+		min-width: 600px;
+		min-height: 80px;
 		border: 3px solid #A9A9A9;
 		margin: 0px;
+		padding : 20px;
+		line-height: 80px;
+		text-align: center;
+	} */
+	.icon-box{
+		width:256px;
+		margin:0px;
 	}
+	
+	.sort-box{
+		width : 600px;
+		padding: 20px 10px;
+		
+		display:flex;
+		flex-flow : row norap;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+		
+		border:2px solid #A9A9A9;
+		border-style: dashed;
+	}
+	
+		.sort-box .box1{
+			align-items: center;
+			align-self:center;
+			border: 1px solid #F0F8FF;
+			height: 55px;
+		}
+	
+		.sort-box .box1:hover{
+			border: 2px solid #6495ED;
+		}
+		
+	.content-box{
+		width: 600px;
+		min-height: 600px; 
+		margin-top:50px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:flex-end;
+	}
+	
+		.content-box .box{
+			display: flex;
+			flex-direction: column;
+			margin-right:25px;
+			width: 260px;
+			height: 350px;
+		}
+	
+	.page-box{
+		margin-top:70px;
+		display: flex;
+		justify-content: center;
+	}	
+		
 
 footer{
 	height: 150px;
@@ -105,6 +174,7 @@ footer{
 	min-width:300px;
 }
 
+
 /* 로고 */
 
 .logo{
@@ -131,10 +201,26 @@ footer{
 	font-weight: bold;
 }
 
+.label{
+	font-size: 11px;
+	font-weight: bold;
+	color: #6495ED;
+}
+
 .label-title{
 	font-size: 13px;
 	font-weight: bold;
 }
+
+#page{
+	margin-right: 10px;
+	font-size: 12px;
+	
+}
+	
+	#page:hover{
+		border: 2px solid #0080c0;
+	}
 
 
 /* 버튼 */
@@ -182,10 +268,6 @@ footer{
 		background: #dedede;
 	}
 
-.cancel-button{
-	
-}
-
 .list-button{
 	width : 100px;
 	float: right;
@@ -197,6 +279,11 @@ footer{
 	float: right;
 }
 
+.write-button{
+	float: right;
+	margin-top: 10px;
+
+}
 
 /* 테이블 */
 
@@ -283,6 +370,7 @@ footer{
 	border:1px solid #4169E1; 
 	min-width: 350px;	
 }
+
 
 /* 나도 가운데 정렬 한다 */
 
