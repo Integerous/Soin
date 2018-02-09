@@ -146,10 +146,13 @@ hr {
 /* ----------MAIN---------- */
 main{
 	display: flex;
-		justify-content: center;
+/* 		justify-content: center; */
 		align-items: center;
 		flex-direction: column;
 	margin-top: 121px;
+	min-height: 708px;
+	
+	background: #0e5079;
 }
 
 /* -----progress bar----- */
@@ -166,7 +169,7 @@ main{
 	display: flex;
 		justify-content: space-around;
 		align-items: center;
-	width: 70%;
+	width: 60%;
 	padding-top: 5px;
 	font-size: 15px;
 	font-weight: bold;
@@ -185,7 +188,7 @@ main{
 .triangle{
 	display: flex;
 		justify-content:space-around;
-	width: 70%;
+	width: 60%;
 	hegiht:	10px;
 	background: #e9e9e9;
 /* 	opacity: 0.7; */
@@ -212,7 +215,7 @@ main{
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-	padding: 20px 40px 30px;
+	padding: 20px 20px 20px;
 	margin: 20px 0px;
 	background: gold;
 	border-radius: 20px;
@@ -222,7 +225,7 @@ section{
 		background: #fff;
 }
 
-/* -----견적요청서----- */
+/* -----견적의뢰서----- */
 .form-title{
 	display: flex;
 		justify-content: flex-start;
@@ -234,16 +237,17 @@ section{
 .ft-container {
 	display: flex;
 		justify-content: flex-start;
+		align-items: center;
 	max-width: 900px;
-	padding: 5px 20px;		
-	border: 3px solid #979797;
+	padding: 5px 10px;		
 	background: gold;
 	font-weight: bold;
 	font-size: 20px;
-	border-radius: 20px;
+/* 	border: 3px solid #979797; */
+/* 	border-radius: 20px; */
 }
 
-/* -----STEP 1---- */
+/* -----견적의뢰서 작성---- */
 .request-form{	
 	display: flex;
 		flex-direction: column;
@@ -268,13 +272,7 @@ legend{
 	font-size: 18px;
 }
 
-.category-7,
-.category-6,
-.category-5,
-.category-4,
-.category-3,
-.category-2,
-.category-1{
+.options{
 	display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -284,23 +282,109 @@ legend{
 	padding: 10px 0px;
 }
 
-.category-2 > div,
-.category-1 > div{
+.options > div{
 	padding: 0px 10px;
 }
 
-.category-5 > div,
-.category-4 > div,
-.category-6 > div,
-.category-3 > div{
-	padding: 0px 10px;
+
+/* -----견적의뢰서 요약---- */
+.request-summary{
+	display: flex;
+		justify-content: space-around;
 }
 
-/* -----button----- */
+.request-options{
+	display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+}
+
+.request-options > div{
+	display: flex;
+		align-items: center;
+	padding: 5px;
+	font-size: 14px;	
+}
+
+.summary-content{
+	display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+}
+
+.summary-content > div{
+	display: flex;
+		align-items: center;
+	padding: 5px;
+	font-size: 14px;
+}
+
+
+
+
+/* -----button container----- */
+
+.btn-container{
+	display: flex;
+		justify-content: space-evenly;
+	padding: 0px 70px;
+}
+/* -----prev button----- */
+
+.previous-button{
+	display: flex;
+		justify-content: center;
+/* 	width: 90%; */
+/* 	background: 1da1f2; */
+}
+
+.prev-btn {
+  border-radius: 10px;
+  background-color:#ff7f00;
+  border: none;
+  /* padding: 20px; */
+  width: 100px;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.prev-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.prev-btn span:after {
+  content: '<';
+  position: absolute;
+  opacity: 0;
+  top: 2px;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.prev-btn:hover span {
+  padding-left: 25px;
+}
+
+.prev-btn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+
+
+/* -----next button----- */
 .next-button{
 	display: flex;
-		justify-content: flex-end;
-	width: 90%;
+		justify-content: center;
+/* 	width: 90%; */
 /* 	background: 1da1f2; */
 }
 
@@ -342,7 +426,7 @@ legend{
   right: 0;
 }
 
-/* -----STEP 2---- */
+
 
 /* ----------FOOTER----------- */
 footer{
