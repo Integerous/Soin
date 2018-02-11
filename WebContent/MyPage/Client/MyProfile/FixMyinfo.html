@@ -63,17 +63,11 @@
 <!------------------------------------main 시작 ---------------------------------->
 	<main id = "main">
 		<section class = "contents-box">
-			<h1>비밀번호 확인
+			<h1 class ="h1fix">회원정보 수정
 			</h1>
-			
-		<div class = "notice-phrase">
-			<p>
-				회원님의 소중한 정보 보호를 위해 현재 비밀번호를 확인해 주세요		
-			</p>
-		</div>
 		
 		<section>
-		<table class = "main-table2">
+		<table class = "main-table3">
 			<tr>
 				<th>아이디</th>
 				<td>soin_people</td>
@@ -81,14 +75,44 @@
 			
 			<tr>
 				<th>비밀번호</th>
-				<td><input type="password" class="input-password" value="" placeholder="비밀번호를 입력해주세요." maxlength="20"></td>
+				<td><input type="password" class="input-text" value="" placeholder="비밀번호를 입력해주세요." maxlength="50"></td>
+			</tr>
+			
+			<tr>
+				<th>비밀번호확인</th>
+				<td><input type="password" class="input-text" value="" placeholder="비밀번호를 다시 입력해주세요." maxlength="50"></td>
+			</tr>
+			
+			<tr>
+				<th>이메일</th>
+				<td><input type="text" class="input-text" ></td>
+				
+			</tr>
+			
+			<tr>
+				<th>연락처</th>
+				<td><input type="text" class="input-text" ></td>
+			</tr>
+			
+			<tr>
+				<th>주소</th>
+				<td><input type="text" class="input-text input-textad" ></td>
+			</tr>
+			
+			<tr>
+				<th>닉네임</th>
+				<td><input type="text" class="input-text" ></td></td>
 			</tr>
 		
 		</table>
 		</section>
 		
-		<section class="button">
-		<input type="button" value="확인" onclick="location.href='#">
+		<section class="button button2">
+		<input type="button" value="저장하기" onclick="location.href='#">
+		</section>
+			
+		<section class="button button2">
+		<input type="button" value="회원탈퇴하기" onclick="location.href='#">
 		</section>
 			
 		</section>
