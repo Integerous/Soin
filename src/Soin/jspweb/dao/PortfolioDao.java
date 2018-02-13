@@ -12,7 +12,6 @@ public interface PortfolioDao {
 	List<Portfolio> getList(int page, String array, String category, String query);
 
 	
-	
 	Portfolio get(String id);
 	//Portfolio getPrev(String id);
 	//Portfolio getNext(String id);

@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class Portfolio {
 
-	
 	private String id;
 	private String location;
 	private String detail_content;
@@ -18,7 +17,7 @@ public class Portfolio {
 	private String construction_position_id;
 	
 	public Portfolio() {
-		
+	
 	}
 
 	public Portfolio(String id, String location, String detail_content, Date period, int hit, int like,
