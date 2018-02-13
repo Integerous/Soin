@@ -139,6 +139,13 @@ main{
 		margin-top:70px;
 		display: flex;
 		justify-content: center;
+	}
+	
+	.title-box{
+		min-height: 200px;
+		width: 600px;
+		display:flex;
+		
 	}	
 		
 
