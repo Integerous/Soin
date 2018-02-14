@@ -69,12 +69,15 @@ nav{
 
 main{
 	min-height: 800px;
-	min-width: 600px;
+	min-width: 700px;
 }
 
 	.main-box{
-		width: 250px;
+		width: 800px;
 		margin: 50px 250px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	/* .search-box{
@@ -96,6 +99,7 @@ main{
 	.sort-box{
 		width : 600px;
 		padding: 20px 10px;
+		margin:0px;
 		
 		display:flex;
 		flex-flow : row norap;
@@ -119,7 +123,7 @@ main{
 		}
 		
 	.content-box{
-		width: 600px;
+		min-width: 800px;
 		min-height: 600px; 
 		margin-top:50px;
 		display: flex;
@@ -131,7 +135,7 @@ main{
 			display: flex;
 			flex-direction: column;
 			margin-right:25px;
-			width: 260px;
+			width: 230px;
 			height: 350px;
 		}
 	
@@ -206,6 +210,8 @@ footer{
 .content-title{
 	font-size:20px ;
 	font-weight: bold;
+	width: 600px;
+	margin-left: 100px;
 }
 
 .label{
@@ -301,7 +307,7 @@ footer{
 	
 .tabel{
 	border-top: 2px solid #A9A9A9;
-	width: 100%;	
+	width: 600px;	
 }
 
 	.tabel td{
@@ -342,8 +348,9 @@ footer{
 	
 .content-table{
 	min-height: 400px;
-	min-width: 532px;
+	width: 540px;
 	padding : 30px 30px;
+	margin: 0px;
 }	
 
 .faq-table{

@@ -13,4 +13,8 @@ public interface NoticeDao {
 	Notice get(String id);
 	Notice getPrev(String id);
 	Notice getNext(String id);
+	
+	int insert(Notice notice);
+	int update(Notice notice);
+	int delete(String id);
 }
