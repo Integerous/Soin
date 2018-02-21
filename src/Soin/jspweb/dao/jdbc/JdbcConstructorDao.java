@@ -58,9 +58,9 @@ public class JdbcConstructorDao implements ConstructorDao{
 			rs.close();
 			st.close();
 			con.close();
-			
+
 			return list;
-			
+
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -68,11 +68,9 @@ public class JdbcConstructorDao implements ConstructorDao{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-	
+
 		return null;
 	}
-
 
 	@Override
 	public List<Constructor> getList(String query) {
