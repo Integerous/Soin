@@ -14,6 +14,7 @@ ul{
 
 h1{
 	color: #B0C4DE;
+			
 }
 
 h3{
@@ -68,7 +69,7 @@ nav{
 }
 
 main{
-	min-height: 800px;
+	min-height: 500px;
 	min-width: 700px;
 }
 
@@ -76,21 +77,12 @@ main{
 		width: 800px;
 		margin: 50px 250px;
 		display: flex;
+		/* flex-wrap: wrap; */
 		justify-content: center;
-		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
 	}
-
-	/* .search-box{
-		display:inline-block;
-		float:none;
-		min-width: 600px;
-		min-height: 80px;
-		border: 3px solid #A9A9A9;
-		margin: 0px;
-		padding : 20px;
-		line-height: 80px;
-		text-align: center;
-	} */
+	
 	.icon-box{
 		width:256px;
 		margin:0px;
@@ -128,7 +120,7 @@ main{
 		margin-top:50px;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content:flex-end;
+		justify-content:center;
 	}
 	
 		.content-box .box{
@@ -136,19 +128,20 @@ main{
 			flex-direction: column;
 			margin-right:25px;
 			width: 230px;
-			height: 350px;
+			height: 300px;
 		}
 	
 	.page-box{
-		margin-top:70px;
+		margin-top:30px;
 		display: flex;
 		justify-content: center;
 	}
 	
 	.title-box{
-		min-height: 200px;
+		height: 100px;
 		width: 600px;
-		display:flex;
+		margin-bottom : 30px;
+		padding: 10px;
 		
 	}	
 		
@@ -183,6 +176,7 @@ footer{
 
 .box-menu{
 	min-width:300px;
+	height: 150px;
 }
 
 
@@ -208,10 +202,12 @@ footer{
 }
 
 .content-title{
-	font-size:20px ;
+	width : 550px;
+	height : 30px;
+	font-size:25px ;
 	font-weight: bold;
-	width: 600px;
-	margin-left: 100px;
+	height : 30px;
+
 }
 
 .label{
@@ -283,7 +279,6 @@ footer{
 
 .list-button{
 	width : 100px;
-	float: right;
 	margin-top: 30px;
 }
 
@@ -295,8 +290,17 @@ footer{
 .write-button{
 	float: right;
 	margin-top: 10px;
-
 }
+
+.go-button{
+	width: 120px;
+	height:30px;
+	margin-left : 610px;
+	background: url("../Images/nhy/memphis.png");
+	border-radius: 0px;
+	font-size: 16px;
+}
+
 
 /* 테이블 */
 
@@ -307,7 +311,7 @@ footer{
 	
 .tabel{
 	border-top: 2px solid #A9A9A9;
-	width: 600px;	
+	min-width: 600px;	
 }
 
 	.tabel td{
@@ -338,8 +342,7 @@ footer{
 	
 	.tabel .text-indent{
 		text-indent: 10px;
-	}
-	
+	}	
 	.tabel .text-ellipsis{
 		white-space :nowrap;
 		overflow: hidden;
@@ -348,9 +351,10 @@ footer{
 	
 .content-table{
 	min-height: 400px;
-	width: 540px;
+	min-width: 540px;
 	padding : 30px 30px;
 	margin: 0px;
+	
 }	
 
 .faq-table{
@@ -380,9 +384,9 @@ footer{
 }
 
 #data-table{
+	min-width: 350px;
 	margin-left: 100px;
-	border:1px solid #4169E1; 
-	min-width: 350px;	
+	border:1px solid #4169E1; 	
 }
 
 
@@ -391,5 +395,10 @@ footer{
 .flex{
 	display:flex;
 	justify-content: center;
+}
+
+.flex2{
+	display: flex;
+	align-content: flex-start;
 }
 
