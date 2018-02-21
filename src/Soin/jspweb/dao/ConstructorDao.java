@@ -5,7 +5,7 @@ import java.util.List;
 import Soin.jspweb.entity.Constructor;
 
 
-public interface ConstructorListDao {
+public interface ConstructorDao {
 
 	List<Constructor> getList();
 	List<Constructor> getList(String query);
