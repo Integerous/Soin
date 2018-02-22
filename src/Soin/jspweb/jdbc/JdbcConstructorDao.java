@@ -1,4 +1,4 @@
-package Soin.jspweb.dao.jdbc;
+package Soin.jspweb.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
