@@ -8,7 +8,6 @@ public class Member
 	private String phoneNum;
 	private String address;
 	private String detailAddress;
-	private String role;
 	
 	public String getId() 
 	{
@@ -69,19 +68,9 @@ public class Member
 	{
 		this.detailAddress = detailAddress;
 	}
-
-	public String getRole() 
-	{
-		return role;
-	}
-
-	public void setRole(String role)
-	{
-		this.role = role;
-	}
 	
 	//가입
-	public Member(String id, String password, String email, String phoneNum, String address, String detailAddress, String role) 
+	public Member(String id, String password, String email, String phoneNum, String address, String detailAddress) 
 	{
 		this.id = id;
 		this.password = password;
@@ -89,7 +78,6 @@ public class Member
 		this.phoneNum = phoneNum;
 		this.address = address;
 		this.detailAddress = detailAddress;
-		this.role = role;
 	}
 
 	//정보 갱신

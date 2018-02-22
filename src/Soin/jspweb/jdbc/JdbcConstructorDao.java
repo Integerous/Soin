@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.newlecture.jspprj.entity.AnswerisView;
-import com.newlecture.jspweb.entity.Member;
 
 import Soin.jspweb.dao.ConstructorDao;
 import Soin.jspweb.entity.Constructor;
@@ -94,6 +93,171 @@ public class JdbcConstructorDao implements ConstructorDao{
 	public Constructor get() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	/*---------------------------------추가분----------------------------------*/
+	
+	//시공업자정보 가져오기
+	@Override
+	public Constructor get(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	//시공업자 정보 입력
+	@Override
+	public int insert(Constructor constructor) 
+	{
+			String sql ="INSERT INTO MEMBER (MEMBER_ID, "
+																			+ "NAME, " 
+																			+ "CORPORATE_REGISTRATION_NUMBER, "
+																			+ "CEO_NAME, " 
+																			+ "MAIN_IMAGE, " 
+																			+ 	"HOMEPAGE_ADDRESS, " 
+																			+ "INTRODUCTION, "
+																			+ 	"SPECIALITY01, "
+																			+ 	"SPECIALITY02, "
+																			+ 	"SPECIALITY03, "
+																			+ 	"SPECIALITY04) "
+																										+ "VALUES (?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?, "
+																														+ "?)";
+																																	
+		int result = 0;
+		
+		try
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			
+			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, constructor.getMember_id());
+			st.setString(2, constructor.getName());
+			st.setString(3, constructor.getCorporateRegistrationNumber());
+			st.setString(4, constructor.getMainImage());
+			st.setString(6, constructor.getHomepageAddress());
+			st.setString(7, constructor.getIntroduction());
+			st.setString(8, constructor.getSpeciality1());
+			st.setString(9, constructor.getSpeciality2());
+			st.setString(10, constructor.getSpeciality3());
+			st.setString(11, constructor.getSpeciality4());
+
+			result = st.executeUpdate();
+			
+			st.close();
+			con.close();			
+		} 
+		
+		catch (ClassNotFoundException e) 
+		{
+		e.printStackTrace();
+		} 
+		catch (SQLException e)
+		{
+		e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	//시공업자 정보 갱신
+	@Override
+	public int update(Constructor constructor)
+	{
+		String sql ="UPDATE MEMBER SET "
+														+"NAME=?, "
+														+"CEO_NAME=?, "
+														+"MAIN_IMAGE=?, "
+														+"HOMEPAGE_ADDRESS=?, "
+														+"INTRODUCTION=?, "
+														+"SPECIALITY01=?, "
+														+"SPECIALITY02=?, "
+														+"SPECIALITY03=?, "
+														+"SPECIALITY04=?";
+														
+		int result = 0;
+		
+		try
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			
+			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, constructor.getName());
+			st.setString(2, constructor.getCeoName());
+			st.setString(3, constructor.getMainImage());
+			st.setString(4, constructor.getHomepageAddress());
+			st.setString(5, constructor.getIntroduction());
+			st.setString(6, constructor.getSpeciality1());
+			st.setString(7, constructor.getSpeciality2());
+			st.setString(8, constructor.getSpeciality3());
+			st.setString(9, constructor.getSpeciality4());
+			
+			result = st.executeUpdate();
+			
+			st.close();
+			con.close();			
+		} 
+		
+		catch (ClassNotFoundException e) 
+		{
+			e.printStackTrace();
+		} 
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+
+		return result;
+	}
+
+
+	//시공업자 정보 삭제
+	@Override
+	public int delete(String id) 
+	{
+		String sql ="DELETE FROM CONSTRUCTOR WHERE MEMBER_ID=?";
+		
+		int result = 0;
+		
+		try
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+
+			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, id);
+			
+			result = st.executeUpdate();
+			
+			st.close();
+			con.close();			
+		} 
+		
+		catch (ClassNotFoundException e) 
+		{
+			e.printStackTrace();
+		} 
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 
 

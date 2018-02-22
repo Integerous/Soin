@@ -9,7 +9,7 @@ public interface ConstructorDao
 {
 
 	//시공업체회원 가져오기
-	Constructor get(String id, String password);
+	Constructor get(String id);
 	
 	//시공업체회원 정보입력
 	int insert(Constructor constructor);
@@ -18,7 +18,7 @@ public interface ConstructorDao
 	int update(Constructor constructor);
 	
 	//시공업체회원 정보삭제
-	int delete(Constructor constuctor);
+	int delete(String id);
 	
 	
 	List<Constructor> getList();
