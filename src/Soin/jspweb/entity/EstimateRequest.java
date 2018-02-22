@@ -3,39 +3,39 @@ package Soin.jspweb.entity;
 import java.util.Date;
 
 public class EstimateRequest {
-	
+
 	private String id;
 	private String title;
 	private String address;
-	private Date desiredDate1;
-	private Date desiredDate2;
+	private Date desiredDate01;
+	private Date desiredDate02;
 	private String etcRequest;
 	private Date regDate;
 	private String memberId;
 	private String productId;
 	private String constructionId;
-	private String bulingTypeId;
+	private String buildingTypeId;
 	private String constructionPositionId;
 	
 	public EstimateRequest() {
-		
+		// TODO Auto-generated constructor stub
 	}
 
-	public EstimateRequest(String id, String title, String address, Date desiredDate1, Date desiredDate2,
+	public EstimateRequest(String id, String title, String address, Date desiredDate01, Date desiredDate02,
 			String etcRequest, Date regDate, String memberId, String productId, String constructionId,
-			String bulingTypeId, String constructionPositionId) {
+			String buildingTypeId, String constructionPositionId) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.address = address;
-		this.desiredDate1 = desiredDate1;
-		this.desiredDate2 = desiredDate2;
+		this.desiredDate01 = desiredDate01;
+		this.desiredDate02 = desiredDate02;
 		this.etcRequest = etcRequest;
 		this.regDate = regDate;
 		this.memberId = memberId;
 		this.productId = productId;
 		this.constructionId = constructionId;
-		this.bulingTypeId = bulingTypeId;
+		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
 	}
 
@@ -63,20 +63,20 @@ public class EstimateRequest {
 		this.address = address;
 	}
 
-	public Date getDesiredDate1() {
-		return desiredDate1;
+	public Date getDesiredDate01() {
+		return desiredDate01;
 	}
 
-	public void setDesiredDate1(Date desiredDate1) {
-		this.desiredDate1 = desiredDate1;
+	public void setDesiredDate01(Date desiredDate01) {
+		this.desiredDate01 = desiredDate01;
 	}
 
-	public Date getDesiredDate2() {
-		return desiredDate2;
+	public Date getDesiredDate02() {
+		return desiredDate02;
 	}
 
-	public void setDesiredDate2(Date desiredDate2) {
-		this.desiredDate2 = desiredDate2;
+	public void setDesiredDate02(Date desiredDate02) {
+		this.desiredDate02 = desiredDate02;
 	}
 
 	public String getEtcRequest() {
@@ -119,12 +119,12 @@ public class EstimateRequest {
 		this.constructionId = constructionId;
 	}
 
-	public String getBulingTypeId() {
-		return bulingTypeId;
+	public String getBuildingTypeId() {
+		return buildingTypeId;
 	}
 
-	public void setBulingTypeId(String bulingTypeId) {
-		this.bulingTypeId = bulingTypeId;
+	public void setBuildingTypeId(String buildingTypeId) {
+		this.buildingTypeId = buildingTypeId;
 	}
 
 	public String getConstructionPositionId() {
@@ -134,7 +134,6 @@ public class EstimateRequest {
 	public void setConstructionPositionId(String constructionPositionId) {
 		this.constructionPositionId = constructionPositionId;
 	}
-	
-	
 
+	
 }
