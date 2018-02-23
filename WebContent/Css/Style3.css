@@ -355,7 +355,7 @@ select{
  
  .detail-title{
  	height:35px;
- 	background:pink;
+ 	background:#F6F6F6;
  	border-bottom: 1px solid gray;
  	border-bottom-style: dotted;
  	text-align: center;
@@ -364,12 +364,11 @@ select{
  	 }
  .detail-info{
  	height: 450px;
- 	background-color: tomato;
+ 	background-color: #E6FFFF; 
  	padding-top: 20px;
  }
  .detail-img{
  	float: left;
- 	background-color: red;
  	height:430px;
  	width:600px;
  	margin-left: 20px;
@@ -381,7 +380,7 @@ select{
  	float:left;
  	margin:0;
  	width:340px;
- 	background-color: green;
+ 	
  	margin-left: 20px;
  }
  
@@ -396,20 +395,29 @@ select{
 	.menu-total{
 		width:inherit;
 		height:150px;
-		background-color: blue;
+		/* background-color: blue; */
 		border-top-style: dotted;
 		border-top: 2px solid gray;
 		
 		
 	}
+	
+	.hit-love{
+		display:flex;
+		/* width:200px; */
+		height:50px;
+		/* background-color: red; */
+		justify-content:space-around;
+		padding:20px;
+	}
 	.choice-container{
 		display:flex;
 		width:500px;
-		height:50px;
-		background:fuchsia;
+		height:100px;
 		margin-left: 230px;
 		justify-content:space-around;
 		align-items:flex-end;
+		
 	}
 	.flex-choice{
 		display:flex;
@@ -419,6 +427,7 @@ select{
 		flex-direction: row;
 		justify-content:space-around;
 		width: 400px;
+		margin-bottom: 15px;
 	}
 	
 		
@@ -432,14 +441,14 @@ select{
 	 .detail-content{
 	 	width:inherit;
 	 	min-height:20px;
-	 	background: aqua;
+	 	background: white;
 	 	margin:30px;
 	 	border: 2px solid black;
 	 	text-align: center;
 	 }
 	 .btn-large{
 		 width:100px;
-	 	height: 40px;
+	 	height: 30px;
 	 	padding-top:10px;
 	 	display:inline-block;
 	 	text-align: center;
@@ -451,74 +460,9 @@ select{
 	 	/* margin-left:40px; */
 	 }
 	
- /* #detail-title{
- 	height:40px;
- 	background-color: #EDFAFD#FFD8D8;
- 	margin-top:50px;
- 	text-align: center;
- 	padding-top: 10px;
- 	font-size:20px;
- 	overflow: hidden;
-	text-overflow: ellipsis;
-	border-bottom: 1px solid gray;
-	border-bottom-style: dotted;
- } */
-/*  .detail-info{
- 	height:440px;
- 	margin:30px;
- 	background-color: #EDFAFD;
- }
- 	.detail-img{
- 		height:420px;
- 		margin:auto;
- 		float:left;
- 		width:600px;
- 	}
- 	.detail-cate{
- 		background-color: #EDFAFD ;
- 		overflow: hidden;
- 		padding-top:50px;
- 		height: 370px;
-   		 width: 310px;
-   		 padding-left: 30px;
- 		
- 	} */
- /*	.construction-content{
- 		float:left;	
- 		
- 		border-bottom:1.5px dotted gray;
- 	}
- 	.construction-content>ul >li{
- 		list-style: circle;
- 		padding-bottom:15px;
- 	} */
-/*  .detail-content{
- 	padding: 30px;
- 	background-color: white;
- 	text-align: center;
- 	border: 2px solid gray;
- 	border-radius: 10px;
- 	font-family: "굴림";
- }
- .btn-large{
- 	width:100px;
- 	height: 30px;
- 	padding:3px 8px;
- 	display:inline-block;
- 	text-align: center;
- 	border-radius: 4px;
- 	border:0px;
- 	cursor:pointer;
- 	border: 1px solid gray;
- 	background-color: #b3d9ff;
- 	margin-left:40px;
+
  	
- }
- 	.btn-large:hover{
- 		background-color: #6d80e9;
- 	} */
- 	
-/*  --작성, 수정.---------------------- */	
+/*  --작성, 수정.------------------------------- */	
 
 .root-container{
 	height: 100%;
@@ -526,3 +470,47 @@ select{
 	width:1000px;
 	margin:0 auto;
 }	
+.left-title{
+	width: 150px;
+    background-color: pink;
+    font-size: 23px;
+    text-align: center;
+    padding-top: 5px;
+    float:left;
+    
+	
+}
+
+	.title-cont{
+		width:850px;
+		background-color: white;
+		float:left;
+	
+	}
+.category{
+	height:100px;
+	
+	border-bottom-style: dotted;
+	border-bottom: 1px solid gray;
+	
+}
+
+	.category-cont{
+		float:left;
+		padding-top: 40px;
+		color:gray;
+	}
+.construction-info{
+	height:300px;
+	
+	border-bottom-style: dotted;
+	border-bottom: 1px solid gray;
+}
+
+.detail-cont{
+	height:600px;
+	
+	border-bottom-style: dotted;
+	border-bottom: 1px solid gray;
+	
+}
