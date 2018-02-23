@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import Soin.jspweb.dao.ConstructorDao;
 import Soin.jspweb.entity.Constructor;
 import Soin.jspweb.entity.ConstructorView;

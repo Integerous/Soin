@@ -19,6 +19,42 @@ public class Constructor {
 	public Constructor(){
 		
 	}
+	
+	//가입
+	public Constructor(String member_id, String name, String corporateRegistrationNumber, String ceoName, String mainImage,
+			String homepageAddress, String introduction, String speciality1, String speciality2,
+			String speciality3, String speciality4) 
+	{
+		this.member_id = member_id;
+		this.name = name;
+		this.corporateRegistrationNumber = corporateRegistrationNumber;
+		this.ceoName = ceoName;
+		this.mainImage = mainImage;
+		this.homepageAddress = homepageAddress;
+		this.introduction = introduction;
+		this.speciality1 = speciality1;
+		this.speciality2 = speciality2;
+		this.speciality3 = speciality3;
+		this.speciality4 = speciality4;
+	}
+	
+	//수정
+	public Constructor(String name, String ceoName, String mainImage,
+			String homepageAddress, String introduction, String speciality1, String speciality2,
+			String speciality3, String speciality4) 
+	{
+		this.name = name;
+		this.ceoName = ceoName;
+		this.mainImage = mainImage;
+		this.homepageAddress = homepageAddress;
+		this.introduction = introduction;
+		this.speciality1 = speciality1;
+		this.speciality2 = speciality2;
+		this.speciality3 = speciality3;
+		this.speciality4 = speciality4;
+	}
+
+
 
 	public Constructor(String member_id, String name, String corporateRegistrationNumber, String ceoName,
 			String mainImage, String address, String homepageAddress, String introduction, int gpa, String speciality1,
