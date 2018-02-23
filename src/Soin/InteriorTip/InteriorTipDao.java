@@ -1,8 +1,6 @@
-package Soin.jspweb.dao;
+package Soin.InteriorTip;
 
 import java.util.List;
-
-import Soin.jspweb.entity.InteriorTip;
 
 public interface InteriorTipDao {
 	
