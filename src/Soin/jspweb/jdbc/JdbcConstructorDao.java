@@ -108,7 +108,7 @@ public class JdbcConstructorDao implements ConstructorDao{
 	@Override
 	public int insert(Constructor constructor) 
 	{
-			String sql ="INSERT INTO MEMBER (MEMBER_ID, "
+			String sql ="INSERT INTO CONSTRUCTOR (MEMBER_ID, "
 																			+ "NAME, " 
 																			+ "CORPORATE_REGISTRATION_NUMBER, "
 																			+ "CEO_NAME, " 
@@ -174,16 +174,17 @@ public class JdbcConstructorDao implements ConstructorDao{
 	@Override
 	public int update(Constructor constructor)
 	{
-		String sql ="UPDATE MEMBER SET "
-														+"NAME=?, "
-														+"CEO_NAME=?, "
-														+"MAIN_IMAGE=?, "
-														+"HOMEPAGE_ADDRESS=?, "
-														+"INTRODUCTION=?, "
-														+"SPECIALITY01=?, "
-														+"SPECIALITY02=?, "
-														+"SPECIALITY03=?, "
-														+"SPECIALITY04=?";
+		String sql ="UPDATE CONSTRUCTOR SET "
+																	+"NAME=?, "
+																	+"CEO_NAME=?, "
+																	+"MAIN_IMAGE=?, "
+																	+"HOMEPAGE_ADDRESS=?, "
+																	+"INTRODUCTION=?, "
+																	+"SPECIALITY01=?, "
+																	+"SPECIALITY02=?, "
+																	+"SPECIALITY03=?, "
+																	+"SPECIALITY04=? "
+																	+"WHERE MEMBER_ID=?";
 														
 		int result = 0;
 		
@@ -204,6 +205,7 @@ public class JdbcConstructorDao implements ConstructorDao{
 			st.setString(7, constructor.getSpeciality2());
 			st.setString(8, constructor.getSpeciality3());
 			st.setString(9, constructor.getSpeciality4());
+			st.setString(9, constructor.getMember_id());
 			
 			result = st.executeUpdate();
 			

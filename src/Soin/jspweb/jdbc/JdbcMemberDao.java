@@ -71,7 +71,8 @@ public class JdbcMemberDao implements MemberDao
 														+ "EMAIL=?, "
 														+ "PHONE_NUMBER=?,"
 														+ "ADDRESS=?,"
-														+ "DETAIL_ADDRESS=?";
+														+ "DETAIL_ADDRESS=?"
+														+ "WHERE ID=?";
 				
 		int result = 0;
 		
@@ -88,6 +89,7 @@ public class JdbcMemberDao implements MemberDao
 			st.setString(3, member.getPhoneNum());
 			st.setString(4, member.getAddress());
 			st.setString(5, member.getDetailAddress());
+			st.setString(6, member.getId());
 	
 			result = st.executeUpdate();
 			

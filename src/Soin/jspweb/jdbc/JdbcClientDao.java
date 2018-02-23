@@ -61,9 +61,10 @@ public class JdbcClientDao implements ClientDao
 	public int update(Client client) 
 	{
 	
-		String sql ="UPDATE MEMBER SET " 
+		String sql ="UPDATE CLIENT SET " 
 												+"NICK_NAME=?"
-												+"SELECT_CHECK=?";
+												+"SELECT_CHECK=?"
+												+"WHERE ID=?";
 		
 		int result = 0;
 		
@@ -77,6 +78,7 @@ public class JdbcClientDao implements ClientDao
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, client.getNickName());
 			st.setInt(2, client.getSelectCheck());
+			st.setString(3, client.getMemberId());
 		
 			result = st.executeUpdate();
 			
