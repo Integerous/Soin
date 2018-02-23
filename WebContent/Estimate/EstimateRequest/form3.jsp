@@ -1,3 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+    
+    
+    
+    
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,16 +84,16 @@
 <!-- ------------progress bar------------ -->		
 			<div class="pb-bar">
 				<section class="progress-bar">
-						<div class="step2">STEP 1</div>
-						<div class="current-step">STEP 2</div>
-						<div class="step3">STEP 3</div>
+						<div class="step1">STEP 1</div>
+						<div class="step2">STEP 2</div>
+						<div class="current-step">STEP 3</div>
 						<div class="step4">STEP 4</div>
 				</section>
 							
 				<div class="triangle">
+					 <div class="ta-1"></div>
 					 <div class="ta-2"></div>
 					 <div class="current-ta"></div>
-					 <div class="ta-3"></div>
 					 <div class="ta-4"></div>
 				</div>
 			</div>
@@ -93,86 +103,81 @@
 
 <!-- ------------견적의뢰서  타이틀------------ -->
 			<section class="form-title">
-				
-				<img src="../../Images/ic_check_box_black_24dp_2x.png" alt="check-box" /></a>
-				
-				<div class="ft-container">
-					견적의뢰서 작성
-				</div>
+				<img src="../../Images/ic_playlist_add_check_black_24dp_2x.png" alt="check-box2" />
+					<div class="ft-container">
+						견적의뢰서 요약
+					</div>
 			</section>
 
-<!-- ------------카테고리 4 선택------------ -->			
+<!-- ------------견적의뢰서 요약------------ -->			
 		<section class="request-form">
 					<div>
 						<fieldset>
-							<legend>4. 원하는 스타일/제품이 담긴 URL 입력</legend>
-								<div class="options">
-									<div>
-										<input type="search">
-										<input type="submit" value="URL 입력">
+							<legend>요약</legend>
+								<div class="request-summary">
+									<div class="request-options">
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											시공 카테고리:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											상세 카테고리:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											실측 사이즈:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											희망 시공일:
+										</div>
+										<div>
+											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
+											시공지 주소:
+										</div>
+									</div>
+									<div class="summary-content">
+										<div>
+											(여기에 해당하는 데이터 불러왕)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
 									</div>
 								</div>
 						</fieldset>
 					</div>
 					
-<!-- ------------카테고리 5 선택------------ -->												
-					<div>
-						<fieldset>
-							<legend>5. 현재 상태 사진 올리기</legend>
-								<div class="options">
-									<div>
-										<input type="file" class="photos">
-									</div>
-								</div>
-						</fieldset>
-					</div>
-					
-<!-- ------------카테고리 6 선택------------ -->					
-					<div>
-						<fieldset>
-							<legend>6. 희망 시공일 선택</legend>
-								<div class="options">
-									<div>
-										<label><input type="date" id="start"></label>
-									</div>
-									<p>또는 </p>
-									<div>
-										<label><input type="date" id="end"></label>
-									</div>
-								</div>
-						</fieldset>
-					</div>
-					
-<!-- ------------카테고리 7 선택------------ -->					
-					<div>
-						<fieldset>
-							<legend>7. 상세 요청사항</legend>
-								<div class="options">
-									<textarea name="request" cols="55" rows="5">
-									</textarea>
-								</div>
-						</fieldset>
-					</div>
-		
+
 
 <!-- ------------button container------------ -->
 		<div class="btn-container">
 		
 <!-- ------------previous button------------ -->	
 			<div class="previous-button">
-				<button class="prev-btn" onclick="location.href='est-request1.html'"><span>이전</span></button>
-			</div>		
-				 
+				<button class="prev-btn" onclick="location.href='est-request2.html'"><span>이전</span></button>
+			</div>
 <!-- ------------next button------------ -->							
 			<div class="next-button">
-		      <button class="next-btn" onclick="location.href='est-request3.html'"><span>다음</span></button>
+		      <button class="next-btn"><span>다음</span></button>
 		    </div>
-
-
-		</div>
-
-
-
+	    
+		</div>  
+		    
+		    
+		    
+		    
+		    
 			</section>
 		</div>
 	</main>

@@ -1,4 +1,4 @@
-package Soin.jspweb.dao;
+package Soin.EstimateRequest;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package Soin.jspweb.jdbc;
+package Soin.EstimateRequest;
 
 import java.sql.Connection;
 import java.sql.Date;

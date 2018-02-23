@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,37 +10,66 @@
 
 <body>
 <!--------------------------------header 시작------------------------------>
-	<header id = "header">
-		<div class = "root-container">
-			<div class = "member-menu">
-			<h1>헤더</h1>
-				<div class = "member-menu-box">
-					<ul>
-						<li><a href = "">로그인</a></li>
-						<li><a href = "">회원가입</a></li>
-						<li><a href = "">고객센터</a></li>
-						<li><a href = "">알림(이미지)</a></li>
-						<li><a href = "">마이페이지(이미지)</a></li>
-					</ul>
-				</div>	
+	<header>
+		<div class = "top-box">
+			<div class ="member-bar">
+				<div class = "member-menu">
+					<div>
+						<a href = "">로그인</a>
+					</div>
+					
+					<div>
+						<a href = "">회원가입</a>
+					</div>
+					
+					<div>
+						<a href = "">고객센터</a>
+					</div>
+					
+					<div>
+						<a href = "">마이페이지</a>
+					</div>
+				</div>
 			</div>
 			
-			<div id="logo">
-				<a href=""><img class = "images" alt = "소인" src = "../../Images/jyh/soin-logo.png"></a>
+			<div class = "logo-bar">
+				<div id = "logo">
+					<a href = ""><img class = "images" src = "../../Images/jyh/SoIn_Logo.png"></a>
+				</div>
+				
+				<div class = "name">
+					<a href = "">소인</a>
+				</div>
+				
+				<div class = "full-name">
+					소규모 인테리어 시공 중개 플랫폼
+				</div>
 			</div>
 			
-			<div class = "null">
-			</div>
-			
-			<div class = "main-menu">
-				<h1>메인메뉴</h1>
-				<ul>
-					<li><a href = "">소인소개</a></li>
-					<li><a href = "">업체소개</a></li>
-					<li><a href = "">견적요청</a></li>
-					<li><a href = "">인테리어TIP</a></li>
-					<li><a href = "">시공후기</a></li>
-				</ul>
+			<div class = "main-bar">
+				<div class = "main-container">
+					<div class = "main-menu">
+						<div>
+							<a href = "">소인소개</a>
+						</div>
+							
+						<div>
+							<a href = "">업체소개</a>
+						</div>
+						
+						<div>
+							<a href = "">견적요청</a>
+						</div>
+						
+						<div>
+							<a href = "">인테리어Tip</a>
+						</div>
+						
+						<div>
+							<a href = "">시공후기</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -48,30 +79,39 @@
 		<div class = "root-container">
 			<h1>메인 컨텐츠</h1>
 			<div class = "main-text-box">
-				컨텐츠 관련 Text(소재정보 메인) 
+				컨텐츠 관련 Text(팁 메인) 
 			</div>
 			
 			<div>
-				<div class = "search-box">
+				<div class = "search-box03">
 						<select name = "category">
-						<option value = "" selected = "selected">카테고리</option>
-						<option value = "창문">창문</option>
-						<option value = "문">문</option>
-						<option value = "욕실">욕실</option>
-						<option value = "벽지">벽지</option>
-						<option value = "기타">기타</option>
-					</select>
-					<input type = "search"  id = "search" placeholder="팁 관련 검색"  class = "search-text">
+							<option value = "" selected = "selected">카테고리1</option>
+							<option value = "창문">창문</option>
+							<option value = "문">문</option>
+							<option value = "욕실">욕실</option>
+							<option value = "벽지">벽지</option>
+							<option value = "기타">기타</option>
+						</select>
+
+						<select name = "category">
+							<option value = "" selected = "selected">소재:카테고리2</option>
+							<option value = "알루미늄">알루미늄</option>
+							<option value = "목재">목재</option>
+							<option value = "비닐">비닐</option>
+							<option value = "기타">기타</option>
+						</select>					
+					
+					<input type = "search"  id = "search" placeholder="소재 관련 검색"  class = "search-text">
 					<input type = "submit" value = "검색" class = "btn">
 				</div>
 			</div>
 			
 			<div class = "main-box">
-				<div class = img-box>
+				<div class = "img-box">
 					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
 				</div>
 				
-				<div class = "text-box">
+				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
 						<a href="Detail01.html">subtitle</a>
 					</div>
@@ -91,11 +131,11 @@
 			</div>
 			
 			<div class = "main-box">
-				<div class = img-box>
+				<div class = "img-box">
 					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Beanu.jpg" alt="비뉴"></a>
 				</div>
 				
-				<div class = "text-box">
+				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
 						<a href="Detail01.html">subtitle</a>
 					</div>
@@ -115,11 +155,11 @@
 			</div>
 			
 			<div class = "main-box">
-				<div class = img-box>
+				<div class = "img-box">
 					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/DesignJ.jpg" alt="디자인제이"></a>
 				</div>
 				
-				<div class = "text-box">
+				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
 						<a href="Detail01.html">subtitle</a>
 					</div>
@@ -139,59 +179,11 @@
 			</div>
 			
 			<div class = "main-box">
-				<div class = img-box>
+				<div class = "img-box">
 					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Illi.jpg" alt="일리"></a>
 				</div>
 				
-				<div class = "text-box">
-					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
-					</div>
-					
-					<div class = "title">
-						<a href="Detail01.html">title</a>
-					</div>
-					
-					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
-					</div>
-					
-					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
-					</div>
-				</div>
-			</div>
-			
-			<div class = "main-box">
-				<div class = img-box>
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Daum.jpg" alt="다움"></a>
-				</div>
-				
-				<div class = "text-box">
-					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
-					</div>
-					
-					<div class = "title">
-						<a href="Detail01.html">title</a>
-					</div>
-					
-					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
-					</div>
-					
-					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
-					</div>
-				</div>
-			</div>
-			
-			<div class = "main-box">
-				<div class = img-box>
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/LSDesign.jpg" alt="엘에스디자인"></a>
-				</div>
-				
-				<div class = "text-box">
+				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
 						<a href="Detail01.html">subtitle</a>
 					</div>
@@ -217,8 +209,8 @@
 		
 		<h1>푸터</h1>
 		<div class = "root-container">
-			<div id = "logo">
-				<img class = "images" alt = "소인" src = "../../Images/jyh/soin-logo.png">
+			<div id = "footer-logo">
+				<img class = "images" alt = "소인" src = "../../Images/jyh/SoIn_Logo.png">
 			</div>
 			
 			<div class = "left-footer">

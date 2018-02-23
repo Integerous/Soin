@@ -1,4 +1,4 @@
-package Soin.jspweb.entity;
+package Soin.EstimateRequest;
 
 import java.util.Date;
 
