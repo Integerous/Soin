@@ -219,7 +219,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 			st.setString(1,id);
 			
 			ResultSet rs = st.executeQuery();//결과집합을 가져올수있는 공간.
-
+  
 			
 			if(rs.next()) {//결과집합을 가져오는 메서드.
 				portfolio = new PortfolioView(//반복할때마다 새로 객체가 만들어짐.
