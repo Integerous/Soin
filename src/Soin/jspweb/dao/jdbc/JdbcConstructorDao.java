@@ -5,12 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.newlecture.jspprj.entity.AnswerisView;
-import com.newlecture.jspweb.entity.Member;
 
 import Soin.jspweb.dao.ConstructorDao;
 import Soin.jspweb.entity.Constructor;
@@ -23,19 +20,19 @@ public class JdbcConstructorDao implements ConstructorDao{
 
 		String sql = "SELECT * FROM ANSWERIS_VIEW WHERE ID=?";
 
+		List<Constructor> list = new ArrayList<>();
 		// 드라이버 로드
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url,"c##sist", "dclass");
 			PreparedStatement st = con.prepareStatement(sql);
+			
 			ResultSet rs = st.executeQuery();
-			
-			List<ConstructorView> list = new ArrayList();
-			
+		
 			ConstructorView constructor = null;
 
-			if (rs.next()) {
+			while (rs.next()) {
 				constructor = new ConstructorView(
 						rs.getString("MEMBER_ID"),
 						rs.getString("NAME"),
@@ -59,8 +56,6 @@ public class JdbcConstructorDao implements ConstructorDao{
 			st.close();
 			con.close();
 
-			return list;
-
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,9 +64,10 @@ public class JdbcConstructorDao implements ConstructorDao{
 			e.printStackTrace();
 		}
 
-		return null;
+		return list;
 	}
 
+	
 	@Override
 	public List<Constructor> getList(String query) {
 		// TODO Auto-generated method stub
