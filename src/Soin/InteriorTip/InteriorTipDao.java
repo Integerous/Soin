@@ -3,11 +3,11 @@ package Soin.InteriorTip;
 import java.util.List;
 
 public interface InteriorTipDao {
-	
-	List<InteriorTip> getList();
-	List<InteriorTip> getList(int page);
-	List<InteriorTip> getList(String query);
-	List<InteriorTip> getList(int page, String query, String Category, String Material);
-	
-	InteriorTip get(String id);
+
+		public int insert(InteriorTip interiorTip);
+		public int update(InteriorTip interiorTip);
+		public int delete(String id);
+		
+		public List<InteriorTipView> getList();
+		public InteriorTipView get(String id);
 }
