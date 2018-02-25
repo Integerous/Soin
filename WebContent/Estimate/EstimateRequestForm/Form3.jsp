@@ -165,7 +165,7 @@
 		
 <!-- ------------previous button------------ -->	
 			<div class="previous-button">
-				<button class="prev-btn" onclick="location.href='est-request2.html'"><span>이전</span></button>
+				<button class="prev-btn" onclick="location.href='form2.jsp'"><span>이전</span></button>
 			</div>
 <!-- ------------next button------------ -->							
 			<div class="next-button">

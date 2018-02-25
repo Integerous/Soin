@@ -1,10 +1,18 @@
+
+<%@page import="Soin.EstimateRequest.EstimateRequestView"%>
+<%@page import="Soin.EstimateRequest.JdbcEstimateRequestDao"%>
+<%@page import="Soin.EstimateRequest.EstimateRequestDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<%
+	String id = request.getParameter("id");
+
+	EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
+	EstimateRequestView estimateRequest = estimateRequestDao.get(id);
 
 
-
-
+%>
 
 
 
@@ -86,15 +94,15 @@
 <!-- ------------progress bar------------ -->		
 			<div class="pb-bar">
 				<section class="progress-bar">
-						<div class="step2">STEP 1</div>
-						<div class="current-step">STEP 2</div>
+						<div class="current-step">STEP 1</div>
+						<div class="step2">STEP 2</div>
 						<div class="step3">STEP 3</div>
 						<div class="step4">STEP 4</div>
 				</section>
 							
 				<div class="triangle">
-					 <div class="ta-2"></div>
 					 <div class="current-ta"></div>
+					 <div class="ta-2"></div>
 					 <div class="ta-3"></div>
 					 <div class="ta-4"></div>
 				</div>
@@ -103,7 +111,7 @@
 <!-- ------------form wrapper------------ -->		
 		<div class="form-wrapper">
 
-<!-- ------------견적의뢰서  타이틀------------ -->
+<!-- ------------견적의뢰서 ------------ -->
 			<section class="form-title">
 				
 				<img src="../../Images/ic_check_box_black_24dp_2x.png" alt="check-box" /></a>
@@ -113,78 +121,91 @@
 				</div>
 			</section>
 
-<!-- ------------카테고리 4 선택------------ -->			
+<!-- ------------카테고리 1 선택------------ -->			
 		<section class="request-form">
-					<div>
-						<fieldset>
-							<legend>4. 원하는 스타일/제품이 담긴 URL 입력</legend>
-								<div class="options">
-									<div>
-										<input type="search">
-										<input type="submit" value="URL 입력">
-									</div>
-								</div>
-						</fieldset>
+				<form action="form-proc.jsp" method="post">
+				<fieldset>
+					<legend>1. 어디에 시공이 필요하신가요?</legend>
+						<div class="options">
+							<div>
+								<input id="window" type="radio" name="construction-position" value="창문" checked>
+								<label for="window">창문</label>
+							</div>
+							<div>
+								<input id="door" type="radio" name="construction-position" value="문">
+								<label for="door">문</label>
+							</div>
+							<div>
+								<input id="bathroom" type="radio" name="construction-position" value="욕실">
+								<label for="bathroom">욕실</label>
+							</div>
+							<div>
+								<input id="wall" type="radio" name="construction-position" value="벽">
+								<label for="wall">벽</label>
+							</div>
+						</div>
+				</fieldset>
+	
+<!-- ------------카테고리 2 선택------------ -->		
+				<fieldset>
+					<legend>2. 상세 카테고리 선택</legend>
+						<div class="options">
+							<div>
+								<input id="high-ss" type="radio" name="category2" value="##" checked>
+								<label for="high-ss">하이샤시</label>
+							</div>
+							<div>
+								<input id="aluminum" type="radio" name="category2" value="##">
+								<label for="aluminum">알루미늄 창</label>
+							</div>
+							<div>
+								<input id="wood" type="radio" name="category2" value="##">
+								<label for="wood">목재 창</label>
+							</div>
+							<div>
+								<input id="etc" type="radio" name="category2" value="##">
+								<label for="etc">기타</label>
+							</div>
+						</div>
+				</fieldset>
+	
+<!-- ------------실측 사이즈------------ -->					
+				<fieldset>
+					<legend>3. 실측 사이즈</legend>
+					<div class="options">
+						<div class="category-3-a">
+							<div>창문 너비 : 
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+							<div>창문 높이 :
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+						</div>
+						<div class="category-3-b">
+							<div>창틀 너비 : 
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+							<div>창틀 높이 :
+								<input type="number" min="1" max="500" value="">cm
+							</div>
+						</div>
 					</div>
-					
-<!-- ------------카테고리 5 선택------------ -->												
-					<div>
-						<fieldset>
-							<legend>5. 현재 상태 사진 올리기</legend>
-								<div class="options">
-									<div>
-										<input type="file" class="photos">
-									</div>
-								</div>
-						</fieldset>
-					</div>
-					
-<!-- ------------카테고리 6 선택------------ -->					
-					<div>
-						<fieldset>
-							<legend>6. 희망 시공일 선택</legend>
-								<div class="options">
-									<div>
-										<label><input type="date" id="start"></label>
-									</div>
-									<p>또는 </p>
-									<div>
-										<label><input type="date" id="end"></label>
-									</div>
-								</div>
-						</fieldset>
-					</div>
-					
-<!-- ------------카테고리 7 선택------------ -->					
-					<div>
-						<fieldset>
-							<legend>7. 상세 요청사항</legend>
-								<div class="options">
-									<textarea name="request" cols="55" rows="5">
-									</textarea>
-								</div>
-						</fieldset>
-					</div>
-		
+				</fieldset>
+
 
 <!-- ------------button container------------ -->
 		<div class="btn-container">
-		
-<!-- ------------previous button------------ -->	
-			<div class="previous-button">
-				<button class="prev-btn" onclick="location.href='est-request1.html'"><span>이전</span></button>
-			</div>		
-				 
+				
 <!-- ------------next button------------ -->							
 			<div class="next-button">
-		      <button class="next-btn" onclick="location.href='est-request3.html'"><span>다음</span></button>
+		      <button class="next-btn" onclick="location.href='form2.jsp'"><span>다음</span></button>
 		    </div>
-
-
+		    
+		    
 		</div>
-
-
-
+		    
+		    </form>
+		    
 			</section>
 		</div>
 	</main>
