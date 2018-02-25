@@ -472,8 +472,8 @@ select{
 }	
 .left-title{
 	width: 150px;
-    background-color: pink;
-    font-size: 23px;
+    /* background-color: pink; */
+    font-size: 20px;
     text-align: center;
     padding-top: 5px;
     float:left;
@@ -482,7 +482,7 @@ select{
 }
 
 	.title-cont{
-		width:850px;
+		width:800px;
 		background-color: white;
 		float:left;
 	
@@ -501,12 +501,45 @@ select{
 		color:gray;
 	}
 .construction-info{
-	height:300px;
+	height:200px;
 	
 	border-bottom-style: dotted;
 	border-bottom: 1px solid gray;
 }
-
+	.construction-cont{
+		display:absolute;
+		/* background-color: aqua; */
+		margin-left: 180px;
+		padding-top:10px;
+		
+	}
+		.construction-cont1{
+			
+			
+		}
+			.con-name1{
+				/* background-color: white; */
+				float:left;
+				width:80px;
+				font-size: 18px;
+			}
+			.con-name2{
+				float: left;
+				/* background-color:yellow; */
+				width:690px;
+				padding-left:20px;
+				margin-bottom: 10px;
+				
+			}
+		
+	/* .construction-cont1{
+		display:flex;
+		
+		height:290px;
+		width:700px;
+		background-color: tomato;
+	}
+ */
 .detail-cont{
 	height:600px;
 	
