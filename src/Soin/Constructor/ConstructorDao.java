@@ -1,8 +1,6 @@
-package Soin.jspweb.dao;
+package Soin.Constructor;
 
 import java.util.List;
-
-import Soin.jspweb.entity.Constructor;
 
 
 public interface ConstructorDao 

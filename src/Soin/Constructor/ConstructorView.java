@@ -1,8 +1,7 @@
-package Soin.jspweb.entity;
+package Soin.Constructor;
 
 public class ConstructorView extends Constructor{
-	
-	private int commentCount;
+	private int distance;
 	
 	public ConstructorView() {
 		// TODO Auto-generated constructor stub
@@ -19,22 +18,24 @@ public class ConstructorView extends Constructor{
 			String introduction, 
 			int gpa, 
 			String speciality1,
-			String speciality2, 
+			String speciality2,
 			String speciality3, 
 			String speciality4
-		) {
+			) {
 		super(member_id, name, corporateRegistrationNumber, ceoName, mainImage, address, homepageAddress, introduction, gpa,
 				speciality1, speciality2, speciality3, speciality4);
 		
-		this.commentCount = commentCount;
+		this.distance = distance;
 	}
 
-	public int getCommentCount() {
-		return commentCount;
+	public int getDistance() {
+		return distance;
 	}
 
-	public void setCommentCount(int commentCount) {
-		this.commentCount = commentCount;
+	public void setDistance(int distnace) {
+		this.distance = distance;
 	}
+	
+	
 
 }
