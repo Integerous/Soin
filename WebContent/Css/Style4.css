@@ -11,6 +11,7 @@ body{
 	display: flex;
 		flex-direction: column;
 	margin: 0;
+
 }
 
 header{
@@ -145,6 +146,9 @@ hr {
 
 /* ----------MAIN---------- */
 main{
+/* 	background-image: url("../Images/정수배경4.png");
+	background-size: cover;
+	background-color: rgba(255, 255, 255, 0.5); */
 	display: flex;
 /* 		justify-content: center; */
 		align-items: center;

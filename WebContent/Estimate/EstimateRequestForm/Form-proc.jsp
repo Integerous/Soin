@@ -1,6 +1,6 @@
-<%@page import="Soin.jspweb.jdbc.JdbcEstimateRequestDao"%>
-<%@page import="Soin.jspweb.dao.EstimateRequestDao"%>
-<%@page import="Soin.jspweb.entity.EstimateRequest"%>
+<%@page import="Soin.EstimateRequest.JdbcEstimateRequestDao"%>
+<%@page import="Soin.EstimateRequest.EstimateRequestDao"%>
+<%@page import="Soin.EstimateRequest.EstimateRequest"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
