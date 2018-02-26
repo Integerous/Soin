@@ -250,4 +250,18 @@ public class JdbcPortfolioDao implements PortfolioDao {
 		return portfolio;
 	}
 
+
+	@Override
+	public PortfolioView getPrev(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public PortfolioView getNext(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

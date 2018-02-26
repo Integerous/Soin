@@ -10,5 +10,8 @@ public interface PortfolioDao {
 	
 	public List<PortfolioView> getList();
 	public PortfolioView get(String id);
-
-}
+	
+	/*public PortfolioView getPrev(String id);//이전글
+	public PortfolioView getNext(String id);//다음글
+*/
+	}
