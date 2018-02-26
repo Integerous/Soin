@@ -1,12 +1,9 @@
-package Soin.jspweb.jdbc;
+package Soin.memberRole;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-import Soin.jspweb.dao.MemberRoleDao;
-import Soin.jspweb.entity.MemberRole;
 
 public class JdbcMemberRoleDao implements MemberRoleDao
 {

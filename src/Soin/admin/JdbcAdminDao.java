@@ -1,7 +1,4 @@
-package Soin.jspweb.jdbc;
-
-import Soin.jspweb.dao.AdminDao;
-import Soin.jspweb.entity.Admin;
+package Soin.admin;
 
 public class JdbcAdminDao implements AdminDao
 {

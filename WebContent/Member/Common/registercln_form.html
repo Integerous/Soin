@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>일반 회원 가입</title>
 		<link href="../../Css/Style1.css" type="text/css" rel="stylesheet"/>
+		<script src="" type="text/javascript" ></script>
 		<style type="text/css">
 		
 		#main
@@ -96,17 +97,18 @@
 											<li><label class="label-text">이메일</label><input class="input"  type="text" ><br /></li>
 											
 											<li><label class="label-text">연락처(핸드폰)</label>
-													<select>
+													<select id="tel01">
 														<option value="010">010</option>
 														<option value="011">011</option>
 														<option value="016">016</option>
 														<option value="016">017</option>
 														<option value="016">018</option>
 														<option value="109">019</option>
-													</select><input class="input-sh-short"  type="text" ><input class="input-sh-short"  type="text" >
+													</select><input id="tel02" class="input-sh-short"  type="text" ><input id="tel03" class="input-sh-short"  type="text" >
+													<br /><input type="text" id="phoneNum" value=""/>
 													<br />
 													
-											<li><label class="label-text">연락처(집)</label>
+											<!-- <li><label class="label-text">연락처(집)</label>
 													<select>
 														<option value="02">02</option>
 														<option value="031">031</option>
@@ -124,14 +126,14 @@
 														<option value="062">062</option>
 														<option value="064">064</option>		
 													</select><input class="input-sh-short"  type="text" ><input class="input-sh-short"  type="text" >
-													<br />		
+													<br />	 -->	
 											</li>
 
 											<li><label class="label-text">우편번호</label><input class="input-short"  type="text" ><a class="btn-input" href="">주소검색</a><br /></li>
 										
-											<li><label class="label-text">주소</label><input class="input"  type="text" ><br /></li>
+											<li><label class="label-text">주소</label><input class="input"  name="address" type="text" ><br /></li>
 											
-											<li><label class="label-text">상세 주소</label><input class="input"  type="text" ><br /></li>
+											<li><label class="label-text">상세 주소</label><input class="input"  name="detailAddress" type="text" ><br /></li>
 										</ul>
 									</fieldset>
 								</div>
@@ -144,10 +146,11 @@
 																		
 								<div class="box">
 									<ul class="agree">
-										<li><label><input type="checkbox" >아래 약관에 모두 동의합니다.</label></li>
-										<li><label><input type="checkbox" ><span class="text-emp">(필수)</span> 개인정보처리방침에 동의합니다.</label><a class="btn-agree" href="">상세보기</a></li>
-										<li><label><input type="checkbox" ><span class="text-emp">(필수)</span> 회원가입 약관에 동의합니다.</label><a class="btn-agree" href="">상세보기</a></li>
-										<li><label><input type="checkbox" ><span class="text-emp">(선택)</span> 인테리어 정보 및 이벤트 알림 수신에 동의합니다. </label><a class="btn-agree" href="">상세보기</a><li>
+										<li><label><input id="reg-cln-chk-all" type="checkbox" >아래 약관에 모두 동의합니다.</label></li>
+										<li><label><input id="reg-cln-chk-01" type="checkbox" ><span class="text-emp">(필수)</span> 개인정보처리방침에 동의합니다.</label><a class="btn-agree" href="">상세보기</a></li>
+										<li><label><input id="reg-cln-chk-02" type="checkbox" ><span class="text-emp">(필수)</span> 회원가입 약관에 동의합니다.</label><a class="btn-agree" href="">상세보기</a></li>
+										<li><label><input id="reg-cln-chk-03" type="checkbox" ><span class="text-emp">(선택)</span> 인테리어 정보 및 이벤트 알림 수신에 동의합니다. </label><a class="btn-agree" href="">상세보기</a><li>
+										<input type="text" id="selectCheck" name="selectCheck" value="">
 										</ul>
 									</div>
 		

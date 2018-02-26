@@ -1,6 +1,4 @@
-package Soin.jspweb.dao;
-
-import Soin.jspweb.entity.Client;
+package Soin.client;
 
 public interface ClientDao 
 {

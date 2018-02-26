@@ -1,12 +1,9 @@
-package Soin.jspweb.jdbc;
+package Soin.client;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-import Soin.jspweb.dao.ClientDao;
-import Soin.jspweb.entity.Client;
 
 public class JdbcClientDao implements ClientDao
 {
