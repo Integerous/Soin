@@ -209,7 +209,6 @@ public class JdbcPortfolioDao implements PortfolioDao {
 		String sql = "SELECT * FROM PORTFOLIO_VIEW WHERE ID=?";
 
 		
-		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
@@ -235,8 +234,6 @@ public class JdbcPortfolioDao implements PortfolioDao {
 						rs.getString("BUILDING_TYPE_ID"),
 						rs.getString("CONSTRUCTION_POSITION_ID")
 						);
-			
-			
 			}
 
 			rs.close();

@@ -1,3 +1,17 @@
+<%@page import="Soin.portfolio.PortfolioView"%>
+<%@page import="Soin.portfolio.JdbcPortfolioDao"%>
+<%@page import="Soin.portfolio.PortfolioDao"%>
+<%@page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String id= request.getParameter("id");//아이디가 꼭 있어야함.
+
+	PortfolioDao portfolioDao = new JdbcPortfolioDao();
+	PortfolioView portfolio = portfolioDao.get(id);
+
+
+%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +21,7 @@
 <style type ="text/css"></style>
 </head>
 <body>
-
+ <div id ="wrap">
     <div id="header">
    
    <div class ="hor-menu menu-member">
@@ -35,7 +49,7 @@
    </div>
     </div>
  <!--  바디!!!----------------------------------------------------------------------------------------- -->   
- <div id ="wrap">
+ 
   <div id ="body">
   	<div class ="company-info">
  		 <div class="constructor-img">
@@ -196,16 +210,6 @@
 		  </div>
     
     	</div>
-    	<div class="pagination">
-			    <a href="#">«</a>
-				<a href="#">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>	
-				<a href="#">»</a>
-				
-			</div>
 	</div>
     	
  <!-- 풋터!!!-----------------------------------------------------------------------------------------  -->  
