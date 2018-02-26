@@ -30,7 +30,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-			Connection con = DriverManager.getConnection(url, "c##sist","dclass");
+			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 
 			st.setString(1, interiorTip.getTitle());
@@ -72,7 +72,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-			Connection con = DriverManager.getConnection(url, "c##sist","dclass");
+			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 
 			st.setString(1, interiorTip.getTitle());
@@ -108,7 +108,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-			Connection con = DriverManager.getConnection(url, "c##sist","dclass");
+			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			
 			st.setString(1, id);
@@ -138,7 +138,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-			Connection con = DriverManager.getConnection(url, "c##sist","dclass");
+			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			ResultSet rs = st.executeQuery();
 
@@ -188,7 +188,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-			Connection con = DriverManager.getConnection(url, "c##sist","dclass");
+			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			ResultSet rs = st.executeQuery();
 			
