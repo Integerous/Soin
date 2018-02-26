@@ -1,0 +1,138 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name = "author" content="Nhyeonyeong" >
+	<meta name = "description" content="후기_작성">
+	<meta name="keywords" content="인테리어,리모델링,집수리,셀프인테리어,소규모인테리어,인테리어중개,벽지,문,창문,욕조,소인,SOIN,soin">
+	<title>소인-소규모 인테리어 중개 플랫폼</title>
+	
+	<link href="../Css/Style7.css" type="text/css" rel="stylesheet" />
+	<style type="text/css">		</style>
+</head>
+
+<body>
+	<!-- ------------------------HEADER------------------------ -->
+	<header>
+		<div>			
+			<div id="member-menu">
+				<h1 class="hidden">회원메뉴</h1>
+				<ul>
+					<li><a href="">로그인</a></li>
+					<li><a href="">회원가입</a></li>
+					<li><a href="">마이페이지</a></li>
+					<li><a href="../CS/FAQ/MainList.html">고객센터</a></li>
+				</ul>
+			</div>	
+			
+			<div class="logo">
+				<img alt="로고" src="../Images/soin-logo2.png"/>	
+			</div>
+		</div>
+	</header>
+	<!-- ------------------------NAVIGATION-------------------- -->
+	<nav>
+		<div>		
+			<div id="main-menu">
+				<h1 class="hidden">메인메뉴</h1>
+				<ul class="flex">
+					<li><a href="">소인소개</a></li>
+					<li><a href="">업체소개</a></li>
+					<li><a href="">견적요청</a></li>
+					<li><a href="">인테리어TIP</a></li>
+					<li><a href="MainList.html">시공후기</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- -------------------------BODY------------------------- -->	
+	<div class="flex">		
+		<main class = "main-box">		
+				
+			<h1 class="content-title">┃ 후기쓰기 </h1>
+			
+			<div class="form content-table" style="min-height: 650px">
+				<ul>
+					<li>
+						<label class="label-title" for="title" >제목</label>
+						<input type="text" id="input-box"  size ="20" placeholder="20자 이내로 작성하세요.">
+					</li>
+					<li>
+						<label class="label-title" for="star-button">평점</label>
+							<input type="image" src="../Images/star.png" class="star-button" id="input-box">
+							<input type="image" src="../Images/star.png" class="star-button">
+							<input type="image" src="../Images/star.png" class="star-button">
+							<input type="image" src="../Images/star.png" class="star-button">
+							<input type="image" src="../Images/star.png" class="star-button">
+						<hr>
+					</li>
+					<li>
+						<label class="label-title" for="info">시공정보</label>
+						<select size="1" id="input-box">
+							<option>벽지/창문 - 2018/01/12</option>
+						</select>
+					</li>
+				</ul>
+					<!-- 여기다가 디비에서 가져온 시공정보를 불러와야해.....	 -->
+					
+					<table id="data-table">
+						<tbody>
+							<tr>
+							<td>카테고리 : </td>
+							</tr>					
+							<tr>
+								<td>시공기간 : </td>
+							</tr>	
+							<tr>
+								<td>시공업체 : </td>
+							</tr>	
+							<tr>
+								<td>거주지역 : </td>
+							</tr>
+						</tbody>
+					</table>
+							
+				
+					<hr>
+				<ul>		
+					<li>
+						<label class="label-title" for="main-photo">메인사진</label>
+						<input type="file" id="input-box">
+					</li>
+					<li>
+						<label class="label-title" for="plus-photo">추가사진</label>
+						<input type="file" id="input-box">
+					</li>
+					<li>
+						<label class="label-title" for="review">후기작성</label>						
+						<textarea name="review" rows="15" cols="60" id="input-box" placeholder="간략한 시공과정과 시공 하면서 느꼈던 점을 솔직하게 알려주세요 :)"></textarea>
+					</li>
+				</ul>
+				<div>
+					<a href="" class="write-button">
+						<img alt="후기등록" src="../Images/nhy/pen3.png">
+					</a>
+					<!-- <a href="MainList.html" class="button text-button">취소하기</a>
+					<a href="" class="button text-button">등록하기</a> -->
+				</div>
+			</div>			
+			
+		</main>		 
+	 </div>
+	 <!-- -----------------------FOOTER----------------------- -->
+	 <footer>
+	 	<section >
+	 		<br>
+			<p>소인_소규모 인테리어 중개 플랫폼<br>
+				사업자등록번호: 12122-1212-12 | 대표: 한정수 <br>
+				주소: 서울특별시 마포구 월드컵북로 21 풍성빌딩 2층 쌍용교육센터 c클래스 | 이메일: soin@gmail.com | 
+				개인정보보호책임자: 한정수 <br>
+				Copyright © 2017-2018 soin. All rights reserved.
+			</p>
+		</section>
+	</footer>
+</body>
+</html>
+    
