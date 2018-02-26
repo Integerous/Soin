@@ -14,7 +14,7 @@ import Soin.InteriorTip.InteriorTipDao;
 import Soin.InteriorTip.InteriorTipView;
 import Soin.InteriorTip.JdbcInteriorTipDao;
 
-@WebServlet("/InteriorTip/Trend/Main03")
+@WebServlet("/InteriorTip/Trend/Main04")
 public class Main04Controller extends HttpServlet{
 
 	@Override
