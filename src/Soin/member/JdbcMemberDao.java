@@ -1,12 +1,9 @@
-package Soin.jspweb.jdbc;
+package Soin.member;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-import Soin.jspweb.dao.MemberDao;
-import Soin.jspweb.entity.Member;
 
 public class JdbcMemberDao implements MemberDao
 {

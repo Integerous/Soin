@@ -1,6 +1,4 @@
-package Soin.jspweb.dao;
-
-import Soin.jspweb.entity.Admin;
+package Soin.admin;
 
 public interface AdminDao 
 {

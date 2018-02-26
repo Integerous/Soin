@@ -1,6 +1,4 @@
-package Soin.jspweb.dao;
-
-import Soin.jspweb.entity.Member;
+package Soin.member;
 
 public interface MemberDao
 {

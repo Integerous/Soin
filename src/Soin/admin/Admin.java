@@ -1,4 +1,4 @@
-package Soin.jspweb.entity;
+package Soin.admin;
 
 public class Admin 
 {

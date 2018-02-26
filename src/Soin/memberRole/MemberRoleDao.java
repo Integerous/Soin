@@ -1,6 +1,4 @@
-package Soin.jspweb.dao;
-
-import Soin.jspweb.entity.MemberRole;
+package Soin.memberRole;
 
 public interface MemberRoleDao
 {
