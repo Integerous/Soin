@@ -6,9 +6,6 @@ import java.util.List;
 public interface ConstructorDao 
 {
 
-	//시공업체회원 가져오기
-	Constructor get(String id);
-	
 	//시공업체회원 정보입력
 	int insert(Constructor constructor);
 	
@@ -22,11 +19,11 @@ public interface ConstructorDao
 	List<Constructor> getList();
 	List<Constructor> getList(String query);
 	List<Constructor> getList(int page);
-	List<Constructor> getList(int page, String filed, String query);
+	List<Constructor> getList(int page,String query);
 
-	Constructor get();
-	
-	
+	//시공업체회원 가져오기
+	Constructor get(String id);
+
 	
 	/*Constructor getDistance();
 	Constructor getGrade();
