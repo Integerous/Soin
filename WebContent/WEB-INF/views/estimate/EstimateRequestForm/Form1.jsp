@@ -5,16 +5,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%
+<%-- <%
 	String id = request.getParameter("id");
 
 	EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 	EstimateRequestView estimateRequest = estimateRequestDao.get(id);
 
 
-%>
-
-
+%> --%>
 
 
 
