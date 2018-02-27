@@ -3,14 +3,14 @@
 <%@page import="Soin.portfolio.PortfolioDao"%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
+<%-- <%
 	String id= request.getParameter("id");//아이디가 꼭 있어야함.
 
 	PortfolioDao portfolioDao = new JdbcPortfolioDao();
 	PortfolioView portfolio = portfolioDao.get(id);
 
 
-%>
+%> --%>
     
 <!DOCTYPE html>
 <html>
@@ -210,6 +210,16 @@
 		  </div>
     
     	</div>
+    	<div class="pagination">
+			    <a href="#">«</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>	
+				<a href="#">»</a>
+				
+			</div>
 	</div>
     	
  <!-- 풋터!!!-----------------------------------------------------------------------------------------  -->  

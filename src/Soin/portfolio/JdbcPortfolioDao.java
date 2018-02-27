@@ -209,7 +209,6 @@ public class JdbcPortfolioDao implements PortfolioDao {
 		String sql = "SELECT * FROM PORTFOLIO_VIEW WHERE ID=?";
 
 		
-		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
@@ -235,8 +234,6 @@ public class JdbcPortfolioDao implements PortfolioDao {
 						rs.getString("BUILDING_TYPE_ID"),
 						rs.getString("CONSTRUCTION_POSITION_ID")
 						);
-			
-			
 			}
 
 			rs.close();
@@ -251,6 +248,20 @@ public class JdbcPortfolioDao implements PortfolioDao {
 			e.printStackTrace();
 		}
 		return portfolio;
+	}
+
+
+	@Override
+	public PortfolioView getPrev(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public PortfolioView getNext(String id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -286,7 +286,25 @@ select{
 	margin-left: 10px;
 }
 
+.pagination {
+    display: inline-block;
+    margin-left:35%;
+    /* margin-top: 12%; */
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color;
+    border: 1px solid #ddd;
+}
 
+.pagination a:hover {
+    background-color: #83aafc;
+    color: white;
+    border: 1px solid #83aafc;
+}
 
 /*  ------------풋터------------- */
 
