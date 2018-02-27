@@ -1,6 +1,7 @@
 package Soin.Contract;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,12 +39,12 @@ public class JdbcContractDao implements ContractDao {
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 
-			st.setString(1, contract.getId());
+			//st.setString(1, contract.getId());
 			st.setString(2, contract.getAddress());
-			st.setDate(3,  contract.getRegdate());
+			//st.setDate(3,  contract.getRegdate());
 			st.setString(4, contract.getContent());
 			st.setString(5, contract.getEtcRequest());
-			st.setDate(6, contract.getConstructionDate());
+			st.setDate(6, (Date) contract.getConstructionDate());
 			st.setString(7, contract.getPositionSize());
 			st.setString(8, contract.getClientId());
 			st.setString(9, contract.getConstructorId());
@@ -95,12 +96,12 @@ public class JdbcContractDao implements ContractDao {
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 
-			st.setString(1, contract.getId());
+			//st.setString(1, contract.getId());
 			st.setString(2, contract.getAddress());
-			st.setDate(3,  contract.getRegdate());
+			//st.setDate(3,  contract.getRegdate());
 			st.setString(4, contract.getContent());
 			st.setString(5, contract.getEtcRequest());
-			st.setDate(6, contract.getConstructionDate());
+			st.setDate(6, (Date) contract.getConstructionDate());
 			st.setString(7, contract.getPositionSize());
 			st.setString(8, contract.getClientId());
 			st.setString(9, contract.getConstructorId());

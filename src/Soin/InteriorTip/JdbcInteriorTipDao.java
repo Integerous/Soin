@@ -24,7 +24,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 				"    building_type_id," + 
 				"    construction_position_id" + 
 				") VALUES ((SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM INTERIOR_TIP)"
-				+ ",?,?,?,?,?,?,?,?,?)";
+				+ ",?,?,?,?,?,?,?,?,?,?)";
 		
 		int result = 0;
 		try {
