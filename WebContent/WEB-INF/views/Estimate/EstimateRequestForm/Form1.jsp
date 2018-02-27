@@ -5,14 +5,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%
+<%-- <%
 	String id = request.getParameter("id");
 
 	EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 	EstimateRequestView estimateRequest = estimateRequestDao.get(id);
-
-
-%>
+%> --%>
 
 
 
@@ -23,7 +21,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상세 견적의뢰 - 소규모 인테리어 시공 중개 플랫폼 소인</title>
-<link href="../../Css/Style4.css" type="text/css" rel="stylesheet"/>
+<link href="../../../../Css/Style4.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>

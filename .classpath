@@ -7,9 +7,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0 (5)"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="lib" path="D:/workspace/tools/apache-tomcat-9.0.2-windows-x64/apache-tomcat-9.0.2/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/tools/apache-tomcat-9.0.2-windows-x64/apache-tomcat-9.0.2/lib/servlet-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
