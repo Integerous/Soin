@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -133,13 +134,13 @@
 			</div>
 			<div class = "construction-cont4">
 				<div class = "con-name1">
-				시공종류
+				공사내역
 				</div>
 				<div class ="con-name2">
 				<input type="text" style="width:400px;" >
 				</div>
 			</div>
-			<!-- <div class = "construction-cont5">
+			<div class = "construction-cont5">
 				<div class = "con-name1">
 				공사비용
 				</div>
@@ -147,7 +148,7 @@
 				<input type="text"  >원
 				</div>
 			
-			</div> -->
+			</div>
 		
 		</div>
 	
