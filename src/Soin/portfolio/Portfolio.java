@@ -15,6 +15,7 @@ public class Portfolio {
 	private String constructionTypeId;
 	private String buildingTypeId;
 	private String constructionPositionId;
+	private String title;
 	
 	public Portfolio() {
 	
@@ -23,7 +24,7 @@ public class Portfolio {
 	
 	
 	public Portfolio(String id, String location, String content, String period, int hit, int like, String memberId,
-			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId) {
+			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String title) {
 		
 		this.id = id;
 		this.location = location;
@@ -36,10 +37,11 @@ public class Portfolio {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
+		this.title =title;
 	}
 
 	public Portfolio(String location, String content, String period, String memberId,
-			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId) {
+			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String title) {
 		
 		//this.id = id;
 		this.location = location;
@@ -52,8 +54,11 @@ public class Portfolio {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
+		this.title =title;
 	}
 
+
+	
 
 	public String getId() {
 		return id;
@@ -144,6 +149,28 @@ public class Portfolio {
 	}
 
 	
-	
+	public String getContent() {
+		return content;
+	}
+
+
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+
+
+	public String getTitle() {
+		return title;
+	}
+
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
 	
 }

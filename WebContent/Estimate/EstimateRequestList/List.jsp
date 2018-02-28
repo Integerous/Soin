@@ -101,61 +101,64 @@
 <!-- ------------form wrapper------------ -->		
 		<div class="form-wrapper">
 
-<!-- ------------견적의뢰서  타이틀------------ -->
-			<section class="form-title">
+<!-- ------------견적의뢰서  리스트 타이틀------------ -->
+			<section class="list-title">
 				<img src="../../Images/ic_playlist_add_check_black_24dp_2x.png" alt="check-box2" />
-					<div class="ft-container">
-						견적의뢰서 요약
+					<div class="lt-container">
+						견적의뢰서 리스트
 					</div>
 			</section>
 
-<!-- ------------견적의뢰서 요약------------ -->			
-		<section class="request-form">
-					<div>
-						<fieldset>
-							<legend>요약</legend>
-								<div class="request-summary">
-									<div class="request-options">
-										<div>
-											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											시공 카테고리:
-										</div>
-										<div>
-											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											상세 카테고리:
-										</div>
-										<div>
-											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											실측 사이즈:
-										</div>
-										<div>
-											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											희망 시공일:
-										</div>
-										<div>
-											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											시공지 주소:
-										</div>
-									</div>
-									<div class="summary-content">
-										<div>
-											(여기에 해당하는 데이터 불러왕)
-										</div>
-										<div>
-											(해당 데이터)
-										</div>
-										<div>
-											(해당 데이터)
-										</div>
-										<div>
-											(해당 데이터)
-										</div>
-										<div>
-											(해당 데이터)
-										</div>
-									</div>
-								</div>
-						</fieldset>
+<!-- ------------견적의뢰서 리스트 테이블------------ -->			
+		<section class="list-form">
+			<div>
+				<table class="table">
+					
+					<thead>
+						<tr>
+							<th class="expand">제목</th>
+							<th class="w100">언어</th>
+							<th class="w100">플랫폼</th>
+							<th class="w100">작성일</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						
+						<%-- <% for(AnswerisView a : list){%> --%>
+						<c:forEach var="ai" items="${list}">
+						<tr>
+						<td class="text-align-left text-indent text-ellipsis">
+						<a href="detail.jsp?id=${ai.id}">${ai.title}</a>
+						</td>
+						
+						<td>
+							<%-- <%=((List<Answeris>)request.getAttribute("list")).get(0).getLanguage()%> --%>
+							<%-- ${list[0].language} --%>
+							${ai.language}
+						</td>
+						
+						<td class="text-ellipsis">
+							${ai.platform}
+						</td>
+						
+						<td>
+							${ai.regDate}
+						</td>
+					
+						</tr>
+						<%-- 	<% }%> --%>
+						</c:forEach>
+					
+					
+						<%-- <% if(list.size() == 0){%> --%>
+						<tr>
+						<td colspan="4">작성된 글이 없습니다.</td>
+						</tr>
+						<%-- <% }%> --%>
+						
+					</tbody>
+				</table>
 					</div>
 					
 
