@@ -28,7 +28,7 @@ public class FormController extends HttpServlet{
 		request.setAttribute("estimateRequest", estimateRequest);
 		
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/views/estimate/EstimateRequestForm/Form1.jsp");
+				request.getRequestDispatcher("/WEB-INF/views/Estimate/EstimateRequestForm/Form1.jsp");
 		
 		dispatcher.forward(request, response);
 		
