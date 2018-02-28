@@ -31,7 +31,20 @@ public class PortfolioWriteController extends HttpServlet{
 				 = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/Portfolio/PortfolioWrite.jsp");
 			
 			dispatcher.forward(request, response);
-			
-			
+				
 		}
+		
+		@Override
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+			//regController.jsp보고 하기.
+			
+			
+			
+			response.sendRedirect("PortfolioMain");//작성하면 포폴메인페이지로 이동함.
+		}
+		
+		
+		
+		
 }
