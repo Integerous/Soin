@@ -4,10 +4,10 @@ import java.util.List;
 
 public interface InteriorTipDao {
 
-		public int insert(InteriorTip interiorTip);
-		public int update(InteriorTip interiorTip);
-		public int delete(String id);
+		int insert(InteriorTip interiorTip);
+		int update(InteriorTip interiorTip);
+		int delete(String id);
 		
-		public List<InteriorTipView> getList();
-		public InteriorTipView get(String id);
+		List<InteriorTipView> getList();
+		InteriorTipView get(String id);
 }

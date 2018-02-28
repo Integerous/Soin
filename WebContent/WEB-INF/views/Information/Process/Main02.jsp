@@ -1,13 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>소인 : 인테리어 팁</title>
+<title>소인 : 인테리어 팁 상세 페이지</title>
 <link href = "../../Css/Style5.css" type = "text/css" rel = "stylesheet"/>
 </head>
-
 <body>
-<!--------------------------------header 시작------------------------------>
+<!--------------------------------header 시작------------------------------>	
 	<header>
 		<div class = "top-box">
 			<div class ="member-bar">
@@ -71,15 +72,9 @@
 			</div>
 		</div>
 	</header>
-	
 <!--------------------------------main 시작------------------------------>	
 	<main id = "main">
 		<div class = "root-container">
-			<h1>메인 컨텐츠</h1>
-			<div class = "main-text-box">
-				컨텐츠 관련 Text(팁 메인) 
-			</div>
-			
 			<div>
 				<div class = "search-box03">
 						<select name = "category">
@@ -104,105 +99,140 @@
 				</div>
 			</div>
 			
-			<div class = "main-box">
-				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
 				</div>
 				
-				<div class = "text-box text-ellipsis">
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail02.html">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail02.html">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail02.html">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
 				</div>
 			</div>
 			
-			<div class = "main-box">
-				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Beanu.jpg" alt="비뉴"></a>
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
 				</div>
 				
-				<div class = "text-box text-ellipsis">
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail02.html">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail02.html">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail02.html">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
 				</div>
 			</div>
 			
-			<div class = "main-box">
-				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/DesignJ.jpg" alt="디자인제이"></a>
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
 				</div>
 				
-				<div class = "text-box text-ellipsis">
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail02.html">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail02.html">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail02.html">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
 				</div>
 			</div>
 			
-			<div class = "main-box">
-				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Illi.jpg" alt="일리"></a>
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
 				</div>
 				
-				<div class = "text-box text-ellipsis">
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail02.html">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail02.html">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail02.html">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
 				</div>
 			</div>
 		</div>
 	</main>
-
-<!--------------------------------footer 시작------------------------------>	
+<!--------------------------------footer 시작------------------------------>		
 	<footer id = "footer">
 		
 		<h1>푸터</h1>
@@ -220,7 +250,7 @@
 				Copyrightⓒ 2018 By SOIN All Right Reserved. 
 				</div>
 			</div>
-			
+
 			<div class = "right-footer">
 				1588-1234<br>
 				고객센터 : 평일 10:00 ~ 18:00 / 주말 10:00 ~ 16:00<br>
@@ -230,6 +260,5 @@
 			
 		</div>
 	</footer>
-	
 </body>
 </html>
