@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +12,9 @@
 <body>
 	<header id="header">
 		<div class="root-container">
-		
+			
 					<img id="logo" src="../../../Images/soin-logo.png" alt="소인">
-				
+		
 			<section class="head-menu">
 				<h1 class="hidden">헤더</h1>
 
@@ -61,8 +63,8 @@
 					type="checkbox" value="wall">벽</label> <label><input
 					type="checkbox" value="bathroom">욕실</label> <label><input
 					type="checkbox" value="the_others">기타</label>
-
 			</section>
+
 			<section>
 				<h1 class="hidden">업체 검색 폼</h1>
 				<select class="area-list area-list-height">
@@ -75,72 +77,26 @@
 					<option value="등촌동" selected="selected">등촌동</option>
 				</select>
 			</section>
+			<section>
+				<form class="form">
 
-			<form class="form">
+					<label>업체검색</label> <input type="text" placeholder="Search..." />
+					<input type="submit" value="검색" />
 
-				<label>업체검색</label> <input type="text" placeholder="Search..." /> <input
-					type="submit" value="검색" />
-			</form>
+				</form>
+			</section>
+
 
 			<hr />
 
 
 			<section>
-				<h2>업체 랭킹(시공 수 정렬-전체 리스트)</h2>
+				<h2>업체 랭킹(리뷰 수 정렬-전체 리스트)</h2>
 				<section>
 					<div class="distance">
 						<a href="Detail.html">
 							<img src="../../../Images/540x360_20170424122432782_wbxxMRuMIB.jpg" alt="아델라">
-						</a>
-							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
-							</ul>
-					</div>
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
-							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
-						</ul>
-					</div>
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
-							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
-							</ul>
-					</div>
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
-							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
-							</ul>
-					</div>
-
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
+						</a>	
 							<ul>
 								<li><a href="Detail.html">업체명 : 아델라</a></li>
 								<li><a href="Detail.html">평점/5.0</a></li>
@@ -189,6 +145,53 @@
 					<div class="distance">
 						<a href="Detail.html">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
+							<li>업체명 : 아델라</li>
+							<li>평점/5.0</li>
+						</a>
+					</div>
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="Detail.html">
+							<img src="../../../Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="Detail.html">업체명 : 아델라</a></li>
+								<li><a href="Detail.html">평점/5.0</a></li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="Detail.html">
+							<img src="../../../Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="Detail.html">업체명 : 아델라</a></li>
+								<li><a href="Detail.html">평점/5.0</a></li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="Detail.html">
+							<img src="../../../Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="Detail.html">업체명 : 아델라</a></li>
+								<li><a href="Detail.html">평점/5.0</a></li>
+							</ul>
+					</div>
+
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="Detail.html">
+							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
 								<li><a href="Detail.html">업체명 : 아델라</a></li>
@@ -240,7 +243,7 @@
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
+								<li><a href="Detail.html">업체명 : 아델</a></li>
 								<li><a href="Detail.html">평점/5.0</a></li>
 							</ul>
 					</div>
@@ -284,7 +287,6 @@
 				</section>
 
 			</section>
-
 
 				<div class="pagination">
 			    <a href="#">«</a>
