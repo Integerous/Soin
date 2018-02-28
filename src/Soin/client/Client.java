@@ -47,6 +47,11 @@ public class Client
 		this.selectCheck = selectCheck;
 	}
 
+	public Client()
+	{
+		
+	}
+	
 	//수정
 	public Client(String nickName, int selectCheck)
 	{

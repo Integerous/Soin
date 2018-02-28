@@ -33,7 +33,7 @@ public class JdbcMemberDao implements MemberDao
 				
 				String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 				
-				Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+				Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 				PreparedStatement st = con.prepareStatement(sql);
 				st.setString(1, member.getId());
 				st.setString(2, member.getPassword());
@@ -79,7 +79,7 @@ public class JdbcMemberDao implements MemberDao
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			
-			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, member.getPassword());
 			st.setString(2, member.getEmail());
@@ -119,7 +119,7 @@ public class JdbcMemberDao implements MemberDao
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 
-			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, id);
 			

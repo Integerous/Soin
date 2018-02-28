@@ -31,7 +31,7 @@ public class JdbcMemberRoleDao implements MemberRoleDao
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			
-			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, memberRole.getMemberId());
 			st.setString(2, memberRole.getRoleName());
@@ -67,7 +67,7 @@ public class JdbcMemberRoleDao implements MemberRoleDao
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 
-			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, id);
 			

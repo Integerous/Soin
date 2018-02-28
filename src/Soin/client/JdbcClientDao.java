@@ -19,7 +19,7 @@ public class JdbcClientDao implements ClientDao
 		String sql ="INSERT INTO CLIENT (MEMBER_ID, NICKNAME, SELECT_CHECK) "
 																													+ "VALUES (?, "
 																													+ "?, "
-																													+ "?, ";
+																													+ "?)";
 	
 		int result = 0;
 		
@@ -29,7 +29,7 @@ public class JdbcClientDao implements ClientDao
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			
-			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			//?로 주어진 값에 대입하는 Statement
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, client.getMemberId());
@@ -71,7 +71,7 @@ public class JdbcClientDao implements ClientDao
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			
-			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, client.getNickName());
 			st.setInt(2, client.getSelectCheck());
@@ -109,7 +109,7 @@ public class JdbcClientDao implements ClientDao
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 
-			Connection con = DriverManager.getConnection(url, "c##Soin_DB", "soin1218");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, id);
 			

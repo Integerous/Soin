@@ -69,6 +69,11 @@ public class Member
 		this.detailAddress = detailAddress;
 	}
 	
+	public Member()
+	{
+		
+	}
+	
 	//가입
 	public Member(String id, String password, String email, String phoneNum, String address, String detailAddress) 
 	{
