@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="../../../Css/Style6.css" type="text/css" rel="stylesheet" />
+<link href="../../Css/Style6.css" type="text/css" rel="stylesheet" />
 <style type="text/css">
 </style>
 </head>
@@ -291,16 +291,14 @@
 				</section>
 
 			</section>
+			
 		</c:forEach>
 				<div class="pagination">
-			    <a href="#">«</a>
-				<a href="#">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>	
-				<a href="#">»</a>
-				
+			    <c:forEach var="i" begin="1" end="5">
+			   		 <c:if test="${i<=lastPage }">
+					<li><a href="?page=${i }">${i }</a></li>
+					</c:if>
+				</c:forEach>
 			</div>
 			
 			</main>

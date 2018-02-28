@@ -23,7 +23,8 @@ public interface ConstructorDao
 
 	//시공업체회원 가져오기
 	ConstructorView get(String id);
-
+	
+	int getCount();
 	
 	/*Constructor getDistance();
 	Constructor getGrade();

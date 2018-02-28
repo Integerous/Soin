@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -440,6 +441,42 @@ public class JdbcConstructorDao implements ConstructorDao{
 		}
 
 		return constructor;
+	}
+
+
+	@Override
+	public int getCount() {
+		String sql = "SELECT count(ID) count FROM CONSTRUCTOR";
+		
+		int count = 0;
+
+		// 드라이버 로드
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			Connection con = DriverManager.getConnection(url,"c##soin", "soin1218");
+			Statement st = con.createStatement();
+			
+			ResultSet rs = st.executeQuery(sql);
+			
+			
+			if (rs.next())
+				
+						count = rs.getInt("MEMBER_ID");
+
+			rs.close();
+			st.close();
+			con.close();
+
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return count;
 	}
 	
 }

@@ -6,56 +6,66 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="../../../Css/Style6.css" type="text/css" rel="stylesheet" />
+<link href="../../../Css/StyleHF.css" type="text/css" rel="stylesheet" />
 <style type="text/css">
 </style>
 </head>
 <body>
-	<header id="header">
-		<div class="root-container">
-
-			<img id="logo" src="../../../Images/soin-logo.png" alt="소인">
-
-			<section class="head-menu">
-				<h1 class="hidden">헤더</h1>
-
-				<nav class="hor-menu member-menu">
-					<h1 class="hidden">회원메뉴</h1>
-
-					<ul>
-						<li><a href="">로그인</a></li>
-						<li><a href="">회원가입</a></li>
-						<li><a href="">고객센터</a></li>
-						<li><a href=""><img class="my-page"
-								src="../../../Images/ic_notifications_black_24dp_2x.png"
-								alt="알림"></a></li>
-						<li><a href=""><img class="my-page"
-								src="../../../Images/ic_account_box_black_24dp_2x.png"
-								alt="마이페이지"></a></li>
-
-					</ul>
-				</nav>
-
-
-			</section>
+	<header>
+		<div id="top-bar">
+			<div class="tb-container">
+				<div class="login-status" style="display:none;">
+					<a href="#">로그아웃</a></div>
+					
+				<div class="logout-status">
+					<a href="#">로그인</a></div>
+				<div class="logout-status">
+					<a href="#">회원가입</a></div>
+				<div><a href="#">고객센터</a></div>
+				<div class="notifications"><a href="#" >
+					<img src="../../Images/ic_notifications_active_black_24px.svg"/></a></div>
+				<div><a href="#">마이페이지</a></div>
+			</div>
 		</div>
-	</header>
-
-	<!-------------- menu 시작------------------ -->
-	<div id="main-menu" style="text-align: center">
-		<div class="root-container">
-			<nav class="hor-menu main-menu main-menu>ul>li fitst-pad-none">
-				<h1 class="hidden">메인메뉴</h1>
-				<ul>
-					<li><a href="">소인소개</a></li>
-					<li><a href="">업체소개</a></li>
-					<li><a href="">견적요청</a></li>
-					<li><a href="">인테리어TIP</a></li>
-					<li><a href="">시공후기</a></li>
-				</ul>
+	
+<!-- ------------logo & title------------ -->			
+		<div id="mid-bar">
+			<div class="mb-container">
+				<div class="logo">
+					<a href="index.html">
+					<img src="../../Images/logo_js.png" alt="Soin_Logo" /></a>
+				</div>
+				
+					<a href="#">소인</a>
+					
+				<div class="p">
+					- 소규모 인테리어 시공 중개 플랫폼
+				</div>
+			</div>
+		</div>
+		
+		<div class="liner"></div>
+		
+<!-- ------------navigation------------ -->
+		<div id="top-nav">
+			
+			<nav class="tn-container">
+				<div class="hello">
+					<a href="#">소인소개</a></div>
+				<div class="hello-contr">
+					<a href="#">업체소개</a></div>
+				<div class="est-request">
+					<a href="#" style="color:gold">견적의뢰</a></div>
+				<div class="tip">
+					<a href="#">인테리어 TIP</a></div>
+				<div class="review">
+					<a href="#">시공후기</a></div>
 			</nav>
 		</div>
-
-	</div>
+			
+		<div class="liner"></div>
+		
+	</header>
 
 	<div id="body">
 		<div class="root-container">
