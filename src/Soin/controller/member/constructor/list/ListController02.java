@@ -14,8 +14,8 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-@WebServlet("/member/constructor/list8")
-public class ListController extends HttpServlet{
+@WebServlet("/member/constructor/main")
+public class ListController02 extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -49,7 +49,7 @@ public class ListController extends HttpServlet{
 		request.setAttribute("count", count);
 		request.setAttribute("lastPage", lastPage);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/list8.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/Main.jsp");
 		dispatcher.forward(request, response);
 	}
 

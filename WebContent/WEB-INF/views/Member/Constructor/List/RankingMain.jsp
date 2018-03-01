@@ -1,57 +1,72 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="../../../Css/Style6.css" type="text/css" rel="stylesheet" />
+<link href="../../Css/Style6.css" type="text/css" rel="stylesheet" />
+<link href="../../Css/StyleHF.css" type="text/css" rel="stylesheet" />
 <style type="text/css">
 </style>
 </head>
 <body>
-	<header id="header">
-		<div class="root-container">
-		<a href="/SoinProject/index.html">
-					<img id="logo" src="../../../Images/soin-logo.png" alt="소인">
-				</a>
-			<section class="head-menu">
-				<h1 class="hidden">헤더</h1>
-	
-				<nav class="hor-menu member-menu">
-					<h1 class="hidden">회원메뉴</h1> 
+	<header>
+		<div id="top-bar">
+			<div class="tb-container">
+				<div class="login-status" style="display:none;">
+					<a href="#">로그아웃</a></div>
 					
-					<ul>
-						<li><a href=" /SoinProject/Member/Common/login.html">로그인</a></li>
-						<li><a href="/SoinProject/Member/Common/register.html">회원가입</a></li>
-						<li><a href="/SoinProject/CS/FAQ/MainList.html">고객센터</a></li>
-						<li><a href=""><img class = "my-page"src="../../../Images/ic_notifications_black_24dp_2x.png" alt="알림"></a></li>
-						<li><a href=""><img class = "my-page"src="../../../Images/ic_account_box_black_24dp_2x.png" alt="마이페이지"></a></li>
-						
-					</ul>
-				</nav>
-				
-
-			</section>
+				<div class="logout-status">
+					<a href="/SoinProject/Member/Common/login.html">로그인</a></div>
+				<div class="logout-status">
+					<a href="/SoinProject/Member/Common/register.html">회원가입</a></div>
+				<div><a href="/SoinProject/CS/FAQ/MainList.html">고객센터</a></div>
+				<div class="notifications"><a href="#" >
+					<img src="../../Images/ic_notifications_active_black_24px.svg"/></a></div>
+				<div><a href="#">마이페이지</a></div>
+			</div>
 		</div>
-	</header>
-
-	<!-------------- menu 시작------------------ -->
-	<div id="main-menu" style="text-align: center">
-		<div class="root-container">
-			<nav class="hor-menu main-menu main-menu>ul>li fitst-pad-none">
-				<h1 class="hidden">메인메뉴</h1>
-				<ul>
-					<li><a href="">소인소개</a></li>
-					<li><a href="">업체소개</a></li>
-					<li><a href="">견적요청</a></li>
-					<li><a href="">인테리어TIP</a></li>
-					<li><a href="">시공후기</a></li>
-				</ul>
+	
+<!-- ------------logo & title------------ -->			
+		<div id="mid-bar">
+			<div class="mb-container">
+				<div class="logo">
+					<a href="index.html">
+					<img src="../../Images/logo_js.png" alt="Soin_Logo" /></a>
+				</div>
+				
+					<a href="#">소인</a>
+					
+				<div class="p">
+					- 소규모 인테리어 시공 중개 플랫폼
+				</div>
+			</div>
+		</div>
+		
+		<div class="liner"></div>
+		
+<!-- ------------navigation------------ -->
+		<div id="top-nav">
+			
+			<nav class="tn-container">
+				<div class="hello">
+					<a href="#">소인소개</a></div>
+				<div class="hello-contr">
+					<a href="#">업체소개</a></div>
+				<div class="est-request">
+					<a href="#" style="color:gold">견적의뢰</a></div>
+				<div class="tip">
+					<a href="#">인테리어 TIP</a></div>
+				<div class="review">
+					<a href="#">시공후기</a></div>
 			</nav>
 		</div>
-
-	</div>
+			
+		<div class="liner"></div>
+		
+	</header>
 
 	<div id="body">
 		<div class="root-container">
@@ -286,14 +301,25 @@
 		</div>
 	</div>
 	<!---------------------footer -------------------- -->
-	<footer id="footer">
-		<div class="root-container">소인 소인 대표 : 한정수 본사 : 서울특별시 마포구 월드컵북로
-			21 (지번)서울특별시 마포구 서교동 447-5 사업자등록번호 : 123-45-67890 Copyrightⓒ 2018 By
-			SOIN All Right Reserved. 1588-1234 고객센터 : 평일 10:00 ~ 18:00 / 주말 10:00
-			~ 16:00 팩스 : 02 - 1234 - 5678 이메일 : cs@soin.kr | 제휴문의 :
-			constructor@soin.kr</div>
-
-	</footer>
+	<footer>
+ 	<div id ="footer">
+       <div class="root-container">
+       <img id ="ceo" src="../../../Images/yurim/소인대표.jpg" alt="소인대표"/>
+         <div id = "company-info">소인 대표 : 한정수<br>
+      
+            본사 : 서울특별시 마포구 월드컵북로 21
+            (지번)서울특별시 마포구 서교동 447-5<br>
+            사업자등록번호 : 123-45-67890</div>
+   
+   
+         <p id = "customer-svc">고객센터 :1588-1234 평일 10:00 ~ 18:00 / 주말 10:00 ~ 16:00<br>
+            팩스 : 02 - 1234 - 5678
+            이메일 : cs@soin.kr| 제휴문의 : constructor@soin.kr</p>
+            
+            <div id = "copyright"><p>Copyrightⓒ 2018 By SOIN All Right Reserved.</p></div>
+          </div>   
+    </div>
+</footer>
 
 
 
