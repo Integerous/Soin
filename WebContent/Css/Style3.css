@@ -170,7 +170,8 @@ select{
  .company-info{
 	 height: 400px;
      background-color: #EDFAFD/* #EBF7FF *//* #FFD8D8 *//* #CEFBC9 */;
-     margin-top: 20px;
+     margin-top: 150px;
+     /* margin-top: 20px; */
  
  }
  .constructor-img{
@@ -258,6 +259,7 @@ select{
 	 min-height:500px;
 	 height:auto;
 	 background-color: #B2CCFF;
+	 /* margin-top: 150px; */
  }
  
 .company-content{
@@ -280,7 +282,9 @@ select{
 .img-interior:hover{
 	opacity: 0.7;
 }
-
+.marginfor{
+	margin-top:150px;
+}
 .search > .box > input{
 	margin-right: 10px;
 	margin-left: 10px;
@@ -338,6 +342,21 @@ select{
  	position: absolute;
  	right: 30px;
  }
+ /* -포트폴리오작성버튼--- */
+ .btn-port-w{
+ 	background-color:#a4a2a3;
+ 	height: 30px;
+ 	width:100px;
+ 	/* border: 2px solid black; */
+	
+ 	margin-top:10px;
+ 	margin-left:850px;
+ 	border-radius: 5px;
+ 	text-align: center;
+ 	font-family:"a옛날목욕탕L","고딕","sans-serif";
+ 	padding-top:8px;
+ }
+ 
  /* ----사이드바--------------------- */
 #side{
 	background-color: #75bbec/* #A0D9E2 *//* #C4D4E0 */ /* #AED9DA */ ;
@@ -379,6 +398,7 @@ select{
  	text-align: center;
  	font-size:23px;
  	padding-top:10px;
+ 	margin-top:150px;
  	 }
  .detail-info{
  	height: 450px;

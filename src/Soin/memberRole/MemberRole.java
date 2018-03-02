@@ -28,6 +28,11 @@ public class MemberRole
 		this.roleName = roleName;
 	}
 	
+	public MemberRole() 
+	{
+	
+	}
+	
 	
 	
 }

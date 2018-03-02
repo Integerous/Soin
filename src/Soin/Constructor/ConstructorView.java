@@ -1,7 +1,7 @@
 package Soin.Constructor;
 
 public class ConstructorView extends Constructor{
-	private int distance;
+	
 	
 	public ConstructorView() {
 		// TODO Auto-generated constructor stub
@@ -20,22 +20,11 @@ public class ConstructorView extends Constructor{
 			String speciality1,
 			String speciality2,
 			String speciality3, 
-			String speciality4
-			) {
+			String speciality4) {
 		super(member_id, name, corporateRegistrationNumber, ceoName, mainImage, address, homepageAddress, introduction, gpa,
 				speciality1, speciality2, speciality3, speciality4);
-		
-		this.distance = distance;
+		// TODO Auto-generated constructor stub
 	}
-
-	public int getDistance() {
-		return distance;
-	}
-
-	public void setDistance(int distnace) {
-		this.distance = distance;
-	}
-	
 	
 
 }

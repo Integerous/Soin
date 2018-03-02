@@ -14,6 +14,24 @@
   <description>
      Welcome to Tomcat
   </description>
+ 
+ 
+ 
+ 
+<!--타일러 사용 --> 
+  <context-param>
+	      <description>Tiles configuration file</description>
+	      <param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+	      <param-value>/WEB-INF/tiles.xml</param-value>
+	   </context-param>
+	   
+	   <listener>
+	       <listener-class>org.apache.tiles.web.startup.simple.SimpleTilesListener</listener-class>
+	   </listener>
+  
+  
+  
+  
   
   <session-config>
   	<session-timeout>3</session-timeout>

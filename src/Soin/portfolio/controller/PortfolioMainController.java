@@ -14,24 +14,23 @@ import Soin.portfolio.JdbcPortfolioDao;
 import Soin.portfolio.PortfolioDao;
 import Soin.portfolio.PortfolioView;
 
-@WebServlet("/member/constructor/portfolioMain")
+@WebServlet("/Member/Constructor/Portfolio/PortfolioMain")
 public class PortfolioMainController extends HttpServlet{
 
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String id= request.getParameter("id");//아이디가 꼭 있어야함.
+
 		PortfolioDao portfolioDao = new JdbcPortfolioDao();
-		List<PortfolioView> list = portfolioDao.getList();
+		PortfolioView portfolio = portfolioDao.get(id);
 		
-		request.setAttribute("list", list);
+		request.setAttribute("portfolio", portfolio);
 		
 		RequestDispatcher dispatcher
-			= request.getRequestDispatcher("/WEB-INF/views/member/constructor/portfolioMain.jsp");
-		
+			 = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/Portfolio/PortfolioMain.jsp");
 		dispatcher.forward(request, response);
 	}
-	
-	
 	
 }

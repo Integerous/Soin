@@ -159,6 +159,16 @@ main{
 	background: #0e5079;
 }
 
+main .table{
+	display : table;
+	table-layout : fixed;
+	width: 100%;
+}
+
+table{
+	border-colapse : separate;
+}
+
 /* -----progress bar----- */
 .pb-bar{
 	display: flex;
@@ -229,7 +239,7 @@ section{
 		background: #fff;
 }
 
-/* -----견적의뢰서----- */
+/* -----견적의뢰서 타이틀----- */
 .form-title{
 	display: flex;
 		justify-content: flex-start;
@@ -324,6 +334,47 @@ legend{
 	padding: 5px;
 	font-size: 14px;
 }
+
+
+
+/* -----견적의뢰서 리스트 타이틀---- */
+.list-title{
+	display: flex;
+		justify-content: flex-start;
+	width: 100%;
+	background: transparent;
+	margin-bottom: 10px;
+}
+
+.lt-container {
+	display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	max-width: 900px;
+	padding: 5px 10px;		
+	background: gold;
+	font-weight: bold;
+	font-size: 20px;
+/* 	border: 3px solid #979797; */
+/* 	border-radius: 20px; */
+}
+
+/* -----견적의뢰서 리스트 테이블---- */
+.list-form{	
+	display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	max-width: 900px;
+	padding: 20px;
+	/* border: dotted #979797 3px; */
+	background: #e9e9e9;
+	border: 3px solid #979797;
+	border-radius: 20px;
+	width: 435.688px;
+}
+
+
+
 
 
 

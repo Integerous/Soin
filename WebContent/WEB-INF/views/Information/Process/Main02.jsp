@@ -1,0 +1,264 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>소인 : 인테리어 팁 상세 페이지</title>
+<link href = "../../Css/Style5.css" type = "text/css" rel = "stylesheet"/>
+</head>
+<body>
+<!--------------------------------header 시작------------------------------>	
+	<header>
+		<div class = "top-box">
+			<div class ="member-bar">
+				<div class = "member-menu">
+					<div>
+						<a href = "">로그인</a>
+					</div>
+					
+					<div>
+						<a href = "">회원가입</a>
+					</div>
+					
+					<div>
+						<a href = "">고객센터</a>
+					</div>
+					
+					<div>
+						<a href = "">마이페이지</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class = "logo-bar">
+				<div id = "logo">
+					<a href = ""><img class = "images" src = "../../Images/jyh/SoIn_Logo.png"></a>
+				</div>
+				
+				<div class = "name">
+					<a href = "">소인</a>
+				</div>
+				
+				<div class = "full-name">
+					소규모 인테리어 시공 중개 플랫폼
+				</div>
+			</div>
+			
+			<div class = "main-bar">
+				<div class = "main-container">
+					<div class = "main-menu">
+						<div>
+							<a href = "">소인소개</a>
+						</div>
+							
+						<div>
+							<a href = "">업체소개</a>
+						</div>
+						
+						<div>
+							<a href = "">견적요청</a>
+						</div>
+						
+						<div>
+							<a href = "">인테리어Tip</a>
+						</div>
+						
+						<div>
+							<a href = "">시공후기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+<!--------------------------------main 시작------------------------------>	
+	<main id = "main">
+		<div class = "root-container">
+			<div>
+				<div class = "search-box03">
+						<select name = "category">
+							<option value = "" selected = "selected">카테고리1</option>
+							<option value = "창문">창문</option>
+							<option value = "문">문</option>
+							<option value = "욕실">욕실</option>
+							<option value = "벽지">벽지</option>
+							<option value = "기타">기타</option>
+						</select>
+
+						<select name = "category">
+							<option value = "" selected = "selected">소재:카테고리2</option>
+							<option value = "알루미늄">알루미늄</option>
+							<option value = "목재">목재</option>
+							<option value = "비닐">비닐</option>
+							<option value = "기타">기타</option>
+						</select>					
+					
+					<input type = "search"  id = "search" placeholder="소재 관련 검색"  class = "search-text">
+					<input type = "submit" value = "검색" class = "btn">
+				</div>
+			</div>
+			
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
+				</div>
+				
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
+					<div class = "subtitle">
+						<a href="Detail02.html">subtitle</a>
+					</div>
+					
+					<div class = "title">
+						<a href="Detail02.html">title</a>
+					</div>
+					
+					<div class = "surmmary">
+						<a href="Detail02.html">surmmary</a>
+					</div>
+					
+					<div class = "review">
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
+					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
+				</div>
+			</div>
+			
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
+				</div>
+				
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
+					<div class = "subtitle">
+						<a href="Detail02.html">subtitle</a>
+					</div>
+					
+					<div class = "title">
+						<a href="Detail02.html">title</a>
+					</div>
+					
+					<div class = "surmmary">
+						<a href="Detail02.html">surmmary</a>
+					</div>
+					
+					<div class = "review">
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
+					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
+				</div>
+			</div>
+			
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
+				</div>
+				
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
+					<div class = "subtitle">
+						<a href="Detail02.html">subtitle</a>
+					</div>
+					
+					<div class = "title">
+						<a href="Detail02.html">title</a>
+					</div>
+					
+					<div class = "surmmary">
+						<a href="Detail02.html">surmmary</a>
+					</div>
+					
+					<div class = "review">
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
+					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
+				</div>
+			</div>
+			
+			<div class = "main02-box">
+				<div class="text02-writer">
+					글쓴이
+				</div>
+				
+				<div class="text02-regdete">
+					작성일자
+				</div>
+				
+				<div class = "text02-box text-ellipsis">
+					
+					<div class = "subtitle">
+						<a href="Detail02.html">subtitle</a>
+					</div>
+					
+					<div class = "title">
+						<a href="Detail02.html">title</a>
+					</div>
+					
+					<div class = "surmmary">
+						<a href="Detail02.html">surmmary</a>
+					</div>
+					
+					<div class = "review">
+						<a href="Detail02.html">리뷰 수 :		/		♥ 좋아요</a>
+					</div>
+				</div>
+				
+				<div class = "img02-box">
+					<a href = "Detail02.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
+				</div>
+			</div>
+		</div>
+	</main>
+<!--------------------------------footer 시작------------------------------>		
+	<footer id = "footer">
+		
+		<h1>푸터</h1>
+		<div class = "root-container">
+			<div id = "footer-logo">
+				<img class = "images" alt = "소인" src = "../../Images/jyh/SoIn_Logo.png">
+			</div>
+			
+			<div class = "left-footer">
+				소인 대표 : 한정수<br>
+				본사 : 서울특별시 마포구 월드컵북로 21<br>
+				(지번)서울특별시 마포구 서교동 447-5<br>
+				사업자등록번호 : 123-45-67890
+				<div class="copyright">
+				Copyrightⓒ 2018 By SOIN All Right Reserved. 
+				</div>
+			</div>
+
+			<div class = "right-footer">
+				1588-1234<br>
+				고객센터 : 평일 10:00 ~ 18:00 / 주말 10:00 ~ 16:00<br>
+				팩스 : 02 - 1234 - 5678<br>
+				이메일 : cs@soin.kr	| 제휴문의 : constructor@soin.kr
+			</div>			
+			
+		</div>
+	</footer>
+</body>
+</html>

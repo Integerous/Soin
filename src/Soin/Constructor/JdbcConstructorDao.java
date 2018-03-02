@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -168,11 +169,11 @@ public class JdbcConstructorDao implements ConstructorDao{
 
 
 	@Override
-	public List<Constructor> getList() {
+	public List<ConstructorView> getList() {
 
 		String sql = "SELECT * FROM CONSTRUCTOR ORDER BY MEMBER_ID";
 
-		List<Constructor> list = new ArrayList<>();
+		List<ConstructorView> list = new ArrayList<>();
 		// 드라이버 로드
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -183,10 +184,10 @@ public class JdbcConstructorDao implements ConstructorDao{
 			ResultSet rs = st.executeQuery();
 			
 			
-			Constructor constructor = null;
+			ConstructorView constructor = null;
 
-			if (rs.next()) {
-				constructor = new Constructor(
+			while (rs.next()) {
+				constructor = new ConstructorView(
 						rs.getString("MEMBER_ID"),
 						rs.getString("NAME"),
 						rs.getString("CORPORATE_REGISTRATION_NUMBER"),
@@ -225,12 +226,12 @@ public class JdbcConstructorDao implements ConstructorDao{
 	
 	
 	@Override
-	public List<Constructor> getList(String query) {
+	public List<ConstructorView> getList(String query) {
 		Scanner scan = new Scanner(System.in);
 		String temp = scan.next();
 		
 		String sql = "SELECT * FROM CONSTRUCTOR WHERE MEMBER_ID LIKE'%"+temp+"%'";
-		List<Constructor> list = new ArrayList<>();
+		List<ConstructorView> list = new ArrayList<>();
 		
 		// 드라이버 로드
 		try {
@@ -242,10 +243,10 @@ public class JdbcConstructorDao implements ConstructorDao{
 			ResultSet rs = st.executeQuery();
 			
 			
-			Constructor constructor = null;
+			ConstructorView constructor = null;
 
-			if (rs.next()) {
-				constructor = new Constructor(
+			while (rs.next()) {
+				constructor = new ConstructorView(
 						rs.getString("MEMBER_ID"),
 						rs.getString("NAME"),
 						rs.getString("CORPORATE_REGISTRATION_NUMBER"),
@@ -282,10 +283,10 @@ public class JdbcConstructorDao implements ConstructorDao{
 	
 	
 	@Override
-	public List<Constructor> getList(int page) {
+	public List<ConstructorView> getList(int page) {
 		String sql = "SELECT * FROM CONSTRUCTOR ORDER BY MEMBER_ID";
 		
-		List<Constructor> list = new ArrayList<>();
+		List<ConstructorView> list = new ArrayList<>();
 		
 		// 드라이버 로드
 		try {
@@ -297,10 +298,10 @@ public class JdbcConstructorDao implements ConstructorDao{
 			ResultSet rs = st.executeQuery();
 			
 			
-			Constructor constructor = null;
+			ConstructorView constructor = null;
 
-			if (rs.next()) {
-				constructor = new Constructor(
+			while(rs.next()) {
+				constructor = new ConstructorView(
 						rs.getString("MEMBER_ID"),
 						rs.getString("NAME"),
 						rs.getString("CORPORATE_REGISTRATION_NUMBER"),
@@ -335,10 +336,10 @@ public class JdbcConstructorDao implements ConstructorDao{
 	}
 
 	@Override
-	public List<Constructor> getList(int page,String query) {
+	public List<ConstructorView> getList(int page,String query) {
 		String sql = "SELECT * FROM CONSTRUCTOR ORDER BY MEMBER_ID";
 
-		List<Constructor> list = new ArrayList<>();
+		List<ConstructorView> list = new ArrayList<>();
 		
 		// 드라이버 로드
 		try {
@@ -350,10 +351,10 @@ public class JdbcConstructorDao implements ConstructorDao{
 			ResultSet rs = st.executeQuery();
 			
 			
-			Constructor constructor = null;
+			ConstructorView constructor = null;
 
-			if (rs.next()) {
-				constructor = new Constructor(
+			while (rs.next()) {
+				constructor = new ConstructorView(
 						rs.getString("MEMBER_ID"),
 						rs.getString("NAME"),
 						rs.getString("CORPORATE_REGISTRATION_NUMBER"),
@@ -391,11 +392,11 @@ public class JdbcConstructorDao implements ConstructorDao{
 	
 	//시공업자정보 가져오기
 	@Override
-	public Constructor get(String id) {
+	public ConstructorView get(String id) {
 
 		String sql = "SELECT * FROM CONSTRUCTOR WHERE MEMBER_ID=?";
 
-		Constructor constructor = null;
+		ConstructorView constructor = null;
 
 		// 드라이버 로드
 		try {
@@ -409,7 +410,7 @@ public class JdbcConstructorDao implements ConstructorDao{
 			
 			
 			if (rs.next()) {
-				constructor = new Constructor(
+				constructor = new ConstructorView(
 						rs.getString("MEMBER_ID"),
 						rs.getString("NAME"),
 						rs.getString("CORPORATE_REGISTRATION_NUMBER"),
@@ -440,6 +441,42 @@ public class JdbcConstructorDao implements ConstructorDao{
 		}
 
 		return constructor;
+	}
+
+
+	@Override
+	public int getCount() {
+		String sql = "SELECT count(ID) count FROM CONSTRUCTOR";
+		
+		int count = 0;
+
+		// 드라이버 로드
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			Connection con = DriverManager.getConnection(url,"c##soin", "soin1218");
+			Statement st = con.createStatement();
+			
+			ResultSet rs = st.executeQuery(sql);
+			
+			
+			if (rs.next())
+				
+						count = rs.getInt("MEMBER_ID");
+
+			rs.close();
+			st.close();
+			con.close();
+
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return count;
 	}
 	
 }

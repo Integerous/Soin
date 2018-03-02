@@ -1,16 +1,5 @@
-<%@page import="Soin.portfolio.PortfolioView"%>
-<%@page import="Soin.portfolio.JdbcPortfolioDao"%>
-<%@page import="Soin.portfolio.PortfolioDao"%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	String id= request.getParameter("id");//아이디가 꼭 있어야함.
-
-	PortfolioDao portfolioDao = new JdbcPortfolioDao();
-	PortfolioView portfolio = portfolioDao.get(id);
-
-
-%>
     
 <!DOCTYPE html>
 <html>
@@ -18,11 +7,70 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="../../../Css/Style3.css" type="text/css" rel="stylesheet" />
+<link href="../../../Css/StyleHF.css" type="text/css" rel="stylesheet" />
 <style type ="text/css"></style>
 </head>
 <body>
- <div id ="wrap">
-    <div id="header">
+ <!-- ---------------------HEADER---------------------- -->
+
+<!-- ------------top-bar------------ -->
+	<header>
+		<div id="top-bar">
+			<div class="tb-container">
+				<div class="login-status" style="display:none;">
+					<a href="#">로그아웃</a></div>
+					
+				<div class="logout-status">
+					<a href="#">로그인</a></div>
+				<div class="logout-status">
+					<a href="#">회원가입</a></div>
+				<div><a href="#">고객센터</a></div>
+				<div class="notifications"><a href="#" >
+					<img src="../../../Images/ic_notifications_active_black_24px.svg"/></a></div>
+				<div><a href="#">마이페이지</a></div>
+			</div>
+		</div>
+	
+<!-- ------------logo & title------------ -->			
+		<div id="mid-bar">
+			<div class="mb-container">
+				<div class="logo">
+					<a href="index.html">
+					<img src="../../../Images/logo_js.png" alt="Soin_Logo" /></a>
+				</div>
+				
+					<a href="#">소인</a>
+					
+				<div class="p">
+					- 소규모 인테리어 시공 중개 플랫폼
+				</div>
+			</div>
+		</div>
+		
+		<div class="liner"></div>
+		
+<!-- ------------navigation------------ -->
+		<div id="top-nav">
+			
+			<nav class="tn-container">
+				<div class="hello">
+					<a href="#">소인소개</a></div>
+				<div class="hello-contr">
+					<a href="#">업체소개</a></div>
+				<div class="est-request">
+					<a href="#" style="color:gold">견적의뢰</a></div>
+				<div class="tip">
+					<a href="#">인테리어 TIP</a></div>
+				<div class="review">
+					<a href="#">시공후기</a></div>
+			</nav>
+		</div>
+			
+		<div class="liner"></div>
+		
+	</header>
+	
+<!--     <div id="header">
    
    <div class ="hor-menu menu-member">
 		<ul>
@@ -47,9 +95,9 @@
 			<li><a href="">시공후기</a></li>
 		</ul>
    </div>
-    </div>
+    </div> -->
  <!--  바디!!!----------------------------------------------------------------------------------------- -->   
- 
+ <div id ="wrap">
   <div id ="body">
   	<div class ="company-info">
  		 <div class="constructor-img">
@@ -210,6 +258,21 @@
 		  </div>
     
     	</div>
+    	
+    	<div class="btn-port-w">
+			<a href="">작성하기</a>
+		</div>
+    	<div class="pagination">
+			    <a href="#">«</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>	
+				<a href="#">»</a>
+				
+			</div>
+		
 	</div>
     	
  <!-- 풋터!!!-----------------------------------------------------------------------------------------  -->  
@@ -236,7 +299,7 @@
    <!--side bar ------------------------- --> 
  <div id = "side">
  	
- 		<a href-"">견적 신청하기</a>
+ 		<a href="">견적 신청하기</a>
  	
  
  </div>  	

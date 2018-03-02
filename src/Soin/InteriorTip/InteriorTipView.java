@@ -37,6 +37,4 @@ public class InteriorTipView extends InteriorTip{
 	public void setLikeCount(int likeCount) {
 		this.likeCount = likeCount;
 	}
-	
-	
 }

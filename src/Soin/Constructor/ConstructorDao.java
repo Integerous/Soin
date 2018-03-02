@@ -16,14 +16,15 @@ public interface ConstructorDao
 	int delete(String id);
 	
 	
-	List<Constructor> getList();
-	List<Constructor> getList(String query);
-	List<Constructor> getList(int page);
-	List<Constructor> getList(int page,String query);
+	List<ConstructorView> getList();
+	List<ConstructorView> getList(String query);
+	List<ConstructorView> getList(int page);
+	List<ConstructorView> getList(int page,String query);
 
 	//시공업체회원 가져오기
-	Constructor get(String id);
-
+	ConstructorView get(String id);
+	
+	int getCount();
 	
 	/*Constructor getDistance();
 	Constructor getGrade();

@@ -24,8 +24,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 				"    product_id," + 
 				"    construction_type_id," + 
 				"    building_type_id," + 
-				"    construction_position_id)" + 
-				" VALUES (" +"(SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM ANSWERIS)"+",?,?,?,?,?,?,?,?)";
+				"    construction_position_id,"+"title)" + 
+				" VALUES (" +"(SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM ANSWERIS)"+",?,?,?,?,?,?,?,?,?)";
 		
 		int result = 0;
 		
@@ -46,6 +46,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 			st.setString(6, portfolio.getConstructionTypeId());
 			st.setString(7, portfolio.getBuildingTypeId());
 			st.setString(8, portfolio.getConstructionPositionId());
+			st.setString(9, portfolio.getTitle());
 			
 			result = st.executeUpdate();
 			
@@ -80,7 +81,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 				"    AND   product_id =?" + 
 				"    AND   construction_type_id =?" + 
 				"    AND   building_type_id =?" + 
-				"    AND   construction_position_id =?";
+				"    AND   construction_position_id =?" +
+				" 	 AND   title =?";
 		int result = 0;
 		
 		try {
@@ -102,7 +104,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 			st.setString(8, portfolio.getConstructionTypeId());
 			st.setString(9, portfolio.getBuildingTypeId());
 			st.setString(10, portfolio.getConstructionPositionId());
-		
+			st.setString(11, portfolio.getTitle());
 			
 			result = st.executeUpdate();//실행결과에 대해 몇개됐다고 하는거.
 
@@ -152,7 +154,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 	}
 
 	@Override
-	public List<PortfolioView> getList() {
+	public List<PortfolioView> getList(int page) {
 		String sql = "SELECT * FROM PORTFOLIO_VIEW ORDER BY REG_DATE DESC";
 
 		
@@ -182,7 +184,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 						rs.getString("PRODUCT_ID"),
 						rs.getString("CONSTRUCTION_TYPE_ID"),
 						rs.getString("BUILDING_TYPE_ID"),
-						rs.getString("CONSTRUCTION_POSITION_ID")
+						rs.getString("CONSTRUCTION_POSITION_ID"),
+						rs.getString("TITLE")
 						);
 			list.add(portfolio);//담고보내야한다.!!
 			
@@ -232,7 +235,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 						rs.getString("PRODUCT_ID"),
 						rs.getString("CONSTRUCTION_TYPE_ID"),
 						rs.getString("BUILDING_TYPE_ID"),
-						rs.getString("CONSTRUCTION_POSITION_ID")
+						rs.getString("CONSTRUCTION_POSITION_ID"),
+						rs.getString("TITLE")
 						);
 			}
 
@@ -251,7 +255,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 	}
 
 
-	@Override
+	/*@Override
 	public PortfolioView getPrev(String id) {
 		// TODO Auto-generated method stub
 		return null;
@@ -262,6 +266,49 @@ public class JdbcPortfolioDao implements PortfolioDao {
 	public PortfolioView getNext(String id) {
 		// TODO Auto-generated method stub
 		return null;
+	}*/
+	@Override
+	public int getCount() {
+		String sql = "SELECT COUNT(ID) COUNT FROM PORTFOLIO ";
+
+		int count = 0;
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+			Statement st = con.createStatement();//아이디에 물음표라서 prepare
+			
+			
+			ResultSet rs = st.executeQuery(sql);//결과집합을 가져올수있는 공간.
+  
+			
+			if(rs.next()) {//결과집합을 가져오는 메서드.
+				count = rs.getInt("count");
+			}
+
+			rs.close();
+			st.close();
+			con.close();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return count;
 	}
 
+
+	
+
+	
+	
+	
+	
 }
+
+
+
