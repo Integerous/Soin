@@ -10,6 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tiles.TilesContainer;
+import org.apache.tiles.access.TilesAccess;
+import org.apache.tiles.request.ApplicationContext;
+import org.apache.tiles.request.servlet.ServletRequest;
+import org.apache.tiles.request.servlet.ServletUtil;
+
 import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
@@ -20,11 +26,11 @@ public class ListController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//기본페이지 
+		//기본페이지 값은 1 
 		int page = 1;
 		int lastPage = 1;
 		
-		//요청한 페이지 값 있을시
+		//요청한 page 값이 있을 경우 기본값을 대치함.
 		String page_ = request.getParameter("page");
 		if(page_ != null && !page_.equals(""))
 			page = Integer.parseInt(page_);
@@ -39,7 +45,7 @@ public class ListController extends HttpServlet{
 				lastPage++;
 		}
 		
-		int off = page % 5 - 1;
+		int off = (page-1)%5;
 		int startNum = page - off;
 		
 		
@@ -48,9 +54,16 @@ public class ListController extends HttpServlet{
 		request.setAttribute("list", list);
 		request.setAttribute("count", count);
 		request.setAttribute("lastPage", lastPage);
+		request.setAttribute("startNum", startNum);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/list8.jsp");
-		dispatcher.forward(request, response);
+		/*RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/list8.jsp");
+		dispatcher.forward(request, response);*/
+		
+		//tiles 3.x 버전
+		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
+		TilesContainer container = TilesAccess.getContainer(applicationContext);
+		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+		container.render("student.community.answeris.list", servletRequest);
 	}
 
 }
