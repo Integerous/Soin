@@ -33,7 +33,7 @@ public class JdbcReviewDao implements ReviewDao {
 	        Class.forName("oracle.jdbc.driver.OracleDriver");
 	        
 	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-	        Connection con = DriverManager.getConnection(url, "c##soin", "dclass");
+	        Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 	        PreparedStatement st = con.prepareStatement(sql); //값을 ?로 대체해놓으면 Prepared로 해야한다.
 	        
 	      	        
@@ -68,23 +68,24 @@ public class JdbcReviewDao implements ReviewDao {
 	@Override
 	public int update(Review review) {
 		String sql = "UPDATE REVIEW"
-				+ "SET" +
-				"title=?"+
-				"	AND	grade_point,"+
-				"content,"+
-				"member_id,"+
-				"product_id,"+
-				"construction_type_id,"+
-				"bulding_type_id,"+
-				"construction_position_id,"+
-				"WHERE id =?";
+				+ "SET" 
+				+ "title=?"
+				+ "grade_point=?,"
+				+ "content=?,"
+				+ "member_id=?,"
+				+ "product_id=?,"
+				+ "construction_type_id=?,"
+				+ "bulding_type_id=?,"
+				+ "construction_position_id=?,"
+				+ "hit=hit+1"
+				+ "WHERE id =?";
 
 		int result = 0;
 		try {
 		    Class.forName("oracle.jdbc.driver.OracleDriver");
 		    
 		    String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-		    Connection con = DriverManager.getConnection(url, "c##soin", "dclass");
+		    Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 		    PreparedStatement st = con.prepareStatement(sql); //값을 ?로 대체해놓으면 Prepared로 해야한다.
 		    
 		  	        
@@ -99,7 +100,9 @@ public class JdbcReviewDao implements ReviewDao {
 			st.setString(6, review.getConstructionTypeId());
 			st.setString(7, review.getBuildingTypeId());
 			st.setString(8, review.getConstructionPositionId()); 
-		    
+			st.setInt(9, review.getHit()); 
+			st.setString(10, review.getId()); 
+			
 		    result = st.executeUpdate();
 			
 		    st.close();
@@ -126,9 +129,11 @@ public class JdbcReviewDao implements ReviewDao {
 	        Class.forName("oracle.jdbc.driver.OracleDriver");
 	        
 	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-	        Connection con = DriverManager.getConnection(url, "c##soin", "dclass");
+	        Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 	        PreparedStatement st = con.prepareStatement(sql); //값을 ?로 대체해놓으면 Prepared로 해야한다.
-	        		   	        
+	        
+	        st.setString(1,id);
+	        
 	        result = st.executeUpdate(); //영향을 받은 놈이 있니?
 	    	
 	        st.close();
@@ -146,6 +151,56 @@ public class JdbcReviewDao implements ReviewDao {
 	}
 
 	@Override
+	public List<ReviewView> getList(int page) {
+		String sql = "SELECT * FROM REVIEW_VIEW ORDER BY REGDATE DESC"; 
+		List<ReviewView> list = new ArrayList<>();
+		
+		try {
+	        Class.forName("oracle.jdbc.driver.OracleDriver");
+	        
+	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+	        Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+	        
+	        PreparedStatement st = con.prepareStatement(sql); 
+	      	        
+	        ResultSet rs = st.executeQuery(sql); 
+	        	       
+	        ReviewView review = null;
+	        while(rs.next()) {
+	        	review = new ReviewView(	        			
+	        			rs.getString("ID"),
+	        			rs.getString("TITLE"),
+	        			rs.getDate("REGDATE"),
+	        			rs.getInt("HIT"),
+	        			rs.getInt("GRADE_POINT"),	        			
+	        			rs.getString("CONTENT"),
+	        			rs.getString("MEMBER_ID"),
+	        			rs.getString("PRODUCT_ID"),
+	        			rs.getString("CONSTRUCTION_TYPE_ID"),
+	        			rs.getString("BUILDING_TYPE_ID"),
+	        			rs.getString("CONSTRUCTION_POSITION_ID"),
+	        			rs.getInt("COMMENT_COUNT")   
+	        		);
+	        	list.add(review);
+	        }
+	    	        
+	        rs.close();
+	        st.close();
+	        con.close();	        
+	       
+	        
+	     } catch (ClassNotFoundException e) {
+	        // TODO Auto-generated catch block
+	        e.printStackTrace();
+	     } catch (SQLException e) {
+	        // TODO Auto-generated catch block
+	        e.printStackTrace();
+	     }
+	     
+	     return list;
+	}
+	
+	@Override
 	public ReviewView get(String id) {
 		String sql = "SELECT * FROM REVIEW_VIEW WHERE ID=?"; 
 		ReviewView review = null;
@@ -154,8 +209,9 @@ public class JdbcReviewDao implements ReviewDao {
 	        Class.forName("oracle.jdbc.driver.OracleDriver");
 	        
 	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-	        Connection con = DriverManager.getConnection(url, "c##soin", "dclass");
-	        PreparedStatement st = con.prepareStatement(sql); 
+	        Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+	        PreparedStatement st = con.prepareStatement(sql);
+	        
 	        st.setString(1, id);
 	        
 	        ResultSet rs = st.executeQuery(); 
@@ -195,54 +251,6 @@ public class JdbcReviewDao implements ReviewDao {
 	     return review;
 	}
 
-	@Override
-	public List<ReviewView> getList() {
-		String sql = "SELECT * FROM REVIEW_VIEW ORDER BY REGDATE DESC"; 
-		List<ReviewView> list = new ArrayList<>();
-		
-		try {
-	        Class.forName("oracle.jdbc.driver.OracleDriver");
-	        
-	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-	        Connection con = DriverManager.getConnection(url, "c##soin", "dclass");
-	        
-	        PreparedStatement st = con.prepareStatement(sql); 
-	      	        
-	        ResultSet rs = st.executeQuery(); 
-	        	       
-	        ReviewView review = null;
-	        while(rs.next()) {
-	        	review = new ReviewView(	        			
-	        			rs.getString("ID"),
-	        			rs.getString("TITLE"),
-	        			rs.getDate("REGDATE"),
-	        			rs.getInt("HIT"),
-	        			rs.getInt("GRADE_POINT"),	        			
-	        			rs.getString("CONTENT"),
-	        			rs.getString("MEMBER_ID"),
-	        			rs.getString("PRODUCT_ID"),
-	        			rs.getString("CONSTRUCTION_TYPE_ID"),
-	        			rs.getString("BUILDING_TYPE_ID"),
-	        			rs.getString("CONSTRUCTION_POSITION_ID"),
-	        			rs.getInt("COMMENT_COUNT")   
-	        		);
-	        	list.add(review);
-	        }
-	    	        
-	        rs.close();
-	        st.close();
-	        con.close();	        
-	       
-	        
-	     } catch (ClassNotFoundException e) {
-	        // TODO Auto-generated catch block
-	        e.printStackTrace();
-	     } catch (SQLException e) {
-	        // TODO Auto-generated catch block
-	        e.printStackTrace();
-	     }
-	     
-	     return list;
-	}
+	
 	
 }

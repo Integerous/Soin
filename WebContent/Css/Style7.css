@@ -348,6 +348,13 @@ footer{
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+
+.tabel2{
+	min-width: 600px;
+	border: 2px solid #A9A9A9;
+		
+}	
+	
 	
 .content-table{
 	min-height: 400px;

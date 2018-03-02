@@ -74,6 +74,7 @@
 			</div>
 			
 			<div class="content-box">
+				
 				<div class="box">
 					<img alt="후기메인사진" src="../Images/nhy/review_door.jpg" style="height:200px; width: 250px;">
 					<p>문</p>
