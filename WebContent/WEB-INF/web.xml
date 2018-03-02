@@ -18,7 +18,7 @@
  
  
  
-<!-- ----------타일러 사용---------- --> 
+<!--타일러 사용 --> 
   <context-param>
 	      <description>Tiles configuration file</description>
 	      <param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
