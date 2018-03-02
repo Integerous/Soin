@@ -194,16 +194,47 @@
 		  </div>
 		  </div>
 		  </div>
-    
-    	</div>
+   
+   
+       	</div>
+       	
+       	<div>
+		
+			<c:if test="${startNum !=1}">
+			<a class="btn btn-prev" href="?p=${startNum-1}">이전</a>
+			</c:if>
+			<c:if test="${startNum==1}">
+			 <span class="btn btn-prev" >이전</span>
+			</c:if>
+		
+		
+	</div>
     	<div class="pagination">
-			    <a href="#">«</a>
+			   <!--  <a href="#">«</a>
 				<a href="#">1</a>
 				<a href="#">2</a>
 				<a href="#">3</a>
 				<a href="#">4</a>
 				<a href="#">5</a>	
-				<a href="#">»</a>
+				<a href="#">»</a> -->
+				
+				<c:forEach var="i" begin="0" end="4">
+					<c:if test="${startNum+i <= lastPage}">
+					
+					<a href="?p=${startNum+i}&t=&q=" >${startNum+i}</a>
+					</c:if>	
+				</c:forEach>	
+				
+				
+				<div>
+			<c:if test="${startNum+5 <= lastPage}">
+			<!-- <span class="btn btn-next" onclick="alert('다음 페이지가 없습니다.');">다음</span> -->
+			<a class="btn btn-next" href="?p=${startNum+5}">다음</a>
+			</c:if>
+			<c:if test="${startNum+5 > lastPage}">
+			<span class="btn btn-next">다음</span>
+			</c:if>
+	</div>
 				
 			</div>
 	</div>

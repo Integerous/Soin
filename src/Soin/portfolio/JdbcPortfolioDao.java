@@ -154,7 +154,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 	}
 
 	@Override
-	public List<PortfolioView> getList() {
+	public List<PortfolioView> getList(int page) {
 		String sql = "SELECT * FROM PORTFOLIO_VIEW ORDER BY REG_DATE DESC";
 
 		
@@ -267,5 +267,48 @@ public class JdbcPortfolioDao implements PortfolioDao {
 		// TODO Auto-generated method stub
 		return null;
 	}*/
+	@Override
+	public int getCount() {
+		String sql = "SELECT COUNT(ID) COUNT FROM PORTFOLIO ";
 
+		int count = 0;
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+			Statement st = con.createStatement();//아이디에 물음표라서 prepare
+			
+			
+			ResultSet rs = st.executeQuery(sql);//결과집합을 가져올수있는 공간.
+  
+			
+			if(rs.next()) {//결과집합을 가져오는 메서드.
+				count = rs.getInt("count");
+			}
+
+			rs.close();
+			st.close();
+			con.close();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return count;
+	}
+
+
+	
+
+	
+	
+	
+	
 }
+
+
+
