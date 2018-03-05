@@ -159,3 +159,10 @@ header{
     position: absolute;
     right: 30px;
  }
+ 
+ .foot-container{
+	height: 100%;
+	min-height: inherit;
+	width:1000px;
+	margin:0 auto;
+}	
