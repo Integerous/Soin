@@ -26,11 +26,11 @@ public class ListController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//기본페이지 값은 1 
+		// 기본페이지 값은 1
 		int page = 1;
 		int lastPage = 1;
-		
-		//요청한 page 값이 있을 경우 기본값을 대치함.
+
+		// 요청한 page 값이 있을 경우 기본값을 대치함.
 		String page_ = request.getParameter("page");
 		if(page_ != null && !page_.equals(""))
 			page = Integer.parseInt(page_);
@@ -46,7 +46,7 @@ public class ListController extends HttpServlet{
 		}
 		
 		int off = (page-1)%5;
-		int startNum = page - off;
+		int startNum = page - off;	
 		
 		
 		List<ConstructorView> list = constructorDao.getList(page);
@@ -64,6 +64,7 @@ public class ListController extends HttpServlet{
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
 		container.render("Member.Constructor.List.list8", servletRequest);
+
 	}
 
 }

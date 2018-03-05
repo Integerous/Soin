@@ -4,7 +4,7 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
        
 <tiles-definitions>
-<<<<<<< HEAD
+
 	<definition name="Estimate.*" template="/WEB-INF/views/inc/sub-layout.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
 		<put-attribute name="main" value="/WEB-INF/views/Estimate/{1}.jsp" />
@@ -12,12 +12,12 @@
 	</definition>
 
 
-	<definition name="Constructor.*" template="/WEB-INF/views/inc/sub-layout.jsp">
+	<definition name="Member.Constructor.List.*" template="/WEB-INF/views/inc/layout6.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
-		<put-attribute name="main" value="/WEB-INF/views/Member/Constructor/{1}.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Member/Constructor/List/{1}.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
 	</definition>
-=======
+
   <definition name="Estimate.*" template="/WEB-INF/views/inc/sub-layout.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/Estimate/{1}.jsp" />
@@ -29,5 +29,5 @@
     <put-attribute name="main" value="/WEB-INF/views/Member/Common/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
+  
 </tiles-definitions>
