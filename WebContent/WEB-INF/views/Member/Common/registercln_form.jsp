@@ -30,11 +30,12 @@
 					<fieldset>
 					<legend class= "hidden">정보입력폼</legend>
 						<ul>
-							<li><label class="label-text">닉네임</label><input class="input-short"  type="text" name ="nickName" required><a class="btn-input" href="">중복체크</a><br /></li>
 						
 							<li><label class="label-text">아이디</label><input class="input-short"  type="text" name ="id" required><a class="btn-input" href="">중복체크</a><br /></li>
 							
 							<li><label id="pwd" class="label-text">비밀번호</label><input class="input"  type="password" name="password" required><br /></li>
+							
+							<li><label class="label-text">닉네임</label><input class="input-short"  type="text" name ="nickName" required><a class="btn-input" href="">중복체크</a><br /></li>
 							
 							<li><label id="pwd-chk" class="label-text">비밀번호 확인</label><input class="input"  type="password" required><br /></li>
 							

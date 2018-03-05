@@ -23,6 +23,7 @@ public class JdbcMemberDao implements MemberDao
 																																										+ "?, "
 																																										+ "?, "
 																																										+ "?, "
+																																										+ "?"
 																																										+ "?)";
 																																																									
 			int result = 0;
@@ -41,7 +42,7 @@ public class JdbcMemberDao implements MemberDao
 				st.setString(4, member.getPhoneNum());
 				st.setString(5, member.getAddress());
 				st.setString(6, member.getDetailAddress());
-				
+				st.setString(7, member.getRole());
 				result = st.executeUpdate();
 				
 				st.close();
