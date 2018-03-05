@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+<c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
     
     
     <!-- ---------------------HEADER---------------------- -->
@@ -13,12 +14,12 @@
 					<a href="#">로그아웃</a></div>
 					
 				<div class="logout-status">
-					<a href="#">로그인</a></div>
+					<a href="${ctx}/Member/Common/login">로그인</a></div>
 				<div class="logout-status">
-					<a href="#">회원가입</a></div>
+					<a href="${ctx}/Member/Common/register">회원가입</a></div>
 				<div><a href="#">고객센터</a></div>
 				<div class="notifications"><a href="#" >
-					<img src="../../Images/ic_notifications_active_black_24px.svg"/></a></div>
+					<img src="${ctx}/Images/ic_notifications_active_black_24px.svg"/></a></div>
 				<div><a href="#">마이페이지</a></div>
 			</div>
 		</div>
@@ -27,8 +28,8 @@
 		<div id="mid-bar">
 			<div class="mb-container">
 				<div class="logo">
-					<a href="index.html">
-					<img src="../../Images/logo_js.png" alt="Soin_Logo" /></a>
+					<a href="${ctx}/index">
+					<img src="${ctx}/Images/logo_js.png" alt="Soin_Logo" /></a>
 				</div>
 				
 					<a href="#">소인</a>
