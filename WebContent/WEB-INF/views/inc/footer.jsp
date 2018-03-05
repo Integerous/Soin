@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+<c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
 
     <!-- ---------------------FOOTER---------------------- -->
-<Footer>
+<footer>
  <div id ="footer">
-       <div class="root-container">
-       <img id ="ceo" src="../../../Images/yurim/소인대표.jpg" alt="소인대표"/>
+       <div class="foot-container">
+       <img id ="ceo" src="${ctx}/Images/yurim/소인대표.jpg" alt="소인대표"/>
          <div id = "company-info">소인 대표 : 한정수<br>
       
             본사 : 서울특별시 마포구 월드컵북로 21
@@ -20,4 +22,4 @@
             <div id = "copyright"><p>Copyrightⓒ 2018 By SOIN All Right Reserved.</p></div>
           </div>   
     </div>
-</Footer>	
+</footer>	

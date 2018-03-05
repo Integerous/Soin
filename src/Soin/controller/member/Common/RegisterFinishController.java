@@ -1,4 +1,4 @@
-package Soin.controller.Member.Common;
+package Soin.controller.member.Common;
 
 import java.io.IOException;
 
