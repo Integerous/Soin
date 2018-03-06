@@ -56,12 +56,12 @@ public class RegisterClnFormController extends HttpServlet
 		member.setPhoneNum(phoneNum);
 		member.setRole("CLIENT");
 		
+		MemberDao memberDao = new JdbcMemberDao();
+		memberDao.insert(member);
+		
 		client.setMemberId(id);
 		client.setNickName(request.getParameter("nickName"));
 		client.setSelectCheck(Integer.parseInt(request.getParameter("selectCheck")));
-		
-		MemberDao memberDao = new JdbcMemberDao();
-		memberDao.insert(member);
 		
 		ClientDao clientDao = new JdbcClientDao();
 		clientDao.insert(client);
