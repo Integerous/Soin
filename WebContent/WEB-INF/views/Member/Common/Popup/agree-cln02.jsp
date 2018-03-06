@@ -127,6 +127,16 @@
 					</p>
 				</div>
 			</div>
+			
+			<div class="box-close">
+			<a id="button-close-popup" class ="btn-close" href="">닫기</a>
+			</div>
+			<script>
+				var closePopupButton = document.getElementById("button-close-popup");
+				closePopupButton.onclick = function() {
+					window.open("about:blank", "_self").close();
+				}
+			</script>
 		</div>
 	</div>
 </body>

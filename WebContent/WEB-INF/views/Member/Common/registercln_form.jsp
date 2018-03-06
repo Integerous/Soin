@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
-
+<script src="Popup/js/reg-cln-popup.js" type="text/javascript"></script>
+ 
 <main id="main">
 	<section>
 		<h1 class="hidden">회원유형 선택</h1>
@@ -50,10 +51,9 @@
 										<option value="016">016</option>
 										<option value="016">017</option>
 										<option value="016">018</option>
-										<option value="109">019</option>
+										<option value="019">019</option>
 									</select><input class="input-sh-short"  type="text" name="tel02" required><input class="input-sh-short"  type="text" name="tel03"  required>
-									<br /><input type="text" id="phone-num" value=""/>
-									<br />
+									<br /></li>
 									
 							<!-- <li><label class="label-text">연락처(집)</label>
 									<select>
@@ -73,8 +73,8 @@
 										<option value="062">062</option>
 										<option value="064">064</option>		
 									</select><input class="input-sh-short"  type="text" ><input class="input-sh-short"  type="text" >
-									<br />	 -->	
-							</li>
+									<br />	 
+							</li>  -->	
 
 							<li><label class="label-text">우편번호</label><input class="input-short"  type="text" ><a class="btn-input" href="">주소검색</a><br /></li>
 						

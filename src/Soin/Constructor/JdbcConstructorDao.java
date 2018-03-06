@@ -16,30 +16,30 @@ public class JdbcConstructorDao implements ConstructorDao{
 	//시공업자 정보 입력
 	@Override
 	public int insert(Constructor constructor) {
-		String sql ="INSERT INTO constructor (" + 
-				"    member_id," + 
-				"    name," + 
-				"    corporate_registration_number," + 
-				"    ceo_name," + 
-				"    main_image," + 
-				"    homepage_address," + 
-				"    introduction," + 
-				"    speciality01," + 
-				"    speciality02," + 
-				"    speciality03," + 
-				"    speciality04" + 
+		String sql ="INSERT INTO constructor ("+ 
+				"member_id, " + 
+				"name, " + 
+				"corporate_registration_number, " + 
+				"ceo_name, " + 
+				"main_image, " + 
+				"homepage_address, " + 
+				"introduction, " + 
+				"speciality01, " + 
+				"speciality02, " + 
+				"speciality03, " + 
+				"speciality04" + 
 				") VALUES (" + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?," + 
-				"    ?" + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?, " + 
+				"?" + 
 				")";
 		
 		int result = 0;
@@ -54,7 +54,8 @@ public class JdbcConstructorDao implements ConstructorDao{
 			st.setString(1, constructor.getMember_id());
 			st.setString(2, constructor.getName());
 			st.setString(3, constructor.getCorporateRegistrationNumber());
-			st.setString(4, constructor.getMainImage());
+			st.setString(4, constructor.getCeoName());
+			st.setString(5, constructor.getMainImage());
 			st.setString(6, constructor.getHomepageAddress());
 			st.setString(7, constructor.getIntroduction());
 			st.setString(8, constructor.getSpeciality1());
@@ -84,18 +85,18 @@ public class JdbcConstructorDao implements ConstructorDao{
 	@Override
 	public int update(Constructor constructor) {
 		String sql = "UPDATE CONSTRUCTOR SET" + 
-				"    member_id = ?," +
-				"    NAME =?," + 
-				"    CORPORATE_REGISTRATION_NUMBER =?," + 
-				"    CEO_NAME =?," + 
-				"    MAIN_IMAGE =?," + 
-				"    HOMEPAGE_ADDERSS =?," + 
-				"    INTRODUCTION =?," + 
-				"    GPA =?," + 
-				"    SPECIALITY01 =?," + 
-				"    SPECIALITY02 =?," + 
-				"    SPECIALITY03 =?," + 
-				"    SPECIALITY04 =?";
+				"member_id = ?," +
+				"NAME =?," + 
+				"CORPORATE_REGISTRATION_NUMBER =?," + 
+				"CEO_NAME =?," + 
+				"MAIN_IMAGE =?," + 
+				"HOMEPAGE_ADDERSS =?," + 
+				"INTRODUCTION =?," + 
+				"GPA =?," + 
+				"SPECIALITY01 =?," + 
+				"SPECIALITY02 =?," + 
+				"SPECIALITY03 =?," + 
+				"SPECIALITY04 =?";
 														
 		int result = 0;
 		

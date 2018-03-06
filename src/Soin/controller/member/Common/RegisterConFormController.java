@@ -51,21 +51,28 @@ public class RegisterConFormController extends HttpServlet
 		member.setPhoneNum(phoneNum);
 		member.setRole("CONSTRUCTOR");
 		
+		MemberDao memberDao = new JdbcMemberDao();
+		memberDao.insert(member);
 		
 		corporateRegistrationNumber = 
 				request.getParameter("connum01")+"-"+request.getParameter("connum02")+"-"+request.getParameter("connum03");
 		
 		constructor.setMember_id(id);
-		constructor.setName("name");
+		constructor.setName(request.getParameter("name"));
 		constructor.setCorporateRegistrationNumber(corporateRegistrationNumber);
-		constructor.setCeoName("ceoName");
-		constructor.setMainImage("mainImage");
-		constructor.setHomepageAddress("homepageAddress");
-		constructor.setIntroduction("introduction");
-		constructor.setSpeciality1("speciality1");
-		constructor.setSpeciality2("speciality2");
-		constructor.setSpeciality3("speciality3");
-		constructor.setSpeciality4("speciality4");
+		constructor.setCeoName(request.getParameter("ceoName"));
+/*		constructor.setMainImage("mainImage");*/
+		constructor.setHomepageAddress(request.getParameter("homepageAddress"));
+		constructor.setIntroduction(request.getParameter("introduction"));
+		
+		constructor.setSpeciality1(request.getParameter("speciality01"));
+		
+		if(!request.getParameter("speciality02").equals("null"))
+			constructor.setSpeciality2("speciality02");
+		if(!request.getParameter("speciality03").equals("null"))
+			constructor.setSpeciality3("speciality03");
+		if(!request.getParameter("speciality04").equals("null"))
+			constructor.setSpeciality4("speciality04");
 		
 		
 		ConstructorDao constructorDao = new JdbcConstructorDao();
