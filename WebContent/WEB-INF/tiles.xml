@@ -15,4 +15,12 @@
     <put-attribute name="main" value="/WEB-INF/views/Member/Common/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
+  
+  <!-- 인테리어 팁 및 정보 -->
+  <definition name="InteriorTip.*.*"  template="/WEB-INF/views/inc/layout5.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views//InteriorTip/{1}/{2}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+  <!-- 인테리어 팁 및 정보 -->
 </tiles-definitions>

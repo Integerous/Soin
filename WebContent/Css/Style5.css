@@ -438,6 +438,41 @@ header{
 }
 /*--------------------------------윤호 Main03 End--------------------------------*/
 /*--------------------------------윤호 Main03 End--------------------------------*/
+
+/*--------------------------------윤호 Main04 Start--------------------------------*/
+.content-box{
+	height: 230px;
+	background: #999;
+	display: flex;
+		justify-content: space-around;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.big-box{
+	width: 650px;
+	height: 220px;
+	background: green;
+	line-height: 8;
+}
+
+.small-box{
+	width: 300px;
+	height: 200px;
+	background: #fff;
+	line-height: 3.5;
+}
+
+.small-content{
+	width:300px;
+	height: 100px;
+	background: yellow;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+/*--------------------------------윤호 Main04 End--------------------------------*/
+/*--------------------------------윤호 Main04 End--------------------------------*/
+
 /*--------------------------------윤호 Detail01 Start--------------------------------*/
 
 #main > .root-container div{
@@ -536,3 +571,41 @@ header{
 }
 /*--------------------------------윤호 Detail03 End--------------------------------*/
 /*--------------------------------윤호 Detail03 End--------------------------------*/
+
+/*--------------------------------윤호 Write Start--------------------------------*/
+.reg-btn{
+	display: flex;
+		justify-content:flex-end;
+	font-size: 15px;
+	padding-right: 30px;
+}
+.write{
+	font-size: 20px;
+}
+
+.tip-label{
+	padding-left: 30px;
+	padding-bottom: 20px;
+	font-size: 22px;
+}
+
+.tip-category{
+		font-size: 15px;
+}
+
+.tip-select{
+	margin-left: 30px;
+}
+.tip-title{
+	font-size: 15px;
+}
+
+.write-title{
+	margin-left: 80px;
+	
+}
+
+.tip-category{
+	margin-left: 30px;
+}
+/*--------------------------------윤호 Write End--------------------------------*/
