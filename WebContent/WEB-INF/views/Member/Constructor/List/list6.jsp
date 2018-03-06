@@ -7,8 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="../../Css/Style6.css" type="text/css" rel="stylesheet" />
-<link href="../../Css/StyleHF.css" type="text/css" rel="stylesheet" />
+<link href="../../../Css/Style6.css" type="text/css" rel="stylesheet" />
 <style type="text/css">
 </style>
 </head>

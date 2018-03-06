@@ -16,7 +16,7 @@
 	<header>
 		<div id="top-bar">
 			<div class="tb-container">
-				<div class="login-status" style="display:none;">
+				<div class="login-status" style="display:none">
 					<a href="#">로그아웃</a></div>
 					
 				<div class="logout-status">

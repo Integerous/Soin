@@ -1,4 +1,4 @@
-package Soin.controller.Member.Common.Popup;
+package Soin.controller.member.Common.Popup;
 
 import java.io.IOException;
 
