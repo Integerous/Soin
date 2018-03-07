@@ -16,17 +16,17 @@
 
 	<body>
 		
-		<tiles:insertAttribute name="header" ></tiles:insertAttribute>
+		<tiles:insertAttribute name="header" />
 		
 		<div id="body">
 			<div class="root-container">
 				
-				<tiles:insertAttribute name="main" ></tiles:insertAttribute>
+				<tiles:insertAttribute name="main" />
 		
 			</div>	
 		</div>
 		
-		<tiles:insertAttribute name="footer" ></tiles:insertAttribute>
+		<tiles:insertAttribute name="footer" />
 		
 	</body>
 </html>

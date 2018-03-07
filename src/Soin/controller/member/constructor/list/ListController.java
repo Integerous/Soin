@@ -20,17 +20,17 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-@WebServlet("/member/constructor/list8")
+@WebServlet("/member/constructor/list")
 public class ListController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//기본페이지 값은 1 
+		// 기본페이지 값은 1
 		int page = 1;
 		int lastPage = 1;
-		
-		//요청한 page 값이 있을 경우 기본값을 대치함.
+
+		// 요청한 page 값이 있을 경우 기본값을 대치함.
 		String page_ = request.getParameter("page");
 		if(page_ != null && !page_.equals(""))
 			page = Integer.parseInt(page_);
@@ -40,13 +40,13 @@ public class ListController extends HttpServlet{
 		int count = constructorDao.getCount();
 		
 		if(count > 0) {
-			lastPage = count/15;
-			if(count % 15 >0)
+			lastPage = count / 15;
+			if(count % 15 > 0)
 				lastPage++;
 		}
 		
-		int off = (page-1)%5;
-		int startNum = page - off;
+		int off = (page-1) % 5;
+		int startNum = page - off;	
 		
 		
 		List<ConstructorView> list = constructorDao.getList(page);
@@ -64,6 +64,10 @@ public class ListController extends HttpServlet{
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
 		container.render("Member.Constructor.List.list8", servletRequest);
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 	}
 
 }
