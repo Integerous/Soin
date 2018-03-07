@@ -9,6 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tiles.TilesContainer;
+import org.apache.tiles.access.TilesAccess;
+import org.apache.tiles.request.ApplicationContext;
+import org.apache.tiles.request.servlet.ServletRequest;
+import org.apache.tiles.request.servlet.ServletUtil;
+
 import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
@@ -25,7 +31,12 @@ public class DetailController extends HttpServlet{
 		
 		request.setAttribute("constructor", constructor);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/detail.jsp");
-		dispatcher.forward(request, response);
+		/*RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/detail.jsp");
+		dispatcher.forward(request, response);*/
+		
+		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
+		TilesContainer container = TilesAccess.getContainer(applicationContext);
+		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+		container.render("Member.Constructor.List.detail", servletRequest);
 	}
 }

@@ -40,8 +40,8 @@
 							<br>
 						</span>	
 							
-						<div class="btn-login">
-							<a class="btn-a" href="">로그인</a>	
+						<div>
+							<input type="submit" class="btn-login btn-a" href="" value="로그인">
 						</div>		
 					</div>
 				</form>

@@ -4,6 +4,19 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
        
 <tiles-definitions>
+	<definition name="Estimate.*" template="/WEB-INF/views/inc/sub-layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Estimate/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+
+
+	<definition name="Constructor.*" template="/WEB-INF/views/inc/sub-layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Member/Constructor/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+
   <definition name="Estimate.*" template="/WEB-INF/views/inc/sub-layout.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/Estimate/{1}.jsp" />
@@ -23,4 +36,13 @@
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
   <!-- 인테리어 팁 및 정보 -->
+  
+  
+  <!-- index용 새로입력시 이거보다 무조건 위에 넣을 것-->
+  
+  <definition name="index"  template="/WEB-INF/views/inc/sub-layout1.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/index.jsp" />
+  	<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
 </tiles-definitions>

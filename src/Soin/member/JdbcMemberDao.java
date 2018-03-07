@@ -17,12 +17,13 @@ public class JdbcMemberDao implements MemberDao
 	@Override
 	public int insert(Member member)
 	{
-		String sql ="INSERT INTO MEMBER (ID, PASSWORD, EMAIL, PHONE_NUMBER, ADDRESS, DETAIL_ADDRESS) "
+		String sql ="INSERT INTO MEMBER (ID, PASSWORD, EMAIL, PHONE_NUMBER, ADDRESS, DETAIL_ADDRESS, ROLE) "
 																																							+ "VALUES (?, "
 																																										+ "?, "
 																																										+ "?, "
 																																										+ "?, "
 																																										+ "?, "
+																																										+ "?,"
 																																										+ "?)";
 																																																									
 			int result = 0;
@@ -41,7 +42,7 @@ public class JdbcMemberDao implements MemberDao
 				st.setString(4, member.getPhoneNum());
 				st.setString(5, member.getAddress());
 				st.setString(6, member.getDetailAddress());
-				
+				st.setString(7, member.getRole());
 				result = st.executeUpdate();
 				
 				st.close();

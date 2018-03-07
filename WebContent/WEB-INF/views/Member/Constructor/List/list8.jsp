@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
+<c:set var="ctx" value="${pageContext.request.servletContext.contextPath }"/> 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="../../Css/Style6.css" type="text/css" rel="stylesheet" />
-<link href="../../Css/StyleHF.css" type="text/css" rel="stylesheet" />
+<link href="${ctx }/Css/Style6.css" type="text/css" rel="stylesheet" />
+<link href="${ctx }/Css/StyleHF.css" type="text/css" rel="stylesheet" />
 <style type="text/css">
 </style>
 </head>
@@ -17,16 +17,16 @@
 		<div id="top-bar">
 			<div class="tb-container">
 				<div class="login-status" style="display:none;">
-					<a href="#">로그아웃</a></div>
+					<a href="${ctx }/#">로그아웃</a></div>
 					
 				<div class="logout-status">
-					<a href="/SoinProject/Member/Common/login.html">로그인</a></div>
+					<a href="${ctx }/SoinProject/Member/Common/login.html">로그인</a></div>
 				<div class="logout-status">
-					<a href="/SoinProject/Member/Common/register.html">회원가입</a></div>
-				<div><a href="/SoinProject/CS/FAQ/MainList.html">고객센터</a></div>
+					<a href="${ctx }/SoinProject/Member/Common/register.html">회원가입</a></div>
+				<div><a href="${ctx }/SoinProject/CS/FAQ/MainList.html">고객센터</a></div>
 				<div class="notifications"><a href="#" >
-					<img src="../../Images/ic_notifications_active_black_24px.svg"/></a></div>
-				<div><a href="#">마이페이지</a></div>
+					<img src="${ctx }/Images/ic_notifications_active_black_24px.svg"/></a></div>
+				<div><a href="${ctx }/#">마이페이지</a></div>
 			</div>
 		</div>
 	
@@ -34,11 +34,11 @@
 		<div id="mid-bar">
 			<div class="mb-container">
 				<div class="logo">
-					<a href="index.html">
-					<img src="../../Images/logo_js.png" alt="Soin_Logo" /></a>
+					<a href="${ctx }/index">
+					<img src="${ctx }/Images/logo_js.png" alt="Soin_Logo" /></a>
 				</div>
 				
-					<a href="#">소인</a>
+					<a href="${ctx }/#">소인</a>
 					
 				<div class="p">
 					- 소규모 인테리어 시공 중개 플랫폼
@@ -53,15 +53,15 @@
 			
 			<nav class="tn-container">
 				<div class="hello">
-					<a href="#">소인소개</a></div>
+					<a href="${ctx }/#">소인소개</a></div>
 				<div class="hello-contr">
-					<a href="#">업체소개</a></div>
+					<a href="${ctx }/#">업체소개</a></div>
 				<div class="est-request">
-					<a href="#" style="color:gold">견적의뢰</a></div>
+					<a href="${ctx }/#" style="color:gold">견적의뢰</a></div>
 				<div class="tip">
-					<a href="#">인테리어 TIP</a></div>
+					<a href="${ctx }/#">인테리어 TIP</a></div>
 				<div class="review">
-					<a href="#">시공후기</a></div>
+					<a href="${ctx }/#">시공후기</a></div>
 			</nav>
 		</div>
 			
@@ -112,97 +112,48 @@
 				<h2>기본 업체 리스트(가나다 순 정렬 - 전체 리스트)</h2>
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/540x360_20170424122432782_wbxxMRuMIB.jpg" alt="아델라">
+						<a href="${ctx }/Detail.html">
+							<img src="${ctx }/Images/540x360_20170424122432782_wbxxMRuMIB.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
-							</ul>
-					</div>
-
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
-							<ul>
-							<li><a href="Detail.html">업체명 : 아델라</a></li>
-							<li><a href="Detail.html">평점/5.0</a></li>
-							</ul>
-					</div>
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
-							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
-							</ul>
-					</div>
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
-							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
-							</ul>
-					</div>
-				</section>
-
-				<section>
-					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
-						</a>
-							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 
@@ -210,12 +161,12 @@
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+							<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+							<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
@@ -223,11 +174,60 @@
 				<section>
 					<div class="distance">
 						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
+							</ul>
+					</div>
+
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="distance">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
@@ -235,23 +235,23 @@
 				<section>
 					<div class="distance">
 						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 
@@ -259,48 +259,48 @@
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 							</ul>
 					</div>
 
@@ -324,7 +324,7 @@
 	<footer>
  	<div id ="footer">
        <div class="root-container">
-       <img id ="ceo" src="../../../Images/yurim/소인대표.jpg" alt="소인대표"/>
+       <img id ="ceo" src="${ctx }/Images/yurim/소인대표.jpg" alt="소인대표"/>
          <div id = "company-info">소인 대표 : 한정수<br>
       
             본사 : 서울특별시 마포구 월드컵북로 21
@@ -346,5 +346,3 @@
 </body>
 </html>
 
-
->

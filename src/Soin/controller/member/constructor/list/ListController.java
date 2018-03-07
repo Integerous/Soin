@@ -63,7 +63,7 @@ public class ListController extends HttpServlet{
 		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		container.render("student.community.answeris.list", servletRequest);
+		container.render("Member.Constructor.List.list8", servletRequest);
 	}
 
 }
