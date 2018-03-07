@@ -62,11 +62,11 @@ header{
 	
 }
 
-nav{
+/* nav{
 	height: 40px;
 	border-top :3px solid #a1c4fd;
 	border-bottom :3px solid #c2e9fb;
-}
+} */
 
 main{
 	min-height: 500px;
@@ -144,6 +144,13 @@ main{
 		padding: 10px;
 		
 	}	
+	
+	.title-box2{
+		height: 100px;
+		width: 300px;
+		padding:10px;
+		
+	}
 		
 
 footer{
@@ -202,7 +209,7 @@ footer{
 }
 
 .content-title{
-	width : 550px;
+	width : 570px;
 	height : 30px;
 	font-size:25px ;
 	font-weight: bold;
@@ -290,6 +297,10 @@ footer{
 .write-button{
 	float: right;
 	margin-top: 10px;
+	width : 50px;
+	height: 30px;
+	padding: 0px;
+	background: url("../Images/nhy/pen3.png") no-repeat center;
 }
 
 .go-button{
@@ -302,10 +313,16 @@ footer{
 }
 
 
+
+
 /* 테이블 */
 
 .form{
 	border :2px solid #A9A9A9;
+}
+
+.form2{
+	border: 1px solid #A9A9A9;
 }
 
 	
@@ -328,6 +345,8 @@ footer{
 		background:#f5f5f5 ;
 	}
 	
+	.tab
+	
 	.table .width-md{
 		width: 100px;
 	}
@@ -349,12 +368,6 @@ footer{
 		text-overflow: ellipsis;
 	}
 
-.tabel2{
-	min-width: 600px;
-	border: 2px solid #A9A9A9;
-		
-}	
-	
 	
 .content-table{
 	min-height: 400px;

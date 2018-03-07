@@ -21,8 +21,9 @@ public class ReviewView extends Review{
 		String constructionTypeId,
 		String buildingTypeId,
 		String constructionPositionId,
+		String attachedFile,
 		int commentCount){
-		super(id, title, regDate, hit, gradePoint, content, memberId, productId, constructionTypeId,buildingTypeId,constructionPositionId );
+		super(id, title, regDate, hit, gradePoint, content, memberId, productId, constructionTypeId,buildingTypeId,constructionPositionId,attachdeFile );
 		this.commentCount = commentCount;
 	}
 
