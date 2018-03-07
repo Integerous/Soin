@@ -8,6 +8,7 @@ public interface InteriorTipDao {
 		int update(InteriorTip interiorTip);
 		int delete(String id);
 		
-		List<InteriorTipView> getList();
+		List<InteriorTipView> getList(int page);
 		InteriorTipView get(String id);
+		int getCount();
 }

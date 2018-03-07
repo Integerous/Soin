@@ -2,6 +2,7 @@
 <!DOCTYPE tiles-definitions PUBLIC
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
        
 <tiles-definitions>
 	<definition name="Estimate.*" template="/WEB-INF/views/inc/sub-layout.jsp">
@@ -17,6 +18,16 @@
 		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
 	</definition>
 
+	<definition name="Member.Constructor.List.*" template="/WEB-INF/views/inc/layout6.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Member/Constructor/List/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+	
+	
+
+
+<<<<<<< HEAD
   <definition name="Estimate.*" template="/WEB-INF/views/inc/sub-layout.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/Estimate/{1}.jsp" />
@@ -29,14 +40,30 @@
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
   
+=======
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
    <definition name="Member.Common.*"  template="/WEB-INF/views/inc/sub-layout1.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/Member/Common/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
   
+  <!-- 인테리어 팁 및 정보 -->
+  <definition name="InteriorTip.*.*"  template="/WEB-INF/views/inc/layout5.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views//InteriorTip/{1}/{2}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+<<<<<<< HEAD
+  
  
 
+=======
+
+  <!-- 인테리어 팁 및 정보 -->
+  
+  
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
   <!-- index용 새로입력시 이거보다 무조건 위에 넣을 것-->
   
   <definition name="index"  template="/WEB-INF/views/inc/sub-layout1.jsp">
@@ -44,4 +71,5 @@
     <put-attribute name="main" value="/WEB-INF/views/index.jsp" />
   	<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
+
 </tiles-definitions>

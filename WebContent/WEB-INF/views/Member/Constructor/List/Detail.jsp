@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath }"/> 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,6 +74,9 @@
 		<div class="root-container">
 			<!--------------------------main 시작----------------------------------->
 			<main id="main">
+=======
+<main id="main">
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 
 			<h1>업체 상세 정보</h1>
 
@@ -243,24 +247,4 @@
 
 
 			</main>
-		
-	</div>
-</div>
-	<!---------------------footer -------------------- -->
-	<footer id="footer">
-		<div class="root-container">소인 소인 대표 : 한정수 본사 : 서울특별시 마포구 월드컵북로
-			21 (지번)서울특별시 마포구 서교동 447-5 사업자등록번호 : 123-45-67890 Copyrightⓒ 2018 By
-			SOIN All Right Reserved. 1588-1234 고객센터 : 평일 10:00 ~ 18:00 / 주말 10:00
-			~ 16:00 팩스 : 02 - 1234 - 5678 이메일 : cs@soin.kr | 제휴문의 :
-			constructor@soin.kr</div>
-
-	</footer>
-
-
-
-</body>
-</html>
-
-
-
 

@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -130,8 +131,13 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 	}
 
 	@Override
-	public List<InteriorTipView> getList() {
-		String sql = "SELECT * FROM INTERIOR_TIP_VIEW ORDER BY REGDATE DESC";
+	public List<InteriorTipView> getList(int page) {
+		
+		int start = 1+(page-1)*15;
+		int end = page*15;
+		
+		/*String sql = "SELECT * FROM INTERIOR_TIP_VIEW ORDER BY REGDATE DESC";*/
+		String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE NUM BETWEEN ? AND ?";
 		
 		List<InteriorTipView> list = new ArrayList<>();
 		
@@ -140,6 +146,9 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
+			st.setInt(1, start);
+			st.setInt(2, end);
+			
 			ResultSet rs = st.executeQuery();
 
 			InteriorTipView interiorTip = null;
@@ -229,4 +238,40 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		return interiorTip;
 	}
 
+	@Override
+	public int getCount() {
+			String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE ID =?";
+			int count = 0;
+			InteriorTipView interiorTip = null;
+			
+			try {
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+				Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
+				Statement st = con.createStatement();
+				ResultSet rs = st.executeQuery(sql);
+				
+				if(rs.next()) {
+					count = rs.getInt("count");
+				}
+					
+					
+					rs.close();
+					st.close();
+					con.close(); 
+					
+				} catch (ClassNotFoundException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (SQLException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+				
+				
+			
+			return count;
+	}
 }

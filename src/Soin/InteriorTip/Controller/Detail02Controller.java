@@ -1,7 +1,6 @@
-package Soin.Information.Controller;
+package Soin.InteriorTip.Controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,19 +13,20 @@ import Soin.InteriorTip.InteriorTipDao;
 import Soin.InteriorTip.InteriorTipView;
 import Soin.InteriorTip.JdbcInteriorTipDao;
 
-
-@WebServlet("/InteriorTip/Process/Main02")
-public class Main02Controller extends HttpServlet{
+@WebServlet("/InteriorTip/Process/Detail02")
+public class Detail02Controller extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		InteriorTipDao interiorDao = new JdbcInteriorTipDao();
-		List<InteriorTipView> list = interiorDao.getList();
+		String id = request.getParameter("id");
+		InteriorTipDao interiorTipDao = new JdbcInteriorTipDao();
+		InteriorTipView interiorTip = interiorTipDao.get(id);
 		
-		request.setAttribute("list", list);
+		request.setAttribute("interiorTip", interiorTip);
 		
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/views/Information/Process/Main02.jsp");
+				request.getRequestDispatcher("/WEB-INF/views/Information/Process/Detail02.jsp");
+		
 		dispatcher.forward(request, response);
 	}
 }
