@@ -1,103 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-	<meta name = "author" content="Nhyeonyeong" >
-	<meta name = "description" content="후기_상세페이지">
-	<meta name="keywords" content="인테리어,리모델링,집수리,셀프인테리어,소규모인테리어,인테리어중개,벽지,문,창문,욕조,소인,SOIN,soin">
-	<title>소인-소규모 인테리어 중개 플랫폼</title>
-	
-	<link href="../Css/Style7.css" type="text/css" rel="stylesheet" />
-	<style type="text/css">		</style>
-</head>
+<%@page import="java.util.List"%>
 
-<body>
-	<!-- ------------------------HEADER------------------------ -->
-	<header>
-		<div>			
-			<div id="member-menu">
-				<h1 class="hidden">회원메뉴</h1>
-				<ul>
-					<li><a href="">로그인</a></li>
-					<li><a href="">회원가입</a></li>
-					<li><a href="">마이페이지</a></li>
-					<li><a href="../CS/FAQ/MainList.html">고객센터</a></li>
-				</ul>
-			</div>	
-			
-			<div class="logo">
-				<img alt="로고" src="../Images/soin-logo2.png"/>	
-			</div>
-		</div>
-	</header>
-	<!-- ------------------------NAVIGATION-------------------- -->
-	<nav>
-		<div>		
-			<div id="main-menu">
-				<h1 class="hidden">메인메뉴</h1>
-				<ul class="flex">
-					<li><a href="">소인소개</a></li>
-					<li><a href="">업체소개</a></li>
-					<li><a href="">견적요청</a></li>
-					<li><a href="">인테리어TIP</a></li>
-					<li><a href="MainList.html">시공후기</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- -------------------------BODY------------------------- -->	
-	<div class="flex">		
-		<main class = "main-box">
-			<div class="title-box form" >
-				동갑내기 부부의 신혼방 완성<br>
-				작성자 : kim_jw<br>
-				작성일 : 2018<br>
-			</div>
-			
-			<div class = "content-box box">
-				<div>
-					<label class="label-title" for="info">시공정보</label>		
-					<table id="data-table">
-						<tbody>
-							<tr>
-								<td>카테고리 : </td>
-							</tr>					
-							<tr>
-								<td>시공기간 : </td>
-							</tr>	
-							<tr>
-								<td>시공업체 : </td>
-							</tr>	
-							<tr>
-								<td>거주지역 : </td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			
-				<div>
-					여기 내용
-				</div>		
-			</div>
-			
-			
-													
-		</main>		 
-	 </div>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+	<main class="main-box">
+	<div>
+		<h1 class="content-title">┃ 동갑내기 부부의 신혼방 완성</h1>
+		<ul class="title-box2 label">
+			<li>작성자 : kim_jw</li>
+			<li>작성일 : 2017년 12월 30일 19:32</li>
+			<li>시공평점 : 4.5</li>
+		</ul>
+	</div>
+	<h3 class="hidden">후기상세</h3>
 	
-	 <!-- -----------------------FOOTER----------------------- -->
-	 <footer>
-	 	<section >
-	 		<br>
-			<p>소인_소규모 인테리어 중개 플랫폼<br>
-				사업자등록번호: 12122-1212-12 | 대표: 한정수 <br>
-				주소: 서울특별시 마포구 월드컵북로 21 풍성빌딩 2층 쌍용교육센터 c클래스 | 이메일: soin@gmail.com | 
-				개인정보보호책임자: 한정수 <br>
-				Copyright © 2017-2018 soin. All rights reserved.
-			</p>
-		</section>
-	</footer>
-</body>
-</html>
+	<table class="form2">
+		<tbody>
+			<tr>
+				<th colspan="4" class="label">시공정보</th>
+			</tr>
+			<tr>
+				<td colspan="4"
+					style="padding: 10px 30px 10px 30px; border-bottom: 1px solid #A9A9A9; border-top: 1px solid #A9A9A9">
+					시공 카테고리 : <br> 시공 업체 : <br> 시공 기간 : <br> 시공 지역 : <br>
+				</td>
+			</tr>
+	
+			<tr>
+				<th colspan="4" class="label">후기내용</th>
+			</tr>
+			<tr>
+				<td colspan="4" style="padding: 20px; border-top: 1px solid #A9A9A9;">
+					7년의 연애 끝에 결혼한 지 2달이 되어가는 20대 후반의 새신랑입니다. ^^ 건축공학을 전공하기도 했고, 제 공간에 대한
+					애착과 인테리어에 대한 관심도 많아 결혼 전부터 아내와 집 꾸미는 것에 대해서 오랫동안 머릿속에 그려왔었습니다. 침실은
+					작아서 꾸미는게 상당히 제한적이었어요. 그래도 신혼 느낌을 내기 위해 나머지 공간과 다른 벽지색으로 포인트를 주었고,
+					침대헤드 뒷면에 LED 라인등을 설치해서 간접등 효과를 냈답니다. <br>
+				<img alt="후기메인사진" src="../Images/nhy/room.jpg"
+					style="height: 340px; width: 420px; text-align: center;"><br>
+					마지막으로는 문을 바꾸는 것에 오랜 고민을 했습니다. 아무래도 방의 전반적인 느낌을 좌우하는 것은 문이라고 생각했거든요.
+					저희는 고민 끝에 화이트 컬러의 깔끔하고 세련된 디자인을 선택했습니다.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<div>
+		<a href="MainList.jsp" class="button text-button list-button">목록</a>
+	</div>
+	
+	
+	</main>
+	

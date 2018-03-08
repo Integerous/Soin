@@ -484,7 +484,7 @@ legend{
 
 
 /* ----------FOOTER----------- */
-footer{
+/* footer{
 	display: flex;
 		align-items: center;
 	clear: both;
@@ -492,6 +492,6 @@ footer{
 	height: 120px;
 	background-color: #979797;
 	margin: 0;
-}
+} */
 
 /* ----------VISUAL----------- */

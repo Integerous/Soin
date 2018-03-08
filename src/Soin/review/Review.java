@@ -14,13 +14,14 @@ public class Review {
 	private String constructionTypeId;
 	private String buildingTypeId;
 	private String constructionPositionId;
+	private String attachedFile;
 	
 	public Review() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public Review(String id, String title, Date regDate, int hit, int gradePoint, String content, String memberId,
-			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId) {
+			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String attachedFile) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -33,6 +34,7 @@ public class Review {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
+		this.attachedFile = attachedFile;
 	}
 	
 	// id, regdate, hit 없음

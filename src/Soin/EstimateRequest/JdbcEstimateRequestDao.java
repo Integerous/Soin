@@ -12,10 +12,6 @@ import java.util.List;
 
 
 
-import Soin.jspweb.dao.EstimateRequestDao;
-import Soin.jspweb.entity.EstimateRequest;
-import Soin.jspweb.entity.EstimateRequestView;
-
 public class JdbcEstimateRequestDao implements EstimateRequestDao {
 
 	

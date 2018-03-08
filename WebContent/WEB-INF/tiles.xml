@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+       
+<tiles-definitions>
+
+  <!-- 정수 : 견적요청  -->
+	<definition name="Estimate.*.*" template="/WEB-INF/views/inc/layout4.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Estimate/{1}/{2}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+
+  <!-- 윤호 : 인테리어 팁 및 정보  -->
+  <definition name="InteriorTip.*.*"  template="/WEB-INF/views/inc/layout5.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/InteriorTip/{1}/{2}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+  
+  <!-- 미정 : 소인 소개  -->  
+  <definition name="Introduce.*"  template="/WEB-INF/views/inc/layout?.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/Introduce/{1}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+  
+  <!-- 미정 : ?  -->  
+	<definition name="Member.Client.*" template="/WEB-INF/views/inc/layout?.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Member/Client/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+
+  <!-- 현수 : 회원정보  -->	
+	<definition name="Member.Common.*" template="/WEB-INF/views/inc/layout1.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Member/Common/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+	
+  <!-- 우진 : 시공업체 리스트  -->	
+	<definition name="Member.Constructor.List.*" template="/WEB-INF/views/inc/layout6.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Member/Constructor/List/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+	
+  <!-- 유림 : 포트폴리오  -->	
+	<definition name="Member.Constructor.Portfolio.*" template="/WEB-INF/views/inc/layout3.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+		<put-attribute name="main" value="/WEB-INF/views/Member/Constructor/Portfolio/{1}.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+	
+  <!-- 건웅 : 마이페이지  -->	
+  <definition name="MyPage.Client.*.*"  template="/WEB-INF/views/inc/layout2.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/MyPage/Client/{1}/{2}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+  
+  <!-- 건웅 : 마이페이지  -->  
+  <definition name="MyPage.Constructor.*.*"  template="/WEB-INF/views/inc/layout2.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/MyPage/Constructor/{1}/{2}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+  
+  <!-- 현영 : 리뷰  -->  
+  <definition name="Review.*"  template="/WEB-INF/views/inc/layout7.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/Review/{1}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+
+ 
+  <!-- 현수 : 인덱스  -->  
+  <definition name="index"  template="/WEB-INF/views/inc/sub-layout1.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/index.jsp" />
+  	<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+
+</tiles-definitions>

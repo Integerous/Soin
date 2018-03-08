@@ -197,7 +197,7 @@
 				
 <!-- ------------next button------------ -->							
 			<div class="next-button">
-		      <button class="next-btn" onclick="location.href='form2.jsp'"><span>다음</span></button>
+		      <button class="next-btn" onclick="location.href='Form2.jsp'"><span>다음</span></button>
 		    </div>
 		    
 		    
@@ -210,9 +210,9 @@
 	</main>
 
 <!-- ---------------------FOOTER---------------------- -->	
-		<footer>
+<!-- 		<footer>
 			<p> Copyright 2018 SoinProject</p>
-		</footer>
+		</footer> -->
 		
 </body>
 </html>
