@@ -3,6 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
 <script src="Popup/js/reg-cln-popup.js" type="text/javascript"></script>
+<script src="Popup/js/check.js" type="text/javascript"></script>
  
 <main id="main">
 	<section>
@@ -32,17 +33,17 @@
 					<legend class= "hidden">정보입력폼</legend>
 						<ul>
 						
-							<li><label class="label-text">아이디</label><input class="input-short"  type="text" name ="id" required><a class="btn-input" href="">중복체크</a><br /></li>
+							<li><label class="label-text">아이디</label><input class="input-short"  type="text" name ="id" required /><input type="button" class="btn-input" id="id-check" value="중복체크"><br /></li>
 							
 							<li><label id="pwd" class="label-text">비밀번호</label><input class="input"  type="password" name="password" required><br /></li>
 							
-							<li><label class="label-text">닉네임</label><input class="input-short"  type="text" name ="nickName" required><a class="btn-input" href="">중복체크</a><br /></li>
+							<li><label class="label-text">닉네임</label><input class="input"  type="text" name ="nickName" required />
 							
-							<li><label id="pwd-chk" class="label-text">비밀번호 확인</label><input class="input"  type="password" required><br /></li>
+							<li><label id="pwd-chk" class="label-text">비밀번호 확인</label><input class="input"  type="password" required /><br /></li>
 							
 							<li><span id="pwd-msg" class="text-small">*비밀번호를 한 번 더 입력해주세요.</span><br /></li>
 							
-							<li><label class="label-text">이메일</label><input class="input"  type="text" name="email" required><br /></li>
+							<li><label class="label-text">이메일</label><input class="input"  type="text" name="email" required /><br /></li>
 							
 							<li><label class="label-text">연락처(핸드폰)</label>
 									<select name="tel01" >
@@ -52,7 +53,7 @@
 										<option value="016">017</option>
 										<option value="016">018</option>
 										<option value="019">019</option>
-									</select><input class="input-sh-short"  type="text" name="tel02" required><input class="input-sh-short"  type="text" name="tel03"  required>
+									</select><input class="input-sh-short"  type="text" name="tel02" required><input class="input-sh-short"  type="text" name="tel03"  required />
 									<br /></li>
 									
 							<!-- <li><label class="label-text">연락처(집)</label>
@@ -78,9 +79,9 @@
 
 							<li><label class="label-text">우편번호</label><input class="input-short"  type="text" ><a class="btn-input" href="">주소검색</a><br /></li>
 						
-							<li><label class="label-text">주소</label><input class="input"  name="address" type="text" required><br /></li>
+							<li><label class="label-text">주소</label><input class="input"  name="address" type="text" required /><br /></li>
 							
-							<li><label class="label-text">상세 주소</label><input class="input"  name="detailAddress" type="text" required><br /></li>
+							<li><label class="label-text">상세 주소</label><input class="input"  name="detailAddress" type="text" /><br /></li>
 						</ul>
 					</fieldset>
 				</div>

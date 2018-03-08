@@ -36,18 +36,47 @@ p
 	padding: 0px;
 }
 
+select
+{
+	box-sizing: border-box;
+	margin: 0px;
+	height: 30px;
+	
+}
+
+ul li
+{
+	padding-bottom: 5px;
+}
+
 /* ----body-------------------------------- */
+.tc
+{
+	text-align: center;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+.center
+{
+	width: 300px;
+	margin: 0px auto;
+}
 
 .length
 {
+	box-sizing: border-box;
 	width: 300px;
-	height: 25px;
+	height: 30px;
 }
 
 .length-sh
 {
+	box-sizing: border-box;
 	width: 90px;
-	height: 25px;
+	height: 30px;
 }
 .hidden
 {
@@ -59,7 +88,7 @@ p
 	padding: 15px 0px;
 	width: 100%;
 	min-height: 100%;
-	background-color: #DDDEDE;
+	background-color: #e9e9e9;
 }
 .agree-box
 {
@@ -73,8 +102,8 @@ p
 
 .find-box
 {
-	width: 500px;
-	min-height: 300px;
+	width: 450px;
+	min-height: 250px;
 	background-color: #fff;
 	margin: auto;
 }
@@ -107,9 +136,25 @@ p
 	font-size: 13px;
 }
 
+.input-box
+{
+	min-height: inherit;
+	padding-top: 15px;
+}
+
+.result-box
+{
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	font-weight: bold;
+}
+
 .box-close
 {
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 .btn-close
@@ -122,6 +167,7 @@ p
 	line-height: 40px;
 	width: 100px;
 	border: none;
+	font-weight: bold;
 }
 
 .btn-close:nth-child(2) 
@@ -132,9 +178,22 @@ p
 .label-text
 {
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 15px;
 	position: absolute;
 	left: 10px;
 }
+
+.fl
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.align-center
+{
+	text-align: center;
+}
+
 
 /*------------------------------------------------------------------------------------------------------------------*/
