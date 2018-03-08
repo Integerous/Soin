@@ -15,6 +15,7 @@ import org.apache.tiles.request.ApplicationContext;
 import org.apache.tiles.request.servlet.ServletRequest;
 import org.apache.tiles.request.servlet.ServletUtil;
 
+import Soin.EstimateRequest.EstimateRequest;
 import Soin.EstimateRequest.EstimateRequestDao;
 import Soin.EstimateRequest.EstimateRequestView;
 import Soin.EstimateRequest.JdbcEstimateRequestDao;
@@ -45,7 +46,30 @@ public class FormController extends HttpServlet{
 	      TilesContainer container = TilesAccess.getContainer(applicationContext);
 	      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
 	      container.render("Estimate.EstimateRequestForm.Form1", servletRequest);
+		       
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	   
+		EstimateRequest estimateRequest = new EstimateRequest();
+		estimateRequest.setConstructionPositionId(request.getParameter("construction-position"));
+
+		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
+		estimateRequestDao.insert(estimateRequest);
 		
+		//견적요청 리스트 페이지 만들고 나서 이거 되살리기!!!!!
+		response.sendRedirect("List.jsp");
+		
+		
+		
+	
 	}
 	
 }
+
+
+
+
+
+

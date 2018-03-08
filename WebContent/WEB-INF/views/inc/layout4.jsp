@@ -8,28 +8,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="${ctx }/Css/Style6.css" type="text/css" rel="stylesheet" />
+<link href="${ctx }/Css/Style4.css" type="text/css" rel="stylesheet" />
 <link href="${ctx }/Css/StyleHF.css" type="text/css" rel="stylesheet" />
-
 </head>
-<body>
 
+<body>
 
 	<div id="body">
 		<div class="root-container">
 		<tiles:insertAttribute name="header"/>
 
-			<!--------------------------main 시작----------------------------------->
-			<tiles:insertAttribute name="main"/>
+		<!--------------------------main 시작----------------------------------->
+		<tiles:insertAttribute name="main"/>
 		</div>
 	</div>
-	<!---------------------footer -------------------- -->
-	<tiles:insertAttribute name="footer"/>
-
-<<<<<<< HEAD
-=======
+	
+		<!---------------------footer -------------------- -->
+		<tiles:insertAttribute name="footer"/>
 
 
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 </body>
 </html>
