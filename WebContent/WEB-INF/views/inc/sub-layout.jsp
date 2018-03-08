@@ -26,7 +26,10 @@
 	<!---------------------footer -------------------- -->
 	<tiles:insertAttribute name="footer"/>
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 </body>
 </html>

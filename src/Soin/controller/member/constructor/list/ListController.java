@@ -20,7 +20,7 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-@WebServlet("/member/constructor/list8")
+@WebServlet("/member/constructor/list")
 public class ListController extends HttpServlet{
 	
 	@Override
@@ -40,12 +40,12 @@ public class ListController extends HttpServlet{
 		int count = constructorDao.getCount();
 		
 		if(count > 0) {
-			lastPage = count/15;
-			if(count % 15 >0)
+			lastPage = count / 15;
+			if(count % 15 > 0)
 				lastPage++;
 		}
 		
-		int off = (page-1)%5;
+		int off = (page-1) % 5;
 		int startNum = page - off;	
 		
 		
