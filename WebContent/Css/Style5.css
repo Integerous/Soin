@@ -205,7 +205,7 @@ header{
 	cursor: pointer;
 	border:0px;
 	border-radius: 5px;
-	text-align: center;
+	text-align: center	;
 	color:#979797;
 	background: #ddd;	
 	font-size: 15px;
@@ -580,7 +580,11 @@ header{
 	padding-right: 30px;
 }
 .write{
-	font-size: 20px;
+	font-size: 15px;
+	width: 450px;
+	margin: 0 auto;
+	box-shadow:  3px 3px 3px 3px #e5e5e5;
+	
 }
 
 .tip-label{
@@ -607,5 +611,13 @@ header{
 
 .tip-category{
 	margin-left: 30px;
+}
+
+.tip-image{
+	margin-left: 50px;
+}
+
+.btn-box{
+	text-align: center;
 }
 /*--------------------------------윤호 Write End--------------------------------*/

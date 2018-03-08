@@ -2,8 +2,6 @@ package Soin.EstimateRequest;
 
 import java.util.List;
 
-import Soin.jspweb.entity.EstimateRequest;
-import Soin.jspweb.entity.EstimateRequestView;
 
 public interface EstimateRequestDao {
 
