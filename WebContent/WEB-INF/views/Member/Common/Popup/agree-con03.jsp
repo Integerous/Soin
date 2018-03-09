@@ -5,8 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>회원가입 약관</title>
-	<link href="../../../Css/Style1p.css" type="text/css" rel="stylesheet"/>
-</head>
+	<link href="css/Style1p.css" type="text/css" rel="stylesheet"/>
 <body>
 	<h1 class="hidden">회원가입 약관</h1>
 	<div class="root-container">
