@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>인테리어 정보 및 이벤트 알람 수신 동의</title>
-	<link href="../../../Css/Style1p.css" type="text/css" rel="stylesheet"/>
+	<link href="css/Style1p.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 	<h1 class="hidden">인테리어 정보 및 이벤트 알람 수신 동의</h1>
@@ -135,6 +135,8 @@
 				var closePopupButton = document.getElementById("button-close-popup");
 				closePopupButton.onclick = function() {
 					window.open("about:blank", "_self").close();
+					window.open("about:blank","_parent").parent.close();
+
 				}
 			</script>
 		</div>

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
-
+<script src="Popup/js/find.js" type="text/javascript" ></script>
 <main id="main">
 	<section>
 		<h1>로그인 화면</h1>
@@ -53,7 +53,7 @@
 						<p>	
 							<span>아이디나 비밀번호를 잊어버리셨나요?</span>
 							<span><a class="btn-small" style="right: 85px" href="">ID찾기</a></span>
-							<span><a class="btn-small" href="">PW찾기</a></span>
+							<span><a class="btn-small" href="" id="find-pw">PW찾기</a></span>
 						</p>
 					</li>
 						
