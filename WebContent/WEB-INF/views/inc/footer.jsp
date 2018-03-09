@@ -1,15 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
- <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}"></c:set>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+<c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
 
     <!-- ---------------------FOOTER---------------------- -->
 <footer>
  <div id ="footer">
-
        <div class="foot-container">
-
        <img id ="ceo" src="${ctx}/Images/yurim/소인대표.jpg" alt="소인대표"/>
          <div id = "company-info">소인 대표 : 한정수<br>
       

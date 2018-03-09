@@ -30,9 +30,9 @@ public class PortfolioView extends Portfolio {
 
 	public PortfolioView(String id, String location, String content, String period, int hit, int like, String memberId,
 			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId,
-			String title, String attachedFile) {
+			String title) {
 		super(id, location, content, period, hit, like, memberId, productId, constructionTypeId, buildingTypeId,
-				constructionPositionId, title, attachedFile);
+				constructionPositionId, title);
 		// TODO Auto-generated constructor stub
 	}
 

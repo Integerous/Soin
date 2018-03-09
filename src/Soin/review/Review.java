@@ -5,7 +5,7 @@ import java.util.Date;
 public class Review {
 	private String id;
 	private String title;
-	private Date regDate;
+	private Date regdate;
 	private int hit;
 	private int gradePoint;
 	private String content;
@@ -14,18 +14,18 @@ public class Review {
 	private String constructionTypeId;
 	private String buildingTypeId;
 	private String constructionPositionId;
-	private String attachedFile;
+
 	
 	public Review() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
-	public Review(String id, String title, Date regDate, int hit, int gradePoint, String content, String memberId,
-			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String attachedFile) {
+	public Review(String id, String title, Date regdate, int hit, int gradePoint, String content, String memberId,
+			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.regDate = regDate;
+		this.regdate = regdate;
 		this.hit = hit;
 		this.gradePoint = gradePoint;
 		this.content = content;
@@ -34,13 +34,13 @@ public class Review {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
-		this.attachedFile = attachedFile;
+;
 	}
 	
-	// id, regdate, hit 없음
+	// insert시에 필요없는 항목을 제외
 	public Review(String title, int gradePoint, String content, String memberId, String productId,
 			String constructionTypeId, String buildingTypeId, String constructionPositionId) {
-		super();
+		
 		this.title = title;
 		this.gradePoint = gradePoint;
 		this.content = content;
@@ -67,12 +67,12 @@ public class Review {
 		this.title = title;
 	}
 
-	public Date getRegDate() {
-		return regDate;
+	public Date getRegdate() {
+		return regdate;
 	}
 
-	public void setRegdate(Date regDate) {
-		this.regDate = regDate;
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
 	}
 
 	public int getHit() {
@@ -138,7 +138,7 @@ public class Review {
 	public void setConstructionPositionId(String constructionPositionId) {
 		this.constructionPositionId = constructionPositionId;
 	}
-	
+
 	
 	
 }

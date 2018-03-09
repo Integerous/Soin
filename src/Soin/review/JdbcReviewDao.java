@@ -5,9 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import Soin.InteriorTip.InteriorTipView;
 import Soin.review.ReviewView;
 
 public class JdbcReviewDao implements ReviewDao {
@@ -72,18 +74,15 @@ public class JdbcReviewDao implements ReviewDao {
 				+ "title=?"
 				+ "grade_point=?,"
 				+ "content=?,"
-				+ "member_id=?,"
 				+ "product_id=?,"
 				+ "construction_type_id=?,"
 				+ "bulding_type_id=?,"
 				+ "construction_position_id=?,"
-				+ "hit=hit+1"
 				+ "WHERE id =?";
 
 		int result = 0;
 		try {
-		    Class.forName("oracle.jdbc.driver.OracleDriver");
-		    
+		    Class.forName("oracle.jdbc.driver.OracleDriver");		    
 		    String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 		    Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 		    PreparedStatement st = con.prepareStatement(sql); //값을 ?로 대체해놓으면 Prepared로 해야한다.
@@ -103,8 +102,7 @@ public class JdbcReviewDao implements ReviewDao {
 			st.setInt(9, review.getHit()); 
 			st.setString(10, review.getId()); 
 			
-		    result = st.executeUpdate();
-			
+		    result = st.executeUpdate();			
 		    st.close();
 		    con.close();
 		    
@@ -126,16 +124,14 @@ public class JdbcReviewDao implements ReviewDao {
 		int result = 0;
 		
 		try {
-	        Class.forName("oracle.jdbc.driver.OracleDriver");
-	        
+	        Class.forName("oracle.jdbc.driver.OracleDriver");	        
 	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 	        Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 	        PreparedStatement st = con.prepareStatement(sql); //값을 ?로 대체해놓으면 Prepared로 해야한다.
 	        
 	        st.setString(1,id);
 	        
-	        result = st.executeUpdate(); //영향을 받은 놈이 있니?
-	    	
+	        result = st.executeUpdate(); //영향을 받은 놈이 있니?	    	
 	        st.close();
 	        con.close();
 	        
@@ -152,7 +148,13 @@ public class JdbcReviewDao implements ReviewDao {
 
 	@Override
 	public List<ReviewView> getList(int page) {
+		//페이지 추가
+		int start = 1+(page-1)*15;
+		int end = page*15;
+		
+		
 		String sql = "SELECT * FROM REVIEW_VIEW ORDER BY REGDATE DESC"; 
+		
 		List<ReviewView> list = new ArrayList<>();
 		
 		try {
@@ -160,12 +162,14 @@ public class JdbcReviewDao implements ReviewDao {
 	        
 	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 	        Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
-	        
 	        PreparedStatement st = con.prepareStatement(sql); 
-	      	        
+	    	st.setInt(1, start);
+			st.setInt(2, end);
+			
 	        ResultSet rs = st.executeQuery(sql); 
 	        	       
 	        ReviewView review = null;
+	        
 	        while(rs.next()) {
 	        	review = new ReviewView(	        			
 	        			rs.getString("ID"),
@@ -179,7 +183,9 @@ public class JdbcReviewDao implements ReviewDao {
 	        			rs.getString("CONSTRUCTION_TYPE_ID"),
 	        			rs.getString("BUILDING_TYPE_ID"),
 	        			rs.getString("CONSTRUCTION_POSITION_ID"),
-	        			rs.getInt("COMMENT_COUNT")   
+	        			rs.getInt("COMMENT_COUNT"),
+	        			rs.getInt("LIKE_COUNT"),
+	        			rs.getString("ATTACHED_FILE")
 	        		);
 	        	list.add(review);
 	        }
@@ -206,18 +212,14 @@ public class JdbcReviewDao implements ReviewDao {
 		ReviewView review = null;
 		
 		try {
-	        Class.forName("oracle.jdbc.driver.OracleDriver");
-	        
+	        Class.forName("oracle.jdbc.driver.OracleDriver");	        
 	        String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 	        Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
-	        PreparedStatement st = con.prepareStatement(sql);
-	        
-	        st.setString(1, id);
-	        
+	        PreparedStatement st = con.prepareStatement(sql);	        
+	        //st.setString(1, id);	        
 	        ResultSet rs = st.executeQuery(); 
 	        
-	       
-	        
+	       	        
 	        if(rs.next()) {
 	        	review = new ReviewView(	        			
 	        			rs.getString("ID"),
@@ -231,7 +233,9 @@ public class JdbcReviewDao implements ReviewDao {
 	        			rs.getString("CONSTRUCTION_TYPE_ID"),
 	        			rs.getString("BUILDING_TYPE_ID"),
 	        			rs.getString("CONSTRUCTION_POSITION_ID"),
-	        			rs.getInt("COMMENT_COUNT")   
+	        			rs.getInt("COMMENT_COUNT"),
+	        			rs.getInt("LIKE_COUNT"),
+	        			rs.getString("ATTACHED_FILE")
 	        		);
 	        }
 	    	        
@@ -249,6 +253,43 @@ public class JdbcReviewDao implements ReviewDao {
 	     }
 	     
 	     return review;
+	}
+	
+	public int getCount() {
+		String sql = "SELECT * FROM REVIEW_VIEW WHERE ID =?";
+		int count = 0;
+		Review review = null;
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			
+			if(rs.next()) {
+				count = rs.getInt("count");
+			}
+				
+				
+				rs.close();
+				st.close();
+				con.close(); 
+				
+			} catch (ClassNotFoundException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			
+			
+		
+		return count;
+		
 	}
 
 	

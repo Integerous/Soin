@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
-
     
     
     <!-- ---------------------HEADER---------------------- -->
@@ -30,11 +28,7 @@
 		<div id="mid-bar">
 			<div class="mb-container">
 				<div class="logo">
-
-					<a href="index.html">
-
 					<a href="${ctx}/index">
-
 					<img src="${ctx}/Images/logo_js.png" alt="Soin_Logo" /></a>
 				</div>
 				
