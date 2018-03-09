@@ -78,7 +78,7 @@
 
  
   <!-- 현수 : 인덱스  -->  
-  <definition name="index"  template="/WEB-INF/views/inc/layout1.jsp">
+  <definition name="index"  template="/WEB-INF/views/inc/sub-layout1.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/index.jsp" />
   	<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />

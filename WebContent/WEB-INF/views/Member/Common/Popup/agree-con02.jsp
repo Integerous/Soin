@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>개인정보처리방침</title>
-	<link href="css/Style1p.css" type="text/css" rel="stylesheet"/>
+	<link href="../../../Css/Style1p.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 	<h1 class="hidden">개인정보처리방침 약관</h1>

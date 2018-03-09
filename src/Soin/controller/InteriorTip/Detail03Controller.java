@@ -1,4 +1,4 @@
-package Soin.InteriorTip.Controller;
+package Soin.controller.InteriorTip;
 
 import java.io.IOException;
 

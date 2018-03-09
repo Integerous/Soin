@@ -6,16 +6,12 @@ import java.util.List;
 public interface EstimateRequestDao {
 
 	
-	int insert(EstimateRequest estimateRequest);
-	int update(EstimateRequest estimateRequest);
-	int delete(String id);
+	public int insert(EstimateRequest estimateRequest);
+	public int update(EstimateRequest estimateRequest);
+	public int delete(String id);
 	
-	int getCount();
-	
-	public List<EstimateRequestView> getList(int page);
+	public List<EstimateRequestView> getList();
 	public EstimateRequestView get(String id);
-	
-	
 	
 	
 	

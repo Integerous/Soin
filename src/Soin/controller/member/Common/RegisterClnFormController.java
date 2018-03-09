@@ -2,6 +2,7 @@ package Soin.controller.member.Common;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +21,9 @@ import Soin.client.JdbcClientDao;
 import Soin.member.JdbcMemberDao;
 import Soin.member.Member;
 import Soin.member.MemberDao;
+import Soin.memberRole.JdbcMemberRoleDao;
+import Soin.memberRole.MemberRole;
+import Soin.memberRole.MemberRoleDao;
 
 @WebServlet("/Member/Common/registercln_form")
 public class RegisterClnFormController extends HttpServlet
@@ -50,7 +54,7 @@ public class RegisterClnFormController extends HttpServlet
 		member.setAddress(request.getParameter("address"));
 		member.setDetailAddress(request.getParameter("detailAddress"));
 		member.setPhoneNum(phoneNum);
-		member.setRole(request.getParameter("role"));
+		member.setRole("CLIENT");
 		
 		MemberDao memberDao = new JdbcMemberDao();
 		memberDao.insert(member);

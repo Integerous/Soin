@@ -65,12 +65,8 @@ public class ListController extends HttpServlet{
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
 		container.render("Member.Constructor.List.list8", servletRequest);
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 	}
 

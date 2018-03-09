@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<<<<<<< HEAD
-<c:set var="ctx" value="${pageContext.request.servletContext.contextPath }"/> 
-
-
-=======
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath }"/> 
 <<<<<<< HEAD
 <!DOCTYPE html>
@@ -81,10 +76,7 @@
 			<!--------------------------main 시작----------------------------------->
 =======
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 			<main id="main">
-<<<<<<< HEAD
-=======
 			<hr/>
 			<hr/>
 			<hr/>
@@ -93,7 +85,6 @@
 			<hr/>
 			<hr/>
 			<hr/>
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 			
 			<section>
 
@@ -180,18 +171,11 @@
 							<ul>
 								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
 <<<<<<< HEAD
-					<li><a href="${ctx }Detail">평점/5.0</a></li>
-					
-					<li><a href="${ctx }/Detail">평점/5.0</a></li>
-					</ul>
-=======
-<<<<<<< HEAD
 								<li><a href="${ctx }Detail">평점/5.0</a></li>
 =======
 								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 							</ul>
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 					</div>
 
 				</section>
@@ -211,17 +195,9 @@
 				<section>
 					<div class="distance">
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 						<a href="Detail.html">
 =======
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 						<a href="${ctx }/Detail">
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
@@ -266,11 +242,7 @@
 								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
 								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 <<<<<<< HEAD
-								</ul>
-=======
-<<<<<<< HEAD
 							</ul>
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 					</div>
 				</section>
 
@@ -282,17 +254,6 @@
 							<ul>
 								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
 								<li><a href="${ctx }/Detail">평점/5.0</a></li>
-<<<<<<< HEAD
-</ul>
-					</div>
-				</section>
-
-				<section>
-					<div class="distance">
-
-						<a href="${ctx }/Detail">
-
-=======
 =======
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 							</ul>
@@ -306,7 +267,6 @@
 =======
 						<a href="${ctx }/Detail">
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
@@ -325,12 +285,8 @@
 								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
 								<li><a href="${ctx }/Detail">평점/5.0</a></li>
 <<<<<<< HEAD
-</ul>
-=======
-<<<<<<< HEAD
 =======
 							</ul>
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 					</div>
 				</section>
 
@@ -342,12 +298,8 @@
 							<ul>
 								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
 								<li><a href="${ctx }/Detail">평점/5.0</a></li>
-<<<<<<< HEAD
-</ul>
-=======
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 							</ul>
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 					</div>
 
 				</section>
@@ -388,6 +340,18 @@
 					</div>
 				</section>
 
+				<section>
+					<div class="distance">
+						<a href="${ctx }/Detail">
+							<img src="${ctx }/Images/soin-logo.png" alt="아델라">
+						</a>
+							<ul>
+								<li><a href="${ctx }/Detail">업체명 : 아델라</a></li>
+								<li><a href="${ctx }/Detail">평점/5.0</a></li>
+							</ul>
+					</div>
+
+				</section>
 
 			</section>
 			
@@ -418,13 +382,6 @@
 			</c:if>
 		
 	</div>
-<<<<<<< HEAD
-
-
-
-</main>
-
-=======
 <<<<<<< HEAD
 	<!---------------------footer -------------------- -->
 	<footer>
@@ -464,5 +421,4 @@
 			
 			
 	
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
