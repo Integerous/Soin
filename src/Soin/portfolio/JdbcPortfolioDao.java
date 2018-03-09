@@ -24,8 +24,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 				"    product_id," + 
 				"    construction_type_id," + 
 				"    building_type_id," + 
-				"    construction_position_id,"+"title)" + 
-				" VALUES (" +"(SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM ANSWERIS)"+",?,?,?,?,?,?,?,?,?)";
+				"    construction_position_id,"+"title,"+"attached_file)" + 
+				" VALUES (" +"(SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM ANSWERIS)"+",?,?,?,?,?,?,?,?,?,?)";
 		
 		int result = 0;
 		
@@ -47,6 +47,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 			st.setString(7, portfolio.getBuildingTypeId());
 			st.setString(8, portfolio.getConstructionPositionId());
 			st.setString(9, portfolio.getTitle());
+			st.setString(10, portfolio.getAttachedFile());
 			
 			result = st.executeUpdate();
 			
@@ -82,7 +83,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 				"    AND   construction_type_id =?" + 
 				"    AND   building_type_id =?" + 
 				"    AND   construction_position_id =?" +
-				" 	 AND   title =?";
+				" 	 AND   title =?"+
+				"	 AND	attached_file=?";
 		int result = 0;
 		
 		try {
@@ -105,6 +107,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 			st.setString(9, portfolio.getBuildingTypeId());
 			st.setString(10, portfolio.getConstructionPositionId());
 			st.setString(11, portfolio.getTitle());
+			st.setString(11, portfolio.getAttachedFile());
 			
 			result = st.executeUpdate();//실행결과에 대해 몇개됐다고 하는거.
 
@@ -185,7 +188,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 						rs.getString("CONSTRUCTION_TYPE_ID"),
 						rs.getString("BUILDING_TYPE_ID"),
 						rs.getString("CONSTRUCTION_POSITION_ID"),
-						rs.getString("TITLE")
+						rs.getString("TITLE"),
+						rs.getString("ATTACHED_FILE")
 						);
 			list.add(portfolio);//담고보내야한다.!!
 			
@@ -236,7 +240,8 @@ public class JdbcPortfolioDao implements PortfolioDao {
 						rs.getString("CONSTRUCTION_TYPE_ID"),
 						rs.getString("BUILDING_TYPE_ID"),
 						rs.getString("CONSTRUCTION_POSITION_ID"),
-						rs.getString("TITLE")
+						rs.getString("TITLE"),
+						rs.getString("ATTACHED_FILE")
 						);
 			}
 

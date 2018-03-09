@@ -1,4 +1,4 @@
-package Soin.controller.InteriorTip;
+package Soin.InteriorTip.Controller;
 
 import java.io.IOException;
 
@@ -13,8 +13,8 @@ import Soin.InteriorTip.InteriorTipDao;
 import Soin.InteriorTip.InteriorTipView;
 import Soin.InteriorTip.JdbcInteriorTipDao;
 
-@WebServlet("/InteriorTip/Trend/Detail04")
-public class Detail04Controller extends HttpServlet{
+@WebServlet("/InteriorTip/Process/Detail02")
+public class Detail02Controller extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,7 +25,7 @@ public class Detail04Controller extends HttpServlet{
 		request.setAttribute("interiorTip", interiorTip);
 		
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/views/Information/Trend/Detail04.jsp");
+				request.getRequestDispatcher("/WEB-INF/views/Information/Process/Detail02.jsp");
 		
 		dispatcher.forward(request, response);
 	}

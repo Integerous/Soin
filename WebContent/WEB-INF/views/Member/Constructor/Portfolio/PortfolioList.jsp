@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+ 
+ <!DOCTYPE html>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<c:set var="ctx" value="${pageContext.request.servletContext.contextPath}"></c:set>
+<!-- 
 <html>
 <head>
 <meta charset="UTF-8">
@@ -8,93 +12,10 @@
 <link href="../../../Css/Style3.css" type="text/css" rel="stylesheet" />
 <link href="../../../Css/StyleHF.css" type="text/css" rel="stylesheet" />
 <style type ="text/css"></style>
-</head>
+</head> -->
 <body>
 
 
-<!-- ------------top-bar------------ -->
-	<header>
-		<div id="top-bar">
-			<div class="tb-container">
-				<div class="login-status" style="display:none;">
-					<a href="#">로그아웃</a></div>
-					
-				<div class="logout-status">
-					<a href="#">로그인</a></div>
-				<div class="logout-status">
-					<a href="#">회원가입</a></div>
-				<div><a href="#">고객센터</a></div>
-				<div class="notifications"><a href="#" >
-					<img src="../../../Images/ic_notifications_active_black_24px.svg"/></a></div>
-				<div><a href="#">마이페이지</a></div>
-			</div>
-		</div>
-	
-<!-- ------------logo & title------------ -->			
-		<div id="mid-bar">
-			<div class="mb-container">
-				<div class="logo">
-					<a href="index.html">
-					<img src="../../../Images/logo_js.png" alt="Soin_Logo" /></a>
-				</div>
-				
-					<a href="#">소인</a>
-					
-				<div class="p">
-					- 소규모 인테리어 시공 중개 플랫폼
-				</div>
-			</div>
-		</div>
-		
-		<div class="liner"></div>
-		
-<!-- ------------navigation------------ -->
-		<div id="top-nav">
-			
-			<nav class="tn-container">
-				<div class="hello">
-					<a href="#">소인소개</a></div>
-				<div class="hello-contr">
-					<a href="#">업체소개</a></div>
-				<div class="est-request">
-					<a href="#" style="color:gold">견적의뢰</a></div>
-				<div class="tip">
-					<a href="#">인테리어 TIP</a></div>
-				<div class="review">
-					<a href="#">시공후기</a></div>
-			</nav>
-		</div>
-			
-		<div class="liner"></div>
-		
-	</header>
-
-<!--     <div id="header">
-   
-   <div class ="hor-menu menu-member">
-		<ul>
-			<li><a href="">로그인</a></li>
-			<li><a href="">회원가입</a></li>
-			<li><a href="">고객센터</a></li>
-			<li><a href=""><div class ="imag-member"><img class ="logo-member" src="../../../Images/yurim/ic_add_alert_black_24dp_1x.png" alt=""/></div></a></li>
-			<li><a href=""><div class ="imag-member"><img class ="logo-member" src="../../../Images/yurim/ic_contact_phone_black_24dp_1x.png" alt=""/></div></a></li>
-		</ul>
-   </div>
-    
-   <div class ="img-logo">
-   		 <img id = "logo" src="../../../Images/soin-logo1.png" alt="소인로고"/>
-   </div>
-
-   <div class ="hor-menu menu-main">
-		<ul>
-			<li><a href="">소인소개</a></li>
-			<li><a href="">업체소개</a></li> 
-			<li><a href="">견적요청</a></li> 
-			<li><a href="">인테리어Tip</a></li> 
-			<li><a href="">시공후기</a></li>
-		</ul>
-   </div>
-    </div> -->
  <!--  바디!!!----------------------------------------------------------------------------------------- -->   
   <div id ="wrap">
   <div id ="body">
@@ -108,7 +29,7 @@
   
 		<div class="company-content2">
 
-		<a href=""><img class="img-interior" src="../../../Images/yurim/문1.jpg" alt="문1"/></a>
+		<a href=""><img class="img-interior" src="${ctx}/Images/yurim/문1.jpg" alt="문1"/></a>
 		<ul class="text-ellipsis">
 		<li style="text-align: center;">업체명</li>
 		<li>문</li>
@@ -118,7 +39,7 @@
 
 
 		<div class="company-content2">
-			<a href=""><img class="img-interior" src="../../../Images/yurim/타일1.jpg" alt="타일1"/></a>
+			<a href=""><img class="img-interior" src="${ctx}/Images/yurim/타일1.jpg" alt="타일1"/></a>
 				<ul class="text-ellipsis">
 				<li style="text-align: center;">업체명</li>
 				<li>벽지</li>
@@ -127,7 +48,7 @@
 		</div>
 
 	<div class="company-content2">
-		<a href=""><img class="img-interior" src="../../../Images/yurim/창문1.jpg" alt="창문1"/></a>
+		<a href=""><img class="img-interior" src="${ctx}/Images/yurim/창문1.jpg" alt="창문1"/></a>
 			<ul class="text-ellipsis">
 				<li style="text-align: center;">업체명</li>
 				<li>창문</li>
@@ -139,7 +60,7 @@
 
   <div class="company-content">
   <div class="company-content2">
-			<a href=""><img class="img-interior" src="../../../Images/yurim/창문2.jpg" alt="창문2"/></a>
+			<a href=""><img class="img-interior" src="${ctx}/Images/yurim/창문2.jpg" alt="창문2"/></a>
 			<ul class="text-ellipsis">
 			<li style="text-align: center;">업체명</li>
 			<li>창문</li>
@@ -148,7 +69,7 @@
 			</div>
 
 		<div class="company-content2">
-		<a href=""><img class="img-interior" src="../../../Images/yurim/욕실1.jpg" alt="욕실1"/></a>
+		<a href=""><img class="img-interior" src="${ctx}/Images/yurim/욕실1.jpg" alt="욕실1"/></a>
 			<ul class="text-ellipsis">
 			<li style="text-align: center;">업체명</li>
 			<li>욕실</li>
@@ -157,7 +78,7 @@
 		</div>
 
 		<div class="company-content2">
-		<a href=""><img class="img-interior" src="../../../Images/yurim/욕실2.jpg" alt="욕실2"/></a>
+		<a href=""><img class="img-interior" src="${ctx}/Images/yurim/욕실2.jpg" alt="욕실2"/></a>
 		<ul class="text-ellipsis">
 			<li style="text-align: center;">업체명</li>
 			<li>욕실</li>
@@ -168,7 +89,7 @@
   
 		  <div class="company-content">
 		  <div class="company-content2">
-		  <a href=""><img class="img-interior" src="../../../Images/yurim/벽지1.jpg" alt="벽지1"/></a>
+		  <a href=""><img class="img-interior" src="${ctx}/Images/yurim/벽지1.jpg" alt="벽지1"/></a>
 		 	 <ul class="text-ellipsis">
 		 	 	<li style="text-align: center;">업체명</li>
 				<li>벽지</li>
@@ -176,7 +97,7 @@
 			</ul>
 		  </div>
 		  <div class="company-content2">
-		  	<a href=""><img class="img-interior" src="../../../Images/yurim/벽지2.jpg" alt="벽지2"/></a>
+		  	<a href=""><img class="img-interior" src="${ctx}/Images/yurim/벽지2.jpg" alt="벽지2"/></a>
 		 	 <ul class="text-ellipsis">
 		 	 	<li style="text-align: center;">업체명</li>
 				<li>창문</li>
@@ -184,7 +105,7 @@
 			</ul>
  		 </div>
  		 <div class="company-content2">
-  		<a href=""><img class="img-interior" src="../../../Images/yurim/타일1.jpg" alt="타일1"/></a>
+  		<a href=""><img class="img-interior" src="${ctx}/Images/yurim/타일1.jpg" alt="타일1"/></a>
   		<ul class="text-ellipsis">
   		<li style="text-align:center;">업체명</li>
 		<li>문</li>
@@ -197,19 +118,21 @@
    
    
        	</div>
+       	<!-- 페이지만들기 -->
+       	<%-- <div>
+       		<c:if test=${startNum !=1}">
+       			<a class = pagination" href="?=${startNum-1}">«</a>
+       		</c:if>
+       		<c:if test="${startNum ==1}">
+       			<span class = pagination">«</span>
+       		</c:if>
+       	</div>
+ --%>       	
        	
-       	<div>
-		
-			<c:if test="${startNum !=1}">
-			<a class="btn btn-prev" href="?p=${startNum-1}">이전</a>
-			</c:if>
-			<c:if test="${startNum==1}">
-			 <span class="btn btn-prev" >이전</span>
-			</c:if>
-		
-		
-	</div>
+       
+       
     	<div class="pagination">
+    	
 			   <!--  <a href="#">«</a>
 				<a href="#">1</a>
 				<a href="#">2</a>
@@ -217,15 +140,15 @@
 				<a href="#">4</a>
 				<a href="#">5</a>	
 				<a href="#">»</a> -->
-				
+				<%-- 
 				<c:forEach var="i" begin="0" end="4">
 					<c:if test="${startNum+i <= lastPage}">
 					
 					<a href="?p=${startNum+i}&t=&q=" >${startNum+i}</a>
 					</c:if>	
-				</c:forEach>	
+				</c:forEach>	 --%>
 				
-				
+			<%-- 	
 				<div>
 			<c:if test="${startNum+5 <= lastPage}">
 			<!-- <span class="btn btn-next" onclick="alert('다음 페이지가 없습니다.');">다음</span> -->
@@ -234,13 +157,13 @@
 			<c:if test="${startNum+5 > lastPage}">
 			<span class="btn btn-next">다음</span>
 			</c:if>
-	</div>
+	</div> --%>
 				
 			</div>
 	</div>
     	
  <!-- 풋터!!!-----------------------------------------------------------------------------------------  -->  
-    <div id ="footer">
+  <!--   <div id ="footer">
     	<div class="root-container">
 	    <img id ="ceo" src="../../../Images/yurim/소인대표.jpg" alt="소인대표"/>
 	  	 <div id = "company-info">소인 대표 : James Han<br>
@@ -257,7 +180,7 @@
 				<div id = "copyright"><p>Copyrightⓒ 2018 By SOIN All Right Reserved.</p></div>
 			 </div>	
     </div>
-    
+     -->
  
   
    <!--side bar ------------------------- --> 

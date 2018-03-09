@@ -22,8 +22,11 @@ public interface ConstructorDao
 	List<ConstructorView> getList(int page,String query);
 
 	//시공업체회원 가져오기
-	ConstructorView get(String id);
-	
+	public ConstructorView get(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	int getCount();
 	
 	/*Constructor getDistance();

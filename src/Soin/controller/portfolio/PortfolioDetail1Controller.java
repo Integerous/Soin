@@ -1,4 +1,4 @@
-package Soin.portfolio.controller;
+package Soin.controller.portfolio;
 
 import java.io.IOException;
 
@@ -8,6 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.tiles.TilesContainer;
+import org.apache.tiles.access.TilesAccess;
+import org.apache.tiles.request.ApplicationContext;
+import org.apache.tiles.request.servlet.ServletRequest;
+import org.apache.tiles.request.servlet.ServletUtil;
 
 import Soin.portfolio.JdbcPortfolioDao;
 import Soin.portfolio.PortfolioDao;
@@ -19,6 +25,12 @@ public class PortfolioDetail1Controller extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.getContextPath();
+		ApplicationContext applicationContext = ServletUtil
+				.getApplicationContext(request.getSession().getServletContext());
+		TilesContainer container = TilesAccess.getContainer(applicationContext);
+		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+		container.render("Member.Constructor.Portfolio.PortfolioDetail1", servletRequest);
 		
 		String id= request.getParameter("id");//아이디가 꼭 있어야함.
 
@@ -27,9 +39,9 @@ public class PortfolioDetail1Controller extends HttpServlet{
 		
 		request.setAttribute("portfolio", portfolio);
 		
-		RequestDispatcher dispatcher
+		/*RequestDispatcher dispatcher
 			 = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/Portfolio/PortfolioDetail1.jsp");
-		dispatcher.forward(request, response);
+		dispatcher.forward(request, response);*/
 		
 	}
 	

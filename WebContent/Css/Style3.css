@@ -22,8 +22,9 @@ display:none;
 }
 .box{
 	margin-top:30px;
-	
+		
 }
+
 
 .btn{
 	min-width:65px;
@@ -162,7 +163,7 @@ select{
  #body{
 	 margin-top:20px;
 	 min-height:500px;
-	 background:#D4F4FA; 
+	 background:#f2f2f2/* #D4F4FA */; 
 	 height:auto;
 	 font-family:"a옛날목욕탕L","고딕","sans-serif";
  }
@@ -223,7 +224,7 @@ select{
  }
  
  .company-sort{
-	 height:100px;
+	 height:110px;
 	/*  background-color: #FAF4C0; */
  
 }
@@ -246,6 +247,13 @@ select{
 	 
 	 float:left;
  }
+ 
+ 	.bottom-ckm{
+ 		
+ 	padding-left: 48px;
+ 	color: #1da1f2;
+ 	
+ 	}
  
  .search{
 	 height:inherit;
@@ -308,6 +316,10 @@ select{
     background-color: #83aafc;
     color: white;
     border: 1px solid #83aafc;
+}
+.pagination > ul{
+	float:left;
+	list-style:none;
 }
 
 /*  ------------풋터------------- */
@@ -526,20 +538,33 @@ select{
 	
 	}
 .category{
-	height:100px;
+	height:110px;
 	
 	border-bottom-style: dotted;
 	border-bottom: 1px solid gray;
 	
 }
-
+	.bottom-ck{
+	    height: 30px;
+	    color:#1da1f2;
+	    position: relative;
+	    top: 80px;
+	    right: 500px;
+	    overflow: hidden;
+	    
+	
+	}
+		.wid{
+		margin-left:40px;
+		
+		}
 	.category-cont{
 		float:left;
 		padding-top: 40px;
 		color:gray;
 	}
 .construction-info{
-	height:200px;
+	height:150px;
 	
 	border-bottom-style: dotted;
 	border-bottom: 1px solid gray;
@@ -579,8 +604,9 @@ select{
 	}
  */
 .detail-cont{
-	height:600px;
 	
+	 min-height:300px;
+    overflow: auto;
 	border-bottom-style: dotted;
 	border-bottom: 1px solid gray;
 	

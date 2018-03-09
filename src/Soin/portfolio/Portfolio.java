@@ -16,15 +16,16 @@ public class Portfolio {
 	private String buildingTypeId;
 	private String constructionPositionId;
 	private String title;
+	private String attachedFile;
+	
 	
 	public Portfolio() {
 	
 	}
 
-	
-	
+	//insert
 	public Portfolio(String id, String location, String content, String period, int hit, int like, String memberId,
-			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String title) {
+			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String title, String attachedFile) {
 		
 		this.id = id;
 		this.location = location;
@@ -38,10 +39,11 @@ public class Portfolio {
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
 		this.title =title;
+		this.attachedFile=attachedFile;
 	}
 
 	public Portfolio(String location, String content, String period, String memberId,
-			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String title) {
+			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String title, String attachedFile) {
 		
 		//this.id = id;
 		this.location = location;
@@ -55,10 +57,19 @@ public class Portfolio {
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
 		this.title =title;
+		this.attachedFile=attachedFile;
 	}
 
 
 	
+
+	public String getAttachedFile() {
+		return attachedFile;
+	}
+
+	public void setAttachedFile(String attachedFile) {
+		this.attachedFile = attachedFile;
+	}
 
 	public String getId() {
 		return id;

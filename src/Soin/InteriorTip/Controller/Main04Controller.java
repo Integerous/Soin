@@ -1,4 +1,4 @@
-package Soin.controller.InteriorTip;
+package Soin.InteriorTip.Controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,12 +20,11 @@ import Soin.InteriorTip.InteriorTipDao;
 import Soin.InteriorTip.InteriorTipView;
 import Soin.InteriorTip.JdbcInteriorTipDao;
 
-@WebServlet("/InteriorTip/Material/Main03")
-public class Main03Controller extends HttpServlet{
-	
+@WebServlet("/InteriorTip/Trend/Main04")
+public class Main04Controller extends HttpServlet{
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		int page = 1;
 		int lastPage = 1;
 		
@@ -66,6 +65,6 @@ public class Main03Controller extends HttpServlet{
 	            .getApplicationContext(request.getSession().getServletContext());
 	      TilesContainer container = TilesAccess.getContainer(applicationContext);
 	      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-	      container.render("InteriorTip.Material.Main03", servletRequest);
+	      container.render("InteriorTip.Trend.Main04", servletRequest);
 	}
 }
