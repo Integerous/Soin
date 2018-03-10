@@ -13,7 +13,7 @@
 				<ul>
 					<li><span>유형선택</span></li>
 					<li><span>정보입력</span></li>
-					<li><span>가입완료</span></li>
+					<li class="selected-step"><span>가입완료</span></li>
 				</ul>
 			</div>
 			

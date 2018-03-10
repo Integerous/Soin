@@ -22,17 +22,12 @@ public class CheckIdController extends HttpServlet
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
-		String ckId = request.getParameter("ckId");
+		String ckId = request.getParameter("id");
 		
 		MemberDao memberDao = new JdbcMemberDao();
 		Boolean cki = memberDao.getId(ckId);
-		
-		String message = "사용 가능한";
-		
-		if(cki == true)
-			message = "이미 사용중인";
 
-		out.printf("%s 아이디입니다.", message);
+		out.print(cki);
 			
 	}
 

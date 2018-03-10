@@ -5,9 +5,9 @@
 <script src="Popup/js/find.js" type="text/javascript" ></script>
 <main id="main">
 	<section>
-		<h1>로그인 화면</h1>
+		<h1 class="hidden">로그인 화면</h1>
+		
 		<div class="login-box">
-			<h1 class="hidden">로그인 양식</h1>
 			<div class="top-padding">
 				<img src="${ctx}/Images/phz/logocopy.png" >
 			</div>
@@ -26,12 +26,12 @@
 						<ul>
 							<li>
 								<label class="hidden">아이디</label>
-								<input type="text" class="input" value="" placeholder="아이디를 입력해주세요." maxlength="20">
+								<input type="text" class="input" value="" placeholder="아이디를 입력해주세요." maxlength="20" autofocus />
 							</li>
 							
 							<li>
 								<label class="hidden">비밀번호</label>
-								<input type="password" class="input" value="" placeholder="비밀번호를 입력해주세요." maxlength="20">
+								<input type="password" class="input" value="" placeholder="비밀번호를 입력해주세요." maxlength="20" />
 							</li>
 						</ul>
 							
