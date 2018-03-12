@@ -20,6 +20,11 @@
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
   
+  <definition name="InteriorTip.*"  template="/WEB-INF/views/inc/layout5.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/InteriorTip/{1}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
    <!-- 현수(추가) : 소인 소개  -->  
   <definition name="Introduce.*"  template="/WEB-INF/views/inc/layout1.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />

@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>소인 : 인테리어 팁 상세 페이지</title>
-<link href = "../../Css/Style5.css" type = "text/css" rel = "stylesheet"/>
+<title>인테리어 팁 및 정보 작성페이지</title>
+<link href = "../Css/Style5.css" type = "text/css" rel = "stylesheet"/>
 </head>
 <body>
 <!--------------------------------header 시작------------------------------>
@@ -14,7 +14,7 @@
 					<div>
 						<a href = "">로그인</a>
 					</div>
-					
+					  
 					<div>
 						<a href = "">회원가입</a>
 					</div>
@@ -31,7 +31,7 @@
 			
 			<div class = "logo-bar">
 				<div id = "logo">
-					<a href = ""><img class = "images" src = "../../Images/jyh/SoIn_Logo.png"></a>
+					<a href = ""><img class = "images" src = "../Images/jyh/SoIn_Logo.png"></a>
 				</div>
 				
 				<div class = "name">
@@ -70,53 +70,73 @@
 			</div>
 		</div>
 	</header>
-
-<!--------------------------------header 끝------------------------------>
+	
 <!--------------------------------main 시작------------------------------>
-
 	<main id = "main">
 		<div class = "root-container">
-			<div class = "detail-title-box">
-				<div class = "detail-title">
-					간단한 컬러 페이지로 확 바뀐 거실 & 침실 분위기
-					<hr>
+			<div class = "write">
+				<div class = "tip-label">
+					팁 작성하기
 				</div>
 				
-				<div class = "detail-popularity">
-					조회수 : 253 / 좋아요 : 22
-					<hr>
-				</div>
-			</div>
-			
-			<div class = "detail-content">
-				<div class = "detail-img">
-					<img src = "../../Images/jyh/Adela.jpg">
-					<img src = "../../Images/jyh/Beanu.jpg">
+				<br/>
+				
+				<div class = "tip-category">
+					팁 카테고리
+					<select name = "tip-categorys" class = "tip-select">
+							<option value = "" selected = "selected">팁 카테고리</option>
+							<option value = "창문">소재</option>
+							<option value = "문">팁</option>
+							<option value = "욕실">시공과정</option>
+							<option value = "벽지">트랜드</option>
+						</select>
 				</div>
 				
-				<div class = "detail-text">
-					오렌지 벽지의 튀는 색상이 싫어서 화이트로 페인팅 하고
-					한쪽은 포인트로 엠보타일을 붙여주었어요.
-					스테인리스 느낌의 엠보타일을 붙여주니 시원한 느낌이 살아나는 것 같아요.
-					엠보타일은 기존과 달리 접착식이라
-					간편하게 스티커처럼 떼서 붙이면 끝이라, 쉽게 작업할 수 있었어요.
+				<br/>
+				
+				<div class = "tip-title">
+					제목  <input class = "write-title" type="text" size="30" placeholder="30자 이내로 작성해주세요.">
 				</div>
+				
+				<br/>
+				
+				<div class = "tip-images">
+					<div class="main-image">
+						메인사진 <input type="file" name = "attached" class="tip-image">
+					</div>
+					
+					<br/>
+					
+					<div class="sub-image">
+						추가사진 <input type="file" name = "attached" class="tip-image">
+					</div>
+				</div>
+				
+				<br/>
+				
+				<div>
+					팁 작성
+					<div>
+						<textarea rows="20" cols="60" placeholder="관련된 팁 및 정보에 대한 글을 작성해주세요." name = "tip-write"></textarea>
+					</div>
+				</div>
+				
+				<br/>
+				
 			</div>
-			
-			<div class = "detail-btn">
-				<input type = "button" value = "목록" class = "btn">
-			</div>
+				<div class="btn-box">
+					<input type="submit"  class = "btn" value="글 등록하기">
+					<a class="btn" href="Main01.html">취소</a>
+				</div>
 		</div>
 	</main>
-
-<!--------------------------------main 끝------------------------------>
-<!--------------------------------footer 시작------------------------------>
+<!--------------------------------footer 시작------------------------------>	
 	<footer id = "footer">
 		
 		<h1>푸터</h1>
 		<div class = "root-container">
 			<div id = "footer-logo">
-				<img class = "images" alt = "소인" src = "../../Images/jyh/SoIn_Logo.png">
+				<img class = "images" alt = "소인" src = "../Images/jyh/SoIn_Logo.png">
 			</div>
 			
 			<div class = "left-footer">
