@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <style>
-	body	{ background: url('../Images/phz/introduce_bg.jpg') no-repeat center; background-size: cover;; }
+	body	{ background: url('../Images/phz/introduce_bg.jpg') no-repeat center; background-size: cover;  background-attachment: fixed; }
 </style>
 
 <main id="main">
@@ -17,7 +17,7 @@
 				<div class="top-padding mr20">
 						
 					<div>
-						<span class="msg-subject">소인 소개</span><span class="msg-strong ml20">SOIN</span>
+						<span class="msg-subject">소인 소개</span><span class="msg-strong ml20 gothic">SOIN</span>
 					</div>
 					
 					<div class="mt20">
@@ -37,7 +37,7 @@
 				<div class="mr20 mt70 bot-padding">
 				
 					<div>
-						<span class="msg-subject">서비스 소개</span><span class="msg-strong ml20">Service</span>
+						<span class="msg-subject">서비스 소개</span><span class="msg-strong ml20 gothic">Service</span>
 					</div>
 				
 					<div class="mt20">

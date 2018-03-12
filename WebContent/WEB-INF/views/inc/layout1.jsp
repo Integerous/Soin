@@ -10,6 +10,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>소규모 인테리어 소인</title>
+		<link rel="shortcut-icon" href="${ctx}/Images/phz/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="${ctx}/Images/phz/favicon.ico" type="image/x-icon"/>
 		<link href="${ctx}/Css/StyleHF.css" type="text/css" rel="stylesheet"/>
 		<link href="${ctx}/Css/Style1.css" type="text/css" rel="stylesheet"/>
 	</head>

@@ -1,12 +1,17 @@
 package Soin.controller.member.Common;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import org.apache.tiles.TilesContainer;
 import org.apache.tiles.access.TilesAccess;
@@ -22,6 +27,11 @@ import Soin.member.Member;
 import Soin.member.MemberDao;
 
 @WebServlet("/Member/Common/registercon_form")
+@MultipartConfig( 
+		fileSizeThreshold = 1024*1024*3,
+		maxFileSize = 1024*1024*3,
+		maxRequestSize = 1024*1024*3
+)
 public class RegisterConFormController extends HttpServlet
 {
 	@Override
@@ -34,7 +44,9 @@ public class RegisterConFormController extends HttpServlet
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+
 		Member member = new Member();
 		Constructor constructor = new Constructor();
 		
@@ -42,6 +54,29 @@ public class RegisterConFormController extends HttpServlet
 		String phoneNum;
 		String corporateRegistrationNumber;
 		phoneNum = request.getParameter("tel01")+"-"+request.getParameter("tel02")+"-"+request.getParameter("tel03");
+		
+		
+		
+		String path = "/Member/Constructor/Upload/MainImage"+id;
+		String realPath = request.getServletContext().getRealPath(path);
+		
+		Part part = request.getPart("mainImage");
+		
+		String imgName = part.getSubmittedFileName();
+		InputStream is = part.getInputStream();
+		
+		byte[] buf = new byte[1024];
+		int size = 0;
+		
+		FileOutputStream fos = new FileOutputStream(realPath+File.separator+imgName);
+		
+		while((size = is.read(buf, 0, 1024)) != -1)
+		{
+			fos.write(buf, 0, size);
+		}
+		
+		is.close();
+		fos.close();
 		
 		member.setId(id);
 		member.setPassword(request.getParameter("password"));
@@ -61,7 +96,7 @@ public class RegisterConFormController extends HttpServlet
 		constructor.setName(request.getParameter("name"));
 		constructor.setCorporateRegistrationNumber(corporateRegistrationNumber);
 		constructor.setCeoName(request.getParameter("ceoName"));
-/*		constructor.setMainImage("mainImage");*/
+		constructor.setMainImage(imgName);
 		constructor.setHomepageAddress(request.getParameter("homepageAddress"));
 		constructor.setIntroduction(request.getParameter("introduction"));
 		
@@ -78,7 +113,10 @@ public class RegisterConFormController extends HttpServlet
 		ConstructorDao constructorDao = new JdbcConstructorDao();
 		constructorDao.insert(constructor);
 		
-		response.sendRedirect("register_finish");
+		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
+	     TilesContainer container = TilesAccess.getContainer(applicationContext);
+	     ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+	     container.render("Member.Common.register_finish", servletRequest);
 		
 	}
 	

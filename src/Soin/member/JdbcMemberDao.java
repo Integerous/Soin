@@ -227,13 +227,13 @@ public class JdbcMemberDao implements MemberDao
 	}
 		
 	@Override
-	public String getId(String email, String phoneNum) {
+	public String findId(String email, String phoneNum) {
 		
 		String sql = "SELECT ID FROM MEMBER WHERE EMAIL=? AND PHONE_NUMBER=?";
 		
 		String id = null;
 		try
-		{
+		{	
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
@@ -245,8 +245,8 @@ public class JdbcMemberDao implements MemberDao
 			ResultSet rs = st.executeQuery();
 		
 			if(rs.next())
-				id = rs.getString("ID");
-			
+				id = rs.getString("ID");	
+				
 			rs.close();
 			st.close();
 			con.close();			
@@ -265,11 +265,11 @@ public class JdbcMemberDao implements MemberDao
 	}
 	
 	@Override
-	public String getPassword(String id, String phoneNum) 
+	public Boolean checkPassword(String id, String phoneNum)
 	{
 		String sql = "SELECT PASSWORD FROM MEMBER WHERE ID=? AND PHONE_NUMBER=?";
-	
-		String password = null;
+
+		Boolean ckPassword = false;
 		try
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -283,7 +283,7 @@ public class JdbcMemberDao implements MemberDao
 			ResultSet rs = st.executeQuery();
 		
 			if(rs.next())
-				password = rs.getString("PASSWORD");
+				ckPassword = true;
 			
 			rs.close();
 			st.close();
@@ -299,7 +299,42 @@ public class JdbcMemberDao implements MemberDao
 			e.printStackTrace();
 		}
 		
-		return password;
+		return ckPassword;
+	}
+
+	@Override
+	public int updatePassword(String password, String id) {
+		
+		String sql = "UPDATE MEMBER SET PASSWORD=? WHERE ID=?";
+		
+		int result = 0;
+		
+		try
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, password);
+			st.setString(2, id);
+			result = st.executeUpdate();
+			
+			st.close();
+			con.close();			
+		} 
+		
+		catch (ClassNotFoundException e) 
+		{
+			e.printStackTrace();
+		} 
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 
 }
