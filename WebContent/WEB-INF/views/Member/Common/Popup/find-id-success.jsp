@@ -25,7 +25,7 @@
 				<img src="../../../Images/phz/find-icon.png" height="13px" width="13px"> 입력하신 회원정보로 찾은 아이디
 			</div>	
 			<div class="result-box center">
-				${id==null? "조회된 내역이 없습니다." : id}
+				${requestScope.id}
 			</div>
 			
 		</div>

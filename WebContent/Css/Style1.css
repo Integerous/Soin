@@ -315,7 +315,7 @@ body
 	width: 100px;
 	height: 40px;
 	border: 1px solid #B3B4B5;
-	position: fixed;
+	position: fixed; 
 	right: 400px;
 	top: 150px;
 	background: url('../Images/phz/home_button.png') no-repeat center;
@@ -705,7 +705,32 @@ body
 	background-color: #fff;
 }
 
-.area-text
+.file-box
+{
+	display:flex;
+	justify-content: center;
+	width: 320px;
+	height: 150px;
+	border: 1px solid #7B7F80;
+	background-color: #e9e9e9;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.file-layout
+{
+	box-sizing: border-box;
+	width: 150px;
+	height: 150px;
+	border-left: 1px solid #7B7F80;
+	border-right: 1px solid #7B7F80;
+	margin-left:auto;
+	margin-right: auto;
+	background-color: #e9e9e9;
+	
+}
+	
+.text-area
 {
 	box-sizing: border-box;
 	width: 320px;
@@ -728,4 +753,10 @@ body
 {
 	margin: 0px;
 }
+
+.gothic
+{
+	font-family: '맑은 고딕', '고딕', sans-serif;
+}
+
 

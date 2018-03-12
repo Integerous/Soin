@@ -195,3 +195,18 @@ ul li
 	text-align: center;
 }
 
+.font-s
+{
+	font-size: 13px;
+}
+
+.mr10
+{
+	margin-right: 10px;
+}
+
+.bold
+{
+	color: #1da1f2;
+	font-weight: bold;
+}

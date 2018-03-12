@@ -54,14 +54,7 @@ window.addEventListener("load", function () {
 
 	function diffPw() {
 
-		if(pwInput.value=="" || pwCheckInput.value=="")
-		{
-			pwCheckMessage.textContent = "*비밀번호와 비밀번호 확인란을 입력해주십시오.";
-			pwCheckMessage.style['color'] = "#000";
-			diffCheck = false;
-		}
-
-		else if(pwInput.value == pwCheckInput.value)
+		if(pwInput.value == pwCheckInput.value)
 		{
 			pwCheckMessage.textContent = "*비밀번호가 일치합니다.";
 			pwCheckMessage.style['color'] = "#000";
@@ -85,7 +78,13 @@ window.addEventListener("load", function () {
 			alert("아이디 중복 검사를 해주십시오.");
 			idInput.focus();
 		}
+		else if(pwInput == "")		
+		{
+			e.preventDefault();
 
+			alert("비밀번호를 입력해주십시오.");
+			pwCheckInput.focus();
+		}
 		else if(diffCheck == false)		
 		{
 			e.preventDefault();

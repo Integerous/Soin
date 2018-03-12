@@ -27,7 +27,7 @@
 			<div class="box-label mt20">
 				<img src="${ctx}/Images/phz/write_ico.png" width="15" height="15"><span class="label-text">정보 입력</span>
 			</div>
-			<form method="post">
+			<form method="post" enctype="multipart/form-data">
 				<div class="info-bg" >
 					<fieldset>
 					<legend class= "hidden">정보입력폼</legend>
@@ -38,7 +38,7 @@
 							
 							<li><label class="label-text">비밀번호 확인</label><input id="pw-check" class="input"  type="password" maxlength="15"><br /></li>
 							
-							<li><div id="pw-check-message" class="text-small">*비밀번호를 한 번 더 입력해주세요.</div></li>
+							<li><div id="pw-check-message" class="text-small"> </div></li>
 							
 							<li><label class="label-text">업체명</label><input name="name" class="input"  type="text"  pattern="^[a-zA-Z0-9가-힣]{2,12}$" placeholder="한글,영어,숫자 2-12자리" maxlength="12" required /><br /></li>
 							
@@ -89,7 +89,9 @@
 							
 							<li><label class="label-text">상세 주소</label><input name="detailAddress" class="input"  type="text" maxlength="30" ><br /></li>
 							
-							<li><div class="input-file" ><label class="label-text">대표이미지</label><input id="image-file-button" name="mainImage" type="file" class="hidden"><input id="image-button" type="button" class="btn-input" value="파일선택"></div></li>
+							<li><div class="file-box"><img src="${ctx}/Images/phz/image_placeholder.png" class="file-layout"></div></li>
+							
+							<li><div class="input-file" ><label class="label-text">대표이미지</label><input id="image-file-button" name="mainImage" type="file" class="hidden" /><input id="image-button" type="button" class="btn-input" value="파일선택"></div></li>
 							
 							<li><div class="text-small">*3MB 이하의 이미지 파일만 업로드 가능합니다.</div></li>
 							
@@ -128,7 +130,7 @@
 									</div>
 								</li>
 							
-								<li><label class="label-text">소개</label><textarea id="introduce-input-area" name="introduction" class="area-text" maxlength="500" ></textarea><br /></li>
+								<li><label class="label-text">소개</label><textarea id="introduce-input-area" name="introduction" class="text-area" maxlength="500" ></textarea><br /></li>
 							</ul>
 						</fieldset>
 					</div>
@@ -159,6 +161,7 @@ window.addEventListener("load", function(){
 
 	var imageButton = document.getElementById("image-button");
 	var imageFileButton = document.getElementById("image-file-button");
+	var imageLayout = document.querySelector(".file-layout");
 
 	imageButton.onclick = function()
 	{
@@ -173,21 +176,35 @@ window.addEventListener("load", function(){
 
 	imageFileButton.onchange = function(e)
 	{
-		var images = imageFileButton.files;
+		var image = imageFileButton.files[0];
 		
-		var typeParts = images[0].type.split("/");
+		var typeParts = image.type.split("/");
 		
 		if(typeParts[0] != "image")
 		{
 			alert("이미지 파일만 업로드할 수 있습니다.");
 			imageFileButton.value=null;
+			imageLayout.src ="${ctx}/Images/phz/image_placeholder.png" ;
+			return;
 		}
 		
-		if(images[0].size > 1024*1024*3)
+		if(image.size > 1024*1024*3)
 		{
 			alert("3MB 이하의 파일만 올릴 수 있습니다.");
 			imageFileButton.value=null;
+			imageLayout.src = "${ctx}/Images/phz/image_placeholder.png";
+			return;
 		}	
+
+		var reader = new FileReader();
+
+		reader.onload = function(event) {
+
+			imageLayout.src = event.target.result;
+
+		};
+
+		reader.readAsDataURL(image);
 	};
 });
 </script>
