@@ -1,9 +1,9 @@
 window.addEventListener("load", function () {
-
+    
     var agrPop01 = document.getElementById("agree-cln-01");
     var agrPop02 = document.getElementById("agree-cln-02");
     var agrPop03 = document.getElementById("agree-cln-03");
-    
+	
     agrPop01.onclick = function () {
 
         window.open("../../Member/Common/Popup/agree-cln01","동의창1", "width=540, height=600");
@@ -22,6 +22,4 @@ window.addEventListener("load", function () {
         
     };
     
-
 });
-

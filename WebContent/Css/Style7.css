@@ -69,7 +69,7 @@ header{
 } */
 
 main{
-	min-height: 500px;
+	min-height: 700px;
 	min-width: 700px;
 }
 
@@ -81,6 +81,7 @@ main{
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
+		margin-top:15%;
 	}
 	
 	.icon-box{
@@ -224,7 +225,7 @@ footer{
 }
 
 .label-title{
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: bold;
 }
 
@@ -300,7 +301,7 @@ footer{
 	width : 50px;
 	height: 30px;
 	padding: 0px;
-	background: url("../Images/nhy/pen3.png") no-repeat center;
+	/* background: url("../Images/nhy/pen3.png") no-repeat center; */
 }
 
 .go-button{
@@ -370,9 +371,9 @@ footer{
 
 	
 .content-table{
-	min-height: 400px;
+	min-height: 700x;
 	min-width: 540px;
-	padding : 30px 30px;
+	padding : 20px 30px;
 	margin: 0px;
 	
 }	
@@ -400,7 +401,7 @@ footer{
 	}
 	
 #input-box{
-	margin-left: 8%;
+	margin-left: 20px;
 }
 
 #data-table{

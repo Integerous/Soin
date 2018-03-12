@@ -165,6 +165,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 						rs.getString("CONSTRUCTION_TYPE_ID"),
 						rs.getString("BUILDING_TYPE_ID"),
 						rs.getString("CONSTRUCTION_POSITION_ID"),
+						rs.getString("ATTACHED_FILE"),
 						rs.getInt("COMMENT_COUNT"),
 						rs.getInt("LIKE_COUNT")
 						);
@@ -213,6 +214,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 						rs.getString("CONSTRUCTION_TYPE_ID"),
 						rs.getString("BUILDING_TYPE_ID"),
 						rs.getString("CONSTRUCTION_POSITION_ID"),
+						rs.getString("ATTACHED_FILE"),
 						rs.getInt("COMMENT_COUNT"),
 						rs.getInt("LIKE_COUNT")
 						);
@@ -242,7 +244,6 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 	public int getCount() {
 			String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE ID =?";
 			int count = 0;
-			InteriorTipView interiorTip = null;
 			
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");

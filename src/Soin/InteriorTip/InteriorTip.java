@@ -13,6 +13,7 @@ public class InteriorTip {
 	private String constructionTypeId;
 	private String buildingTypeId;
 	private String constructionPositionId;
+	private String attachedFile;
 	
 	public InteriorTip() {
 		
@@ -20,7 +21,7 @@ public class InteriorTip {
 	
 	public InteriorTip(String id, String title, String content, int hit, Date regdate,
 			 String memberId, String productId, String constructionTypeId, String buildingTypeId,
-			 String constructionPositionId){
+			 String constructionPositionId, String attachedFile){
 		
 		this.id = id;
 		this.title = title;
@@ -32,11 +33,12 @@ public class InteriorTip {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
+		this.attachedFile = attachedFile;
 	}
 	
 // INSERT시 필요없는 항목 삭제
 	public InteriorTip(String title, String content, String memberId, String productId, String constructionTypeId, String buildingTypeId,
-			 String constructionPositionId){
+			 String constructionPositionId, String attachedFile){
 		
 		this.title = title;
 		this.content = content;
@@ -45,6 +47,7 @@ public class InteriorTip {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
+		this.attachedFile = attachedFile;
 	}
 
 	public String getId() {
@@ -125,6 +128,14 @@ public class InteriorTip {
 
 	public void setConstructionPositionId(String constructionPositionId) {
 		this.constructionPositionId = constructionPositionId;
+	}
+
+	public String getAttachedFile() {
+		return attachedFile;
+	}
+
+	public void setAttachedFile(String attachedFile) {
+		this.attachedFile = attachedFile;
 	}
 	
 	

@@ -20,8 +20,13 @@
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
   
-  <!-- 미정 : 소인 소개  -->  
-  <definition name="Introduce.*"  template="/WEB-INF/views/inc/layout?.jsp">
+  <definition name="InteriorTip.*"  template="/WEB-INF/views/inc/layout5.jsp">
+    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+    <put-attribute name="main" value="/WEB-INF/views/InteriorTip/{1}.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+   <!-- 현수(추가) : 소인 소개  -->  
+  <definition name="Introduce.*"  template="/WEB-INF/views/inc/layout1.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/Introduce/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
@@ -75,13 +80,12 @@
     <put-attribute name="main" value="/WEB-INF/views/Review/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
-
- 
+  
   <!-- 현수 : 인덱스  -->  
   <definition name="index"  template="/WEB-INF/views/inc/layout1.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="main" value="/WEB-INF/views/index.jsp" />
-  	<put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
 
 </tiles-definitions>

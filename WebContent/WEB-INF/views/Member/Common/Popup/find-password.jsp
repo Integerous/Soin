@@ -5,15 +5,16 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
-	<title>아이디 찾기</title>
+	<title>비밀번호 찾기</title>
 	<link href="css/Style1p.css" type="text/css" rel="stylesheet"/>
+	<script src="js/close.js" type="text/javascript"></script>
 </head>
 <body class="root-container">
 	<h1 class="hidden">비밀번호 찾기</h1>
 	<div class="find-box">
 		
 		<div class="title-box">
-					비밀번호 찾기
+			비밀번호 찾기
 		</div>		
 				
 		<form method="post">
@@ -45,7 +46,7 @@
 			
 			<div class="box-close">
 				<input type="submit" class ="btn-close" value="찾기"/>
-				<input type="button" class ="btn-close" value="닫기"/>
+				<input id="button-close-popup" type="button" class ="btn-close bl" value="닫기"/>
 			</div>
 			
 		</form>

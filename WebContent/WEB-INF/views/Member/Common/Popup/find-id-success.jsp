@@ -9,39 +9,30 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
 	<title>아이디 찾기</title>
 	<link href="css/Style1p.css" type="text/css" rel="stylesheet"/>
+	<script src="js/close.js" type="text/javascript"></script>
 </head>
 <body class="root-container">
 	<h1 class="hidden">아이디찾기</h1>
 	<div class="find-box">
 		
 		<div class="title-box">
-					아이디찾기
+			아이디찾기
 		</div>		
 				
-			<div class="content-box">
-				
-				<div class="input-box center tc">
-					<img src="../../../Images/phz/find-icon.png" height="13px" width="13px"> 입력하신 회원정보로 찾은 아이디
-				</div>	
-				<div class="result-box center">
-					${id}
-				</div>
-				
+		<div class="content-box">
+			
+			<div class="input-box center tc">
+				<img src="../../../Images/phz/find-icon.png" height="13px" width="13px"> 입력하신 회원정보로 찾은 아이디
+			</div>	
+			<div class="result-box center">
+				${id==null? "조회된 내역이 없습니다." : id}
 			</div>
 			
-			<div class="box-close">
-				<button id="button-close-popup" class ="btn-close">닫기</button>
-			</div>
-			
-			<script>
-				var closePopupButton = document.getElementById("button-close-popup");
-				
-				closePopupButton.onclick = function() {
-					 window.open("about:blank", "_self").close(); 
-					 window.open("about:blank","_parent").parent.close();
-				}
-			</script>
-			
+		</div>
+		
+		<div class="box-close">
+			<button id="button-close-popup" class ="btn-close bl">닫기</button>
+		</div>
 	</div>
 </body>
 </html>

@@ -3,8 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath }"/> 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,19 +69,13 @@
 		<div class="liner"></div>
 		
 	</header>
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 
-<<<<<<< HEAD
-
-<main id="main">
-=======
 	<div id="body">
 		<div class="root-container">
 			<!--------------------------main 시작----------------------------------->
 			<main id="main">
 =======
 <main id="main">
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 
 			<h1>업체 상세 정보</h1>

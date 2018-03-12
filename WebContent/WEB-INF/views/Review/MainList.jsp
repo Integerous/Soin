@@ -88,7 +88,7 @@
 	
 		<div>
 			<h3 class="hidden">후기 작성하러 가기</h3>
-			<a href="Write.html" class="button go-button">후기작성하기</a>
+			<a href="Write" class="button go-button">후기작성하기</a>
 		</div>
 	</div>
 	

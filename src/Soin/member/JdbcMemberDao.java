@@ -183,7 +183,7 @@ public class JdbcMemberDao implements MemberDao
 		
 		return cki;
 	}
-	
+		
 	@Override
 	public Boolean getName(String ckname) 
 	{
@@ -213,7 +213,7 @@ public class JdbcMemberDao implements MemberDao
 			st.close();
 			con.close();			
 		} 
-		
+			
 		catch (ClassNotFoundException e) 
 		{
 			e.printStackTrace();
@@ -225,7 +225,7 @@ public class JdbcMemberDao implements MemberDao
 		
 		return ckn;
 	}
-	
+		
 	@Override
 	public String getId(String email, String phoneNum) {
 		
@@ -251,7 +251,7 @@ public class JdbcMemberDao implements MemberDao
 			st.close();
 			con.close();			
 		} 
-		
+	
 		catch (ClassNotFoundException e) 
 		{
 			e.printStackTrace();
@@ -260,15 +260,15 @@ public class JdbcMemberDao implements MemberDao
 		{
 			e.printStackTrace();
 		}
-		
+	
 		return id;
 	}
-
+	
 	@Override
 	public String getPassword(String id, String phoneNum) 
 	{
 		String sql = "SELECT PASSWORD FROM MEMBER WHERE ID=? AND PHONE_NUMBER=?";
-		
+	
 		String password = null;
 		try
 		{
@@ -301,7 +301,5 @@ public class JdbcMemberDao implements MemberDao
 		
 		return password;
 	}
-
-	
 
 }

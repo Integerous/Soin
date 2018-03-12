@@ -5,9 +5,9 @@
 <script src="Popup/js/find.js" type="text/javascript" ></script>
 <main id="main">
 	<section>
-		<h1>로그인 화면</h1>
+		<h1 class="hidden">로그인 화면</h1>
+		
 		<div class="login-box">
-			<h1 class="hidden">로그인 양식</h1>
 			<div class="top-padding">
 				<img src="${ctx}/Images/phz/logocopy.png" >
 			</div>
@@ -26,12 +26,12 @@
 						<ul>
 							<li>
 								<label class="hidden">아이디</label>
-								<input type="text" class="input" value="" placeholder="아이디를 입력해주세요." maxlength="20">
+								<input type="text" class="input" value="" placeholder="아이디를 입력해주세요." maxlength="20" autofocus />
 							</li>
 							
 							<li>
 								<label class="hidden">비밀번호</label>
-								<input type="password" class="input" value="" placeholder="비밀번호를 입력해주세요." maxlength="20">
+								<input type="password" class="input" value="" placeholder="비밀번호를 입력해주세요." maxlength="20" />
 							</li>
 						</ul>
 							
@@ -41,7 +41,7 @@
 						</span>	
 							
 						<div>
-							<input type="submit" class="btn-login btn-a" href="" value="로그인">
+							<input type="submit" class="btn-login btn-a" value="로그인">
 						</div>		
 					</div>
 				</form>
@@ -52,8 +52,8 @@
 					<li>
 						<p>	
 							<span>아이디나 비밀번호를 잊어버리셨나요?</span>
-							<span><a class="btn-small" style="right: 85px" href="">ID찾기</a></span>
-							<span><a class="btn-small" href="" id="find-pw">PW찾기</a></span>
+							<span><input type="button" class="btn-small" style="right: 85px" id="find-id" value="ID찾기"></span>
+							<span><input type="button" class="btn-small" href="" id="find-pw" value="PW찾기"></span>
 						</p>
 					</li>
 						

@@ -3,9 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath }"/> 
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,15 +76,14 @@
 			<!--------------------------main 시작----------------------------------->
 =======
 >>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
->>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 			<main id="main">
 			<section>
 
-				<label><input type="checkbox" name="category" value="door">문</label> 
-				<label><input type="checkbox" name="category" value="window">창문</label> 
-				<label><input type="checkbox" name="category" value="wall">벽</label> 
-				<label><input type="checkbox" name="category" value="bathroom">욕실</label> 
-				<label><input type="checkbox" name="category" value="the_others">기타</label>
+				<label><input type="checkbox" value="door">문</label> <label><input
+					type="checkbox" value="window">창문</label> <label><input
+					type="checkbox" value="wall">벽</label> <label><input
+					type="checkbox" value="bathroom">욕실</label> <label><input
+					type="checkbox" value="the_others">기타</label>
 			</section>
 
 			<section>
