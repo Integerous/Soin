@@ -41,48 +41,48 @@
 				<h2>내 주변 업체(거리 순 정렬, 벽 필터에 해당 되는 업체)</h2>
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 
@@ -103,48 +103,48 @@
 				<h2>업체 랭킹(펑점 순 정렬, 벽 필터에 해당 되는 업체)</h2>
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-							<li><a href="Detail.html">업체명 : 아델라</a></li>
-							<li><a href="Detail.html">평점/5.0</a></li>
+							<li><a href="Detail?id=">업체명 : 아델라</a></li>
+							<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
@@ -161,48 +161,48 @@
 				<h2>기본 리스트(게시판 형태 4x3,가나다 순 정렬, 벽 필터에 해당 되는 업체)</h2>
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
 
 				<section>
 					<div class="distance">
-						<a href="Detail.html">
+						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail.html">업체명 : 아델라</a></li>
-								<li><a href="Detail.html">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명 : 아델라</a></li>
+								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
 				</section>
