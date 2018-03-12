@@ -13,10 +13,10 @@ public class InteriorTipView extends InteriorTip{
 	
 	public InteriorTipView(String id, String title, String content, int hit, Date regdate,
 			 String memberId, String productId, String constructionTypeId, String buildingTypeId,
-			 String constructionPositionId, int commentCount, int likeCount) {
+			 String constructionPositionId, String attachedFile, int commentCount, int likeCount) {
 		
 		super(id, title, content, hit, regdate, memberId, productId,
-				constructionTypeId, buildingTypeId, constructionPositionId);
+				constructionTypeId, buildingTypeId, constructionPositionId, attachedFile);
 		
 		this.commentCount = commentCount;
 		this.likeCount = likeCount;
