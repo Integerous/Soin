@@ -150,7 +150,12 @@
 				지역명
 				</div>
 				<div class ="con-name2">
+<<<<<<< HEAD
+					<select name ="location"  style="margin-top:0px; width:auto; margin-left:auto;">
+						
+=======
 					<select style="margin-top:0px; width:auto; margin-left:auto;">
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 						<option value="서울시 강남구">서울시 강남구</option>
 						<option value="서울시 강동구">서울시 강동구</option>
 						<option value="서울시 강북구">서울시 강북구</option>
@@ -222,6 +227,39 @@
 		</div>
 		<div class="construction-cont">
 			<form action="" method="post" enctype="multipart/form-data">
+<<<<<<< HEAD
+			<!-- 사진업로드 -->		
+		
+			<input id="photo-file-button" class="hidden" type="file" name="attached1"/>
+			<input id="photo-button" class ="btn" type="button" value="사진선택"/>
+			<img id="photo1" src="" style="width: 50px;height: 50px;border: 1px solid #595959; border-radius:5px;"/>
+			<br>
+			
+			
+			<input id="photo-file-button2" class="hidden" type="file" name="attached2"/>
+			<input id="photo-button2" class ="btn" type="button" value="사진추가"/>
+			<img id="photo2" src="" style="width: 50px;height: 50px;border: 1px solid #595959; border-radius:5px;"/>
+			
+			<br>
+			
+			<tr>
+			
+				<td class="write-line" style="width:680px; height:250px;"><textarea name="detailContent" style="min-height: 200px; vertical-align: middle; width:700px;"></textarea></td>
+			</tr>
+			
+			
+			
+		
+			
+			<!-- <tr>
+				<td class="write-line"><input name="attached" type="file" style="float:left; padding-top:10px;" name="image-upload"/></td>
+			</tr -->
+			
+			
+			
+			<!-- <form action="" method="post" enctype="multipart/form-data">
+=======
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
 			<input type="text" style="width:680px; height:250px;" >
 			<input type="file" style="float:right" name="image-upload">
 			<input type ="submit" >
@@ -282,4 +320,91 @@
 		
 
 </body>
+<<<<<<< HEAD
 </html>
+
+<!-- 여기서 나중에 가져오기 --><script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+   bkLib.onDomLoaded(nicEditors.allTextAreas);
+</script>
+
+
+<script>
+
+	window.addEventListener("load",function(){
+	 
+		var photoFileButton = document.querySelector("#photo-file-button");
+	    var photoButton = document.querySelector("#photo-button");
+	    
+	    var photoFileButton2 = document.querySelector("#photo-file-button2");
+	    var photoButton2 = document.querySelector("#photo-button2");
+	    var photo1 = document.querySelector("#photo1");
+	    var photo2 = document.querySelector("#photo2");
+	    
+	    photoButton.onclick = function(e){
+	        var evt = new MouseEvent("click",{
+	                view:window,
+	                bubbles:true,
+	                cancelable:true
+	        });
+	        photoFileButton.dispatchEvent(evt);
+	    };
+	
+	    photoButton2.onclick = function(e){
+	        var evt = new MouseEvent("click",{
+	                view:window,
+	                bubbles:true,
+	                cancelable:true
+	        });
+	        photoFileButton2.dispatchEvent(evt);
+	    };
+	    
+	    photoFileButton.onchange = function(e){
+	        
+	    	var file = photoFileButton.files[0];
+	    	//var files = photoFileButton.files;
+			
+	        
+	        //var info = "name:"+files[0].name+", size:"+files[0].size+", type:"+files[0].type;
+
+	        var typeParts = file.type.split("/");
+
+	        if(typeParts[0] !="image")
+	            alert("지원되는 이미지 파일의 형식이 아닙니다.");
+	        
+	        var reader = new FileReader();
+	        reader.onload = function(evt){
+	        	photo1.src = evt.target.result;
+	        };
+	        reader.readAsDataURL(file);
+	       
+	       // alert(info);
+
+
+	    };
+	    photoFileButton2.onchange = function(e){
+	        var file = photoFileButton2.files[0];
+			
+	        //var info = "name:"+files[0].name+", size:"+files[0].size+", type:"+files[0].type;
+
+	        var typeParts = file.type.split("/");
+
+	        if(typeParts[0] !="image")
+	            alert("지원되는 이미지 파일의 형식이 아닙니다.");
+	       
+	       // alert(info);
+			var reader = new FileReader();
+			reader.onload = function(evt){
+				photo2.src = evt.target.result;
+			};
+			reader.readAsDataURL(file);
+	    };
+	    
+	    
+	});
+
+</script>
+=======
+</html>
+>>>>>>> branch 'master' of https://github.com/ryan-js/SoinProject.git
