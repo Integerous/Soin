@@ -43,13 +43,13 @@
 		<div class="liner"></div>
 		
 <!-- ------------navigation------------ -->
-		<div id="top-nav">
+		<div id="top-nav">		
 			
 			<nav class="tn-container">
 				<div class="hello">
 					<a href="${ctx}/Introduce/introduce">소인소개</a></div>
 				<div class="hello-contr">
-					<a href="#">업체소개</a></div>
+					<a href="${ctx}/member/constructor/list/list8">업체소개</a></div>
 				<div class="est-request">
 					<a href="#">견적의뢰</a></div>
 				<div class="tip">
