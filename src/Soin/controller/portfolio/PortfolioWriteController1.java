@@ -31,15 +31,16 @@ import Soin.portfolio.PortfolioDao;
 import Soin.portfolio.PortfolioView;
 
 
-@WebServlet("/Member/Constructor/Portfolio/PortfolioWrite")
+@WebServlet("/Member/Constructor/Portfolio/PortfolioWrite1")
 
-@MultipartConfig( 
+@MultipartConfig(
 		fileSizeThreshold=1024*1024,
 		maxFileSize=1024*1024*5,
 		maxRequestSize=1024*1024*5*5//전체 요청 크기 5메가 5개까지.
 )
 
-public class PortfolioWriteController extends HttpServlet{
+
+public class PortfolioWriteController1 extends HttpServlet{
 
 		@Override
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

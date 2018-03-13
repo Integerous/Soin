@@ -20,9 +20,10 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 				"    product_id," + 
 				"    construction_type_id," + 
 				"    building_type_id," + 
-				"    construction_position_id" + 
+				"    construction_position_id," +
+				"    attached_file" + 
 				") VALUES ((SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM INTERIOR_TIP)"
-				+ ",?,?,?,?,?,?,?)";
+				+ ",?,?,?,?,?,?,?,?)";
 		
 		int result = 0;
 		try {
@@ -38,6 +39,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			st.setString(5, interiorTip.getConstructionTypeId());
 			st.setString(6, interiorTip.getBuildingTypeId());
 			st.setString(7, interiorTip.getConstructionPositionId());
+			st.setString(8, interiorTip.getAttachedFile());
 			
 			result = st.executeUpdate();
 			st.close();
@@ -63,7 +65,8 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 				"    product_id =?," + 
 				"    construction_type_id =?," + 
 				"    building_type_id =?," + 
-				"    construction_position_id =? WHERE ID =?";
+				"    construction_position_id =?," +
+				"	  attached_file = ? WHERE ID =?";
 		
 		int result = 0;
 		try {
@@ -78,7 +81,8 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			st.setString(4, interiorTip.getConstructionTypeId());
 			st.setString(5, interiorTip.getBuildingTypeId());
 			st.setString(6, interiorTip.getConstructionPositionId());
-			st.setString(7, interiorTip.getId());
+			st.setString(7, interiorTip.getAttachedFile());
+			st.setString(8, interiorTip.getId());
 			
 			result = st.executeUpdate();
 			st.close();

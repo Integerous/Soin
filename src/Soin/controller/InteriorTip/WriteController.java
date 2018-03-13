@@ -46,6 +46,8 @@ public class WriteController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("UTF-8");
+		
 		InteriorTip interiorTip = new InteriorTip();
 		
 		//파일 관련------------------------------------------------------------------
@@ -57,7 +59,7 @@ public class WriteController extends HttpServlet{
 		if(!file.exists())
 			file.mkdirs();
 		
-		Part part = request.getPart("attached");
+		Part part = request.getPart("file");
 		
 		InputStream is = part.getInputStream();
 		String fname = part.getSubmittedFileName();
@@ -81,9 +83,10 @@ public class WriteController extends HttpServlet{
 		interiorTip.setTitle(request.getParameter("title"));
 		interiorTip.setContent(request.getParameter("content"));
 		interiorTip.setAttachedFile(fname);
+		
 		InteriorTipDao interiorTipDao = new JdbcInteriorTipDao();
 		interiorTipDao.insert(interiorTip);
 		
-		response.sendRedirect("Main01");
+		response.sendRedirect("SelfTip/Main01");
 	}
 }
