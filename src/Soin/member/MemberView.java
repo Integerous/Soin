@@ -26,5 +26,4 @@ public class MemberView
 	{
 		this.client = client;
 	}
-
 }
