@@ -122,77 +122,185 @@
 
 <!-- ------------카테고리 1 선택------------ -->			
 		<section class="request-form">
-				<form action="form-proc.jsp" method="post">
+				<form method="post">
 				<fieldset>
 					<legend>1. 어디에 시공이 필요하신가요?</legend>
 						<div class="options">
 							<div>
-								<input id="window" type="radio" name="construction-position" value="창문" checked>
+								<input id="window" type="radio" name="construction-position" value="window" onclick="javascript:showWindow();" checked>
 								<label for="window">창문</label>
 							</div>
 							<div>
-								<input id="door" type="radio" name="construction-position" value="문">
+								<input id="door" type="radio" name="construction-position" value="door" onclick="javascript:showDoor();">
 								<label for="door">문</label>
 							</div>
 							<div>
-								<input id="bathroom" type="radio" name="construction-position" value="욕실">
+								<input id="bathroom" type="radio" name="construction-position" value="bathroom" onclick="javascript:showBathroom();">
 								<label for="bathroom">욕실</label>
 							</div>
 							<div>
-								<input id="wall" type="radio" name="construction-position" value="벽">
+								<input id="wall" type="radio" name="construction-position" value="wall" onclick="javascript:showWall();">
 								<label for="wall">벽</label>
 							</div>
 						</div>
 				</fieldset>
-	
-<!-- ------------카테고리 2 선택------------ -->		
-				<fieldset>
+
+				<!-- ------------카테고리 2 선택------------ -->		
+				<fieldset id="ifWindow">
 					<legend>2. 상세 카테고리 선택</legend>
-						<div class="options">
-							<div>
-								<input id="high-ss" type="radio" name="category2" value="##" checked>
-								<label for="high-ss">하이샤시</label>
-							</div>
-							<div>
-								<input id="aluminum" type="radio" name="category2" value="##">
-								<label for="aluminum">알루미늄 창</label>
-							</div>
-							<div>
-								<input id="wood" type="radio" name="category2" value="##">
-								<label for="wood">목재 창</label>
-							</div>
-							<div>
-								<input id="etc" type="radio" name="category2" value="##">
-								<label for="etc">기타</label>
-							</div>
+					<div class="options" >
+						<div>
+							<input id="high-ss" type="radio" name="detail-category" value="high-ss" checked>
+							<label for="high-ss">하이샤시</label>
 						</div>
-				</fieldset>
-	
-<!-- ------------실측 사이즈------------ -->					
-				<fieldset>
-					<legend>3. 실측 사이즈</legend>
-					<div class="options">
-						<div class="category-3-a">
-							<div>창문 너비 : 
-								<input type="number" min="1" max="500" value="">cm
-							</div>
-							<div>창문 높이 :
-								<input type="number" min="1" max="500" value="">cm
-							</div>
+						<div>
+							<input id="aluminum" type="radio" name="detail-category" value="aluminum">
+							<label for="aluminum">알루미늄 창</label>
 						</div>
-						<div class="category-3-b">
-							<div>창틀 너비 : 
-								<input type="number" min="1" max="500" value="">cm
-							</div>
-							<div>창틀 높이 :
-								<input type="number" min="1" max="500" value="">cm
-							</div>
+						<div>
+							<input id="wood" type="radio" name="detail-category" value="wood">
+							<label for="wood">목재 창</label>
+						</div>
+						<div>
+							<input id="etc" type="radio" name="detail-category" value="etc">
+							<label for="etc">기타</label>
 						</div>
 					</div>
 				</fieldset>
 
+				<fieldset  id="ifDoor">
+						<legend>2. 상세 카테고리 선택</legend>
+						<div class="options">
+							<div>
+								<input id="high-ss" type="radio" name="detail-category" value="high-ss" checked>
+								<label for="high-ss">문</label>
+							</div>
+							<div>
+								<input id="aluminum" type="radio" name="detail-category" value="aluminum">
+								<label for="aluminum">문</label>
+							</div>
+							<div>
+								<input id="wood" type="radio" name="detail-category" value="wood">
+								<label for="wood">문</label>
+							</div>
+							<div>
+								<input id="etc" type="radio" name="detail-category" value="etc">
+								<label for="etc">문</label>
+							</div>
+						</div>
+					</fieldset>
+				<fieldset  id="ifBathroom">
+						<legend>2. 상세 카테고리 선택</legend>
+						<div class="options">
+							<div>
+								<input id="high-ss" type="radio" name="detail-category" value="high-ss" checked>
+								<label for="high-ss">욕실</label>
+							</div>
+							<div>
+								<input id="aluminum" type="radio" name="detail-category" value="aluminum">
+								<label for="aluminum">욕실</label>
+							</div>
+							<div>
+								<input id="wood" type="radio" name="detail-category" value="wood">
+								<label for="wood">욕실</label>
+							</div>
+							<div>
+								<input id="etc" type="radio" name="detail-category" value="etc">
+								<label for="etc">욕실</label>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset  id="ifWall">
+							<legend>2. 상세 카테고리 선택</legend>
+							<div class="options">
+								<div>
+									<input id="high-ss" type="radio" name="detail-category" value="high-ss" checked>
+									<label for="high-ss">벽</label>
+								</div>
+								<div>
+									<input id="aluminum" type="radio" name="detail-category" value="aluminum">
+									<label for="aluminum">벽</label>
+								</div>
+								<div>
+									<input id="wood" type="radio" name="detail-category" value="wood">
+									<label for="wood">벽</label>
+								</div>
+								<div>
+									<input id="etc" type="radio" name="detail-category" value="etc">
+									<label for="etc">벽</label>
+								</div>
+							</div>
+						</fieldset>
+				
+			<script>
+					function showWindow(){
+						var a = document.getElementById('ifWindow');
+						var b = document.getElementById('ifDoor');
+						var c = document.getElementById('ifBathroom');
+						var d = document.getElementById('ifWall');
+						a.style.display = "block";
+						b.style.display = "none";
+						c.style.display = "none";
+						d.style.display = "none";
+					}
+					function showDoor(){
+						var a = document.getElementById('ifWindow');
+						var b = document.getElementById('ifDoor');
+						var c = document.getElementById('ifBathroom');
+						var d = document.getElementById('ifWall');
+						a.style.display = "none";
+						b.style.display = "block";
+						c.style.display = "none";
+						d.style.display = "none";
+					}
+					function showBathroom(){
+						var a = document.getElementById('ifWindow');
+						var b = document.getElementById('ifDoor');
+						var c = document.getElementById('ifBathroom');
+						var d = document.getElementById('ifWall');
+						a.style.display = "none";
+						b.style.display = "none";
+						c.style.display = "block";
+						d.style.display = "none";
+					}
+					function showWall(){
+						var a = document.getElementById('ifWindow');
+						var b = document.getElementById('ifDoor');
+						var c = document.getElementById('ifBathroom');
+						var d = document.getElementById('ifWall');
+						a.style.display = "none";
+						b.style.display = "none";
+						c.style.display = "none";
+						d.style.display = "block";
+					}
+					
+			</script>
+																							
+<!-- ------------스타일/제품 선택------------ -->
+				<fieldset>
+					<legend>3. 건물 종류 선택</legend>
+					<div class="options">
+						<div>
+								<input id="apt" type="radio" name="building-type" value="apt" checked>
+								<label for="apt">아파트</label>
+							</div>
+							<div>
+								<input id="house" type="radio" name="building-type" value="house">
+								<label for="house">주택</label>
+							</div>
+							<div>
+								<input id="villa" type="radio" name="building-type" value="villa">
+								<label for="villa">빌라</label>
+							</div>
+							<div>
+								<input id="commercial" type="radio" name="building-type" value="commercial">
+								<label for="commercial">상업시설</label>
+							</div>
+					</div>
+				</fieldset>
 
-<!-- ------------button container------------ -->
+
+				<!-- ------------button container------------ -->
 		<div class="btn-container">
 				
 <!-- ------------next button------------ -->							
