@@ -15,10 +15,8 @@ public class AgreeCon03Controller extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-
 		RequestDispatcher dispatcher 
 		= request.getRequestDispatcher("/WEB-INF/views/Member/Common/Popup/agree-con03.jsp");
 		dispatcher.forward(request, response);
 	}
-	
 }

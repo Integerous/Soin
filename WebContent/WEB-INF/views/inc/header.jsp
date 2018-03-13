@@ -10,13 +10,22 @@
 	<header>
 		<div id="top-bar">
 			<div class="tb-container">
-				<div class="login-status" style="display:none;">
-					<a href="#">로그아웃</a></div>
+				
+				<c:if test="${not empty sessionScope.id}">
+				<div class="login-status">
+					<a href="${ctx}/Member/Common/logout">로그아웃</a></div>
+				</c:if>
 					
+				<c:if test="${empty sessionScope.id}">	
 				<div class="logout-status">
 					<a href="${ctx}/Member/Common/login">로그인</a></div>
+				</c:if>
+				
+				<c:if test="${empty sessionScope.id}">	
 				<div class="logout-status">
 					<a href="${ctx}/Member/Common/register">회원가입</a></div>
+				</c:if>
+				
 				<div><a href="#">고객센터</a></div>
 				<div class="notifications"><a href="#" >
 					<img src="${ctx}/Images/ic_notifications_active_black_24px.svg"/></a></div>
@@ -32,7 +41,7 @@
 					<img src="${ctx}/Images/logo_js.png" alt="Soin_Logo" /></a>
 				</div>
 				
-					<a href="#">소인</a>
+					<a href="${ctx}/index">소인</a>
 					
 				<div class="p">
 					- 소규모 인테리어 시공 중개 플랫폼
@@ -43,15 +52,15 @@
 		<div class="liner"></div>
 		
 <!-- ------------navigation------------ -->
-		<div id="top-nav">
+		<div id="top-nav">		
 			
 			<nav class="tn-container">
 				<div class="hello">
-					<a href="#">소인소개</a></div>
+					<a href="${ctx}/Introduce/introduce">소인소개</a></div>
 				<div class="hello-contr">
-					<a href="#">업체소개</a></div>
+					<a href="${ctx}/member/constructor/list/list8">업체소개</a></div>
 				<div class="est-request">
-					<a href="#" style="color:gold">견적의뢰</a></div>
+					<a href="#">견적의뢰</a></div>
 				<div class="tip">
 					<a href="#">인테리어 TIP</a></div>
 				<div class="review">

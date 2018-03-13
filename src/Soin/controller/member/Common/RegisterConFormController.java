@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -37,16 +38,28 @@ public class RegisterConFormController extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
-	     TilesContainer container = TilesAccess.getContainer(applicationContext);
-	     ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-	     container.render("Member.Common.registercon_form", servletRequest);
+		if(request.getSession().getAttribute("id") != null)
+		{	
+			response.setContentType("text/html; charset=UTF-8");
+			response.setCharacterEncoding("UTF-8");
+			PrintWriter out = response.getWriter();
+			
+			out.print("<script>alert('잘못된 접근입니다.'); history.back();</script>");
+		}
+		else
+		{
+			ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
+			TilesContainer container = TilesAccess.getContainer(applicationContext);
+			ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+			container.render("Member.Common.registercon_form", servletRequest);
+		}
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-
+		request.setCharacterEncoding("UTF-8");
+		
 		Member member = new Member();
 		Constructor constructor = new Constructor();
 		
@@ -59,6 +72,10 @@ public class RegisterConFormController extends HttpServlet
 		
 		String path = "/Member/Constructor/Upload/MainImage"+id;
 		String realPath = request.getServletContext().getRealPath(path);
+		
+		File file = new File(realPath);
+		if(!file.exists())
+			file.mkdirs();
 		
 		Part part = request.getPart("mainImage");
 		
@@ -114,9 +131,9 @@ public class RegisterConFormController extends HttpServlet
 		constructorDao.insert(constructor);
 		
 		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
-	     TilesContainer container = TilesAccess.getContainer(applicationContext);
-	     ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-	     container.render("Member.Common.register_finish", servletRequest);
+		TilesContainer container = TilesAccess.getContainer(applicationContext);
+		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+		container.render("Member.Common.register_finish", servletRequest);
 		
 	}
 	

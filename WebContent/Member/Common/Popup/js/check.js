@@ -29,19 +29,24 @@ window.addEventListener("load", function () {
 		
 		var request = new XMLHttpRequest();
 		
-		request.open("GET", "idcheck?id="+id, false);
-		request.send();
+		request.onreadystatechange = function () {
 		
-		if(request.responseText == "true")
-		{
-			alert("이미 사용중인 아이디입니다.");
-		}
-		else
-		{
-			alert("사용가능한 아이디입니다.");
-			dupCheck = true;
-		}
-
+			if(request.readystate == 4)
+			{
+				if(request.responseText == "true")
+				{
+					alert("이미 사용중인 아이디입니다.");
+				}
+				else
+				{
+					alert("사용가능한 아이디입니다.");
+					dupCheck = true;
+				}
+			}
+		};
+		
+		request.open("GET", "idcheck?id="+id, true);
+		request.send();
 	};
 	
 	idInput.onchange = function (){

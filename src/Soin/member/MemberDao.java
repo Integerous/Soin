@@ -2,6 +2,9 @@ package Soin.member;
 
 public interface MemberDao
 {
+	//정보조회
+	MemberView get(String id);
+	
 	//로그인
 	Member get(String inputId, String inputPassword);
 	
