@@ -6,7 +6,7 @@ public class Portfolio {
 
 	private String id;
 	private String location;
-	private String content;
+	private String content; 
 	private String period;
 	private int hit;
 	private int like;

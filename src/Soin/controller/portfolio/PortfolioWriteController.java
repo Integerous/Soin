@@ -33,7 +33,7 @@ import Soin.portfolio.PortfolioView;
 
 @WebServlet("/Member/Constructor/Portfolio/PortfolioWrite")
 
-@MultipartConfig(
+@MultipartConfig( 
 		fileSizeThreshold=1024*1024,
 		maxFileSize=1024*1024*5,
 		maxRequestSize=1024*1024*5*5//전체 요청 크기 5메가 5개까지.

@@ -14,7 +14,7 @@ public class JdbcPortfolioDao implements PortfolioDao {
 
 	@Override
 	public int insert(Portfolio portfolio) {
-		
+		 
 		String sql = "INSERT INTO PORTFOLIO(" + 
 				"    id," + 
 				"    location," + 

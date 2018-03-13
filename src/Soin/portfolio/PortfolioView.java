@@ -8,7 +8,7 @@ public class PortfolioView extends Portfolio {
 	public PortfolioView() {
 		
 	}
-
+ 
 
 	
 	/*public PortfolioView(String id,
