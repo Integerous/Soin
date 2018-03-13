@@ -38,43 +38,43 @@
 				
 				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail01">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail01">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail01">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail01">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
 				</div>
 			</div>
 			
 			<div class = "main-box">
 				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Beanu.jpg" alt="비뉴"></a>
+					<a href = "Detail01"><img class = "images" src = "../../Images/jyh/Beanu.jpg" alt="비뉴"></a>
 				</div>
 				
 				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail01">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail01">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail01">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail01">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
 				</div>
 			</div>
@@ -86,49 +86,49 @@
 				
 				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail01">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail01">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail01">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail01">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
 				</div>
 			</div>
 			
 			<div class = "main-box">
 				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Illi.jpg" alt="일리"></a>
+					<a href = "Detail01"><img class = "images" src = "../../Images/jyh/Illi.jpg" alt="일리"></a>
 				</div>
 				
 				<div class = "text-box text-ellipsis">
 					<div class = "subtitle">
-						<a href="Detail01.html">subtitle</a>
+						<a href="Detail01">subtitle</a>
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01.html">title</a>
+						<a href="Detail01">title</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01.html">surmmary</a>
+						<a href="Detail01">surmmary</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01.html">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail01">리뷰 수 :		/		♥ 좋아요</a>
 					</div>
 				</div>
 			</div>
 			
 			<div class = "reg-btn">
-				<a href="Write.html"><input type="button" value="글쓰기" class = "btn"></a>
+				<a href="../Write"><input type="button" value="글쓰기" class = "btn"></a>
 			</div>
 		</div>
 	</main>

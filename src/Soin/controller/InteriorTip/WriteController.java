@@ -23,7 +23,7 @@ import Soin.InteriorTip.InteriorTip;
 import Soin.InteriorTip.InteriorTipDao;
 import Soin.InteriorTip.JdbcInteriorTipDao;
 
-@WebServlet("/InteriorTip/Reg")
+@WebServlet("/InteriorTip/Write")
 @MultipartConfig(
 		fileSizeThreshold = 1024 * 1024,		//1MB이상일 경우 메모리 사용 (?) ← 이게 무슨 말이야 ?
 		maxFileSize = 1024 * 1024 * 100,	// 100메가
@@ -40,7 +40,7 @@ public class WriteController extends HttpServlet{
 	            .getApplicationContext(request.getSession().getServletContext());
 	      TilesContainer container = TilesAccess.getContainer(applicationContext);
 	      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-	      container.render("InteriorTip.reg", servletRequest);
+	      container.render("InteriorTip.Write", servletRequest);
 	}
 	
 	@Override

@@ -28,7 +28,7 @@
 			</div>
 			
 			<div class = "detail-btn">
-				<input type = "button" value = "목록" onclick = "location.href = 'Main01.html'" class = "btn">
+				<input type = "button" value = "목록" onclick = "location.href = 'Main01.jsp'" class = "btn">
 			</div>
 		</div>
 	</main>

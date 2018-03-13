@@ -49,22 +49,22 @@ select{
 	text-overflow: ellipsis;
 }
 /*--------------------------------header------------------------------*/
-header{
-/* 	height: 130px;
-	position: fixed; */
+/* header{
+	height: 130px;
+	position: fixed;
 	width: 100%;
 }
 
 .top-box{
 	display:flex;
 		flex-direction: column;
-		/* justify-content: center; */
+		justify-content: center;
 		align-items: center;
 	height: 115px;	
-}
+} */
 
 /*--------------------------------member-menu------------------------------*/
-.member-bar{
+/* .member-bar{
 	display: flex;
 	height: 30px;
 	width: 100%;
@@ -96,9 +96,9 @@ header{
 		color: #000000;
 		background: #b0c4de;
 	}
-	
+	 */
 /*--------------------------------main-menu------------------------------*/
-.main-bar{
+/* .main-bar{
 	background: #b0c4de;
 	height: 60px;
 	width: 100%;
@@ -122,7 +122,7 @@ header{
 	
 	.main-menu div:hover{
 		background: #ffcec8;
-	}
+	} */
 /*--------------------------------logo------------------------------*/
 
 .logo-bar{
@@ -181,6 +181,7 @@ header{
 #main > .root-container{
 	padding-top: 70px;
 	padding-bottom: 70px;
+	margin-top: 100px;
 }
 
 .main-text-box{
@@ -584,7 +585,7 @@ header{
 	width: 450px;
 	margin: 0 auto;
 	box-shadow:  3px 3px 3px 3px #e5e5e5;
-	
+	/* padding-top: 100px; */
 }
 
 .tip-label{

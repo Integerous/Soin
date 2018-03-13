@@ -13,19 +13,16 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 
 	@Override
 	public int insert(InteriorTip interiorTip) {
-		String sql = "INSERT INTO interior_tip (" + 
-				"    id," + 
+		String sql = "INSERT INTO interior_tip (" +  
 				"    title," + 
 				"    content," + 
-				"    hit," + 
-				"    regdate," + 
 				"    member_id," + 
 				"    product_id," + 
 				"    construction_type_id," + 
 				"    building_type_id," + 
 				"    construction_position_id" + 
 				") VALUES ((SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM INTERIOR_TIP)"
-				+ ",?,?,?,?,?,?,?,?,?,?)";
+				+ ",?,?,?,?,?,?,?)";
 		
 		int result = 0;
 		try {
@@ -63,7 +60,6 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		
 		String sql = "UPDATE INTERIOR_TIP SET title =?," + 
 				"    content =?," + 
-				"    hit =?," +   
 				"    product_id =?," + 
 				"    construction_type_id =?," + 
 				"    building_type_id =?," + 
@@ -78,12 +74,11 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 
 			st.setString(1, interiorTip.getTitle());
 			st.setString(2, interiorTip.getContent());
-			st.setInt(3, interiorTip.getHit());
-			st.setString(4, interiorTip.getProductId());
-			st.setString(5, interiorTip.getConstructionTypeId());
-			st.setString(6, interiorTip.getBuildingTypeId());
-			st.setString(7, interiorTip.getConstructionPositionId());
-			st.setString(8, interiorTip.getId());
+			st.setString(3, interiorTip.getProductId());
+			st.setString(4, interiorTip.getConstructionTypeId());
+			st.setString(5, interiorTip.getBuildingTypeId());
+			st.setString(6, interiorTip.getConstructionPositionId());
+			st.setString(7, interiorTip.getId());
 			
 			result = st.executeUpdate();
 			st.close();
