@@ -2,10 +2,13 @@ package Soin.Constructor;
 
 public class ConstructorView extends Constructor{
 	
+	private String address;
+	private String role;
 	
 	public ConstructorView() {
-		// TODO Auto-generated constructor stub
+		
 	}
+	
 
 	public ConstructorView(
 			String member_id, 
@@ -13,18 +16,41 @@ public class ConstructorView extends Constructor{
 			String corporateRegistrationNumber, 
 			String ceoName,
 			String mainImage, 
-			String address, 
-			String homepageAddress, 
+			String address,
+			String role,
+			float gpa, 
 			String introduction, 
-			int gpa, 
+			String homepageAddress, 
 			String speciality1,
 			String speciality2,
 			String speciality3, 
 			String speciality4) {
-		super(member_id, name, corporateRegistrationNumber, ceoName, mainImage, address, homepageAddress, introduction, gpa,
+		super(member_id, name, corporateRegistrationNumber, ceoName, mainImage, homepageAddress, introduction, gpa,
 				speciality1, speciality2, speciality3, speciality4);
-		// TODO Auto-generated constructor stub
+
+		this.address = address;
+		this.role = role;
 	}
+
+
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	
 	
 
 }

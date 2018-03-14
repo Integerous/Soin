@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@page import="Soin.Constructor.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath }"/> 
 
-			<!--------------------------main 시작----------------------------------->
 			<main id="main">
 
 
@@ -32,17 +32,17 @@
 				</section>
 
 				<div class="box">
-				<img class="icon" src="../../../Images/phz/write_ico.png" alt="아이콘">
+				<img src="${ctx }/Images/phz/write_ico.png" alt="아이콘"style="height:15px; width:15px;">
 					<div class="box-display">업체 정보</div>
 					<table class="table">
 						<tr>
-							<th>대표명</th>
-							<td>한정수</td>
+							<th>대표자명</th>
+							<td>${constructor.name }</td>
 						</tr>
 
 						<tr>
 							<th>주소</th>
-							<td>경기도 안양시 한정수집</td>
+							<td>${constructor.address }</td>
 						</tr>
 
 						<tr>
@@ -52,10 +52,10 @@
 
 						<tr>
 							<th>홈페이지</th>
-							<td>www.HJS.com</td>
+							<td></td>
 						</tr>
 					</table>
-					<img class="icon" src="../../../Images/phz/write_ico.png" alt="아이콘">
+					<img src="${ctx }/Images/phz/write_ico.png" alt="아이콘"style="height:15px; width:15px;">
 					<div class="box-display">업체 소개</div>
 
 					<div>
@@ -169,7 +169,10 @@
 				</div>
 
 				<div>
-					<input class="btn btn-size btn-margin" type="submit" value="더보기">
+				<a href="${ctx}/Review/MainList">
+					<input class="btn btn-size btn-margin" type="submit" value="더보기"
+					 <%-- onclick = "location.href='${ctx}/Review/MainList'" --%>>
+					 </a>
 				</div>
 			</div>
 
