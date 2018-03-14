@@ -24,6 +24,7 @@ public class Detail01Controller extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String id = request.getParameter("id");
 		InteriorTipDao interiorTipDao = new JdbcInteriorTipDao();
 		InteriorTipView interiorTip = interiorTipDao.get(id);

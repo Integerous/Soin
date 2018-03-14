@@ -136,12 +136,12 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 	@Override
 	public List<InteriorTipView> getList(int page) {
 		
-		int start = 1+(page-1)*15;
-		int end = page*15;
+		int start = 1+(page-1)*4;
+		int end = page*4;
 		
 		/*String sql = "SELECT * FROM INTERIOR_TIP_VIEW ORDER BY REGDATE DESC";*/
 		//String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE NUM BETWEEN ? AND ?";
-		String sql = "SELECT * FROM INTERIOR_TIP_VIEW ORDER BY REGDATE DESC";
+		String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE NUM BETWEEN ? AND ?";
 		
 		List<InteriorTipView> list = new ArrayList<>();
 		
@@ -149,6 +149,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
+			//Statement st = con.createStatement();
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setInt(1, start);
 			st.setInt(2, end);

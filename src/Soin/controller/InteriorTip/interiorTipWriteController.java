@@ -60,6 +60,9 @@ public class interiorTipWriteController extends HttpServlet{
 		if(!file.exists())
 			file.mkdirs();
 		
+		//Part part = null;
+		
+		//if(request.getPart("file").equals("")) {
 		Part part = request.getPart("file");
 		
 		InputStream is = part.getInputStream();
@@ -76,6 +79,8 @@ public class interiorTipWriteController extends HttpServlet{
 		
 		is.close();
 		fos.close();
+		interiorTip.setAttachedFile(fname);
+		//}
 		
 		//파일 관련------------------------------------------------------------------
 		
@@ -83,7 +88,6 @@ public class interiorTipWriteController extends HttpServlet{
 		//interiorTip.setMemberId(request.getParameter("memberId"));
 		interiorTip.setTitle(request.getParameter("title"));
 		interiorTip.setContent(request.getParameter("content"));
-		interiorTip.setAttachedFile(fname);
 		
 		InteriorTipDao interiorTipDao = new JdbcInteriorTipDao();
 		interiorTipDao.insert(interiorTip);
