@@ -21,7 +21,7 @@ import Soin.review.ReviewView;
 
 
 @WebServlet("/Review/Detail")
-public class DetailController extends HttpServlet{
+public class DetailsController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
