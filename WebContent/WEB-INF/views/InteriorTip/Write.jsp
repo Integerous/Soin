@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <main id = "main">
 		<div class = "root-container">
 			<form method="post" enctype="multipart/form-data">
@@ -23,7 +25,7 @@
 				<br/>
 				
 				<div class = "tip-title">
-					제목  <input class = "write-title" type="text" size="30" placeholder="30자 이내로 작성해주세요.">
+					제목  <input name = "title" class = "write-title" type="text" size="30" placeholder="30자 이내로 작성해주세요.">
 				</div>
 				
 				<br/>
@@ -36,10 +38,10 @@
 					
 					<br/>
 					
-					<div class="sub-image" style="height:60px;">
+					<!-- <div class="sub-image" style="height:60px;">
 						추가사진 <input type="file" name = "file" class="tip-image" id="sub-img">
 						<img id="sub-photo" style="width:50px; height: 50px; border: 1px solid #595959; border-radius:25px; box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);"/>
-					</div>
+					</div> -->
 				</div>
 				
 				<br/>
@@ -47,7 +49,7 @@
 				<div>
 					팁 작성
 					<div>
-						<textarea rows="20" cols="60" placeholder="관련된 팁 및 정보에 대한 글을 작성해주세요." name = "tip-write"></textarea>
+						<textarea name="content"  rows="20" cols="60" placeholder="관련된 팁 및 정보에 대한 글을 작성해주세요." name = "tip-write"></textarea>
 					</div>
 				</div>
 				

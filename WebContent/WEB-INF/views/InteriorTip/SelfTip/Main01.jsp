@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+
+
 <main id = "main">
 		<div class = "root-container">
 			<h1>메인 컨텐츠</h1>
@@ -31,9 +35,10 @@
 				</div>
 			</div>
 			
+			<c:forEach var="it" items="${list }">
 			<div class = "main-box">
 				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/Adela.jpg" alt="아델라"></a>
+					<a href = "Detail01"><img class = "images" src = "${it.attachedFile}" ></a>
 				</div>
 				
 				<div class = "text-box text-ellipsis">
@@ -42,18 +47,39 @@
 					</div>
 					
 					<div class = "title">
-						<a href="Detail01">title</a>
+						<a href="Detail01">${it.title }</a>
 					</div>
 					
 					<div class = "surmmary">
-						<a href="Detail01">surmmary</a>
+						<a href="Detail01">${it.content }</a>
 					</div>
 					
 					<div class = "review">
-						<a href="Detail01">리뷰 수 :		/		♥ 좋아요</a>
+						<a href="Detail01">댓글 수 :${it.commentCount }		/		 좋아요: ${it.likeCount }</a>
 					</div>
 				</div>
 			</div>
+			</c:forEach>
+			
+			
+			<div>
+      
+			     <c:if test="${startNum != 1 }">
+			     	<a class="btn btn-prev" href="?p=${startNum-1 }">이전</a>
+			     </c:if>
+			      
+			      <c:if test="${startNum == 1 }">
+			      	<span class="btn btn-prev" onclick="alert('이전 페이지가 없습니다.');">이전</span>
+			      </c:if>
+      
+   			</div>
+   			
+   			<c:forEach var="i" begin="0" end="4">
+               		<c:if test="${startNum+i <= lastPage}">
+               			<li><a href="?p=${startNum+i}&t=&q=" >${startNum+i }</a></li>
+               		</c:if>
+            </c:forEach>
+			
 			
 			<div class = "main-box">
 				<div class = "img-box">
@@ -81,7 +107,7 @@
 			
 			<div class = "main-box">
 				<div class = "img-box">
-					<a href = "Detail01.html"><img class = "images" src = "../../Images/jyh/DesignJ.jpg" alt="디자인제이"></a>
+					<a href = "Detail01"><img class = "images" src = "../../Images/jyh/DesignJ.jpg" alt="디자인제이"></a>
 				</div>
 				
 				<div class = "text-box text-ellipsis">

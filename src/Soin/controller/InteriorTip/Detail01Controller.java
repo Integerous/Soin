@@ -9,6 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tiles.TilesContainer;
+import org.apache.tiles.access.TilesAccess;
+import org.apache.tiles.request.ApplicationContext;
+import org.apache.tiles.request.servlet.ServletRequest;
+import org.apache.tiles.request.servlet.ServletUtil;
+
 import Soin.InteriorTip.InteriorTipDao;
 import Soin.InteriorTip.InteriorTipView;
 import Soin.InteriorTip.JdbcInteriorTipDao;
@@ -24,9 +30,15 @@ public class Detail01Controller extends HttpServlet{
 		
 		request.setAttribute("interiorTip", interiorTip);
 		
-		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/views/Information/SelfTip/Dateil01.jsp");
+		/*RequestDispatcher dispatcher =
+				request.getRequestDispatcher("/WEB-INF/views/InteriorTip/SelfTip/Dateil01.jsp");
 		
-		dispatcher.forward(request, response);
+		dispatcher.forward(request, response)*/;
+		
+		ApplicationContext applicationContext = ServletUtil
+	            .getApplicationContext(request.getSession().getServletContext());
+	      TilesContainer container = TilesAccess.getContainer(applicationContext);
+	      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+	      container.render("InteriorTip.SelfTip.Detail01", servletRequest);
 	}
 }

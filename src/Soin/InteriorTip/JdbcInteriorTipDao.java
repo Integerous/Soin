@@ -14,6 +14,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 	@Override
 	public int insert(InteriorTip interiorTip) {
 		String sql = "INSERT INTO interior_tip (" +  
+				"    id," + 
 				"    title," + 
 				"    content," + 
 				"    member_id," + 
@@ -31,7 +32,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
-
+			
 			st.setString(1, interiorTip.getTitle());
 			st.setString(2, interiorTip.getContent());
 			st.setString(3, interiorTip.getMemberId());
@@ -41,6 +42,9 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			st.setString(7, interiorTip.getConstructionPositionId());
 			st.setString(8, interiorTip.getAttachedFile());
 			
+			
+			
+		
 			result = st.executeUpdate();
 			st.close();
 			con.close();
@@ -136,7 +140,8 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 		int end = page*15;
 		
 		/*String sql = "SELECT * FROM INTERIOR_TIP_VIEW ORDER BY REGDATE DESC";*/
-		String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE NUM BETWEEN ? AND ?";
+		//String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE NUM BETWEEN ? AND ?";
+		String sql = "SELECT * FROM INTERIOR_TIP_VIEW ORDER BY REGDATE DESC";
 		
 		List<InteriorTipView> list = new ArrayList<>();
 		
@@ -199,6 +204,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, id);
 			ResultSet rs = st.executeQuery();
 			
 			if(rs.next()) {
@@ -241,7 +247,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 
 	@Override
 	public int getCount() {
-			String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE ID =?";
+			String sql = "SELECT COUNT(ID) COUNT FROM INTERIOR_TIP_VIEW";
 			int count = 0;
 			
 			try {

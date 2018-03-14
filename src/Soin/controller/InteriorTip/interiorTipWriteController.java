@@ -26,11 +26,11 @@ import Soin.InteriorTip.JdbcInteriorTipDao;
 @WebServlet("/InteriorTip/Write")
 @MultipartConfig(
 		fileSizeThreshold = 1024 * 1024,		//1MB이상일 경우 메모리 사용 (?) ← 이게 무슨 말이야 ?
-		maxFileSize = 1024 * 1024 * 100,	// 100메가
-		maxRequestSize = 1024 * 1024 * 100 * 5 // 100메가 5개까지
+		maxFileSize = 1024 * 1024 * 3,	// 100메가
+		maxRequestSize = 1024 * 1024 * 3 * 5 // 100메가 5개까지
 		)
 
-public class WriteController extends HttpServlet{
+public class interiorTipWriteController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -51,6 +51,7 @@ public class WriteController extends HttpServlet{
 		InteriorTip interiorTip = new InteriorTip();
 		
 		//파일 관련------------------------------------------------------------------
+		
 		String pathUrl = "/soin/upload/InteriorTip";
 		
 		String pathSystem = request.getServletContext().getRealPath(pathUrl);
@@ -70,8 +71,8 @@ public class WriteController extends HttpServlet{
 		
 		int size = 0;
 		
-		while((size = is.read(buf, 0, size)) != -1)
-				fos.write(buf, 0, size);
+		while((size = is.read(buf, 0,1024)) != -1)
+			fos.write(buf, 0, size);
 		
 		is.close();
 		fos.close();
@@ -79,7 +80,7 @@ public class WriteController extends HttpServlet{
 		//파일 관련------------------------------------------------------------------
 		
 		
-		interiorTip.setMemberId(request.getParameter("memberId"));
+		//interiorTip.setMemberId(request.getParameter("memberId"));
 		interiorTip.setTitle(request.getParameter("title"));
 		interiorTip.setContent(request.getParameter("content"));
 		interiorTip.setAttachedFile(fname);
