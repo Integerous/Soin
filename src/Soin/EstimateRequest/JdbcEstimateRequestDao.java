@@ -32,9 +32,11 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 				"    product_id," + 
 				"    construction_id," + 
 				"    building_type_id," + 
-				"    construction_position_id," + 
+				"    construction_position_id," +
+				"    attached_file," +
+				"    detail_category," +
 				"    id," + 
-				") VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+				") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			
 		int result = 0;
 
@@ -60,7 +62,9 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 			st.setString(8, estimateRequest.getConstructionId());
 			st.setString(9, estimateRequest.getBuildingTypeId());
 			st.setString(10, estimateRequest.getConstructionPositionId());
-			st.setString(11, estimateRequest.getId());
+			st.setString(11, estimateRequest.getAttachedFile());
+			st.setString(12, estimateRequest.getDetailCategory());
+			st.setString(13, estimateRequest.getId());
 			
 			
 			result = st.executeUpdate();
@@ -97,8 +101,10 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 				"    REGDATE =?," + 
 				"    PRODUCT_ID =?, " + 
 				"    CONSTRUCTION_ID =?, " + 
-				"    BUILDING_TYPE_ID =?, " + 
-				"    CONSTRUCTION_POSITION_ID=?" + 
+				"    BUILDING_TYPE_ID =?, " +
+				"    CONSTRUCTION_POSITION_ID=?," +
+				"    ATTACHED_FILE =?," +
+				"    DETAIL_CATEGORY =?," +
 				"WHERE ID =?";
 		
 		int result = 0;
@@ -124,7 +130,9 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 			st.setString(8, estimateRequest.getConstructionId());
 			st.setString(9, estimateRequest.getBuildingTypeId());
 			st.setString(10, estimateRequest.getConstructionPositionId());
-			st.setString(11, estimateRequest.getId());
+			st.setString(11, estimateRequest.getAttachedFile());
+			st.setString(12, estimateRequest.getDetailCategory());
+			st.setString(13, estimateRequest.getId());
 			
 			
 			
@@ -192,7 +200,7 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 	
 //////////////////////////////////////////////////////////////////
 	@Override
-	public List<EstimateRequestView> getList() {
+	public List<EstimateRequestView> getList(int page) {
 		
 		String sql = "SELECT * FROM estimateRequestVIEW ORDER BY REG_DATE DESC";
 		
@@ -227,7 +235,9 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 						rs.getString("PRODUCT_ID"),
 						rs.getString("CONSTRUCTION_ID"),
 						rs.getString("BUILDING_TYPE_ID"),
-						rs.getString("CONSTRUCTION_POSITION_ID")
+						rs.getString("CONSTRUCTION_POSITION_ID"),
+						rs.getString("ATTACHED_FILE"),
+						rs.getString("DETAIL_CATEGORY")
 						);
 				
 				list.add(estimateRequest);
@@ -288,7 +298,9 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 							rs.getString("PRODUCT_ID"),
 							rs.getString("CONSTRUCTION_ID"),
 							rs.getString("BUILDING_TYPE_ID"),
-							rs.getString("CONSTRUCTION_POSITION_ID")
+							rs.getString("CONSTRUCTION_POSITION_ID"),
+							rs.getString("ATTACHED_FILE"),
+							rs.getString("DETAIL_CATEGORY")
 						);		
 			}
 		
@@ -311,7 +323,39 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 
 	
 	
-	
+	@Override
+	public int getCount() {
+		String sql = "SELECT COUNT(ID) COUNT FROM ESTIMATEREQUEST";
+		
+		int count = 0;
+		
+		//드라이버 로드
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+			Statement st = con.createStatement();
+			
+			ResultSet rs = st.executeQuery(sql);
+						
+			if(rs.next()){
+				count = rs.getInt("COUNT");
+			}
+			
+			rs.close();
+			st.close();
+			con.close();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
 	
 	
 //////////////////////////////////////////////////////////////////////////////	

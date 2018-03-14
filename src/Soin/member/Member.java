@@ -84,7 +84,14 @@ public class Member
 	{
 		
 	}
-	
+	//로그인용 정보체크
+	public Member(String id, String password, String role) 
+	{
+		this.id = id;
+		this.password = password;
+		this.role = role;
+	}
+
 	//가입
 	public Member(String id, String password, String email, String phoneNum, String address, String detailAddress, String role) 
 	{
@@ -96,6 +103,8 @@ public class Member
 		this.detailAddress = detailAddress;
 		this.role = role;
 	}
+
+
 
 	//정보 갱신
 	public Member(String password, String email, String phoneNum, String address, String detailAddress) 

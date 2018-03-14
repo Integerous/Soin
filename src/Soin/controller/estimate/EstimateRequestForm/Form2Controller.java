@@ -1,6 +1,7 @@
 package Soin.controller.estimate.EstimateRequestForm;
 
 import java.io.IOException;
+import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,19 +21,19 @@ import Soin.EstimateRequest.EstimateRequestDao;
 import Soin.EstimateRequest.EstimateRequestView;
 import Soin.EstimateRequest.JdbcEstimateRequestDao;
 
-@WebServlet("/estimate/EstimateRequestForm/Form1")
+@WebServlet("/estimate/EstimateRequestForm/Form2")
 
-public class FormController extends HttpServlet{
+public class Form2Controller extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = request.getParameter("id");
+	/*	String id = request.getParameter("id");
 
 		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 		EstimateRequestView estimateRequest = estimateRequestDao.get(id);
 		
 		
-		request.setAttribute("estimateRequest", estimateRequest);
+		request.setAttribute("estimateRequest", estimateRequest);*/
 		
 		
 		
@@ -45,7 +46,7 @@ public class FormController extends HttpServlet{
 	            .getApplicationContext(request.getSession().getServletContext());
 	      TilesContainer container = TilesAccess.getContainer(applicationContext);
 	      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-	      container.render("Estimate.EstimateRequestForm.Form1", servletRequest);
+	      container.render("Estimate.EstimateRequestForm.Form2", servletRequest);
 		       
 	}
 	
@@ -53,13 +54,23 @@ public class FormController extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   
 		EstimateRequest estimateRequest = new EstimateRequest();
-		estimateRequest.setConstructionPositionId(request.getParameter("construction-position"));
 
+		estimateRequest.setAttachedFile(request.getParameter("photo-upload"));
+		//estimateRequest.setDesiredDate01(request.getParameter("date-picker"));
+		
+		//DATE로 형변환
+		String datePickerStr = request.getParameter("date-picker");  
+	    Date datePicker = java.sql.Date.valueOf(datePickerStr);
+	       estimateRequest.setDesiredDate01(datePicker);
+		
+		estimateRequest.setEtcRequest(request.getParameter("etc-request"));
+
+		
 		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 		estimateRequestDao.insert(estimateRequest);
 		
 		//견적요청 리스트 페이지 만들고 나서 이거 되살리기!!!!!
-		response.sendRedirect("List.jsp");
+		response.sendRedirect("Form3");
 		
 		
 		
