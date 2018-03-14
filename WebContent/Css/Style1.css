@@ -130,6 +130,24 @@ body
 	border: 1px solid #7B7F80;
 }
 
+.address-box
+{	
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	right: 4px;
+}	
+
+	.address-box select
+	{
+		margin: 0px;
+	}
+	
 .input-short
 {
 	box-sizing: border-box;
@@ -270,6 +288,9 @@ body
 	width: 100px;
 	height: 100px;
 	background-color: #fff;
+	border-top: none;
+	border-left: none;
+	border-right: none;
 	border-bottom: 5px solid #1da1f2;
 	display: flex;
 	align-items: center;
@@ -375,6 +396,11 @@ body
 	text-align: center;
 }	
 
+	.btn-small:hover
+	{
+		cursor	 pointer
+	}
+
 	.btn-login
 	{
 		position: absolute;
@@ -388,6 +414,11 @@ body
 		font-weight: bold;
 		text-align: center;
 		vertical-align: middle;
+	}
+	
+	.btn-login:hover
+	{
+		cursor: pointer;
 	}
 
 .login-bg

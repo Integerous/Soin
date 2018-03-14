@@ -4,6 +4,7 @@
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
 <script src="Popup/js/reg-cln-popup.js" type="text/javascript"></script>
 <script src="Popup/js/check.js" type="text/javascript"></script>
+ <script src="js/address.js" type="text/javascript" ></script>
  
 <main id="main">
 	<section>
@@ -79,7 +80,24 @@
 
 							<!-- <li><label class="label-text">우편번호</label><input class="input-short"  type="text" ><a class="btn-input" href="">주소검색</a><br /></li> -->
 						
-							<li><label class="label-text">주소</label><input class="input"  name="address" type="text" maxlength="30" required /><br /></li>
+							<li><label class="label-text">주소</label>
+									<div class="address-box">
+										<select id="cat01">
+											<option>대분류 선택</option>
+											<option value="01">ㄱ,ㄴ</option>
+											<option value="02">ㄷ,ㅁ,ㅅ</option>
+											<option value="03">ㅅ,ㅇ,ㅈ</option>
+										</select>
+										
+										<select id="cat02" name="address01">
+											<option>중분류 선택</option>
+										</select>
+										
+										<select id="cat03" name="address02">
+											<option>소분류 선택</option>
+										</select>
+									</div>
+							</li>
 							
 							<li><label class="label-text">상세 주소</label><input class="input"  name="detailAddress" type="text" maxlength="30" /><br /></li>
 						</ul>
