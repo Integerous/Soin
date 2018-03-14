@@ -1,11 +1,15 @@
-<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}"/> 
 
 
 
-	<main class="main-box">
+	<main class="main-box" style="margin-top:8%">
 	
 	<h1 class="content-title">┃ 후기쓰기</h1>
+	<form method="post" enctype="multipart/form-data"> <!-- 자기 자신을 mapping할때는 아무것도 적지 않는다. -->
 	
 	<div class="form content-table" style="min-height: 650px">
 		<ul>
@@ -15,11 +19,17 @@
 			</li>
 			<li>
 				<label class="label-title" for="star-button">평점</label> 
-				<input name="gradePoint" type="image" src="../Images/star.png" class="star-button" id="input-box"> 
+							
+				<input type="radio" name="gradePoint" value="1" style="margin-left: 20px">1점
+				<input type="radio" name="gradePoint" value="2">2점
+				<input type="radio" name="gradePoint" value="3" checked="checked">3점
+				<input type="radio" name="gradePoint" value="4">4점
+				<input type="radio" name="gradePoint" value="5">5점
+				<!-- <input name="gradePoint" type="image" src="../Images/star.png" class="star-button" id="input-box"> 
 				<input name="gradePoint" type="image" src="../Images/star.png" class="star-button"> 
 				<input name="gradePoint" type="image" src="../Images/star.png" class="star-button"> 
 				<input name="gradePoint" type="image" src="../Images/star.png" class="star-button"> 
-				<input name="gradePoint" type="image" src="../Images/star.png" class="star-button">
+				<input name="gradePoint" type="image" src="../Images/star.png" class="star-button"> -->
 				<hr>
 			</li>
 			<li>
@@ -54,45 +64,53 @@
 		<ul>
 			<li>
 				<label class="label-title" for="main-photo">메인사진</label> 
-				<input type="file" id="main-picture-button" style="margin-left:33px" required="required">			
+				<input type="file" name="attachedFile" id="main-picture-button" style="margin-left:33px" required="required">			
 			</li>
 			<!--<li>
 				<label class="label-title" for="plus-photo">추가사진</label> 
 				<input type="file" id="plus-picture" style="margin-left:33px">
 			</li> -->
-			<li>
+			<li style="display: flex; align-items: flex-start;">
 				<label class="label-title" for="review">후기작성</label> 
-				<textarea name="content" rows="15" cols="60" id="review-write" placeholder="간략한 시공과정과 시공 하면서 느꼈던 점을 솔직하게 알려주세요 :)" style="margin-left:33px"></textarea>
+				<textarea name="content" rows="17" cols="60" id="review-write" placeholder="간략한 시공과정과 시공 하면서 느꼈던 점을 솔직하게 알려주세요 :)" style="margin-left:33px"></textarea>
 			</li>
 		</ul>
-		<div>
-			<input type="submit" class="hidden"  id="review-write">
-			<a href="" class="write-button">
-				<img alt="후기등록" src="../Images/nhy/pen3.png">
-			</a>
-			 	<!-- <a href="MainList.html" class="button text-button">취소하기</a>
-				<a href="" class="button text-button">등록하기</a> --> 
-		</div>
-	</div>
 	
+			<!-- <input type="submit" class="hidden"  id="review-write"> -->
+			<!-- <a href="" class="write-button">
+				<img alt="후기등록" src="../Images/nhy/pen3.png">
+			</a> -->
+	
+			<input type = "submit" class="button text-button review-button" value = "등록하기"/>
+		
+	</div>
+	</form>
 	</main>
 	
-<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-<script type="text/javascript">
-   bkLib.onDomLoaded(nicEditors.allTextAreas);
-</script>
 
 <script>
-	var mainPictureButton = document.querySelector("#main-picture-button");
+	window.addEventListener("load",function(){
+		var mainPictureButton = document.querySelector("#main-picture-button");
+			
+			mainPictureButton.onchange=function(e){
+				var file = mainPictureButton.files[0];
+				
+			var typeParts = file.type.split("/");
 
-	mainPictureButton.onchange=function(e){
-		var files = mainPictureButton.files;
-		var typeParts = files[0].type.split("/");
+			if(typeParts[0] != "image"){
+				alert("지원하는 이미지 파일 형식이 아닙니다.");
+				return;
+			}
+			/* var reader = new FileReader();
+			
+			reader.onload = function(evt){
+				photo.src = evt.target.result; //메모리상의 이미지를 넣어줄거야
+			};
+				
+			reader.readAsDataURL(file); */
+			};
 
-		if(typeParts[0] != "image"){
-			alert("지원하는 이미지 파일 형식이 아닙니다.");
-			return;
-		};
-	};
+	});
+	
 
 </script>
