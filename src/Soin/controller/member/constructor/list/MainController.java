@@ -40,8 +40,8 @@ public class MainController extends HttpServlet{
 		int count = constructorDao.getCount();
 		
 		if(count > 0) {
-			lastPage = count / 15;
-			if(count % 15 > 0)
+			lastPage = count / 16;
+			if(count % 16 > 0)
 				lastPage++;
 		}
 		
@@ -65,7 +65,7 @@ public class MainController extends HttpServlet{
 		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		container.render("Member.Constructor.List.main", servletRequest);
+		container.render("Member.Constructor.List.Main", servletRequest);
 
 	}
 }

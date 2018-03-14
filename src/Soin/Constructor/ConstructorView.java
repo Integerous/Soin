@@ -2,8 +2,8 @@ package Soin.Constructor;
 
 public class ConstructorView extends Constructor{
 	
-	private String address;
 	private String role;
+	private String address;
 	
 	public ConstructorView() {
 		
@@ -16,20 +16,21 @@ public class ConstructorView extends Constructor{
 			String corporateRegistrationNumber, 
 			String ceoName,
 			String mainImage, 
-			String address,
-			String role,
-			float gpa, 
-			String introduction, 
 			String homepageAddress, 
+			String introduction, 
+			float gpa, 
 			String speciality1,
 			String speciality2,
 			String speciality3, 
-			String speciality4) {
+			String speciality4,
+			String role,
+			String address
+			) {
 		super(member_id, name, corporateRegistrationNumber, ceoName, mainImage, homepageAddress, introduction, gpa,
 				speciality1, speciality2, speciality3, speciality4);
 
-		this.address = address;
 		this.role = role;
+		this.address = address;
 	}
 
 

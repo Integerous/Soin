@@ -91,7 +91,7 @@
 							<img src="${ctx }/Images/jyh/Daum.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="detail?member_id=${constructor.member_id }">${constructor.name }</a></li>
+								<li><a href="detail?member_id=${constructor.member_id }">업체명:${constructor.name }</a></li>
 								<li><a href="detail?member_id=${constructor.member_id }">평점 : ${constructor.gpa}</a></li>
 							</ul>
 					</div>

@@ -17,15 +17,15 @@
 								alt="아델라">
 
 							<form>
-								<label>상호명</label> <input type="text" placeholder="업체명">
+								<label style="font-weight: bold;">상호명</label> <a>${constructor.name }</a>
 							</form>
 							<form>
-								<label class="rank-label">평점</label> <input type="text"
-									placeholder="평점관련">
+								<label class="rank-label" style="font-weight: bold;">평점</label> <a>${constructor.gpa }</a>
+
 							</form>
 
 							<div>
-								해쉬태그<br>#우와 #너무귀찮아<br> #언제 #다하지
+								해쉬태그<br>#우와 #너무<br> #어려워 #뉴뉴...
 							</div>
 						</div>
 					
@@ -37,7 +37,7 @@
 					<table class="table">
 						<tr>
 							<th>대표자명</th>
-							<td>${constructor.name }</td>
+							<td>${constructor.ceoName }</td>
 						</tr>
 
 						<tr>
@@ -52,14 +52,14 @@
 
 						<tr>
 							<th>홈페이지</th>
-							<td></td>
+							<td>${constructor.homepageAddress }</td>
 						</tr>
 					</table>
 					<img src="${ctx }/Images/phz/write_ico.png" alt="아이콘"style="height:15px; width:15px;">
 					<div class="box-display">업체 소개</div>
 
 					<div>
-						<textarea class="textarea-size">정수의 소인 업체 !</textarea>
+						<textarea class="textarea-size">${constructor.introduction}</textarea>
 					</div>
 				</div>
 
@@ -96,7 +96,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Adela.jpg" alt="아델라">
-							<li>지역/컨셉</li>
+							<li>서교동/벽지</li>
 						</div>
 					</div>
 
@@ -104,7 +104,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Beanu.jpg" alt="아델라">
-							<li>지역/컨셉</li>
+							<li>사2동/창문</li>
 						</div>
 					</div>
 
@@ -113,7 +113,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Daum.jpg" alt="아델라">
-							<li>지역/컨셉</li>
+							<li>본오동/문</li>
 						</div>
 					</div>
 
@@ -121,12 +121,16 @@
 			</div>
 			<div class="box">
 
-				<div>
+				<div><a href="${ctx}/estimate/EstimateRequestForm/Form1">
 					<input class="btn btn-size" type="submit" value="견적요청">
+					</a>
 				</div>
 
 				<div>
-					<input class="btn btn-size btn-margin" type="submit" value="더보기">
+				<a href="${ctx}/member/constructor/portfolio/portfolioList">
+					<input class="btn btn-size btn-margin" type="submit" value="더보기"
+					 <%-- onclick = "location.href='${ctx}/Review/MainList'" --%>>
+					 </a>
 				</div>
 			</div>
 			<hr />
@@ -139,7 +143,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Adela.jpg" alt="아델라">
-							<li>지역/컨셉</li>
+							<li>서교동/벽지</li>
 						</div>
 					</div>
 
@@ -147,7 +151,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Beanu.jpg" alt="아델라">
-							<li>지역/컨셉</li>
+							<li>사2동/창문</li>
 						</div>
 					</div>
 
@@ -156,7 +160,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Daum.jpg" alt="아델라">
-							<li>지역/컨셉</li>
+							<li>본오동/문</li>
 						</div>
 					</div>
 
@@ -164,8 +168,9 @@
 			</div>
 			<div class="box">
 
-				<div>
+				<div><a href="${ctx}/estimate/EstimateRequestForm/Form1">
 					<input class="btn btn-size" type="submit" value="견적요청">
+					</a>
 				</div>
 
 				<div>

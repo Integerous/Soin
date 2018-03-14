@@ -48,8 +48,8 @@
 							<img src="../../../Images/jyh/Adela.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail?id=">업체명 : 아델라</a></li>
-								<li><a href="Detail?id=">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명:아델라</a></li>
+								<li><a href="Detail?id=">평점 : 5.0</a></li>
 						</ul>
 
 					</div>
@@ -61,8 +61,8 @@
 							<img src="../../../Images/jyh/Beanu.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail?id=">업체명 : 아델라</a></li>
-								<li><a href="Detail?id=">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명:아델라</a></li>
+								<li><a href="Detail?id=">평점 : 5.0</a></li>
 							</ul>
 						
 					</div>
@@ -74,8 +74,8 @@
 							<img src="../../../Images/jyh/Daum.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail?id=">업체명 : 아델라</a></li>
-								<li><a href="Detail?id=">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명:아델라</a></li>
+								<li><a href="Detail?id=">평점 : 5.0</a></li>
 							</ul>
 						
 					</div>
@@ -87,14 +87,14 @@
 							<img src="../../../Images/jyh/DesignJ.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail?id=">업체명 : 아델라</a></li>
-								<li><a href="Detail?id=">평점/5.0</a></li>
+								<li><a href="Detail?id=">업체명:아델라</a></li>
+								<li><a href="Detail?id=">평점 : 5.0</a></li>
 							</ul>
 					</div>
 
 				</section>
 				<div>
-					<a href="list1.html" class="button button-more">더보기</a>
+					<a href="${ctx }/member/constructor/list/near" class="button button-more">더보기</a>
 				</div>
 
 			</section>
@@ -108,18 +108,20 @@
 			<section>
 				<h2>업체 랭킹(평점 순 정렬)</h2>
 				<section>
+					<c:forEach var="constructor" items="${list1}" begin="0" end="3">
 					<div class="distance">
-						<a href="Detail?id=">
-							<img src="../../../Images/jyh/Illi.jpg" alt="아델라">
+						<a href="detail?member_id=${constructor.member_id }"> 
+							<img src="${ctx }/Images/540x360_20170424122432782_wbxxMRuMIB.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail?id=">업체명 : 아델라</a></li>
-								<li><a href="Detail?id=">평점/5.0</a></li>
-						</ul>
+								<li><a href="detail?member_id=${constructor.member_id }">업체명:${constructor.name }</a></li>
+								<li><a href="detail?member_id=${constructor.member_id }">평점 : ${constructor.gpa}</a></li>
+							</ul>
 					</div>
+				</c:forEach>
 				</section>
 
-				<section>
+				<!-- <section>
 					<div class="distance">
 						<a href="Detail?id=">
 							<img src="../../../Images/jyh/LSDesign.jpg" alt="아델라">
@@ -153,9 +155,9 @@
 								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
-				</section>
+				</section> -->
 				<div>
-					<a href="list4.html" class="button button-more">더보기</a>
+					<a href="${ctx }/member/constructor/list/gpa" class="button button-more">더보기</a>
 				</div>
 			</section>
 
@@ -166,18 +168,20 @@
 			<section>
 				<h2>기본 리스트</h2>
 				<section>
+					<c:forEach var="constructor" items="${list}" begin="0" end="3">
 					<div class="distance">
-						<a href="Detail?id=">
-							<img src="../../../Images/soin-logo.png" alt="아델라">
+						<a href="detail?member_id=${constructor.member_id }"> 
+							<img src="${ctx }/Images/jyh/Daum.jpg" alt="아델라">
 						</a>
 							<ul>
-								<li><a href="Detail?id=">업체명 : 아델라</a></li>
-								<li><a href="Detail?id=">평점/5.0</a></li>
+								<li><a href="detail?member_id=${constructor.member_id }">업체명:${constructor.name }</a></li>
+								<li><a href="detail?member_id=${constructor.member_id }">평점 : ${constructor.gpa}</a></li>
 							</ul>
 					</div>
+				</c:forEach>
 				</section>
 
-				<section>
+<!-- 				<section>
 					<div class="distance">
 						<a href="Detail?id=">
 							<img src="../../../Images/soin-logo.png" alt="아델라">
@@ -212,20 +216,40 @@
 								<li><a href="Detail?id=">평점/5.0</a></li>
 							</ul>
 					</div>
-				</section>
+				</section> -->
 				<div>
-					<a href="list8.html" class="button button-more">더보기</a>
+					<a href="${ctx }/member/constructor/list/default" class="button button-more">더보기</a>
 				</div>
 			</section>
 
-			<div class="pagination">
-			    <a href="#">«</a>
-				<a href="#">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>	
-				<a href="#">»</a>
+			 <div class="pagination">
+		<c:if test="${startNum != 1 }">
+			<a class="btn btn-prev" href="?page=${startNum-1 }" >«</a>
+		</c:if>
+		
+		<c:if test="${startNum == 1}">
+			<a class="btn btn-prev" onclick="alert('이전 페이지가 없습니다.');">«</a>
+		</c:if>
+	
+				<c:forEach var="i" begin="0" end="4">
+        
+        	<c:if test="${startNum+i<=lastPage }">
+        	
+      
+         	 <a class="btn btn-next" href="?page=${startNum+i }">${startNum+i }</a>
+      
+        
+     		</c:if>
+     		
+		</c:forEach>
+		
+			<c:if test="${startNum+5 <=lastPage}">
+				<a class="btn btn-next" href="?page=${startNum+5 }">»</a>
+			</c:if>
+			
+			<c:if test="${ startNum+5 >lastPage}">
+				<a class="btn btn-next" onclick="alert('다음 페이지가 없습니다.');">»</a>
+			</c:if>
 				
 			</div>
 
