@@ -46,8 +46,8 @@
 						</tr>
 
 						<tr>
-							<th>연락처</th>
-							<td>010-1234-5678</td>
+							<th>전문</th>
+							<td>${constructor.speciality1 }</td>
 						</tr>
 
 						<tr>
@@ -96,7 +96,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Adela.jpg" alt="아델라">
-							<li>서교동/벽지</li>
+							<li>마포구/벽지</li>
 						</div>
 					</div>
 
@@ -104,7 +104,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Beanu.jpg" alt="아델라">
-							<li>사2동/창문</li>
+							<li>강서구/창문</li>
 						</div>
 					</div>
 
@@ -113,7 +113,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Daum.jpg" alt="아델라">
-							<li>본오동/문</li>
+							<li>강남구/문</li>
 						</div>
 					</div>
 
@@ -143,7 +143,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Adela.jpg" alt="아델라">
-							<li>서교동/벽지</li>
+							<li>마포구/벽지</li>
 						</div>
 					</div>
 
@@ -151,7 +151,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Beanu.jpg" alt="아델라">
-							<li>사2동/창문</li>
+							<li>강서구/창문</li>
 						</div>
 					</div>
 
@@ -160,7 +160,7 @@
 					<div class="distance">
 						<div>
 							<img src="../../../Images/jyh/Daum.jpg" alt="아델라">
-							<li>본오동/문</li>
+							<li>강남구/문</li>
 						</div>
 					</div>
 

@@ -18,13 +18,53 @@
 				<h1 class="hidden">업체 검색 폼</h1>
 
 				<select class="area-list area-list-height">
-					<option value="마포구">마포구</option>
-					<option value="강남구">강남구</option>
-					<option value="강서구" selected="selected">강서구</option>
-				</select> <select class="area-list">
-					<option value="서교동">서교동</option>
-					<option value="삼성동">삼성동</option>
-					<option value="등촌동	" selected="selected">등촌동</option>
+					<option value="마포구" selected="selected">마포구</option>
+						<option value="관악구">관악구</option>
+						<option value="광진구">광진구</option>
+						<option value="구로구">구로구</option>
+						<option value="금천구">금천구</option>
+						<option value="노원구">노원구</option>
+						<option value="도봉구">도봉구</option>
+						<option value="동대문구">동대문구</option>
+						<option value="동작구">동작구</option>
+						<option value="서대문구">서대문구</option>
+						<option value="강남구">강남구</option>
+						<option value="서초구">서초구</option>
+						<option value="성동구">성동구</option>
+						<option value="성북구">성북구</option>
+						<option value="양천구">양천구</option>
+						<option value="영등포구">영등포구</option>
+						<option value="용산구">용산구</option>
+						<option value="은평구">은평구</option>
+						<option value="종로구">종로구</option>
+						<option value="중구">중구</option>
+						<option value="중랑구">중랑구</option>
+				</select> 
+				
+				<select class="area-list">
+					<option value="서교동" selected="selected">서교동</option>
+						<option value="강일동">강일동</option>
+						<option value="수유동">수유동</option>
+						<option value="발산동">발산동</option>
+						<option value="남현동">남현동</option>
+						<option value="화양동">화양동</option>
+						<option value="구로동">구로동</option>
+						<option value="가산동">가산동</option>
+						<option value="상계동">상계동</option>
+						<option value="도봉동">도봉동</option>
+						<option value="장안동">장안동</option>
+						<option value="상도동">상도동</option>
+						<option value="망원동">망원동</option>
+						<option value="신촌동">신촌동</option>
+						<option value="서초동">서초동</option>
+						<option value="행당동">행당동</option>
+						<option value="석촌동">석촌동</option>
+						<option value="문래동">문래동</option>
+						<option value="한남동">한남동</option>
+						<option value="신사동">신사동</option>
+						<option value="삼청동">삼청동</option>
+						<option value="명동">명동</option>
+						<option value="상봉동">상봉동</option>
 				</select>
 			</section>
 
@@ -222,7 +262,7 @@
 				</div>
 			</section>
 
-			 <div class="pagination">
+	<%-- 		 <div class="pagination">
 		<c:if test="${startNum != 1 }">
 			<a class="btn btn-prev" href="?page=${startNum-1 }" >«</a>
 		</c:if>
@@ -251,7 +291,7 @@
 				<a class="btn btn-next" onclick="alert('다음 페이지가 없습니다.');">»</a>
 			</c:if>
 				
-			</div>
+			</div> --%>
 
 			</main>
 
