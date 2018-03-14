@@ -175,6 +175,10 @@ body
 	font-weight: bold;
 }
 
+	.btn-input:hover
+	{
+		cursor: pointer;
+	}
 
 .msg-subject
 {
@@ -248,7 +252,7 @@ body
 
 .category
 {
-	padding-top: 350px;
+	padding-top: 450px;
 }
 
 .question
@@ -363,14 +367,10 @@ body
 	color: #fff;
 	text-align: center;
 }
-
- .btn-default.btnhuge
- {
- 	display: inline-box;
- 	height: 100px;
- 	width: 100px;
- }
-
+	.btn-default:hover
+	{
+		cursor: pointer;
+	}
 
 
 .btn-small
@@ -386,7 +386,7 @@ body
 
 	.btn-small:hover
 	{
-		cursor	 pointer
+		cursor: pointer;
 	}
 
 	.btn-login
@@ -652,6 +652,11 @@ body
 	position: absolute;
 	right: 0px;
 }	
+	.btn-agree:hover
+	{
+		cursor: pointer;
+	}
+
 
 .btn-huge
 {	

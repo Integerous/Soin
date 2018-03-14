@@ -11,29 +11,28 @@
 		<h1 class="hidden">견적 신청 카테고리 선택</h1>
 		
 		<div class="category">
-			<form action="interiortip">
+			<form action="estimate/EstimateRequestForm/Form1">
 				<div class="question center">
 					<span>무엇을 바꾸고 싶으신가요?</span>
 				</div>
 				
 				<div id="category01" class="content center mt20">	
-					<a href="Estimate/EstimateRequestForm/Form1?construction-position=창문" class="btn btn-window c1">
+					<button name="check" class="btn btn-window c1" value="창문">
 						<img src="${ctx }/Images/phz/window.png" alt="창문"><span class="win hidden">창문</span>
-					</a>
-					
-					<a href="Estimate/EstimateRequestForm/Form1?construction-position=문" class="btn btn-door c1">
+					</button>
+
+					<button name="check" class="btn btn-door c1" value="문">
 						<img src="${ctx }/Images/phz/door.png" alt="문"><span class="door hidden">문</span>
-					</a>
+					</button>
 					
-					<a href="Estimate/EstimateRequestForm/Form1?construction-position=욕실" class="btn btn-bath c1">	
+					<button name="check" class="btn btn-bath c1" value="욕실">	
 						<img src="${ctx }/Images/phz/bath.png" alt="욕실"><span class="bath hidden">욕실</span>
-					</a>
+					</button>
 					
-					<a href="Estimate/EstimateRequestForm/Form1?construction-position=벽" class="btn btn-wallpaper c1">
+					<button name="check" class="btn btn-wallpaper c1" value="벽">
 						<img src="${ctx }/Images/phz/wallpaper.png" alt="벽"><span class="wallpaper hidden">벽</span>
-					</a>
+					</button>
 				</div>
-				
 				<!-- <div id="category02" style="display:none;" class="content center mt20">	
 					<button type="button" value="private" class="btn c2">
 						<span>아파트/주택</span>
@@ -80,10 +79,6 @@
 					</div>
 				</div>  -->
 				
-				<div class="center mt20">
-					<input type="submit"  class="btn-default btn-huge" value="신청" />
-				</div>
-				
 		<!--	<input id="01" type="hidden" name="" >
 	 			<input id="02" type="hidden" name="c2" >
 				<input id="03" type="hidden" name="c3" >
@@ -114,17 +109,7 @@
 		/* var question = document.querySelector(".question span") */
 		
 		//함수정의역========================================
-		for(var i=0;i< cat01Btn.length; i++)
-		{	
-			cat01Btn[i].onclick = 	function () {
 
-				location.href="../Estimate/EstimateRequestForm/Form1?construction-position="+cat01Btn[i].value;
-			}	
-		 }
-		
-			
-			
-			
 	/* for(var i=0;i< cat01Btn.length; i++)
 		{	
 			cat01Btn[i].onclick = openCat02;

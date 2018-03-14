@@ -24,7 +24,7 @@
 					
 						<li><div class="center bold">아이디</div></li>
 						<li>
-							<div class="center"><input class="length" name="id" type="text" pattern="^[a-zA-Z0-9]{5,10}$" maxlength="10" placeholder="아이디를 입력해주십시오" required /></div>
+							<div class="center"><input class="length" name="id" type="text" pattern="^[a-zA-Z0-9]{5,15}$" maxlength="15" placeholder="아이디를 입력해주십시오" required /></div>
 						</li>
 						<li><div class="center bold">연락처</div></li>
 						<li>

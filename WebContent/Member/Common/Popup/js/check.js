@@ -5,12 +5,16 @@ window.addEventListener("load", function () {
 	var pwInput = document.querySelector("input[name='password']");
 	var pwCheckInput = document.getElementById("pw-check");
 	var pwCheckMessage = document.getElementById("pw-check-message");
+	var cat02 = document.getElementById("cat02");
+	var cat03 = document.getElementById("cat03");
+
 	var submitBtn = document.getElementById("submit-button");
 
-	var regPattern = /^[a-zA-Z0-9]{5,10}$/;
+	var regPattern = /^[a-zA-Z0-9]{5,15}$/;
 	
 	var dupCheck = false;
 	var diffCheck = false;
+	var cat03Check = false;
 
 	idCkBtn.onclick = function() {
 		
@@ -30,8 +34,9 @@ window.addEventListener("load", function () {
 		var request = new XMLHttpRequest();
 		
 		request.onreadystatechange = function () {
+
 		
-			if(request.readystate == 4)
+			if(request.readyState == 4)
 			{
 				if(request.responseText == "true")
 				{
@@ -80,6 +85,15 @@ window.addEventListener("load", function () {
 
 	}
 
+	cat03.onchange = function () {
+		
+		if(cat03.value != "null")
+			cat03Check = true;
+		else
+			cat03Check = false;
+	};
+	
+	
 	submitBtn.onclick = function (e){
 
 		if(dupCheck == false)
@@ -103,6 +117,14 @@ window.addEventListener("load", function () {
 			alert("비밀번호를 확인해주십시오.");
 			pwCheckInput.focus();
 		}
+		else if(cat03Check == false)
+		{
+			e.preventDefault();
+			
+			alert("주소를 자세히 선택해주십시오.");
+		}	
+			
+		
 		
 	};
 
