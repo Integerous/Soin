@@ -5,7 +5,7 @@ public class Client
 	private String memberId;
 	private int picked;
 	private String nickName;
-	private int selectCheck; //선택약관동의여부
+	private String selectCheck; //선택약관동의여부
 	
 	public String getMemberId()
 	{
@@ -37,12 +37,12 @@ public class Client
 		this.nickName = nickName;
 	}
 
-	public int getSelectCheck() 
+	public String getSelectCheck() 
 	{
 		return selectCheck;
 	}
 
-	public void setSelectCheck(int selectCheck)
+	public void setSelectCheck(String selectCheck)
 	{
 		this.selectCheck = selectCheck;
 	}
@@ -53,14 +53,14 @@ public class Client
 	}
 	
 	//수정
-	public Client(String nickName, int selectCheck)
+	public Client(String nickName, String selectCheck)
 	{
 		this.nickName = nickName;
 		this.selectCheck = selectCheck;
 	}
 	
 	//가입
-	public Client(String memberId, String nickName, int picked, int selectCheck) 
+	public Client(String memberId, String nickName, int picked, String selectCheck) 
 	{
 		this.memberId = memberId;
 		this.nickName = nickName;

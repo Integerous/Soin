@@ -33,7 +33,7 @@
 					<fieldset>
 					<legend class= "hidden">정보입력폼</legend>
 						<ul>
-							<li><label class="label-text">아이디</label><input name="id" class="input-short"  type="text" pattern="^[a-zA-Z0-9]{5,10}$" maxlength="10" placeholder="영문, 숫자 5-10자리 이내" required /><input type="button" class="btn-input ml20" id="id-check" value="중복체크"><br /></li>
+							<li><label class="label-text">아이디</label><input name="id" class="input-short"  type="text" pattern="^[a-zA-Z0-9]{5,15$" maxlength="15" placeholder="영문, 숫자 5-15자리 이내" required /><input type="button" class="btn-input ml20" id="id-check" value="중복체크"><br /></li>
 							
 							<li><label class="label-text">비밀번호</label><input name="password" class="input"  type="password" pattern="^[a-zA-Z0-9!@#$%^&*()\-_+=]{8,15}$" maxlength="15" placeholder="대소문자, 숫자, 특수문자 8-15자리 이내 "  required /><br /></li>
 							

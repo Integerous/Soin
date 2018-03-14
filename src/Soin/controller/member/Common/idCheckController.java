@@ -13,7 +13,7 @@ import Soin.member.JdbcMemberDao;
 import Soin.member.MemberDao;
 
 @WebServlet("/Member/Common/idcheck")
-public class CheckIdController extends HttpServlet 
+public class idCheckController extends HttpServlet 
 {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 

@@ -3,8 +3,6 @@ window.addEventListener("load", function () {
     var cat01 = document.getElementById("cat01");
     var cat02 = document.getElementById("cat02");
     var cat03 = document.getElementById("cat03");
-   
-    var option01 = cat01.querySelectorAll("option");
 
     cat01.onchange = function(evt1) {
     	
@@ -18,6 +16,7 @@ window.addEventListener("load", function () {
     		
     		 var opt03t = document.createElement("option");
              opt03t.textContent = "소분류 선택";
+             opt03t.value="null";
              cat03.appendChild(opt03t);
     	}
     	
@@ -72,6 +71,7 @@ window.addEventListener("load", function () {
         		
         		 var opt03t = document.createElement("option");
                  opt03t.textContent = "소분류 선택";
+                 opt03t.value="null";
                  cat03.appendChild(opt03t);
         	}
         	

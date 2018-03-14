@@ -62,39 +62,42 @@ public class RegisterConFormController extends HttpServlet
 		
 		Member member = new Member();
 		Constructor constructor = new Constructor();
+		Part part = null;
 		
 		String id = request.getParameter("id");
 		String phoneNum;
 		String corporateRegistrationNumber;
 		phoneNum = request.getParameter("tel01")+"-"+request.getParameter("tel02")+"-"+request.getParameter("tel03");
 		
+		String imgName = "main.png";
 		
-		
-		String path = "/Member/Constructor/Upload/MainImage"+id;
-		String realPath = request.getServletContext().getRealPath(path);
-		
-		File file = new File(realPath);
-		if(!file.exists())
-			file.mkdirs();
-		
-		Part part = request.getPart("mainImage");
-		
-		String imgName = part.getSubmittedFileName();
-		InputStream is = part.getInputStream();
-		
-		byte[] buf = new byte[1024];
-		int size = 0;
-		
-		FileOutputStream fos = new FileOutputStream(realPath+File.separator+imgName);
-		
-		while((size = is.read(buf, 0, 1024)) != -1)
+		if(request.getPart("mainImage").getSize()!=0)
 		{
-			fos.write(buf, 0, size);
-		}
-		
-		is.close();
-		fos.close();
-		
+			part = request.getPart("mainImage");
+			
+			String path = "/Member/Constructor/Upload/MainImage/"+id;
+			String realPath = request.getServletContext().getRealPath(path);
+			
+			File file = new File(realPath);
+			if(!file.exists())
+				file.mkdirs();
+			
+			imgName = part.getSubmittedFileName();
+			InputStream is = part.getInputStream();
+			
+			byte[] buf = new byte[1024];
+			int size = 0;
+			
+			FileOutputStream fos = new FileOutputStream(realPath+File.separator+imgName);
+			
+			while((size = is.read(buf, 0, 1024)) != -1)
+			{
+				fos.write(buf, 0, size);
+			}
+			
+			is.close();
+			fos.close();
+		}	
 		member.setId(id);
 		member.setPassword(request.getParameter("password"));
 		member.setEmail(request.getParameter("email"));
