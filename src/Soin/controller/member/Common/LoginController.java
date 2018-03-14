@@ -32,7 +32,7 @@ public class LoginController extends HttpServlet
 			response.setCharacterEncoding("UTF-8");
 			PrintWriter out = response.getWriter();
 			
-			out.print("<script>alert('이미 로그인 하셨습니다.'); history.back();</script>");
+			out.print("<script>history.back(); alert('이미 로그인 하셨습니다.');</script>");
 		}
 		
 		else
@@ -59,11 +59,11 @@ public class LoginController extends HttpServlet
 		
 		if(member == null)
 		{
-			out.print("<script>alert('아이디 또는 비밀번호가 정확하지 않습니다.'); location.href='login';</script>");
+			out.print("<script>location.href='login'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>");
 		}
-		else if(member.getPassword().equals(inputPassword))
+		else if(!inputPassword.equals(member.getPassword()))
 		{
-			out.print("<script>alert('아이디 또는 비밀번호가 정확하지 않습니다.'); location.href='login';</script>");
+			out.print("<script>location.href='login'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>");
 		}
 		else
 		{
