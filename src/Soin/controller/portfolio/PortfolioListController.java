@@ -10,8 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.tiles.TilesContainer;
+import org.apache.tiles.access.TilesAccess;
+import org.apache.tiles.request.ApplicationContext;
+import org.apache.tiles.request.servlet.ServletRequest;
+import org.apache.tiles.request.servlet.ServletUtil;
 
+import Soin.Constructor.ConstructorDao;
+import Soin.Constructor.JdbcConstructorDao;
 import Soin.portfolio.JdbcPortfolioDao;
+import Soin.portfolio.Portfolio;
 import Soin.portfolio.PortfolioDao;
 import Soin.portfolio.PortfolioView;
 
@@ -30,11 +38,12 @@ public class PortfolioListController extends HttpServlet{
 			page = Integer.parseInt(page_);
 		
 		
+		//PortfolioDao portfolioDao = new JdbcPortfolioDao();
 		
-		PortfolioDao portfolioDao = new JdbcPortfolioDao();
+		
 		/*List<PortfolioView> list = portfolioDao.getList();*/
 		
-		int count = portfolioDao.getCount();
+		/*int count = portfolioDao.getCount();
 		
 		
 		if(count>0) {
@@ -46,27 +55,38 @@ public class PortfolioListController extends HttpServlet{
 		
 		int off =(page-1)%5;//밑에식을 써먹으려고만든거.
 		int startNum = page - off;
-		
-		List<PortfolioView> list = portfolioDao.getList(page);
-		
-		request.setAttribute("list", list);
-		request.setAttribute("count", count);
-		request.setAttribute("lastPage", lastPage);
-		request.setAttribute("startNum", startNum);
-		
-		
-		 /*ApplicationContext applicationContext = ServletUtil
-		            .getApplicationContext(request.getSession().getServletContext());
-		      TilesContainer container = TilesAccess.getContainer(applicationContext);
-		      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		      container.render("student.community.answeris.list", servletRequest);*/
+		*/
+		//List<PortfolioView> list = portfolioDao.getList(page);
 		
 		
 		
-		RequestDispatcher dispatcher
-			= request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/Portfolio/PortfolioList.jsp");
+		PortfolioDao portfolioDao = new JdbcPortfolioDao();
+		List<Portfolio> list2 = portfolioDao.getList2();
 		
-		dispatcher.forward(request, response);
+		//ConstructorDao constructorDao = new JdbcConstructor();
+		
+		String title = portfolioDao.getTitle();
+		String category = portfolioDao.getCategory();
+		
+		
+		request.setAttribute("list2", list2);
+		//request.setAttribute("list", list);
+		//request.setAttribute("count", count);
+		//request.setAttribute("lastPage", lastPage);
+		//request.setAttribute("startNum", startNum);
+		
+		//request.setAttribute("title", title);
+		//request.setAttribute("category", category);
+	
+		
+		
+		request.getContextPath();
+		ApplicationContext applicationContext = ServletUtil
+				.getApplicationContext(request.getSession().getServletContext());
+		TilesContainer container = TilesAccess.getContainer(applicationContext);
+		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+		container.render("Member.Constructor.Portfolio.PortfolioList", servletRequest);
+		
 	}
 	
 	

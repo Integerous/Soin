@@ -46,7 +46,7 @@ public class PortfolioWriteController extends HttpServlet{
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
 			//String id= request.getParameter("id");//아이디가 꼭 있어야함.
-
+//여기서 id값 넘어 오는지 찍어봐 id 요고 system.out같은 걸로ㅇㅋ
 			//PortfolioDao portfolioDao = new JdbcPortfolioDao();
 			//PortfolioView portfolio = portfolioDao.get(id);
 			
@@ -75,7 +75,11 @@ public class PortfolioWriteController extends HttpServlet{
 		
 		@Override
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+			
+
+			
+			request.setCharacterEncoding("utf-8");
+			
 			//regController.jsp보고 하기.
 			String pathUrl ="/portfolio/upload";//물리적인 경로
 			String pathSystem = request.getServletContext().getRealPath(pathUrl);
@@ -88,8 +92,6 @@ public class PortfolioWriteController extends HttpServlet{
 				
 			Portfolio portfolio = new Portfolio();
 			Constructor constructor = new Constructor();
-			
-			
 			
 			
 			Part part = request.getPart("attached1");
@@ -107,23 +109,37 @@ public class PortfolioWriteController extends HttpServlet{
 			is.close();
 			fos.close();
 			
+			//임의값
+			portfolio.setProductId("dd");
+			portfolio.setConstructionPositionId("room");
+			portfolio.setBuildingTypeId("ddddd");
+			portfolio.setConstructionTypeId("window");
 			
-			portfolio.setTitle(request.getParameter("portflio-title"));//포트폴리오제목
-			//portfolio.(request.getParameter(""));//카테고리
-			constructor.setName(request.getParameter("constructorName"));//업체명
+			
+			//portfolio.setMemberId((String)request.getSession().getAttribute("id"));
+			portfolio.setMemberId("test");
+			
+			
+			
+			portfolio.setTitle(request.getParameter("portfolio-title"));//포트폴리오제목
+			portfolio.setCategory(request.getParameter("category"));//카테고리
+			//portfolio.set(request.getParameter("constructorName"));//업체명
 			portfolio.setLocation(request.getParameter("location"));//지역명
 			portfolio.setPeriod(request.getParameter("constructionPeriod"));//공사기간
-			//portfolio.set(request.getParameter("constructionSort"));//시공종류
-			portfolio.setTitle(request.getParameter("title"));//사진선택
-			portfolio.setTitle(request.getParameter("title"));//내용
+			//portfolio.set(request.getParameter("constructionSort"));//시공종류->나중에하기.
+			//portfolio.setAttachedFile(request.getParameter("attached1"));//사진선택
+			portfolio.setAttachedFile(fname);//사진선택
+			
+			portfolio.setContent(request.getParameter("detailContent"));//내용
 			
 			
 			PortfolioDao portfolioDao = new JdbcPortfolioDao();
 			portfolioDao.insert(portfolio);
-			ConstructorDao constructorDao = new JdbcConstructorDao();
-			constructorDao.insert(constructor);
-			
-			//response.sendRedirect("PortfolioMain");//작성하면 포폴메인페이지로 이동함.
+/*			ConstructorDao constructorDao = new JdbcConstructorDao();
+			constructorDao.get(constructor);
+*/			
+			//여기 부분 바로 리다이렉트 되니까 내가 주석처리 해놈
+			response.sendRedirect("PortfolioMain");//작성하면 포폴메인으로 이동함.
 		}
 		
 		
