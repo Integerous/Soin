@@ -5,20 +5,19 @@ import java.util.Date;
 public class ReviewView extends Review{
 	private int commentCount;
 	private int likeCount;
-	private String attachedFile;
+
 	
 	public ReviewView() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public ReviewView(String id, String title, Date regdate, int hit, int gradePoint, String content,
+	public ReviewView(String id, String title, Date regdate, int hit, String gradePoint, String content,
 			String memberId, String productId, String constructionTypeId, String buildingTypeId,
-			String constructionPositionId, int commentCount, int likeCount, String attachedFile) {
+			String constructionPositionId, String attachedFile, int commentCount, int likeCount) {
 		super(id, title, regdate, hit, gradePoint, content, memberId, 
-				productId, constructionTypeId, buildingTypeId, constructionPositionId);
+				productId, constructionTypeId, buildingTypeId, constructionPositionId, attachedFile);
 		this.commentCount = commentCount;
 		this.likeCount = likeCount;	
-		this.attachedFile = attachedFile;
 	}
 
 	public int getCommentCount() {
@@ -37,13 +36,6 @@ public class ReviewView extends Review{
 		this.likeCount = likeCount;
 	}
 
-	public String getAttachedFile() {
-		return attachedFile;
-	}
-
-	public void setAttachedFile(String attachedFile) {
-		this.attachedFile = attachedFile;
-	}
 
 
 		

@@ -56,11 +56,11 @@ body{
 	width: inherit;	
 }
 
-header{
+/* header{
 	height: 135px;
 	margin: 0px;
 	
-}
+} */
 
 /* nav{
 	height: 40px;
@@ -81,7 +81,6 @@ main{
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		margin-top:15%;
 	}
 	
 	.icon-box{
@@ -122,14 +121,20 @@ main{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content:center;
+		padding-left: 30px;
 	}
 	
 		.content-box .box{
 			display: flex;
 			flex-direction: column;
 			margin-right:25px;
+			margin-bottom:10px;
 			width: 230px;
 			height: 300px;
+		}
+		
+		.content-box .box>p{
+			margin-bottom: 0px;
 		}
 	
 	.page-box{
@@ -154,11 +159,11 @@ main{
 	}
 		
 
-footer{
+/* footer{
 	height: 150px;
 	background: #eef1f5;
 	text-align: center;
-}
+} */
 
 
 /* 메뉴 */
@@ -188,12 +193,13 @@ footer{
 }
 
 
+
 /* 로고 */
 
-.logo{
+/* .logo{
 	display:tabel;
 	margin-left: 45%;	
-}
+} */
 
 	.logo>img{
 		display: tabel-cell;
@@ -219,9 +225,15 @@ footer{
 }
 
 .label{
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: bold;
 	color: #6495ED;
+}
+
+.label2{
+	font-size : 13px;
+	font-weight: bold;
+	color:#2980B9  ;
 }
 
 .label-title{
@@ -269,7 +281,7 @@ footer{
 }
 
 .text-button{
-	height : 20px;
+	min-height : 40px;
 	min-width : 50px;
 	float: right;
 	margin-left: 20px;
@@ -287,12 +299,25 @@ footer{
 
 .list-button{
 	width : 100px;
+	 height : 20px;
 	margin-top: 30px;
 }
 
+.list-button2{
+	border: 0px;
+	background:url("../Images/nhy/checklist.png") no-repeat center;
+}
+
+	.list-button2:hover{
+	border: 3px solid #66E854 ;
+	background:url("../Images/nhy/checklist.png") no-repeat center;
+	}
+	
 .review-button{
-	background:url("../Images/plus.png") no-repeat center;
-	float: right;
+	height : 70px;
+	width:200px;
+	border: 0px;
+	background:url("../Images/nhy/pencil.png") no-repeat right;
 }
 
 .write-button{
@@ -307,7 +332,8 @@ footer{
 .go-button{
 	width: 120px;
 	height:30px;
-	margin-left : 610px;
+	margin-left : 590px;
+	margin-top : 20px;
 	background: url("../Images/nhy/memphis.png");
 	border-radius: 0px;
 	font-size: 16px;
@@ -323,7 +349,10 @@ footer{
 }
 
 .form2{
-	border: 1px solid #A9A9A9;
+	border-bottom: 1px solid ;
+	border-top: 1px solid #A9A9A9;
+	
+	width: 600px;
 }
 
 	
@@ -346,7 +375,6 @@ footer{
 		background:#f5f5f5 ;
 	}
 	
-	.tab
 	
 	.table .width-md{
 		width: 100px;
@@ -371,7 +399,7 @@ footer{
 
 	
 .content-table{
-	min-height: 700x;
+	min-height: 700px;
 	min-width: 540px;
 	padding : 20px 30px;
 	margin: 0px;
@@ -421,5 +449,13 @@ footer{
 .flex2{
 	display: flex;
 	align-content: flex-start;
+}
+
+/* 페이지 번호 */
+.pagination {
+	font-size : 15px;
+    display: inline-block;
+    margin-left:5%;
+    margin-top: 12%;
 }
 

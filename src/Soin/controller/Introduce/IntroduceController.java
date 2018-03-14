@@ -1,6 +1,7 @@
 package Soin.controller.Introduce;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,10 +22,28 @@ public class IntroduceController extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
+		/*ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		container.render("Introduce.introduce", servletRequest);
+		container.render("Introduce.introduce", servletRequest);*/
+		
+		
+		if(request.getSession().getAttribute("id") == null)
+		{
+			/*response.setContentType("text/html; charset=UTF-8");
+			response.setCharacterEncoding("UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>location.href='../Member/Common/login?returnUrl=../../Introduce/introduce'; alert('로그인이 필요한 서비스입니다.');</script>");*/
+			response.sendRedirect("../Member/Common/login?returnUrl=../../Introduce/introduce");
+		}
+		else
+		{
+			ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
+			TilesContainer container = TilesAccess.getContainer(applicationContext);
+			ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+			container.render("Introduce.introduce", servletRequest);
+		}
+		
 	}
 	
 	

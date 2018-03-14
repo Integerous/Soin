@@ -39,12 +39,12 @@ public class Main01Controller extends HttpServlet{
 		int count = interiorTipDao.getCount();
 		
 		if(count > 0) {
-			lastPage = count/15;
-			if(lastPage % 15 > 0)
+			lastPage = count/4;
+			if(lastPage % 4 > 0)
 				lastPage++;
 		}
 		
-		int off = (page - 1) % 5;
+		int off = (page - 1) % 4;
 		int startNum = page - off;
 		
 		List<InteriorTipView> list = interiorTipDao.getList(page);

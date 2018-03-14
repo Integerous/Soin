@@ -22,10 +22,12 @@ public class EstimateRequestView extends EstimateRequest {
 			String productId, 
 			String constructionId,
 			String buildingTypeId, 
-			String constructionPositionId) {
+			String constructionPositionId,
+			String attachedFile,
+			String detailCategory) {
 		
 		super(id, title, address, desiredDate01, desiredDate02, etcRequest, regDate, memberId, productId, constructionId,
-				buildingTypeId, constructionPositionId);
+				buildingTypeId, constructionPositionId, attachedFile, detailCategory);
 	
 	}
 	

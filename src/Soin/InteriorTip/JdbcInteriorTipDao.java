@@ -14,15 +14,17 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 	@Override
 	public int insert(InteriorTip interiorTip) {
 		String sql = "INSERT INTO interior_tip (" +  
+				"    id," + 
 				"    title," + 
 				"    content," + 
 				"    member_id," + 
 				"    product_id," + 
 				"    construction_type_id," + 
 				"    building_type_id," + 
-				"    construction_position_id" + 
+				"    construction_position_id," +
+				"    attached_file" + 
 				") VALUES ((SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM INTERIOR_TIP)"
-				+ ",?,?,?,?,?,?,?)";
+				+ ",?,?,?,?,?,?,?,?)";
 		
 		int result = 0;
 		try {
@@ -30,7 +32,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
-
+			
 			st.setString(1, interiorTip.getTitle());
 			st.setString(2, interiorTip.getContent());
 			st.setString(3, interiorTip.getMemberId());
@@ -38,7 +40,11 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			st.setString(5, interiorTip.getConstructionTypeId());
 			st.setString(6, interiorTip.getBuildingTypeId());
 			st.setString(7, interiorTip.getConstructionPositionId());
+			st.setString(8, interiorTip.getAttachedFile());
 			
+			
+			
+		
 			result = st.executeUpdate();
 			st.close();
 			con.close();
@@ -63,7 +69,8 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 				"    product_id =?," + 
 				"    construction_type_id =?," + 
 				"    building_type_id =?," + 
-				"    construction_position_id =? WHERE ID =?";
+				"    construction_position_id =?," +
+				"	  attached_file = ? WHERE ID =?";
 		
 		int result = 0;
 		try {
@@ -78,7 +85,8 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			st.setString(4, interiorTip.getConstructionTypeId());
 			st.setString(5, interiorTip.getBuildingTypeId());
 			st.setString(6, interiorTip.getConstructionPositionId());
-			st.setString(7, interiorTip.getId());
+			st.setString(7, interiorTip.getAttachedFile());
+			st.setString(8, interiorTip.getId());
 			
 			result = st.executeUpdate();
 			st.close();
@@ -128,10 +136,11 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 	@Override
 	public List<InteriorTipView> getList(int page) {
 		
-		int start = 1+(page-1)*15;
-		int end = page*15;
+		int start = 1+(page-1)*4;
+		int end = page*4;
 		
 		/*String sql = "SELECT * FROM INTERIOR_TIP_VIEW ORDER BY REGDATE DESC";*/
+		//String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE NUM BETWEEN ? AND ?";
 		String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE NUM BETWEEN ? AND ?";
 		
 		List<InteriorTipView> list = new ArrayList<>();
@@ -140,6 +149,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
+			//Statement st = con.createStatement();
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setInt(1, start);
 			st.setInt(2, end);
@@ -195,6 +205,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
 			Connection con = DriverManager.getConnection(url, "c##soin","soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, id);
 			ResultSet rs = st.executeQuery();
 			
 			if(rs.next()) {
@@ -237,7 +248,7 @@ public class JdbcInteriorTipDao implements InteriorTipDao{
 
 	@Override
 	public int getCount() {
-			String sql = "SELECT * FROM INTERIOR_TIP_VIEW WHERE ID =?";
+			String sql = "SELECT COUNT(ID) COUNT FROM INTERIOR_TIP_VIEW";
 			int count = 0;
 			
 			try {

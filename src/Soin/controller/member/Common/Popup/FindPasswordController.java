@@ -20,9 +20,20 @@ public class FindPasswordController extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		RequestDispatcher dispatcher 
-		= request.getRequestDispatcher("/WEB-INF/views/Member/Common/Popup/find-password.jsp");
-		dispatcher.forward(request, response);
+		if(request.getSession().getAttribute("id") != null)
+		{	
+			response.setContentType("text/html; charset=UTF-8");
+			response.setCharacterEncoding("UTF-8");
+			PrintWriter out = response.getWriter();
+			
+			out.print("<script>alert('잘못된 접근입니다.'); history.back();</script>");
+		}
+		else
+		{
+			RequestDispatcher dispatcher 
+			= request.getRequestDispatcher("/WEB-INF/views/Member/Common/Popup/find-password.jsp");
+			dispatcher.forward(request, response);
+		}
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 

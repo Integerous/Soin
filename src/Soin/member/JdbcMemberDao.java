@@ -6,13 +6,104 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import Soin.client.Client;
+
 public class JdbcMemberDao implements MemberDao
 {
+	@Override
+	public MemberView get(String id) 
+	{
+		String sql ="SELECT ID, NICKNAME, EMAIL, PHONE_NUMBER, ADDRESS, DETAIL_ADDRESS FROM CLIENT_MEMBER_VIEW WHERE ID=?";
+		
+		MemberView memberView = new MemberView();
+		
+		try
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, id);
+			ResultSet rs = st.executeQuery();
+		
+			if(rs.next())
+			{
+				Member member = new Member();
+				Client client = new Client();
+				
+				member.setId(rs.getString("ID"));
+				member.setEmail(rs.getString("EMAIL"));
+				member.setPhoneNum(rs.getString("PHONE_NUMBER"));
+				member.setAddress(rs.getString("ADDRESS"));
+				member.setDetailAddress(rs.getString("DETAIL_ADDRESS"));
+				
+				client.setNickName(rs.getString("NICKNAME"));
+				
+				memberView.setClient(client);
+				memberView.setMember(member);
+				
+			}
+			
+			rs.close();
+			st.close();
+			con.close();			
+		} 
+		
+		catch (ClassNotFoundException e) 
+		{
+		e.printStackTrace();
+		} 
+		catch (SQLException e)
+		{
+		e.printStackTrace();
+		}
+
+		return memberView;
+	}
 
 	@Override
-	public Member get(String inputId, String inputPassword) {
-		// TODO Auto-generated method stub
-		return null;
+	public Member get(String inputId, String inputPassword) 
+	{
+		String sql ="SELECT ID, PASSWORD, ROLE FROM MEMBER WHERE ID=?";
+		
+		Member member = null;
+		
+		try
+		{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, inputId);
+			ResultSet rs = st.executeQuery();
+		
+			if(rs.next())
+			{
+				 member = new Member(rs.getString("ID"), 
+						 								rs.getString("PASSWORD"),
+														rs.getString("ROLE"));	
+
+			}
+			
+			rs.close();
+			st.close();
+			con.close();			
+		} 
+		
+		catch (ClassNotFoundException e) 
+		{
+		e.printStackTrace();
+		} 
+		catch (SQLException e)
+		{
+		e.printStackTrace();
+		}
+
+		return member;
 	}
 
 	@Override
@@ -336,5 +427,6 @@ public class JdbcMemberDao implements MemberDao
 		
 		return result;
 	}
+
 
 }

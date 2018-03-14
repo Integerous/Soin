@@ -29,6 +29,7 @@ a{
 	
 }
 
+
 input{
 	display: inline-block;
 }
@@ -197,7 +198,7 @@ section{
 		border:3px solid #333333;
 		font-size: 15px;
 		width: 320px;
-		height: 200px;
+		height: 150px;
 		/* border-spacing: 0px; */
 }
 
@@ -216,6 +217,7 @@ section{
 	margin-top: 25px;
 	margin-bottom: 30px;
 }
+
 .box-display{
 	display:inline-block;
 }
@@ -250,8 +252,4 @@ section{
     background-color: #83aafc;
     color: white;
     border: 1px solid #83aafc;
-}
-.icon{
-	height:15px;
-	width:15px;
 }

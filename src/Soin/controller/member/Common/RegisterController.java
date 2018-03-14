@@ -1,6 +1,7 @@
 package Soin.controller.member.Common;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,10 +21,22 @@ public class RegisterController extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
-	     TilesContainer container = TilesAccess.getContainer(applicationContext);
-	     ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-	     container.render("Member.Common.register", servletRequest);
+		if(request.getSession().getAttribute("id") != null)
+		{	
+			response.setContentType("text/html; charset=UTF-8");
+			response.setCharacterEncoding("UTF-8");
+			PrintWriter out = response.getWriter();
+			
+			out.print("<script>alert('잘못된 접근입니다.'); history.back();</script>");
+		}
+		
+		else
+		{
+			ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
+			TilesContainer container = TilesAccess.getContainer(applicationContext);
+			ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+			container.render("Member.Common.register", servletRequest);
+		}
 	}
 
 }

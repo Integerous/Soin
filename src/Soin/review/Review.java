@@ -7,21 +7,22 @@ public class Review {
 	private String title;
 	private Date regdate;
 	private int hit;
-	private int gradePoint;
+	private String gradePoint;
 	private String content;
 	private String memberId;
 	private String productId;
 	private String constructionTypeId;
 	private String buildingTypeId;
 	private String constructionPositionId;
+	private String attachedFile;
 
 	
 	public Review() {
 		
 	}
 
-	public Review(String id, String title, Date regdate, int hit, int gradePoint, String content, String memberId,
-			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId) {
+	public Review(String id, String title, Date regdate, int hit, String gradePoint, String content, String memberId,
+			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId, String attachedFile) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -34,12 +35,13 @@ public class Review {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
-;
+		this.attachedFile = attachedFile;
+
 	}
 	
 	// insert시에 필요없는 항목을 제외
-	public Review(String title, int gradePoint, String content, String memberId, String productId,
-			String constructionTypeId, String buildingTypeId, String constructionPositionId) {
+	public Review(String title, String gradePoint, String content, String memberId, String productId,
+			String constructionTypeId, String buildingTypeId, String constructionPositionId, String attachedFile) {
 		
 		this.title = title;
 		this.gradePoint = gradePoint;
@@ -49,6 +51,8 @@ public class Review {
 		this.constructionTypeId = constructionTypeId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
+		this.attachedFile = attachedFile;
+		
 	}
 
 	public String getId() {
@@ -83,11 +87,12 @@ public class Review {
 		this.hit = hit;
 	}
 
-	public int getGradePoint() {
+
+	public String getGradePoint() {
 		return gradePoint;
 	}
 
-	public void setGradePoint(int gradePoint) {
+	public void setGradePoint(String gradePoint) {
 		this.gradePoint = gradePoint;
 	}
 
@@ -138,6 +143,15 @@ public class Review {
 	public void setConstructionPositionId(String constructionPositionId) {
 		this.constructionPositionId = constructionPositionId;
 	}
+
+	public String getAttachedFile() {
+		return attachedFile;
+	}
+
+	public void setAttachedFile(String attachedFile) {
+		this.attachedFile = attachedFile;
+	}
+
 
 	
 	

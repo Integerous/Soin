@@ -126,7 +126,7 @@
 										</div>
 										<div>
 											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											실측 사이즈:
+											희망 시공일:
 										</div>
 										<div>
 											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
