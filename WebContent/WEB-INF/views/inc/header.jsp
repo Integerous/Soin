@@ -29,7 +29,7 @@
 				<div><a href="#">고객센터</a></div>
 				<div class="notifications"><a href="#" >
 					<img src="${ctx}/Images/ic_notifications_active_black_24px.svg"/></a></div>
-				<div><a href="#">마이페이지</a></div>
+				<div><a href="${ctx}/MyPage/Client/MyProfile/MyProfile.jsp ">마이페이지</a></div>
 			</div>
 		</div>
 	
@@ -58,7 +58,7 @@
 				<div class="hello">
 					<a href="${ctx}/Introduce/introduce">소인소개</a></div>
 				<div class="hello-contr">
-					<a href="${ctx}/member/constructor/list/list8">업체소개</a></div>
+					<a href="${ctx}/member/constructor/list/main">업체소개</a></div>
 				<div class="est-request">
 					<a href="#">견적의뢰</a></div>
 				<div class="tip">

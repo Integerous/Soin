@@ -169,6 +169,10 @@ ul li
 	border: none;
 	font-weight: bold;
 }
+	.btn-close:hover
+	{
+		cursor: pointer;
+	}
 
 .bl
 {

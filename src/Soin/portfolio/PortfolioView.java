@@ -30,16 +30,16 @@ public class PortfolioView extends Portfolio {
 
 	public PortfolioView(String id, String location, String content, String period, int hit, int like, String memberId,
 			String productId, String constructionTypeId, String buildingTypeId, String constructionPositionId,
-			String title) {
+			String title, String attachedFile, String category) {
 		super(id, location, content, period, hit, like, memberId, productId, constructionTypeId, buildingTypeId,
-				constructionPositionId, title);
+				constructionPositionId, title, attachedFile, category);
 		// TODO Auto-generated constructor stub
 	}
 
 
 
 
-
+/*
 
 	public int getReviewCount() {
 		return reviewCount;
@@ -51,7 +51,7 @@ public class PortfolioView extends Portfolio {
 	}
 
 
-
+*/
 	
 
 	

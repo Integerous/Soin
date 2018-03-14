@@ -1,6 +1,7 @@
 package Soin.controller.member.constructor.list;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,24 +20,52 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-
-@WebServlet("/member/constructor/list/detail")
-public class DetailController extends HttpServlet{
+@WebServlet("/member/constructor/list/main")
+public class MainController extends HttpServlet{
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String member_id = request.getParameter("member_id");
+		
+		// 기본페이지 값은 1
+		int page = 1;
+		int lastPage = 1;
+
+		// 요청한 page 값이 있을 경우 기본값을 대치함.
+		String page_ = request.getParameter("page");
+		if(page_ != null && !page_.equals(""))
+			page = Integer.parseInt(page_);
 		
 		ConstructorDao constructorDao = new JdbcConstructorDao();
-		ConstructorView constructor = constructorDao.get(member_id);
 		
-		request.setAttribute("constructor", constructor);
+		int count = constructorDao.getCount();
 		
-		/*RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/detail.jsp");
+		if(count > 0) {
+			lastPage = count / 15;
+			if(count % 15 > 0)
+				lastPage++;
+		}
+		
+		int off = (page-1) % 5;
+		int startNum = page - off;	
+		
+		
+		List<ConstructorView> list = constructorDao.getList(page);
+		List<ConstructorView> list1 = constructorDao.getList1(page);
+		
+		request.setAttribute("list", list);
+		request.setAttribute("list1", list1);
+		request.setAttribute("count", count);
+		request.setAttribute("lastPage", lastPage);
+		request.setAttribute("startNum", startNum);
+		
+		/*RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/list8.jsp");
 		dispatcher.forward(request, response);*/
 		
+		//tiles 3.x 버전
 		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		container.render("Member.Constructor.List.detail", servletRequest);
+		container.render("Member.Constructor.List.main", servletRequest);
+
 	}
 }

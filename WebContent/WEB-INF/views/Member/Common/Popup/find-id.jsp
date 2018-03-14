@@ -24,7 +24,7 @@
 					
 						<li><div class="center bold">이메일</div></li>
 						<li>
-							<div class="center"><input class="length" name="email" type="text" placeholder="가입시 입력한 E-mail을 입력하세요" required /></div>
+							<div class="center"><input class="length" name="email" type="text" pattern="^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$" maxlength="30" placeholder="가입시 입력한 E-mail을 입력하세요" required /></div>
 						</li>
 						<li><div class="center bold">연락처</div></li>
 						<li>
@@ -37,7 +37,8 @@
 									<option value="016">018</option>
 									<option value="019">019</option>
 								</select>
-								<input name="tel02" class="length-sh"  type="text" required /><input name="tel03" class="length-sh"  type="text" required />
+								<input name="tel02" class="length-sh"  type="text" pattern ="\d{3,4}" maxlength="4"  placeholder="숫자 3-4자리" required />
+								<input name="tel03" class="length-sh"  type="text" pattern ="\d{4}" maxlength="4" placeholder="숫자 4자리" required />
 							</div>
 						</li>
 					</ul>			

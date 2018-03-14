@@ -3,7 +3,6 @@ package Soin.controller.member.Common;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,9 +21,6 @@ import Soin.client.JdbcClientDao;
 import Soin.member.JdbcMemberDao;
 import Soin.member.Member;
 import Soin.member.MemberDao;
-import Soin.memberRole.JdbcMemberRoleDao;
-import Soin.memberRole.MemberRole;
-import Soin.memberRole.MemberRoleDao;
 
 @WebServlet("/Member/Common/registercln_form")
 public class RegisterClnFormController extends HttpServlet
@@ -75,7 +71,7 @@ public class RegisterClnFormController extends HttpServlet
 		
 		client.setMemberId(id);
 		client.setNickName(request.getParameter("nickName"));
-		client.setSelectCheck(Integer.parseInt(request.getParameter("selectCheck")));
+		client.setSelectCheck(request.getParameter("selectCheck"));
 		
 		ClientDao clientDao = new JdbcClientDao();
 		clientDao.insert(client);

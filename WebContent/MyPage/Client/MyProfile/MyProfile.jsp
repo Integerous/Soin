@@ -1,5 +1,44 @@
+<%@page import="Soin.member.Member"%>
+<%@page import="Soin.client.Client"%>
+<%@page import="Soin.member.MemberView"%>
+<%@page import="Soin.member.JdbcMemberDao"%>
+<%@page import="Soin.member.MemberDao"%>
+<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
+
+<c:if test="${empty sessionScope.id}">
+<%
+	response.sendRedirect("../../../Member/Common/login?returnUrl=../../MyPage/Client/MyProfile/MyProfile.jsp");
+%>
+</c:if>
+
+<c:if test="${not empty sessionScope.id}">
+<%
+
+	String id = (String)request.getSession().getAttribute("id");
+	MemberDao memberDao = new JdbcMemberDao();
+	MemberView mv = memberDao.get(id);
+	Member m = mv.getMember();
+	Client c = mv.getClient();
+
+
+	/* 	String sql = "SELECT * FROM CLIENT_MEMBER_VIEW WHERE ID =+;
+		//0.드라이버 로드
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		//1.연결 생성
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@211.238.142.251:1521:orcl", "c##soin",
+				"soin1218");
+		//2.문장 실행
+		Statement st = con.createStatement();
+		//3.결과집합 사용
+		ResultSet rs = st.executeQuery(sql);
+		//4.패치
+		rs.next(); */
+	
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +64,14 @@
 				<li><a href="">알림</a></li>
 				<li><a href="">고객센터</a></li>
 				<li><a href="">회원가입</a></li>
-				<li><a href="">로그인</a></li>
+				
+				<c:if test="${empty sessionScope.id}">
+				<li><a href="${ctx}/Member/Common/login">로그인</a></li>
+				</c:if>
+				
+				<c:if test="${not empty sessionScope.id}">
+				<li><a href="${ctx}/Member/Common/logout">로그아웃</a></li>
+				</c:if>
 			</ul>
 			<h1 id="logo"><img class = "logo-images" src="../../../Images/hgw/logo1.png" alt="Soin"/></h1>
 			
@@ -75,33 +121,33 @@
 		<table class = "main-table">
 			<tr>
 				<th>아이디</th>
-				<td>soin_people</td>
+				<td><%=m.getId() %></td>
 			</tr>
 			
 			<tr>
 				<th>이메일</th>
-				<td>soin@gmail.com</td>
+				<td><%=m.getEmail()%></td>
 			</tr>
 			
 			<tr>
 				<th>연락처</th>
-				<td>010-1234-5678</td>
+				<td><%=m.getPhoneNum() %></td>
 			</tr>
 			
 			<tr>
 				<th>주소</th>
-				<td>서울시 마포구 아현동</td>
+				<td><%=m.getAddress() %><%=m.getDetailAddress() %></td>
 			</tr>
 			
 			<tr>
 				<th>닉네임</th>
-				<td>난쟁이</td>
+				<td><%=c.getNickName() %></td>
 			</tr>
 		</table>
 		</section>
 		
 		<section class="button">
-		<input type="button" value="회원정보수정" onclick="location.href='FixMyinfo.jsp'">
+		<input type="button" value="회원정보수정" onclick="location.href='Password.jsp'">
 		</section>
 			
 		</section>
@@ -129,3 +175,9 @@
 	</footer>
 </body>
 </html>
+<%-- <%
+	rs.close();
+	st.close();
+	con.close();
+%> --%>
+</c:if>

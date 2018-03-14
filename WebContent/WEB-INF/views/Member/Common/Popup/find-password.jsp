@@ -24,7 +24,7 @@
 					
 						<li><div class="center bold">아이디</div></li>
 						<li>
-							<div class="center"><input class="length" name="id" type="text" placeholder="아이디를 입력해주십시오" required /></div>
+							<div class="center"><input class="length" name="id" type="text" pattern="^[a-zA-Z0-9]{5,15}$" maxlength="15" placeholder="아이디를 입력해주십시오" required /></div>
 						</li>
 						<li><div class="center bold">연락처</div></li>
 						<li>
@@ -37,7 +37,8 @@
 									<option value="016">018</option>
 									<option value="019">019</option>
 								</select>
-								<input name="tel02" class="length-sh"  type="text" required /><input name="tel03" class="length-sh"  type="text" required />
+								<input name="tel02" class="length-sh"  type="text" pattern ="\d{3,4}" maxlength="4" placeholder="숫자 3-4자리" required />
+								<input name="tel03" class="length-sh"  type="text" pattern ="\d{4}" maxlength="4" placeholder="숫자 4자리" required />
 							</div>
 						</li>
 					</ul>			

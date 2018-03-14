@@ -13,6 +13,8 @@
 <title></title>
 
 <link href="${ctx}/Css/Style3.css" type="text/css" rel="stylesheet"/>
+<link href="${ctx}/Css/StyleHF.css" type="text/css" rel="stylesheet"/>
+
 </head>
 <body>
 <!-- 헤더부분 -->
@@ -23,11 +25,6 @@
 
 <!-- 풋터부분 -->
 	<tiles:insertAttribute name="footer"></tiles:insertAttribute>
-
-
-
-
-
 
 
 

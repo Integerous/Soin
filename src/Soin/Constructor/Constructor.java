@@ -7,10 +7,9 @@ public class Constructor {
 	private String corporateRegistrationNumber; 
 	private String ceoName;
 	private String mainImage;
-	private String address;
 	private String homepageAddress;
 	private String introduction;
-	private int gpa;
+	private float gpa;
 	private String speciality1;
 	private String speciality2;
 	private String speciality3;
@@ -57,7 +56,7 @@ public class Constructor {
 
 
 	public Constructor(String member_id, String name, String corporateRegistrationNumber, String ceoName,
-			String mainImage, String address, String homepageAddress, String introduction, int gpa, String speciality1,
+			String mainImage, String homepageAddress, String introduction, float gpa, String speciality1,
 			String speciality2, String speciality3, String speciality4) {
 		super();
 		this.member_id = member_id;
@@ -65,7 +64,6 @@ public class Constructor {
 		this.corporateRegistrationNumber = corporateRegistrationNumber;
 		this.ceoName = ceoName;
 		this.mainImage = mainImage;
-		this.address = address;
 		this.homepageAddress = homepageAddress;
 		this.introduction = introduction;
 		this.gpa = gpa;
@@ -115,13 +113,6 @@ public class Constructor {
 		this.mainImage = mainImage;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
 
 	public String getHomepageAddress() {
 		return homepageAddress;
@@ -139,11 +130,11 @@ public class Constructor {
 		this.introduction = introduction;
 	}
 
-	public int getGpa() {
+	public float getGpa() {
 		return gpa;
 	}
 
-	public void setGpa(int gpa) {
+	public void setGpa(float gpa) {
 		this.gpa = gpa;
 	}
 

@@ -61,7 +61,7 @@
 			<div class="content-box">
 				
 				<div class="input-box center tc">
-					<span id="memberId" class="bold">${requestScope.id}</span>님, 새로운 비밀번호를 설정해주세요.
+					<span id="memberId" class="bold">${sessionScope.memberId}</span>님의 새로운 비밀번호 설정
 				</div>	
 				
 				<div class="input-box center">

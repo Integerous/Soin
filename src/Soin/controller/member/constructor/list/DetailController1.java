@@ -1,4 +1,4 @@
-package Soin.review.controller;
+package Soin.controller.member.constructor.list;
 
 import java.io.IOException;
 
@@ -15,28 +15,28 @@ import org.apache.tiles.request.ApplicationContext;
 import org.apache.tiles.request.servlet.ServletRequest;
 import org.apache.tiles.request.servlet.ServletUtil;
 
-import Soin.review.JdbcReviewDao;
-import Soin.review.ReviewDao;
-import Soin.review.ReviewView;
+import Soin.Constructor.ConstructorDao;
+import Soin.Constructor.ConstructorView;
+import Soin.Constructor.JdbcConstructorDao;
 
 
-@WebServlet("/Review/Detail")
-public class DetailController extends HttpServlet{
-	
+@WebServlet("/member/constructor/list/detail")
+public class DetailController1 extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id = request.getParameter("id");
-
-		ReviewDao reviewDao = new JdbcReviewDao();
-		ReviewView review = reviewDao.get(id); //entity가 주로 모델이 됨
+		String member_id = request.getParameter("member_id");
 		
-		request.setAttribute("review", review);		
+		ConstructorDao constructorDao = new JdbcConstructorDao();
+		ConstructorView constructor = constructorDao.get(member_id);
 		
+		request.setAttribute("constructor", constructor);
 		
-		ApplicationContext applicationContext = ServletUtil
-				.getApplicationContext(request.getSession().getServletContext());
+		/*RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/Member/Constructor/List/detail.jsp");
+		dispatcher.forward(request, response);*/
+		
+		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		container.render("Review.Detail",servletRequest);
+		container.render("Member.Constructor.List.Detail", servletRequest);
 	}
 }
