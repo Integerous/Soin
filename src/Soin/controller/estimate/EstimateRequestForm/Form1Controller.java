@@ -1,6 +1,7 @@
 package Soin.controller.estimate.EstimateRequestForm;
 
 import java.io.IOException;
+import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -26,13 +27,13 @@ public class Form1Controller extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//String id = request.getParameter("id");
+	/*	String id = request.getParameter("id");
 
-		//EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
-		//EstimateRequestView estimateRequest = estimateRequestDao.get(id);
+		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
+		EstimateRequestView estimateRequest = estimateRequestDao.get(id);
 		
 		
-		//request.setAttribute("estimateRequest", estimateRequest);
+		request.setAttribute("estimateRequest", estimateRequest);*/
 		
 		
 		
@@ -52,22 +53,42 @@ public class Form1Controller extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   
+		
+		
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
+		
+		//String id = request.getParameter("id");
+		
+		String add01 = request.getParameter("add01");
+		String add02 = request.getParameter("add02");
+		
+		String address = add01+" "+ add02;
+		
 		EstimateRequest estimateRequest = new EstimateRequest();
-
+		
+		//1. 시공종류 선택
 		estimateRequest.setConstructionPositionId(request.getParameter("construction-position"));
+		//2. 상세카테고리 선택
 		estimateRequest.setDetailCategory(request.getParameter("detail-category"));
-		estimateRequest.setProductId(request.getParameter("product"));
+		//3. 건물 종류 선택
+		estimateRequest.setBuildingTypeId(request.getParameter("building-type"));
+		// 4.지역 선택
+		estimateRequest.setAddress(address);
+		// 5.희망시공일 선택 / DATE로 형변환
+		String datePickerStr = request.getParameter("desired-date01");  
+	    Date datePicker = java.sql.Date.valueOf(datePickerStr);
+	       estimateRequest.setDesiredDate01(datePicker);
+		// 6.기타 요청사항
+		estimateRequest.setEtcRequest(request.getParameter("etc-request"));
 		
 		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 		estimateRequestDao.insert(estimateRequest);
+		//String id = estimateRequestDao.getLatest();
+		response.sendRedirect("Form4");
 		
-		response.sendRedirect("Form2");
 		
-		
-		
-	
 	}
-	
 }
 
 

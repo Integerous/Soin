@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
     
     
     
@@ -101,15 +101,15 @@
 <!-- ------------form wrapper------------ -->		
 		<div class="form-wrapper">
 
-<!-- ------------견적의뢰서  타이틀------------ -->
+<!-- ------------견적요청서  타이틀------------ -->
 			<section class="form-title">
 				<img src="../../Images/ic_playlist_add_check_black_24dp_2x.png" alt="check-box2" />
 					<div class="ft-container">
-						견적의뢰서 요약
+						견적요청 완료
 					</div>
 			</section>
 
-<!-- ------------견적의뢰서 요약------------ -->			
+<!-- ------------견적요청 완료메세지------------ -->			
 		<section class="request-form">
 					<div>
 						<fieldset>
@@ -130,39 +130,34 @@
 										</div>
 										<div>
 											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											시공지 주소:
+											희망 시공일:
 										</div>
 										<div>
 											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
-											희망 시공일:
+											시공지 주소:
 										</div>
 										<div>
 											<img src="../../Images/ic_check_black_24dp_1x.png" alt="check" />
 											상세 요청사항:
 										</div>
 									</div>
-									
-										<div class="summary-content">
-											<div>
-												${estimateRequest.constructionPositionId}
-											</div>
-											<div>
-												${estimateRequest.detailCategory}
-											</div>
-											<div>
-												${estimateRequest.buildingTypeId}
-											</div>
-											<div>
-												${estimateRequest.address}
-											</div>
-											<div>
-												${estimateRequest.desiredDate01}
-											</div>
-											<div>
-												${estimateRequest.etcRequest}
-											</div>
+									<div class="summary-content">
+										<div>
+											(여기에 해당하는 데이터 불러왕)
 										</div>
-									
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+										<div>
+											(해당 데이터)
+										</div>
+									</div>
 								</div>
 						</fieldset>
 					</div>
@@ -174,27 +169,27 @@
 		
 <!-- ------------previous button------------ -->	
 			<div class="previous-button">
-				<button class="prev-btn" onclick="location.href='form2'"><span>이전</span></button>
+				<button class="prev-btn" onclick="location.href='form2.jsp'"><span>이전</span></button>
 			</div>
 <!-- ------------next button------------ -->							
 			<div class="next-button">
-		      <button type="submit" class="next-btn"><span>다음</span></button>
+		      <button class="next-btn"><span>다음</span></button>
 		    </div>
 	    
 		</div>  
+		    
+		    
+		    
+		    
+		    
 			</section>
-		    
-		    
-		    
-		    
-		    
 		</div>
 	</main>
 
 <!-- ---------------------FOOTER---------------------- -->	
-<!-- 		<footer>
+		<footer>
 			<p> Copyright 2018 SoinProject</p>
-		</footer> -->
+		</footer>
 		
 </body>
 </html>

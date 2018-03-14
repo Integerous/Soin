@@ -21,22 +21,23 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 //////////////////////////////////////////////////////////////////
 	@Override
 	public int insert(EstimateRequest estimateRequest) {
-		String sql = "INSERT INTO estimateRequest " + 
+		String sql = "INSERT INTO ESTIMATE_REQUEST("+ 
+				"    id," + 
 				"    title," + 
 				"    address," + 
 				"    desired_date01," + 
 				"    desired_date02," + 
 				"    etc_request," + 
 				"    regdate," + 
-				"    member_id" + 
+				"    member_id," + 
 				"    product_id," + 
 				"    construction_id," + 
 				"    building_type_id," + 
 				"    construction_position_id," +
 				"    attached_file," +
-				"    detail_category," +
-				"    id," + 
-				") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				"    detail_category" +
+				") VALUES ((SELECT NVL(MAX(TO_NUMBER(ID)),0)+1 ID FROM ESTIMATE_REQUEST)"
+				+ ",?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			
 		int result = 0;
 
@@ -46,7 +47,7 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 		
 			//연결 생성하기
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
-			Connection con = DriverManager.getConnection(url, "c##sist", "dclass");
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			//문장 실행하기
 			PreparedStatement st = con.prepareStatement(sql); //prepared가 무슨의미였지?
 			//st.setString(1, id);
@@ -58,13 +59,14 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 			st.setDate(4, (Date) estimateRequest.getDesiredDate02());
 			st.setString(5, estimateRequest.getEtcRequest());
 			st.setDate(6,  (Date) estimateRequest.getRegDate());
-			st.setString(7, estimateRequest.getProductId());
-			st.setString(8, estimateRequest.getConstructionId());
-			st.setString(9, estimateRequest.getBuildingTypeId());
-			st.setString(10, estimateRequest.getConstructionPositionId());
-			st.setString(11, estimateRequest.getAttachedFile());
-			st.setString(12, estimateRequest.getDetailCategory());
-			st.setString(13, estimateRequest.getId());
+			st.setString(7, estimateRequest.getMemberId());
+			st.setString(8, estimateRequest.getProductId());
+			st.setString(9, estimateRequest.getConstructionId());
+			st.setString(10, estimateRequest.getBuildingTypeId());
+			st.setString(11, estimateRequest.getConstructionPositionId());
+			st.setString(12, estimateRequest.getAttachedFile());
+			st.setString(13, estimateRequest.getDetailCategory());
+			//st.setString(13, estimateRequest.getId());
 			
 			
 			result = st.executeUpdate();
@@ -92,20 +94,21 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 //////////////////////////////////////////////////////////////////
 	@Override
 	public int update(EstimateRequest estimateRequest) {
-		String sql = "UPDATE estimateRequest SET" + 
+		String sql = "UPDATE ESTIMATE_REQUEST SET" + 
 				"    TITLE =?," + 
-				"    ADDRESS =?, " + 
-				"    DESIRED_DATE01 =?, " + 
+				"    ADDRESS =?," + 
+				"    DESIRED_DATE01 =?," + 
 				"    DESIRED_DATE02 =?," + 
-				"    ETC_REQUEST =?, " + 
-				"    REGDATE =?," + 
-				"    PRODUCT_ID =?, " + 
-				"    CONSTRUCTION_ID =?, " + 
-				"    BUILDING_TYPE_ID =?, " +
+				"    ETC_REQUEST =?," + 
+				"    REGDATE =?," +
+				"    MEMBER_ID =?," +
+				"    PRODUCT_ID =?," + 
+				"    CONSTRUCTION_ID =?," + 
+				"    BUILDING_TYPE_ID =?," +
 				"    CONSTRUCTION_POSITION_ID=?," +
 				"    ATTACHED_FILE =?," +
-				"    DETAIL_CATEGORY =?," +
-				"WHERE ID =?";
+				"    DETAIL_CATEGORY =?" +
+				"	WHERE ID =?";
 		
 		int result = 0;
 
@@ -125,14 +128,15 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 			st.setDate(3, (Date) estimateRequest.getDesiredDate01());
 			st.setDate(4, (Date) estimateRequest.getDesiredDate02());
 			st.setString(5, estimateRequest.getEtcRequest());
-			st.setDate(6, (Date) estimateRequest.getRegDate());
-			st.setString(7, estimateRequest.getProductId());
-			st.setString(8, estimateRequest.getConstructionId());
-			st.setString(9, estimateRequest.getBuildingTypeId());
-			st.setString(10, estimateRequest.getConstructionPositionId());
-			st.setString(11, estimateRequest.getAttachedFile());
-			st.setString(12, estimateRequest.getDetailCategory());
-			st.setString(13, estimateRequest.getId());
+			st.setDate(6,  (Date) estimateRequest.getRegDate());
+			st.setString(7, estimateRequest.getMemberId());
+			st.setString(8, estimateRequest.getProductId());
+			st.setString(9, estimateRequest.getConstructionId());
+			st.setString(10, estimateRequest.getBuildingTypeId());
+			st.setString(11, estimateRequest.getConstructionPositionId());
+			st.setString(12, estimateRequest.getAttachedFile());
+			st.setString(13, estimateRequest.getDetailCategory());
+			st.setString(14, estimateRequest.getId());
 			
 			
 			
@@ -160,7 +164,7 @@ public class JdbcEstimateRequestDao implements EstimateRequestDao {
 //////////////////////////////////////////////////////////////////
 	@Override
 	public int delete(String id) {
-String sql = "DELETE estimateRequest WHERE ID=?";
+String sql = "DELETE ESTIMATE_REQUEST WHERE ID=?";
 		
 		int result = 0;
 
@@ -202,7 +206,7 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 	@Override
 	public List<EstimateRequestView> getList(int page) {
 		
-		String sql = "SELECT * FROM estimateRequestVIEW ORDER BY REG_DATE DESC";
+		String sql = "SELECT * FROM ESTIMATE_REQUEST_VIEW ORDER BY REG_DATE DESC";
 		
 		List<EstimateRequestView> list = new ArrayList<>(); //반환할 내용이므로 변수선언을 try 위에서 함
 
@@ -266,7 +270,7 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 	@Override
 	public EstimateRequestView get(String id) {
 		
-		String sql = "SELECT * FROM estimateRequest WHERE ID=?"; //이걸 하기위해 밑에있는것들을 한다.
+		String sql = "SELECT * FROM ESTIMATE_REQUEST WHERE ID=?"; //이걸 하기위해 밑에있는것들을 한다.
 		
 		EstimateRequestView estimateRequest = null; //반환할 내용이므로 변수선언을 try 위에서 함 // 왜 NULL을 줬지?
 
@@ -325,7 +329,7 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 	
 	@Override
 	public int getCount() {
-		String sql = "SELECT COUNT(ID) COUNT FROM ESTIMATEREQUEST";
+		String sql = "SELECT COUNT(ID) COUNT FROM ESTIMATE_REQUEST";
 		
 		int count = 0;
 		
@@ -357,6 +361,47 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 		return count;
 	}
 	
+	/*@Override
+	public EstimateRequest getLatest() {
+	String sql = "SELECT * FROM ESTIMATE_REQUEST ORDER BY REGDATE"; //이걸 하기위해 밑에있는것들을 한다.
+		
+		String id1 = null;
+		//드라이버 로드
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+			//연결 생성하기
+			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl";
+			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
+			//문장 실행하기
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, id1);
+			
+			//사용하기
+			ResultSet rs = st.executeQuery();
+			
+			
+			if(rs.next()){
+					id1 = rs.getString("id");
+			}
+		
+			
+			//닫아 주기
+			rs.close();
+			st.close();
+			con.close();
+			
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return id1;
+	}*/
+
 	
 //////////////////////////////////////////////////////////////////////////////	
 	@Override
@@ -376,6 +421,11 @@ String sql = "DELETE estimateRequest WHERE ID=?";
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+
+
+
 
 
 }

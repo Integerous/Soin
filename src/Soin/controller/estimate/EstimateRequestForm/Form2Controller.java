@@ -27,13 +27,13 @@ public class Form2Controller extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	/*	String id = request.getParameter("id");
+		String id = request.getParameter("id");
 
 		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 		EstimateRequestView estimateRequest = estimateRequestDao.get(id);
 		
 		
-		request.setAttribute("estimateRequest", estimateRequest);*/
+		request.setAttribute("estimateRequest", estimateRequest);
 		
 		
 		
@@ -53,23 +53,34 @@ public class Form2Controller extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   
+		
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
+		
+		
+		String add01 = request.getParameter("add01");
+		String add02 = request.getParameter("add02");
+		
+		String address = add01+" "+ add02;
+	
+		
 		EstimateRequest estimateRequest = new EstimateRequest();
-
-		estimateRequest.setAttachedFile(request.getParameter("photo-upload"));
+		
+		// 4.지역 선택
+		estimateRequest.setAddress(address);
 		//estimateRequest.setDesiredDate01(request.getParameter("date-picker"));
 		
-		//DATE로 형변환
-		String datePickerStr = request.getParameter("date-picker");  
+		// 5.희망시공일 선택 / DATE로 형변환
+		String datePickerStr = request.getParameter("desired-date01");  
 	    Date datePicker = java.sql.Date.valueOf(datePickerStr);
 	       estimateRequest.setDesiredDate01(datePicker);
-		
+		// 6.기타 요청사항
 		estimateRequest.setEtcRequest(request.getParameter("etc-request"));
 
 		
 		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 		estimateRequestDao.insert(estimateRequest);
 		
-		//견적요청 리스트 페이지 만들고 나서 이거 되살리기!!!!!
 		response.sendRedirect("Form3");
 		
 		

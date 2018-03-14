@@ -29,7 +29,7 @@ public class Form3Controller extends HttpServlet{
 		String id = request.getParameter("id");
 
 		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
-		EstimateRequestView estimateRequest = estimateRequestDao.get(id);
+		EstimateRequestView estimateRequest = estimateRequestDao.get("50");
 		
 		
 		request.setAttribute("estimateRequest", estimateRequest);
@@ -61,10 +61,7 @@ public class Form3Controller extends HttpServlet{
 		estimateRequestDao.insert(estimateRequest);
 		
 		//견적요청 리스트 페이지 만들고 나서 이거 되살리기!!!!!
-		response.sendRedirect("List.jsp");
-		
-		
-		
+		response.sendRedirect("List");
 	
 	}
 	
