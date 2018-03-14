@@ -47,6 +47,7 @@
 							<li><label class="label-text">이메일</label><input name="email" class="input"  type="text"  pattern="^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$" maxlength="30" placeholder="abc@def.com" required /><br /></li>
 							
 							<li><label class="label-text">연락처(핸드폰)</label>
+								<div class="wrap-box">
 									<select name="tel01" >
 										<option value="010">010</option>
 										<option value="011">011</option>
@@ -55,7 +56,8 @@
 										<option value="016">018</option>
 										<option value="019">019</option>
 									</select><input name="tel02" class="input-sh-short"  type="text"  pattern ="\d{3,4}" maxlength="4" placeholder="숫자 3-4자리" required /><input name="tel03" class="input-sh-short"  type="text"  pattern ="\d{4}" maxlength="4" placeholder="숫자 4자리" required />
-									<br /></li>
+								</div>
+							</li>
 									
 							<!-- <li><label class="label-text">연락처(집)</label>
 									<select>
@@ -81,7 +83,7 @@
 							<!-- <li><label class="label-text">우편번호</label><input class="input-short"  type="text" ><a class="btn-input" href="">주소검색</a><br /></li> -->
 						
 							<li><label class="label-text">주소</label>
-									<div class="address-box">
+									<div class="wrap-box">
 										<select id="cat01">
 											<option>대분류 선택</option>
 											<option value="01">ㄱ,ㄴ</option>

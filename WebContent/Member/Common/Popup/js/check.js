@@ -58,8 +58,14 @@ window.addEventListener("load", function () {
 	pwCheckInput.onchange = diffPw;
 
 	function diffPw() {
-
-		if(pwInput.value == pwCheckInput.value)
+		
+		if(pwInput.value == "" || pwCheckInput.value =="" )
+		{
+			pwCheckMessage.textContent = "*비밀번호를 한번 더 입력해주세요.";
+			pwCheckMessage.style['color'] = "#000";
+			diffCheck = false;
+		}
+		else if(pwInput.value == pwCheckInput.value)
 		{
 			pwCheckMessage.textContent = "*비밀번호가 일치합니다.";
 			pwCheckMessage.style['color'] = "#000";

@@ -43,13 +43,19 @@
 							
 							<li><label class="label-text">업체명</label><input name="name" class="input"  type="text"  pattern="^[a-zA-Z0-9가-힣]{2,12}$" placeholder="한글,영어,숫자 2-12자리" maxlength="12" required /><br /></li>
 							
-							<li><label class="label-text">사업자등록번호</label><input name="connum01" class="marl5 input-sh-short"  type="text" pattern="\d{3}" maxlength="3" placeholder="숫자 3자리" required /><input name="connum02" class="input-sh-short"  type="text" pattern="\d{2}" maxlength="2"  placeholder="숫자 2자리" required /><input name="connum03"  class="input-sh-short"  type="text" pattern="\d{5}" maxlength="5" placeholder="숫자 5자리" required />
-							
+							<li><label class="label-text">사업자등록번호</label>
+								<div class="wrap-box">
+									<input name="connum01" class="marl5 input-sh-short"  type="text" pattern="\d{3}" maxlength="3" placeholder="숫자 3자리" required />
+									<input name="connum02" class="input-sh-short"  type="text" pattern="\d{2}" maxlength="2"  placeholder="숫자 2자리" required />
+									<input name="connum03"  class="input-sh-short"  type="text" pattern="\d{5}" maxlength="5" placeholder="숫자 5자리" required />
+								</div>	
+							</li>
 							<li><label class="label-text">대표명</label><input name="ceoName" class="input"  type="text" pattern="^[가-힣]{2,10}$" maxlength="10"  placeholder="한글 2-10자리" required />
 																					
 							<li><label class="label-text">이메일</label><input name="email" class="input"  type="text"  pattern="^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$" maxlength="30" placeholder="abc@def.com" required /><br /></li>
 							
 							<li><label class="label-text">연락처(핸드폰)</label>
+								<div class="wrap-box">	
 									<select name="tel01" >
 										<option value="010">010</option>
 										<option value="011">011</option>
@@ -58,7 +64,7 @@
 										<option value="016">018</option>
 										<option value="019">019</option>
 									</select><input name="tel02" class="input-sh-short"  type="text"  pattern ="\d{3,4}" maxlength="4"  placeholder="숫자 3-4자리" required /><input name="tel03" class="input-sh-short"  type="text"  pattern ="\d{4}" maxlength="4" placeholder="숫자 4자리" required />
-									<br />
+								</div>
 						<!-- 			
 							<li><label class="label-text">연락처(회사)</label>
 									<select>
@@ -87,7 +93,7 @@
 							<!-- <li><label class="label-text">우편번호</label><input class="input-short"  type="text" ><a class="btn-input" href="">주소검색</a><br /></li> -->
 						
 							<li><label class="label-text">주소</label>
-									<div class="address-box">
+									<div class="wrap-box">
 										<select id="cat01">
 											<option>대분류 선택</option>
 											<option value="01">ㄱ,ㄴ</option>
@@ -113,7 +119,7 @@
 							<li><div class="text-small">*3MB 이하의 이미지 파일만 업로드 가능합니다.</div></li>
 							
 							<li><label class="label-text">전문분야</label>
-									<div class="sp-box">
+									<div class="wrap-box">
 										<select class="sp-select" name="speciality01" >
 											<option value="window">창문</option>
 											<option value="door">문</option>
