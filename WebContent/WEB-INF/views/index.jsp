@@ -36,46 +36,34 @@
 					<div class="btn btn-kitchen c1">
 						<img src="${ctx }/Images/phz/kitchen.png" alt="주방"><span class="kitchen hidden">주방</span>
 					</div>
+					
+					<input id="01" type="hidden" name="constructionPosition">
 				</div>
+				
 				<div id="category02" style="display:none;" class="content center mt20">	
-					<div class="btn c2">	
-					</div>
+					<input name="detailCategory" type="button" class="btn c2">	
 					
-					<div class="btn c2">
-					</div>
+					<input name="detailCategory" type="button"  class="btn c2">
 					
-					<div class="btn c2">
-					</div>
-					
-					<div class="btn c2">
-					</div>
+					<input name="detailCategory" type="button" class="btn c2">
+
+					<input name="detailCategory"  type="button" class="btn c2">
 				</div> 
 				
 				<div id="category03" style="display:none;" class="content center mt20">	
-					<div class="btn c3">
-						<span>아파트</span>
-					</div>
+					<input name="buildingType" type="button" class="btn c3" value="아파트">
 					
-					<div class="btn c3">
-						<span>주택</span>
-					</div>
+					<input name="buildingType" type="button" class="btn c3" value="주택">
+						
+					<input name="buildingType" type="button" class="btn c3" value="빌라">
 					
-					<div class="btn c3">
-						<span>빌라</span>
-					</div>
-					
-					<div class="btn c3" >
-						<span>상업시설</span>
-					</div>
+					<input name="buildingType" type="button" class="btn c3" value="상업시설">
 				</div>
 				
 				<div class="center mt20">
 					<input type="submit" class="btn-default btn-huge" value="견적신청"/>
 				</div>
 				
-				<input id="01" type="hidden" name="construction-position">
-	 			<input id="02" type="hidden" name="detail-category" >
-				<input id="03" type="hidden" name="building-type" > 
 			</form>
 		</div>
 	</section>
@@ -87,18 +75,12 @@
 		var cat01 = document.querySelector("form #category01");
 		var cat02 = document.querySelector("form #category02");
 		var cat03 = document.querySelector("form #category03");
-		/* var cat04 = document.querySelector("form #category04"); */
 		
 		var cat01Val = document.getElementById("01");
-		var cat02Val = document.getElementById("02");
-		var cat03Val = document.getElementById("03");
-		/* var cat04Val = document.getElementById("04"); */
 
 		var cat01Btn = document.querySelectorAll("form #category01 .c1");
-		var cat01Spans = document.querySelectorAll("#category01 div span");
 		var cat02Btn = document.querySelectorAll("form #category02 .c2");
 		var cat03Btn = document.querySelectorAll("form #category03 .c3");
-		/* var cat04Btn = document.querySelectorAll("form #category04 .c4"); */
 		
 		var question = document.querySelector(".question span");
 		
@@ -108,7 +90,7 @@
 		var cat02Wall = ['도배', '장판', '페인트', '그외'];
 		var cat02Kit = ['싱크', '후드', '주방가구', '타일'];
 		
-		var cat03pl = ['아파트','주택','빌라','상업시설'];
+		var cat03pl = ['아파트', '주택', '빌라', '상업시설'];
 		//함수정의역========================================
 
 			cat01Btn[0].onclick = function(){
@@ -148,32 +130,28 @@
 				{
 					if(cat01Val.value == "창문")
 					{
-						cat02Val.value= cat02Win[i];
-						cat02Btn[i].textContent = cat02Win[i];
+						cat02Btn[i].value = cat02Win[i];
 						cat02Btn[i].onclick = openCat03;
 					}
 					else if(cat01Val.value == "문")
 					{	
-						cat02Val.value= cat02Door[i];
-						cat02Btn[i].textContent = cat02Door[i];
+						cat02Btn[i].value = cat02Door[i];
 						cat02Btn[i].onclick = openCat03;
 					}
 					else if(cat01Val.value == "욕실")
 					{
-						cat02Val.value= cat02Bath[i];
-						cat02Btn[i].textContent = cat02Bath[i];
+						
+						cat02Btn[i].value = cat02Bath[i];
 						cat02Btn[i].onclick = openCat03;
 					}
 					else if(cat01Val.value == "벽/바닥")
 					{					
-						cat02Val.value= cat02Wall[i];
-						cat02Btn[i].textContent = cat02Wall[i];
+						cat02Btn[i].value = cat02Wall[i];
 						cat02Btn[i].onclick = openCat03;
 					}
 					else
 					{				
-						cat02Val.value= cat02Kit[i];
-						cat02Btn[i].textContent = cat02Kit[i];
+						cat02Btn[i].value = cat02Kit[i];
 						cat02Btn[i].onclick = openCat03;
 					}
 			
@@ -190,17 +168,13 @@
 					
 					for(var i=0;i< cat03Btn.length; i++)
 					{
-						cat03Btn[i].onclick = function dd() {
+						cat03Btn[i].onclick = cat03Sel;
+
+						function cat03Sel() {
 							this.style.backgroundColor = "gray";
 							this.style.color = "#fff";
-							goForm()
-					
-						}
-					
-						function goForm() {			
-							cat03Val.value= cat03pl[i];
 							question.textContent = "하단의 버튼을 눌러 신청해주세요.(로그인 필요)";	
-						}		
+						}
 					}
 				}		
 			}	
