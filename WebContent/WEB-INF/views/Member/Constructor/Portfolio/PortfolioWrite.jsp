@@ -193,7 +193,7 @@
 
 <!-- ---사이드바-------------------------------------------- -->
 <div id = "side">
- 		<a href="${ctx}/Estimate/EstimateRequestForm/Form1">견적 신청하기</a>
+ 		<a href="">견적 신청하기</a>
  </div>  
 
 </body>
