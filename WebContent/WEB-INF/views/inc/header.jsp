@@ -29,7 +29,7 @@
 				<div><a href="#">고객센터</a></div>
 				<div class="notifications"><a href="#" >
 					<img src="${ctx}/Images/ic_notifications_active_black_24px.svg"/></a></div>
-				<div><a href="#">마이페이지</a></div>
+				<div><a href="${ctx}/MyPage/Client/MyProfile/MyProfile.jsp ">마이페이지</a></div>
 			</div>
 		</div>
 	

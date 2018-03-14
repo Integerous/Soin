@@ -1,5 +1,23 @@
+<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+	String sql = "SELECT * FROM CLIENT_MEMBER_VIEW WHERE ID = 'test111'";
+	//0.드라이버 로드
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	//1.연결 생성
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@211.238.142.251:1521:orcl", "c##soin",
+			"soin1218");
+	//2.문장 실행
+	Statement st = con.createStatement();
+	//3.결과집합 사용
+	ResultSet rs = st.executeQuery(sql);
+	//4.패치
+	rs.next();
+%>
+<c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +43,7 @@
 				<li><a href="">알림</a></li>
 				<li><a href="">고객센터</a></li>
 				<li><a href="">회원가입</a></li>
-				<li><a href="">로그인</a></li>
+				<li><a href="${ctx}/Member/Common/login">로그인</a></li>
 			</ul>
 			<h1 id="logo"><img class = "logo-images" src="../../../Images/hgw/logo1.png" alt="Soin"/></h1>
 		</nav>
@@ -78,7 +96,7 @@
 		<table class = "main-table2">
 			<tr>
 				<th>아이디</th>
-				<td>soin_people</td>
+				<td><%=rs.getString("ID") %></td>
 			</tr>
 			
 			<tr>
@@ -90,7 +108,7 @@
 		</section>
 		
 		<section class="button">
-		<input type="button" value="확인" onclick="location.href='#">
+		<input type="button" value="확인" onclick="location.href='FixMyinfo.jsp'">
 		</section>
 			
 		</section>

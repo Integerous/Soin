@@ -1,7 +1,23 @@
+<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%-- <%response.setCharacterEncoding("UTF-8") %>
 <%response.setContentType("text/html;UTF-8") %> --%>
+<%
+	String sql = "SELECT * FROM INQUIRY WHERE MEMBER_ID='newlec'";
+	//0.드라이버 로드
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	//1.연결 생성
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@211.238.142.251:1521:orcl", "c##soin",
+			"soin1218");
+	//2.문장 실행
+	Statement st = con.createStatement();
+	//3.결과집합 사용
+	ResultSet rs = st.executeQuery(sql);
+	//4.패치
+	/* rs.next(); */
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +28,8 @@
 <style type="text/css">
 </style>
 </head>
-
 <body>
+                                            <!-- 강의4-3참고해서 게시판 만들기 -->
    <!------------------------------------header ìì ---------------------------------->
 	<header id ="header">
 	<div class="root-container">
@@ -75,27 +91,40 @@
 		<section>
 		<table class = "table">
 			<thead>
-				<tr>
-					<td class = "width-sn">번호</td>
-					<td class = "width-ex">시공명</td>
-					<td class = "width-nd">시공종류</td>
-					<td class = "width-md">작성일</td>
-					<td class = "width-sm">접수현황</td>
+				<tr class ="thead">
+					<th class = "width-sn">번호</th>
+					<th class = "width-ex">시공명</th>
+					<th class = "width-nd">시공종류</th>
+					<th class = "width-md">작성날짜</th>
+					<th class = "width-sm">답변여부</th>
 				</tr>
 			</thead>
 			<tbody>
+			<%
+			while(rs.next())  {
+			%>
 				<tr>
-					<td>
-						
-						
-					</td>
+					<td class = "width-sn"><a href=""><%=rs.getString("ID") %></a></td>
+					<td class = "width-ex"><a href=""><%=rs.getString("TITLE") %></a></td>
+					<td class = "width-nd"><a href=""><%=rs.getString("TYPE") %></a></td>
+					<td class = "width-md"><a href=""><%=rs.getDate("REGDATE") %></a></td>
+					<td class = "width-sm"><a href=""><%=rs.getString("ANSWER_CHECK") %></a></td>
 				</tr>
+			<%
+			} 
+			%>
 			</tbody>		
 		</table>
 		</section>
 		
 		<div class=pn-page>
-			이전 1 다음
+			<input type="button" value="이전" onclick="'location.href='#'">
+					<a class="strong" href="">1</a>
+					<a href="">2</a>
+					<a href="">3</a>
+					<a href="">4</a>
+					<a href="">5</a> 
+			<input type="button"  value="다음" onclick="'location.href='#'">
 		</div>
 			
 		</section>
@@ -123,3 +152,8 @@
 	</footer>
 </body>
 </html>
+<%
+	rs.close();
+	st.close();
+	con.close();
+%>

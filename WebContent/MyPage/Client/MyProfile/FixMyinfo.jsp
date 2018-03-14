@@ -100,6 +100,11 @@
 				<th>주소</th>
 				<td><input type="text" class="input-text input-textad" ></td>
 			</tr>
+			<tr>
+			
+				<th>상세주소</th>
+				<td><input type="text" class="input-text input-textad" ></td>
+			</tr>
 			
 			<tr>
 				<th>닉네임</th>
