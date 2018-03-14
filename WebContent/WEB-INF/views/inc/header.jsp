@@ -10,17 +10,26 @@
 	<header>
 		<div id="top-bar">
 			<div class="tb-container">
-				<div class="login-status" style="display:none;">
-					<a href="#">로그아웃</a></div>
+				
+				<c:if test="${not empty sessionScope.id}">
+				<div class="login-status">
+					<a href="${ctx}/Member/Common/logout">로그아웃</a></div>
+				</c:if>
 					
+				<c:if test="${empty sessionScope.id}">	
 				<div class="logout-status">
 					<a href="${ctx}/Member/Common/login">로그인</a></div>
+				</c:if>
+				
+				<c:if test="${empty sessionScope.id}">	
 				<div class="logout-status">
 					<a href="${ctx}/Member/Common/register">회원가입</a></div>
+				</c:if>
+				
 				<div><a href="#">고객센터</a></div>
 				<div class="notifications"><a href="#" >
 					<img src="${ctx}/Images/ic_notifications_active_black_24px.svg"/></a></div>
-				<div><a href="#">마이페이지</a></div>
+				<div><a href="${ctx}/MyPage/Client/MyProfile/MyProfile.jsp ">마이페이지</a></div>
 			</div>
 		</div>
 	

@@ -5,12 +5,16 @@ window.addEventListener("load", function () {
 	var pwInput = document.querySelector("input[name='password']");
 	var pwCheckInput = document.getElementById("pw-check");
 	var pwCheckMessage = document.getElementById("pw-check-message");
+	var cat02 = document.getElementById("cat02");
+	var cat03 = document.getElementById("cat03");
+
 	var submitBtn = document.getElementById("submit-button");
 
-	var regPattern = /^[a-zA-Z0-9]{5,10}$/;
+	var regPattern = /^[a-zA-Z0-9]{5,15}$/;
 	
 	var dupCheck = false;
 	var diffCheck = false;
+	var cat03Check = false;
 
 	idCkBtn.onclick = function() {
 		
@@ -29,19 +33,25 @@ window.addEventListener("load", function () {
 		
 		var request = new XMLHttpRequest();
 		
-		request.open("GET", "idcheck?id="+id, false);
-		request.send();
-		
-		if(request.responseText == "true")
-		{
-			alert("이미 사용중인 아이디입니다.");
-		}
-		else
-		{
-			alert("사용가능한 아이디입니다.");
-			dupCheck = true;
-		}
+		request.onreadystatechange = function () {
 
+		
+			if(request.readyState == 4)
+			{
+				if(request.responseText == "true")
+				{
+					alert("이미 사용중인 아이디입니다.");
+				}
+				else
+				{
+					alert("사용가능한 아이디입니다.");
+					dupCheck = true;
+				}
+			}
+		};
+		
+		request.open("GET", "idcheck?id="+id, true);
+		request.send();
 	};
 	
 	idInput.onchange = function (){
@@ -53,8 +63,14 @@ window.addEventListener("load", function () {
 	pwCheckInput.onchange = diffPw;
 
 	function diffPw() {
-
-		if(pwInput.value == pwCheckInput.value)
+		
+		if(pwInput.value == "" || pwCheckInput.value =="" )
+		{
+			pwCheckMessage.textContent = "*비밀번호를 한번 더 입력해주세요.";
+			pwCheckMessage.style['color'] = "#000";
+			diffCheck = false;
+		}
+		else if(pwInput.value == pwCheckInput.value)
 		{
 			pwCheckMessage.textContent = "*비밀번호가 일치합니다.";
 			pwCheckMessage.style['color'] = "#000";
@@ -69,6 +85,15 @@ window.addEventListener("load", function () {
 
 	}
 
+	cat03.onchange = function () {
+		
+		if(cat03.value != "null")
+			cat03Check = true;
+		else
+			cat03Check = false;
+	};
+	
+	
 	submitBtn.onclick = function (e){
 
 		if(dupCheck == false)
@@ -92,6 +117,14 @@ window.addEventListener("load", function () {
 			alert("비밀번호를 확인해주십시오.");
 			pwCheckInput.focus();
 		}
+		else if(cat03Check == false)
+		{
+			e.preventDefault();
+			
+			alert("주소를 자세히 선택해주십시오.");
+		}	
+			
+		
 		
 	};
 

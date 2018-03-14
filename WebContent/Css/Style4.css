@@ -286,6 +286,24 @@ legend{
 	font-size: 18px;
 }
 
+#ifWindow{
+	display: block;
+}
+
+#ifDoor{
+	display: none;
+}
+
+#ifBathroom{
+	display: none;
+}
+
+#ifWall{
+	display: none;
+}
+
+
+
 .options{
 	display: flex;
 		justify-content: flex-start;
@@ -298,6 +316,23 @@ legend{
 
 .options > div{
 	padding: 0px 10px;
+}
+
+.options .address-picker{
+	display: flex;
+		justify-content: space-between;
+	width:190px;
+}
+
+.date-pick{
+	display: flex;
+		flex-direction: row;
+/* 		justify-content: space-around; */
+}
+
+.date-pick > div{
+	display: flex;
+		align-items: center;
 }
 
 
@@ -337,7 +372,19 @@ legend{
 
 
 
-/* -----견적의뢰서 리스트 타이틀---- */
+/* -----견적의뢰서 리스트 ---- */
+
+.list-form{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	padding: 20px;
+	background: #e9e9e9;
+	border: 3px solid #979797;
+	border-radius: 20px;
+	width: 900px;
+}
+
 .list-title{
 	display: flex;
 		justify-content: flex-start;
@@ -359,33 +406,39 @@ legend{
 /* 	border-radius: 20px; */
 }
 
-/* -----견적의뢰서 리스트 테이블---- */
-.list-form{	
-	display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-	max-width: 900px;
-	padding: 20px;
-	/* border: dotted #979797 3px; */
-	background: #e9e9e9;
-	border: 3px solid #979797;
-	border-radius: 20px;
-	width: 435.688px;
-}
 
 
-
-
-
-
-
-/* -----button container----- */
+/* -----견적요청 button container----- */
 
 .btn-container{
 	display: flex;
 		justify-content: space-evenly;
 	padding: 0px 70px;
 }
+
+/* -----견적리스트 button container----- */
+
+.list-btn-container{
+	display: flex;
+		justify-content: center;
+	padding-top: 20px;
+}
+
+/* -----게시판 pager container----- */
+.pager-container{
+	display: flex;
+		justify-content: center;
+		align-items: center;
+	height: 30px;
+	padding-top: 10px;
+}
+
+.pager-list{
+	display: flex;
+		justify-content: space-evenly;
+}
+
+
 /* -----prev button----- */
 
 .previous-button{
@@ -480,6 +533,39 @@ legend{
   opacity: 1;
   right: 0;
 }
+
+
+/* -----견적요청하기  button----- */
+.request-button{
+	display: flex;
+		justify-content: flex-end;
+	padding-right: 30px;
+}
+
+.request-btn {
+  border-radius: 10px;
+  background-color: #1da1f2;
+  border: none;
+  /* padding: 20px; */
+  width: auto;
+  height: 50px;
+  transition: all 0.5s;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.request-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.request-btn:hover {
+  background-color: red;
+}
+
 
 
 

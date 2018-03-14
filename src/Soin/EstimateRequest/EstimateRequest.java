@@ -16,6 +16,8 @@ public class EstimateRequest {
 	private String constructionId;
 	private String buildingTypeId;
 	private String constructionPositionId;
+	private String attachedFile;
+	private String detailCategory;
 	
 	public EstimateRequest() {
 		// TODO Auto-generated constructor stub
@@ -23,7 +25,7 @@ public class EstimateRequest {
 
 	public EstimateRequest(String id, String title, String address, Date desiredDate01, Date desiredDate02,
 			String etcRequest, Date regDate, String memberId, String productId, String constructionId,
-			String buildingTypeId, String constructionPositionId) {
+			String buildingTypeId, String constructionPositionId, String attachedFile, String detailCategory) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -37,6 +39,25 @@ public class EstimateRequest {
 		this.constructionId = constructionId;
 		this.buildingTypeId = buildingTypeId;
 		this.constructionPositionId = constructionPositionId;
+		this.attachedFile = attachedFile;
+		this.detailCategory = detailCategory;
+	}
+
+	
+	public String getAttachedFile() {
+		return attachedFile;
+	}
+
+	public void setAttachedFile(String attachedFile) {
+		this.attachedFile = attachedFile;
+	}
+
+	public String getDetailCategory() {
+		return detailCategory;
+	}
+
+	public void setDetailCategory(String detailCategory) {
+		this.detailCategory = detailCategory;
 	}
 
 	public String getId() {

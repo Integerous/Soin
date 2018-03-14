@@ -34,7 +34,7 @@ public class JdbcClientDao implements ClientDao
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, client.getMemberId());
 			st.setString(2, client.getNickName());
-			st.setInt(3, client.getSelectCheck());
+			st.setString(3, client.getSelectCheck());
 		
 			result = st.executeUpdate();
 			
@@ -74,7 +74,7 @@ public class JdbcClientDao implements ClientDao
 			Connection con = DriverManager.getConnection(url, "c##soin", "soin1218");
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, client.getNickName());
-			st.setInt(2, client.getSelectCheck());
+			st.setString(2, client.getSelectCheck());
 			st.setString(3, client.getMemberId());
 		
 			result = st.executeUpdate();
