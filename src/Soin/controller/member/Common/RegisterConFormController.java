@@ -69,6 +69,7 @@ public class RegisterConFormController extends HttpServlet
 		String corporateRegistrationNumber;
 		phoneNum = request.getParameter("tel01")+"-"+request.getParameter("tel02")+"-"+request.getParameter("tel03");
 		
+		String address = request.getParameter("add01") + " " + request.getParameter("add02");
 		String imgName = "main.png";
 		
 		if(request.getPart("mainImage").getSize()!=0)
@@ -101,7 +102,7 @@ public class RegisterConFormController extends HttpServlet
 		member.setId(id);
 		member.setPassword(request.getParameter("password"));
 		member.setEmail(request.getParameter("email"));
-		member.setAddress(request.getParameter("address"));
+		member.setAddress(address);
 		member.setDetailAddress(request.getParameter("detailAddress"));
 		member.setPhoneNum(phoneNum);
 		member.setRole("CONSTRUCTOR");

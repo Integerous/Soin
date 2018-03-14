@@ -252,7 +252,7 @@ body
 
 .category
 {
-	padding-top: 450px;
+	padding-top: 350px;
 }
 
 .question
@@ -260,7 +260,7 @@ body
 	line-height: 50px;
 	font-weight: bold;
 	height: 50px;
-	width: 500px;
+	width: 600px;
 	background-color: #fff;
 	
 }
@@ -268,7 +268,7 @@ body
 .content
 {
 	height: inherit;
-	width: 500px;
+	width: 600px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

@@ -1,6 +1,7 @@
 package Soin.controller.estimate.EstimateRequestForm;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
@@ -40,16 +41,28 @@ public class Form1Controller extends HttpServlet{
 		/*RequestDispatcher dispatcher =
 				request.getRequestDispatcher("/WEB-INF/views/Estimate/EstimateRequestForm/Form1.jsp");
 		dispatcher.forward(request, response);*/
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
 		
-		
-		ApplicationContext applicationContext = ServletUtil
-	            .getApplicationContext(request.getSession().getServletContext());
-	      TilesContainer container = TilesAccess.getContainer(applicationContext);
-	      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-	      container.render("Estimate.EstimateRequestForm.Form1", servletRequest);
-		       
+		if(request.getSession().getAttribute("id") == null)
+		{
+			out.println("<script>location.href='../../Member/Common/login?returnUrl=../../estimate/EstimateRequestForm/Form1'; alert('로그인이 필요한 서비스입니다.');</script>");
+		}
+		else if(!request.getSession().getAttribute("role").equals("CLIENT"))
+		{
+			out.println("<script>history.back(); alert('개인 회원만 이용 가능합니다.');</script>");
+		}
+		else
+		{
+			ApplicationContext applicationContext = ServletUtil
+		            .getApplicationContext(request.getSession().getServletContext());
+		      TilesContainer container = TilesAccess.getContainer(applicationContext);
+		      ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+		      container.render("Estimate.EstimateRequestForm.Form1", servletRequest);
+		}     
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   

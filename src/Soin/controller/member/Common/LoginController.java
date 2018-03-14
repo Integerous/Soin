@@ -57,27 +57,34 @@ public class LoginController extends HttpServlet
 		MemberDao memberDao = new JdbcMemberDao();
 		Member member =memberDao.get(inputId, inputPassword);
 		
+		String returnUrl = request.getParameter("returnUrl");
+		
 		if(member == null)
 		{
-			out.print("<script>location.href='login'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>");
+			if(returnUrl != null)
+				out.printf("<script>location.href='login?returnUrl=%s'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>", returnUrl);
+			else
+				out.print("<script>location.href='login'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>");
 		}
 		else if(!inputPassword.equals(member.getPassword()))
 		{
-			out.print("<script>location.href='login'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>");
+			if(returnUrl != null)
+				out.printf("<script>location.href='login?returnUrl=%s'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>", returnUrl);
+			else
+				out.print("<script>location.href='login'; alert('아이디 또는 비밀번호가 정확하지 않습니다.');</script>");
 		}
 		else
 		{
 			request.getSession().setAttribute("id", member.getId());
 			request.getSession().setAttribute("role", member.getRole());
 			
-			String returnUrl = request.getParameter("returnUrl");
 			
 			if(returnUrl != null)
-				response.sendRedirect(returnUrl);	
-			
+				response.sendRedirect(returnUrl);
 			else
 				response.sendRedirect("../../index");
-		}
+				
+		}		
 		
 	}
 	

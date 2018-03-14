@@ -55,13 +55,13 @@ public class RegisterClnFormController extends HttpServlet
 		
 		String id = request.getParameter("id");
 		String phoneNum;
+		String address = request.getParameter("add01") + " " + request.getParameter("add02");
 		
 		phoneNum = request.getParameter("tel01")+"-"+request.getParameter("tel02")+"-"+request.getParameter("tel03");
-		
 		member.setId(id);
 		member.setPassword(request.getParameter("password"));
 		member.setEmail(request.getParameter("email"));
-		member.setAddress(request.getParameter("address"));
+		member.setAddress(address);
 		member.setDetailAddress(request.getParameter("detailAddress"));
 		member.setPhoneNum(phoneNum);
 		member.setRole("CLIENT");

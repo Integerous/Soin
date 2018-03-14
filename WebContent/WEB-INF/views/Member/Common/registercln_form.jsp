@@ -91,11 +91,11 @@
 											<option value="03">ㅅ,ㅇ,ㅈ</option>
 										</select>
 										
-										<select id="cat02" name="address01">
+										<select name="add01" id="cat02" name="address01">
 											<option>중분류 선택</option>
 										</select>
 										
-										<select id="cat03" name="address02">
+										<select name="add02" id="cat03" name="address02">
 											<option>소분류 선택</option>
 										</select>
 									</div>

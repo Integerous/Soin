@@ -27,8 +27,8 @@
 				</c:if>
 				
 				<div><a href="#">고객센터</a></div>
-				<div class="notifications"><a href="#" >
-					<img src="${ctx}/Images/ic_notifications_active_black_24px.svg"/></a></div>
+				<%-- <div class="notifications"><a href="#" >
+					<img src="${ctx}/Images/ic_notifications_active_black_24px.svg"/></a></div> --%>
 				<div><a href="${ctx}/MyPage/Client/MyProfile/MyProfile.jsp ">마이페이지</a></div>
 			</div>
 		</div>
@@ -58,13 +58,13 @@
 				<div class="hello">
 					<a href="${ctx}/Introduce/introduce">소인소개</a></div>
 				<div class="hello-contr">
-					<a href="${ctx}/member/constructor/list/main">업체소개</a></div>
+					<a href="${ctx}/Member/Constructor/List/Main">업체소개</a></div>
 				<div class="est-request">
-					<a href="#">견적의뢰</a></div>
+					<a href="${ctx}/estimate/EstimateRequestForm/Form1">견적의뢰</a></div>
 				<div class="tip">
-					<a href="#">인테리어 TIP</a></div>
+					<a href="${ctx}/InteriorTip/SelfTip/Main01">인테리어 TIP</a></div>
 				<div class="review">
-					<a href="#">시공후기</a></div>
+					<a href="${ctx}/Review/MainList">시공후기</a></div>
 			</nav>
 		</div>
 			

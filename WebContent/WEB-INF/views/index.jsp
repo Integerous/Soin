@@ -17,72 +17,65 @@
 				</div>
 				
 				<div id="category01" class="content center mt20">	
-					<button name="check" class="btn btn-window c1" value="창문">
-						<img src="${ctx }/Images/phz/window.png" alt="창문"><span class="win hidden">창문</span>
-					</button>
+					<div class="btn btn-window c1">
+						<span class="win hidden">창문</span><img src="${ctx }/Images/phz/window.png" alt="창문">
+					</div>
 
-					<button name="check" class="btn btn-door c1" value="문">
+					<div class="btn btn-door c1">
 						<img src="${ctx }/Images/phz/door.png" alt="문"><span class="door hidden">문</span>
-					</button>
+					</div>
 					
-					<button name="check" class="btn btn-bath c1" value="욕실">	
+					<div class="btn btn-bath c1">	
 						<img src="${ctx }/Images/phz/bath.png" alt="욕실"><span class="bath hidden">욕실</span>
-					</button>
+					</div>
 					
-					<button name="check" class="btn btn-wallpaper c1" value="벽">
-						<img src="${ctx }/Images/phz/wallpaper.png" alt="벽"><span class="wallpaper hidden">벽</span>
-					</button>
+					<div  class="btn btn-wallpaper c1">
+						<img src="${ctx }/Images/phz/wallpaper.png" alt="벽/바닥"><span class="wallpaper hidden">벽/바닥</span>
+					</div>
+					
+					<div class="btn btn-kitchen c1">
+						<img src="${ctx }/Images/phz/kitchen.png" alt="주방"><span class="kitchen hidden">주방</span>
+					</div>
 				</div>
-				<!-- <div id="category02" style="display:none;" class="content center mt20">	
-					<button type="button" value="private" class="btn c2">
-						<span>아파트/주택</span>
-					</button>
+				<div id="category02" style="display:none;" class="content center mt20">	
+					<div class="btn c2">	
+					</div>
 					
-					<button type="button" value="commercial" class="btn c2">
-						<span>상업시설</span>
-					</button>
+					<div class="btn c2">
+					</div>
+					
+					<div class="btn c2">
+					</div>
+					
+					<div class="btn c2">
+					</div>
 				</div> 
 				
 				<div id="category03" style="display:none;" class="content center mt20">	
-					<button type="button" value="room" class="btn c3">
-						<span>방</span>
-					</button>
-					
 					<div class="btn c3">
-						<span>베란다</span>
+						<span>아파트</span>
 					</div>
 					
 					<div class="btn c3">
-						<span>욕실</span>
+						<span>주택</span>
 					</div>
 					
 					<div class="btn c3">
-						<span>기타</span>
+						<span>빌라</span>
 					</div>
-				</div> 
+					
+					<div class="btn c3" >
+						<span>상업시설</span>
+					</div>
+				</div>
 				
-				<div id="category04" style="display:none;" class="content center mt20">	
-					<div class="btn c4">
-						<span>PVC</span>
-					</div>
-					
-					<div class="btn c4">
-						<span>알루미늄</span>
-					</div>
-					
-					<div class="btn c4">
-						<span>목재</span>
-					</div>
-					
-					<div class="btn c4">
-						<span>기타</span>
-					</div>
-				</div>  -->
+				<div class="center mt20">
+					<input type="submit" class="btn-default btn-huge" value="견적신청"/>
+				</div>
 				
-		<!--	<input id="01" type="hidden" name="" >
-	 			<input id="02" type="hidden" name="c2" >
-				<input id="03" type="hidden" name="c3" >
-				<input id="04" type="hidden" name="c4"> -->
+				<input id="01" type="hidden" name="construction-position">
+	 			<input id="02" type="hidden" name="detail-category" >
+				<input id="03" type="hidden" name="building-type" > 
 			</form>
 		</div>
 	</section>
@@ -92,93 +85,141 @@
 	window.addEventListener("load", function(){
 		//변수준비
 		var cat01 = document.querySelector("form #category01");
-		/* var cat02 = document.querySelector("form #category02");
+		var cat02 = document.querySelector("form #category02");
 		var cat03 = document.querySelector("form #category03");
-		var cat04 = document.querySelector("form #category04"); */
+		/* var cat04 = document.querySelector("form #category04"); */
 		
-		/* var cat01Val = document.getElementById("01");
+		var cat01Val = document.getElementById("01");
 		var cat02Val = document.getElementById("02");
 		var cat03Val = document.getElementById("03");
-		var cat04Val = document.getElementById("04"); */
+		/* var cat04Val = document.getElementById("04"); */
 
 		var cat01Btn = document.querySelectorAll("form #category01 .c1");
-		/* var cat02Btn = document.querySelectorAll("form #category02 .c2");
+		var cat01Spans = document.querySelectorAll("#category01 div span");
+		var cat02Btn = document.querySelectorAll("form #category02 .c2");
 		var cat03Btn = document.querySelectorAll("form #category03 .c3");
-		var cat04Btn = document.querySelectorAll("form #category04 .c4"); */
+		/* var cat04Btn = document.querySelectorAll("form #category04 .c4"); */
 		
-		/* var question = document.querySelector(".question span") */
+		var question = document.querySelector(".question span");
 		
+		var cat02Win = ['하이샤시', '알루미늄', '목재창', '그 외'];
+		var cat02Door = ['현관문', '방문', '슬라이딩 도어', '그 외'];
+		var cat02Bath = ['세면대', '욕조', '타일', '변기', '그 외'];
+		var cat02Wall = ['도배', '장판', '페인트', '그외'];
+		var cat02Kit = ['싱크', '후드', '주방가구', '타일'];
+		
+		var cat03pl = ['아파트','주택','빌라','상업시설'];
 		//함수정의역========================================
 
-	/* for(var i=0;i< cat01Btn.length; i++)
-		{	
-			cat01Btn[i].onclick = openCat02;
-		 }*/
-
-	/* cat01Btn[0].onclick = openCat02;
-		cat01Btn[1].onclick = openCat02;
-		cat01Btn[2].onclick = openCat02;
-		cat01Btn[3].onclick = openCat02; 
-		
-		function openCat02()
-		{	
-			cat01Val.value = this.value;		
-			cat01.style.display = "none";
-			cat02.style.display = "flex"; 
-			cat02.style.width ="280px";
-			question.textContent = "어디에 위치해 있나요? - 시공종류";
-
-			for(var i=0;i< cat02Btn.length; i++)
-			{
-				cat02Btn[i].onclick = openCat03;
-				
+			cat01Btn[0].onclick = function(){
+				cat01Val.value="창문";
+				openCat02()
 			}
-		
- 			function openCat03() 
+			cat01Btn[1].onclick = function(){ 
+				cat01Val.value="문";
+				openCat02()
+			}
+			cat01Btn[2].onclick = function(){ 
+				cat01Val.value="욕실";
+				openCat02()
+			}
+			cat01Btn[3].onclick = function(){ 
+				cat01Val.value="벽/바닥";
+				openCat02()
+			}
+			cat01Btn[4].onclick = function(){ 
+				cat01Val.value="주방";
+				openCat02()
+			}
+			
+			function openCat02()
 			{	
-				cat02Val.value = this.value;
-				cat02.style.display = "none";
-				cat03.style.display = "flex"; 
-				cat03.style.width ="500px";	
-				question.textContent = "어디에 위치해 있나요? - 시공위치";
+				cat01.style.display = "none";
+				cat02.style.display = "flex"; 
+				cat02.style.width ="500px";
+				question.textContent = "어떤 시공을 원하시나요? - 세부사항";
 				
-				for(var i=0;i< cat03Btn.length; i++)
+/* 				var cat02l = cat02Btn.length;
+				
+	/* 			if(cat01Val.value=="욕실")
+					var cat02l = 5; */
+				
+				for(var i=0; i<cat02Btn.length; i++)
 				{
-					cat03Btn[i].onclick = openCat04;
+					if(cat01Val.value == "창문")
+					{
+						cat02Val.value= cat02Win[i];
+						cat02Btn[i].textContent = cat02Win[i];
+						cat02Btn[i].onclick = openCat03;
+					}
+					else if(cat01Val.value == "문")
+					{	
+						cat02Val.value= cat02Door[i];
+						cat02Btn[i].textContent = cat02Door[i];
+						cat02Btn[i].onclick = openCat03;
+					}
+					else if(cat01Val.value == "욕실")
+					{
+						cat02Val.value= cat02Bath[i];
+						cat02Btn[i].textContent = cat02Bath[i];
+						cat02Btn[i].onclick = openCat03;
+					}
+					else if(cat01Val.value == "벽/바닥")
+					{					
+						cat02Val.value= cat02Wall[i];
+						cat02Btn[i].textContent = cat02Wall[i];
+						cat02Btn[i].onclick = openCat03;
+					}
+					else
+					{				
+						cat02Val.value= cat02Kit[i];
+						cat02Btn[i].textContent = cat02Kit[i];
+						cat02Btn[i].onclick = openCat03;
+					}
+			
 				}
-				
-				function openCat04() 
-				{			
-					cat03Val.value = this.value;	
-					cat03.style.display = "none";
-					cat04.style.display = "flex"; 
-					cat04.style.width ="500px";
-					question.textContent = "어떤 재질을 원하시나요?";
+					
+					
+	 			function openCat03() 
+				{	
+					cat02.style.display = "none";
+					cat03.style.display = "flex"; 
+					cat03.style.width ="500px";	
+					question.textContent = "어떤 주거 형태인가요? - 시공위치"; 
+					
 					
 					for(var i=0;i< cat03Btn.length; i++)
 					{
-						cat04Btn[i].onclick = function () 
-						{
-							cat04Btn[i].style.backgroundColor= "#e9e9e9";
-							cat04Val.value = this.value;
-						};
+						cat03Btn[i].onclick = function dd() {
+							this.style.backgroundColor = "gray";
+							this.style.color = "#fff";
+							goForm()
+					
+						}
+					
+						function goForm() {			
+							cat03Val.value= cat03pl[i];
+							question.textContent = "하단의 버튼을 눌러 신청해주세요.(로그인 필요)";	
+						}		
 					}
-				}	
-			}
-		}*/
+				}		
+			}	
+
 
 		//이벤트 처리========================================	
 		var winBtn = document.querySelector(".btn-window");
 		var doorBtn = document.querySelector(".btn-door");
 		var wallpaperBtn = document.querySelector(".btn-wallpaper");
 		var bathBtn = document.querySelector(".btn-bath");
-
+		var kitchenBtn = document.querySelector(".btn-kitchen");
+		
 		var imgs = document.querySelectorAll(".c1 img");
 		
 		var win = winBtn.querySelector(".win");
 		var door = document.querySelector(".door");
 		var bath = document.querySelector(".bath");
 		var wallpaper = document.querySelector(".wallpaper");
+		var kitchen = document.querySelector(".kitchen");
 		
 		winBtn.onmouseover = function(){
 	
@@ -225,6 +266,18 @@
 				
 				wallpaper.classList.add("hidden");
 				imgs[3].classList.remove("hidden");
+			};
+		}; 
+		
+		kitchenBtn.onmouseover = function(){
+			
+			kitchen.classList.remove("hidden");
+			imgs[4].classList.add("hidden");
+			
+			kitchenBtn.onmouseout = function(){
+				
+				kitchen.classList.add("hidden");
+				imgs[4].classList.remove("hidden");
 			};
 		}; 
 		

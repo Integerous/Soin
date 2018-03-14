@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -40,12 +41,26 @@ public class WriterController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//request.getContextPath(); //경로 알아내기
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
 		
-		ApplicationContext applicationContext = ServletUtil
-				.getApplicationContext(request.getSession().getServletContext());
-		TilesContainer container = TilesAccess.getContainer(applicationContext);
-		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		container.render("Review.Write", servletRequest);
+		if(request.getSession().getAttribute("id") == null)
+		{
+			out.println("<script>location.href='../Member/Common/login?returnUrl=../../Review/Write'; alert('로그인이 필요한 서비스입니다.');</script>");
+		}
+		else if(!request.getSession().getAttribute("role").equals("CLIENT"))
+		{
+			out.println("<script>history.back(); alert('개인 회원만 이용 가능합니다.');</script>");
+		}
+		else
+		{
+			ApplicationContext applicationContext = ServletUtil
+					.getApplicationContext(request.getSession().getServletContext());
+			TilesContainer container = TilesAccess.getContainer(applicationContext);
+			ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
+			container.render("Review.Write", servletRequest);
+		}
 	}
 	
 	@Override
