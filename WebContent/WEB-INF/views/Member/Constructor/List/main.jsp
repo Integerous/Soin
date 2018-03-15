@@ -134,7 +134,7 @@
 
 				</section>
 				<div>
-					<a href="${ctx }/member/constructor/list/near" class="button button-more">더보기</a>
+					<a href="${ctx }/Member/Constructor/List/near" class="button button-more">더보기</a>
 				</div>
 
 			</section>
@@ -197,7 +197,7 @@
 					</div>
 				</section> -->
 				<div>
-					<a href="${ctx }/member/constructor/list/gpa" class="button button-more">더보기</a>
+					<a href="${ctx }/Member/Constructor/List/gpa" class="button button-more">더보기</a>
 				</div>
 			</section>
 
@@ -258,7 +258,7 @@
 					</div>
 				</section> -->
 				<div>
-					<a href="${ctx }/member/constructor/list/default" class="button button-more">더보기</a>
+					<a href="${ctx }/Member/Constructor/List/default" class="button button-more">더보기</a>
 				</div>
 			</section>
 

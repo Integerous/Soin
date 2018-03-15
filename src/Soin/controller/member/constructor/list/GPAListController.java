@@ -20,7 +20,7 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-@WebServlet("/member/constructor/list/gpa")
+@WebServlet("/Member/Constructor/List/gpa")
 public class GPAListController extends HttpServlet{
 	
 	@Override

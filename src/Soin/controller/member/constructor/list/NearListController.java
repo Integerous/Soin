@@ -20,7 +20,7 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-@WebServlet("/member/constructor/list/near")
+@WebServlet("/Member/Constructor/List/near")
 public class NearListController extends HttpServlet{
 	
 	@Override
