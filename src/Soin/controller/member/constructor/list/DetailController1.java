@@ -20,7 +20,7 @@ import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
 
-@WebServlet("/member/constructor/list/detail")
+@WebServlet("/Member/Constructor/List/detail")
 public class DetailController1 extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

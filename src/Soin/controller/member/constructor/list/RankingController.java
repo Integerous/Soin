@@ -20,7 +20,7 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-@WebServlet("/member/constructor/list/ranking")
+@WebServlet("/Member/Constructor/List/ranking")
 public class RankingController extends HttpServlet{
 	
 	@Override
