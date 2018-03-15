@@ -20,7 +20,7 @@ import Soin.Constructor.ConstructorDao;
 import Soin.Constructor.ConstructorView;
 import Soin.Constructor.JdbcConstructorDao;
 
-@WebServlet("/member/constructor/list/main")
+@WebServlet("/Member/Constructor/List/main")
 public class MainController extends HttpServlet{
 	
 	@Override
