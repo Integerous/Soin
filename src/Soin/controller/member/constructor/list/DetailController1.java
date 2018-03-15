@@ -40,3 +40,4 @@ public class DetailController1 extends HttpServlet{
 		container.render("Member.Constructor.List.Detail", servletRequest);
 	}
 }
+	

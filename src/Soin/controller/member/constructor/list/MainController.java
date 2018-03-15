@@ -65,7 +65,7 @@ public class MainController extends HttpServlet{
 		ApplicationContext applicationContext = ServletUtil.getApplicationContext(request.getSession().getServletContext());
 		TilesContainer container = TilesAccess.getContainer(applicationContext);
 		ServletRequest servletRequest = new ServletRequest(applicationContext, request, response);
-		container.render("Member.Constructor.List.Main", servletRequest);
+		container.render("Member.Constructor.List.main", servletRequest);
 
 	}
 }
