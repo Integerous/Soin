@@ -8,10 +8,10 @@
 		<div class = "root-container">
 			<h1>메인 컨텐츠</h1>
 			<div class = "main-text-box">
-				컨텐츠 관련 Text(팁 메인) 
+				<!-- 컨텐츠 관련 Text(팁 메인) --> 
 			</div>
 			
-			<div>
+			<!-- <div>
 				<div class = "search-box03">
 						<select name = "category">
 							<option value = "" selected = "selected">카테고리1</option>
@@ -33,7 +33,7 @@
 					<input type = "search"  id = "search" placeholder="소재 관련 검색"  class = "search-text">
 					<input type = "submit" value = "검색" class = "btn">
 				</div>
-			</div>
+			</div> -->
 			
 			<c:forEach var="it" items="${list }">
 			<div class = "main-box">
@@ -42,19 +42,19 @@
 				</div>
 				
 				<div class = "text-box text-ellipsis">
-					<div class = "subtitle">
+					<%-- <div class = "subtitle">
 						<a href="Detail01?id=${it.id }">subtitle</a>
-					</div>
+					</div> --%>
 					
 					<div class = "title">
 						<a href="Detail01?id=${it.id }}">${it.title }</a>
 					</div>
 					
-					<div class = "surmmary">
+					<div class = "surmmary .text-ellipsis">
 						<a href="Detail01?id=${it.id }">${it.content }</a>
 					</div>
 					
-					<div class = "review">
+					<div class = "review-like">
 						<a href="Detail01?id=${it.id }">댓글 수 :${it.commentCount }		/		 좋아요: ${it.likeCount }</a>
 					</div>
 				</div>

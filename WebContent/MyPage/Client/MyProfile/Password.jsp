@@ -1,10 +1,29 @@
+<%@page import="Soin.client.Client"%>
+<%@page import="Soin.member.Member"%>
+<%@page import="Soin.member.MemberView"%>
+<%@page import="Soin.member.MemberDao"%>
+<%@page import="Soin.member.JdbcMemberDao"%>
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
-	String sql = "SELECT * FROM CLIENT_MEMBER_VIEW WHERE ID = 'test111'";
+String id = (String)request.getSession().getAttribute("id");
+MemberDao memberDao = new JdbcMemberDao();
+MemberView mv = memberDao.get(id);
+Member m = mv.getMember();
+Client c = mv.getClient();
+
+/* String id = (String)request.getSession().getAttribute("id");
+MemberDao memberDao = new JdbcMemberDao();
+MemberView mv = memberDao.get(id);
+Member m = mv.getMember();
+Client c = mv.getClient(); */
+
+
+
+/* 	String sql = "SELECT * FROM CLIENT_MEMBER_VIEW WHERE ID = 'test111'";
 	//0.드라이버 로드
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	//1.연결 생성
@@ -15,7 +34,7 @@
 	//3.결과집합 사용
 	ResultSet rs = st.executeQuery(sql);
 	//4.패치
-	rs.next();
+	rs.next(); */
 %>
 <c:set var="ctx" value="${pageContext.request.servletContext.contextPath}" />
 <!DOCTYPE html>
@@ -43,7 +62,14 @@
 				<li><a href="">알림</a></li>
 				<li><a href="">고객센터</a></li>
 				<li><a href="">회원가입</a></li>
+				
+				<c:if test="${empty sessionScope.id}">
 				<li><a href="${ctx}/Member/Common/login">로그인</a></li>
+				</c:if>
+				
+				<c:if test="${not empty sessionScope.id}">
+				<li><a href="${ctx}/Member/Common/logout">로그아웃</a></li>
+				</c:if>
 			</ul>
 			<h1 id="logo"><img class = "logo-images" src="../../../Images/hgw/logo1.png" alt="Soin"/></h1>
 		</nav>
@@ -71,9 +97,9 @@
 	<aside id = "aside">
 	<div class = "ver-menu">
 		<ul> 
-	 		<li><a href="" class="btn">나의 프로필</a></li>
-		    <li><a href="" class="btn">나의 견적</a></li>
-	 		 <li><a href="" class="btn">나의 후기</a></li>
+	 		<li><a href="MyProfile.jsp" class="btn">나의 프로필</a></li>
+		    <li><a href="../MyEstimate/MyEstimate.jsp" class="btn">나의 견적</a></li>
+	 		 <li><a href="../MyReview/MyReview.jsp" class="btn">나의 후기</a></li>
 			 <li><a href="" class="btn">나의 문의내역</a></li>
 	 		 <li><a href="" class="btn">찜한 업체</a></li>
 	   </ul>
@@ -96,7 +122,7 @@
 		<table class = "main-table2">
 			<tr>
 				<th>아이디</th>
-				<td><%=rs.getString("ID") %></td>
+				<td><%=m.getId() %></td>
 			</tr>
 			
 			<tr>

@@ -9,8 +9,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>소인 : 인테리어 정보</title>
-<link href="${ctx }/Css/StyleHF.css" type="text/css" rel="stylesheet"/>
 <link href="${ctx }/Css/Style5.css" type="text/css" rel="stylesheet"/>
+<link href="${ctx }/Css/StyleHF.css" type="text/css" rel="stylesheet"/>
 
 </head>
 <body>

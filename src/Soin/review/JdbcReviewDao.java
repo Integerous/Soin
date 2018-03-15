@@ -9,7 +9,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import Soin.InteriorTip.InteriorTipView;
 import Soin.review.ReviewView;
 
 public class JdbcReviewDao implements ReviewDao {
