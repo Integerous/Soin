@@ -127,7 +127,7 @@
 				</div>
 
 				<div>
-				<a href="${ctx}/member/constructor/portfolio/portfolioList">
+				<a href="${ctx}/member/constructor/portfolio/portfolioMain">
 					<input class="btn btn-size btn-margin" type="submit" value="더보기"
 					 <%-- onclick = "location.href='${ctx}/Review/MainList'" --%>>
 					 </a>
