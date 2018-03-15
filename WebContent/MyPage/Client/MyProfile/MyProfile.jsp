@@ -102,9 +102,9 @@
 	<aside id = "aside">
 	<div class = "ver-menu">
 		<ul> 
-	 		<li><a href="" class="btn">나의 프로필</a></li>
-		    <li><a href="" class="btn">나의 견적</a></li>
-	 		 <li><a href="" class="btn">나의 후기</a></li>
+	 		<li><a href="MyProfile.jsp" class="btn">나의 프로필</a></li>
+		    <li><a href="../MyEstimate/MyEstimate.jsp" class="btn">나의 견적</a></li>
+	 		 <li><a href="../MyReview/MyReview.jsp" class="btn">나의 후기</a></li>
 			 <li><a href="" class="btn">나의 문의내역</a></li>
 	 		 <li><a href="" class="btn">찜한 업체</a></li>
 	   </ul>
@@ -139,17 +139,21 @@
 				<td><%=m.getAddress() %><%=m.getDetailAddress() %></td>
 			</tr>
 			
-			<tr>
+		<%-- 	<tr>
 				<th>닉네임</th>
 				<td><%=c.getNickName() %></td>
-			</tr>
+			</tr> --%>
 		</table>
 		</section>
 		
 		<section class="button">
 		<input type="button" value="회원정보수정" onclick="location.href='Password.jsp'">
 		</section>
-			
+		
+		<form action="MyProfileDel.jsp" method="post">
+		<section class="button button2">
+		<input type="submit" value="회원탈퇴하기" >
+		</form>	
 		</section>
 	
 

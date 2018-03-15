@@ -1,19 +1,27 @@
 <%@page import="java.sql.*"%>
+<%@page import="Soin.client.Client"%>
+<%@page import="Soin.member.Member"%>
+<%@page import="Soin.member.MemberView"%>
+<%@page import="Soin.member.MemberDao"%>
+<%@page import="Soin.member.JdbcMemberDao"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%-- <%response.setCharacterEncoding("UTF-8") %>
 <%response.setContentType("text/html;UTF-8") %> --%>
 <%
-	String sql = "SELECT * FROM INQUIRY WHERE MEMBER_ID='newlec'";
+	String memId = (String) request.getSession().getAttribute("ID");
+	String sql = "SELECT * FROM INQUIRY WHERE MEMBER_ID=?";
 	//0.드라이버 로드
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	//1.연결 생성
 	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@211.238.142.251:1521:orcl", "c##soin",
 			"soin1218");
 	//2.문장 실행
-	Statement st = con.createStatement();
+	PreparedStatement st = con.prepareStatement(sql);
+	st.setString(1, memId);
 	//3.결과집합 사용
-	ResultSet rs = st.executeQuery(sql);
+	ResultSet rs = st.executeQuery();
 	//4.패치
 	/* rs.next(); */
 %>
@@ -75,9 +83,9 @@
 	<aside id = "aside">
 	<div class = "ver-menu">
 		<ul> 
-	 		<li><a href="" class="btn">나의 프로필</a></li>
-		    <li><a href="" class="btn">나의 견적</a></li>
-	 		 <li><a href="" class="btn">나의 후기</a></li>
+	 		<li><a href="../MyProfile/MyProfile.jsp" class="btn">나의 프로필</a></li>
+		    <li><a href="MyEstimate.jsp" class="btn">나의 견적</a></li>
+	 		 <li><a href="../MyReview/MyReview.jsp" class="btn">나의 후기</a></li>
 			 <li><a href="" class="btn">나의 문의내역</a></li>
 	 		 <li><a href="" class="btn">찜한 업체</a></li>
 	   </ul>
