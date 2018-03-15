@@ -49,10 +49,10 @@
 		<c:forEach var="i" items="${list}">
 			<div class="box" href="Detail?id=${i.id}">
 				<img alt="후기메인사진" src="${ctx}/SoinProject/Review/upload/${i.attachedFile}" onerror="this.src='${ctx}/Images/nhy/room.jpg'" style="height:200px; width: 250px;">
-				<p style="font-style: italic; color: #FAD23D;"> ${i.constructionTypeId}</p>
+				<p style="font-style: italic; color: #FAD23D;"> <%-- ${i.constructionTypeId} --%>WINDOW</p>
 				<h3><a href="Detail?id=${i.id}">${i.title}</a></h3>
 				<p>작성자 : ${i.memberId} </p>			
-				<p>작성일 : ${i.regdate} </p>	
+				<p>작성일 : <%-- ${i.regdate} --%>00/00/00 </p>	
 			</div>
 		</c:forEach>
 		
