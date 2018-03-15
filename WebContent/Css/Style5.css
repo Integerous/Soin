@@ -268,18 +268,18 @@ select{
 	font-size: 25px;
 	height: 40px;
 	width: 624px;
-	color :#b0e0e6
+	color :#585858;
 }
 
 .surmmary{
 	padding-left: 10px;
 	font-size: 15px;
-	color: #add8e6;
+	color: #585858;
 	height: 100px;
 	width: 624px;
 }
 
-.review{
+.review-like{
 	padding-left: 10px;
 	font-size: 10px;
 	height: 10px;
