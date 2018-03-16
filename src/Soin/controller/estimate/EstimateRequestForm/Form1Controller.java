@@ -90,15 +90,16 @@ public class Form1Controller extends HttpServlet{
 		estimateRequest.setAddress(address);
 		// 5.희망시공일 선택 / DATE로 형변환
 		String datePickerStr = request.getParameter("desired-date01");  
-	    Date datePicker = java.sql.Date.valueOf(datePickerStr);
-	       estimateRequest.setDesiredDate01(datePicker);
+	    	Date datePicker = java.sql.Date.valueOf(datePickerStr);
+	    	estimateRequest.setDesiredDate01(datePicker);
+
 		// 6.기타 요청사항
 		estimateRequest.setEtcRequest(request.getParameter("etc-request"));
 		
 		EstimateRequestDao estimateRequestDao = new JdbcEstimateRequestDao();
 		estimateRequestDao.insert(estimateRequest);
 		//String id = estimateRequestDao.getLatest();
-		response.sendRedirect("Form4");
+		response.sendRedirect("../../index");
 		
 		
 	}

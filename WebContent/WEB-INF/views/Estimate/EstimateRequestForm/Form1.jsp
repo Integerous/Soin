@@ -544,7 +544,7 @@
 		</div>
 		<!-- ------------next button------------ -->							
 		<div class="next-button">
-		  <button type="submit" class="next-btn" onclick="location.href='Form4'"><span>다음</span></button>
+		  <button type="submit" class="next-btn" onclick="javascript:submitEstimate()"><span>완료</span></button>
 		</div>
 	
 	</div>  
@@ -645,17 +645,33 @@
 	var desiredDate = document.getElementById("desired-date01");
 
 		DdateSelect.onchange = inputDesiredDate;
+		
 	function inputDesiredDate (){
-		desiredDate.textContent = DdateSelect.value;
-	};
+			desiredDate.textContent = DdateSelect.value;
+	}
+
 	
 	
 	//6. 기타 요청사항	
 	var ErequestSelect = s2.querySelector("textarea");
 	var etcRequest = document.getElementById("etc-request");
 	
+	// function strReplace(subject, search, replace) {
+	//     return subject.split(search).join(replace);
+	// };
+
+	// var t1 = strReplace(ErequestSelect.value , '\n', '');
+	// etcRequest.textContent = t1;
+
 	function flush(){
 		etcRequest.textContent = ErequestSelect.value;
+	};
+	
+	
+	// 제출 완료 버튼
+
+	function submitEstimate(){
+		alert('견적요청이 완료되었습니다.');
 	};
 	
 

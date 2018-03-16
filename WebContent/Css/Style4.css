@@ -308,7 +308,7 @@ legend{
 
 
 
-.options{
+.optionss{
 	display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -318,11 +318,11 @@ legend{
 	padding: 10px 0px;
 }
 
-.options > div{
+.optionss > div{
 	padding: 0px 10px;
 }
 
-.options .address-picker{
+.optionss .address-picker{
 	display: flex;
 		justify-content: space-between;
 	width:190px;
