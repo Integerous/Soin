@@ -13,6 +13,23 @@
 %> --%>
 
 
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상세 견적의뢰 - 소규모 인테리어 시공 중개 플랫폼 소인</title>
+<link href="../../../../Css/Style4.css" type="text/css" rel="stylesheet"/>
+
+
+</head>
+<body>
+	
+<!-- <div id="grid">	 -->
+<!-- ---------------------HEADER---------------------- -->
+
 <!-- ---------------------MAIN---------------------- -->	
 	<main>
 	
@@ -53,7 +70,7 @@
 			<section class="request-form">
 				<fieldset>
 					<legend>1. 어디에 시공이 필요하신가요?</legend>
-						<div class="options">
+						<div class="optionss">
 							<div>
 								<input id="window" type="radio" name="construction-position" value="창문" onclick="javascript:showWindow();">
 								<label for="window">창문</label>
@@ -80,7 +97,7 @@
 <!-- ------------2. 창문 인테리어 시공 선택------------ -->		
 				<fieldset id="ifWindow">
 					<legend>2. 창문 인테리어 시공 선택</legend>
-					<div class="options" >
+					<div class="optionss" >
 						<div>
 							<input id="high-ss" type="radio" name="detail-category" value="하이샤시">
 							<label for="high-ss">하이샤시</label>
@@ -101,7 +118,7 @@
 				</fieldset>
 				<fieldset  id="ifDoor">
 						<legend>2. 문 인테리어 시공 선택</legend>
-						<div class="options">
+						<div class="optionss">
 							<div>
 								<input id="frt-door" type="radio" name="detail-category" value="현관문" >
 								<label for="frt-door">현관문</label>
@@ -122,7 +139,7 @@
 					</fieldset>
 				<fieldset  id="ifBathroom">
 						<legend>2. 욕실 인테리어 시공 선택</legend>
-						<div class="options">
+						<div class="optionss">
 							<div>
 								<input id="wash-stand" type="radio" name="detail-category" value="세면대">
 								<label for="wash-stand">세면대</label>
@@ -148,7 +165,7 @@
 					</fieldset>
 				<fieldset  id="ifWall">
 							<legend>2. 벽/바닥 인테리어 시공 선택</legend>
-							<div class="options">
+							<div class="optionss">
 								<div>
 									<input id="wall-paper" type="radio" name="detail-category" value="도배">
 									<label for="wall-paper">도배</label>
@@ -169,7 +186,7 @@
 						</fieldset>
 				<fieldset  id="ifKitchen">
 							<legend>2. 주방 인테리어 시공 선택</legend>
-							<div class="options">
+							<div class="optionss">
 								<div>
 									<input id="sink" type="radio" name="detail-category" value="싱크">
 									<label for="sink">싱크</label>
@@ -238,7 +255,7 @@
 <!-- ------------3. 건물 종류 선택------------ -->
 				<fieldset>
 					<legend>3. 건물 종류 선택</legend>
-					<div class="options">
+					<div class="optionss">
 						<div>
 								<input id="apt" type="radio" name="building-type" value="아파트" >
 								<label for="apt">아파트</label>
@@ -281,10 +298,10 @@
 					<div>
 						<fieldset>
 							<legend>4. 시공지 주소 선택</legend>
-								<div class="options">
+								<div class="optionss">
 									<div class="address-picker">
 										<div>
-										<select onchange="categoryChange(this)" name="add01" style=" width:90px; height:30px; font-size:11pt">
+										<select id="address1" onchange="categoryChange(this)" name="add01" style=" width:90px; height:30px; font-size:11pt">
 											<option>구 선택</option>
 											<option value="강남구">강남구</option>
 											<option value="강동구">강동구</option>
@@ -407,7 +424,7 @@
 					<div>
 						<fieldset>
 							<legend>5. 희망 시공일 선택</legend>
-								<div class="options">
+								<div class="optionss">
 									<div>
 										<input type="date" name="desired-date01"
 										placeholder="원하시는 시공일을 선택해주세요."
@@ -415,7 +432,7 @@
 									</div>
 									<div class="date-pick">
 										<div>
-											<input type="checkbox" value="unsettled" name="desired-date01" style="width:20px; height:20px;">
+											<input type="checkbox" value="시공일 미정" name="desired-date01" style="width:20px; height:20px;">
 										</div>
 										<p>시공일 미정</p>
 									</div>
@@ -427,9 +444,9 @@
 					<div>
 						<fieldset>
 							<legend>6. 상세 요청사항</legend>
-								<div class="options">
+								<div class="optionss">
 									<div>
-										<textarea placeholder="시공 희망사항을 작성해주세요.&#13;&#10;(상세히 작성하셔야 견적금액에 정확히 나옵니다.)"
+										<textarea onchange='flush()' placeholder="시공 희망사항을 작성해주세요.&#13;&#10;(상세히 작성하셔야 견적금액에 정확히 나옵니다.)"
 										name="etc-request" cols="50" rows="3"></textarea>
 									</div>
 								</div>
@@ -501,7 +518,7 @@
 								<div id="building-type">
 									${estimateRequest.buildingTypeId}
 								</div>
-								<div>
+								<div id="add03">
 									${estimateRequest.address}
 								</div>
 								<div id="desired-date01">
@@ -566,7 +583,7 @@
 		s3.style.display ="block";
 	}
 	
-	//1번 질문 요약
+	//1. 시공 카테고리
 	var constSelect = s1.querySelectorAll("input[name='construction-position']");
 	var constPosition = document.getElementById("construction-position");
 
@@ -580,7 +597,7 @@
 	
 	
 	
-	//2번 질문 요약	
+	//2. 상세 카테고리
 	var detailSelect = s1.querySelectorAll("input[name='detail-category']");
 	var detailCategory = document.getElementById("detail-category");
 
@@ -593,7 +610,7 @@
 	};
 	
 	
-	//3번 질문 요약	
+	//3. 건물 종류
 	var BtypeSelect = s1.querySelectorAll("input[name='building-type']");
 	var buildingType = document.getElementById("building-type");
 
@@ -606,38 +623,39 @@
 	};
 	
 	
-	//4번 질문 요약	
-	var BtypeSelect = s2.querySelectorAll("input[name='building-type']");
-	var buildingType = document.getElementById("building-type");
+	//4. 시공지 주소
+	
+	var addSelect01 = document.getElementById("address1");
+	var addInput03 = document.getElementById("add03");
+	var temp;
 
-	for(var i=0; i<BtypeSelect.length; i++){
-		BtypeSelect[i].onchange = inputBuildingType;
-	}	
-		
-	function inputBuildingType (){
-		buildingType.textContent = this.value;
-	};
+	for(var i=0; i<addSelect01.length; i++){
+		if(addSelect01.options[i].selected == true){
+			temp = addSelect01.options[i].value;
+			break;
+		}
+	}
+
+	addInput03.textContent = temp;
+
 	
 	
-	//5번 질문 요약	
-	var DdateSelect = s2.querySelectorAll("input[name='desired-date01']");
+	//5. 희망 시공일	
+	var DdateSelect = s2.querySelector("input[name='desired-date01']");
 	var desiredDate = document.getElementById("desired-date01");
 
-	for(var i=0; i<DdateSelect.length; i++){
-		DdateSelect[i].onchange = inputDesiredDate;
-	}	
-		
+		DdateSelect.onchange = inputDesiredDate;
 	function inputDesiredDate (){
-		desiredDate.textContent = this.value;
+		desiredDate.textContent = DdateSelect.value;
 	};
 	
 	
-	//6번 질문 요약	
-	var ErequestSelect = s2.querySelector("input[name='etc-request']");
+	//6. 기타 요청사항	
+	var ErequestSelect = s2.querySelector("textarea");
 	var etcRequest = document.getElementById("etc-request");
-
-	ErequestSelect[i].onchange = function (){
-		etcRequest.textContent = this.value;
+	
+	function flush(){
+		etcRequest.textContent = ErequestSelect.value;
 	};
 	
 
@@ -646,3 +664,10 @@
 
 
 </main>
+<!-- ---------------------FOOTER---------------------- -->	
+<!-- 		<footer>
+	<p> Copyright 2018 SoinProject</p>
+</footer> -->
+		
+</body>
+</html>
