@@ -121,13 +121,13 @@
 			</div>
 			<div class="box">
 
-				<div><a href="${ctx}/estimate/EstimateRequestForm/Form1">
+				<div><a href="${ctx}/Estimate/EstimateRequestForm/Form1">
 					<input class="btn btn-size" type="submit" value="견적요청">
 					</a>
 				</div>
 
 				<div>
-				<a href="${ctx}/member/constructor/portfolio/portfolioMain">
+				<a href="${ctx}/Member/Constructor/Portfolio/PortfolioMain">
 					<input class="btn btn-size btn-margin" type="submit" value="더보기"
 					 <%-- onclick = "location.href='${ctx}/Review/MainList'" --%>>
 					 </a>

@@ -216,7 +216,7 @@
    <!--side bar ------------------------- --> 
  <div id = "side">
  	
- 		<a href="">견적 신청하기</a>
+ 		<a href="${ctx}/Estimate/EstimateRquestForm/Form1 ">견적 신청하기</a>
  	
  </div>  	
   
