@@ -1,6 +1,1 @@
-<<<<<<< HEAD
-SoinProject
-=======
-# Soin-Project
-쌍용 프로젝트(소인)
->>>>>>> refs/remotes/SoinProject/master
+Soin 소인 - 소규모 인테리어 시공 중개플랫폼
