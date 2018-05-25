@@ -1,10 +1,10 @@
 # Soin (소인)
 - 소규모 인테리어 시공 중개플랫폼
-- 역할 - 팀장 (기획, 견적요청 폼, Header 디자인)
+- 역할 - **팀장** (기획, 견적요청 폼, Header 디자인)
 
 ## 00. 프로젝트 개요
   - 기본 정보
-    - 팀 프로젝트(총 7명)
+    - **팀 프로젝트(총 7명)**
     - 팀 구성방법 - 아이디어 스피치를 통한 팀 구성
   - 프로젝트 기획 상세
     - 창문 교체, 욕실 타일 시공 등 소규모 인테리어 시공만을 위한 시공 중개 O2O 서비스
@@ -13,7 +13,7 @@
     - 참고한 서비스: 집닥, 카닥, 오늘의집
 
 ## 01. 주요 코드
-  - [견적요청 Entity,Dao,View,JDBC](https://github.com/Integerous/Soin/tree/master/src/Soin/EstimateRequest)
+  - **[견적요청 Entity,Dao,View,JDBC](https://github.com/Integerous/Soin/tree/master/src/Soin/EstimateRequest)**
   - [견적요청서.jsp](https://github.com/Integerous/Soin/blob/master/WebContent/WEB-INF/views/Estimate/EstimateRequestForm/Form1.jsp)
   - [견적요청서요약.jsp](https://github.com/Integerous/Soin/blob/master/WebContent/WEB-INF/views/Estimate/EstimateRequestList/List.jsp)
   - [견적요청폼.css](https://github.com/Integerous/Soin/blob/master/WebContent/Css/Style4.css)
